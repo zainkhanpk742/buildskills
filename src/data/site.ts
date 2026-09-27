@@ -1,3 +1,5 @@
+import { websiteLessons } from "@/data/websiteLessons";
+
 export const nav = [
   { label: "Learn", href: "/learn" },
   { label: "Questions", href: "/questions" },
@@ -156,105 +158,20 @@ export type Guide = {
   next: { href: string; label: string };
 };
 
+const detailedWebsiteGuides: Guide[] = websiteLessons.map((lesson) => ({
+  slug: lesson.slug,
+  area: lesson.area,
+  title: lesson.title,
+  summary: lesson.summary,
+  paragraphs: [...lesson.paragraphs],
+  next: { ...lesson.next },
+}));
+
+const websiteGuideSlugs = new Set(detailedWebsiteGuides.map((guide) => guide.slug));
+
 export const guides: Guide[] = [
-  {
-    slug: "seo/what-is-seo",
-    area: "SEO",
-    title: "What is SEO?",
-    summary:
-      "SEO is the work of helping a useful page get found for a question someone actually types.",
-    paragraphs: [
-      "Search engine optimization is not a trick, and it is not a traffic machine. A search engine tries to match a query with a page that answers it. SEO is how you make that match more likely: the language people use, the structure of the page, the ability to crawl it, and the reasons another page would treat yours as a source.",
-      "Start with the question, not the tactic. If you cannot say who is searching and what a good answer does for them, keywords and plugins will not save the page. A clear page about one subject beats a vague page trying to rank for everything.",
-      "The practical parts sit in a fixed order. Understand what search is. Learn how a page is discovered and indexed. Match the intent of the query. Write and structure the page. Remove technical barriers. Earn references. Then measure whether the right people arrived — not whether a chart went up.",
-      "BuildSkills treats SEO as that path. You can follow it yourself, or the studio can do the structural and content work with you.",
-    ],
-    next: { href: "/learn/seo", label: "Open the SEO path" },
-  },
-  {
-    slug: "websites/how-to-build-a-website",
-    area: "Websites",
-    title: "How do I build a website?",
-    summary:
-      "Decide the job of the site before you pick a tool. Pages, words, then publish.",
-    paragraphs: [
-      "A website is a published structure with a job. Someone should be able to understand you, contact you, buy, book, or learn. If that job is fuzzy, the design will be fuzzy too. Write the job in one sentence before you open a builder.",
-      "Then list only the pages that job requires. A focused business usually needs a homepage, a clear explanation of the work, proof or detail, and a way to start. Extra pages can wait. Each page needs a heading that says what it is, and text a person can skim.",
-      "Layout comes after the words. Make the heading, the point, and the next action obvious. Choose type and spacing you can repeat. A quiet page that is easy to read will outperform a decorated page that is hard to finish.",
-      "Publishing is the last step of the first version, not the first step. A domain, hosting, and a page you can edit later matter more than a stack you cannot maintain. When the site exists, the next field is usually search: can the right person find it?",
-    ],
-    next: { href: "/learn/seo/what-is-seo", label: "What is SEO?" },
-  },
-  {
-    slug: "seo/how-to-get-website-on-google",
-    area: "SEO",
-    title: "How do I get my website on Google?",
-    summary:
-      "Google has to discover the site, be allowed to crawl it, and decide to keep it.",
-    paragraphs: [
-      "Publishing a website is not the same as being findable. Google has to discover a URL, be allowed to read it, and consider it worth storing in the index. Until that happens, rankings are not the problem. Discovery is.",
-      "Give the site a public address. Make sure the important pages are linked from the homepage, not orphaned. A simple sitemap and a clear title on each page help a crawler understand what exists. Block nothing important with a stray noindex or a password wall.",
-      "Search Console is the honest check. It tells you whether Google has seen the property, which pages it indexed, and which it refused. Submit the site, then read the coverage instead of guessing.",
-      "After a page is indexed, you can work on whether it deserves to rank. That is a different job: intent, content, internal links, and technical health. Do not skip the first job to chase the second.",
-    ],
-    next: { href: "/learn/seo/how-to-increase-website-traffic", label: "How do I increase website traffic?" },
-  },
-  {
-    slug: "seo/how-to-increase-website-traffic",
-    area: "SEO",
-    title: "How do I increase website traffic?",
-    summary:
-      "Choose the visits you want, then earn them with pages that answer specific questions.",
-    paragraphs: [
-      "More traffic is a result, not a task. The useful question is which visits you want, and which page should earn them. A hundred people with the problem you solve are worth more than a thousand who landed by accident.",
-      "Most sites grow from a short list. Publish pages that answer specific questions. Title them the way a person would ask. Link those pages together so a crawler and a reader can move. Fix anything that blocks indexing. Then distribute: search, a place your audience already is, and a reason to pass the page on.",
-      "Chasing every channel at once usually means finishing none of them. Pick one query you can answer better than the current results, and make that page the proof. Measure whether those people arrived and whether they did the thing the page was for.",
-      "If the site has no clear offer, traffic will not know what to do when it arrives. Fix the page before you buy the audience.",
-    ],
-    next: { href: "/learn/seo", label: "Follow the full SEO path" },
-  },
-  {
-    slug: "mobile-apps/how-to-build-a-mobile-app",
-    area: "Mobile Apps",
-    title: "How do I build a mobile app?",
-    summary:
-      "Build an app when the phone is part of the job. Otherwise start with a site.",
-    paragraphs: [
-      "A mobile app is worth building when the job is repeated, personal, or needs the phone itself: a camera, notifications, offline use, a workflow someone opens daily. If the job is to explain a service and take a message, a website is usually the right first product.",
-      "If it is an app, name one workflow. Not a feature list. Who opens it, what they are trying to finish, and what the phone must remember. The screens are the steps of that workflow. Anything that does not serve the workflow waits.",
-      "Then choose how to build: a native app, a cross-platform app, or a carefully made web app. The choice follows the workflow — performance, offline needs, and how often it will change — not whichever framework is fashionable.",
-      "Write the workflow in plain language before you draw the interface. The drawing is easier when the sentences are already true.",
-    ],
-    next: { href: "/learn/business-software", label: "Business software" },
-  },
-  {
-    slug: "business-software/software-for-your-business",
-    area: "Business Software",
-    title: "How do I create software for my business?",
-    summary:
-      "Describe the workflow first. The database and the screens are how you keep that promise.",
-    paragraphs: [
-      "Business software should match work you already do: the steps, the exceptions, and the facts people look up all day. A generic tool that almost fits will be routed around. The fit is the product.",
-      "Write the workflow in sentences. Who starts it. What they enter. What the system must remember. What another person needs to see. What done looks like, including the cases that are not the happy path. If you cannot describe it, you cannot build it yet.",
-      "The data model is that description made precise: the things, the relationships, and what must never be lost. Screens are how a person moves through the same description. Automation is only the steps that are boring and reliable enough to hand over.",
-      "Build the smallest loop that a real person can finish. Use it. Then extend it. A wide system that nobody trusts is more expensive than a narrow one that is true.",
-    ],
-    next: { href: "/services", label: "Have the studio build it" },
-  },
-  {
-    slug: "freelancing/how-to-start-freelancing",
-    area: "Freelancing",
-    title: "How can I start freelancing?",
-    summary:
-      "A paid skill, a few proofs, and a simple way for the right person to start a conversation.",
-    paragraphs: [
-      "Freelancing starts when someone will pay you for a skill they need and you can deliver. Websites, search, design, writing, and software are common because the output is visible. The skill comes first. The personal brand is a later refinement.",
-      "Proof can be small. Three examples with a clear brief — what the work was for, what you did, what changed — are more convincing than a moodboard. Practice projects count if the brief is honest and the result is specific.",
-      "You need a page that says what you do, who it is for, and how a project starts. A price, or a clear way you scope a price. Then go where the problem already is. Waiting to be discovered is not a plan.",
-      "Scope the work in writing. What is included, what is not, when it is done. Most early freelance pain is an unclear edge, not a weak logo.",
-    ],
-    next: { href: "/learn/websites", label: "Learn websites" },
-  },
+  ...guidesBase.filter((guide) => !websiteGuideSlugs.has(guide.slug)),
+  ...detailedWebsiteGuides,
 ];
 
 export const featuredQuestions = [
