@@ -1,13 +1,34 @@
+import type { Metadata } from "next";
 import Link from "next/link";
-export const metadata = {
+import { guides } from "@/data/site";
+import { Interior } from "@/components/library";
+
+export const metadata: Metadata = {
   title: "Resources",
-  description: "Free practical checklists, worksheets and guides."
+  description: "A reading list of BuildSkills guides: SEO, websites, apps, business software, and freelancing.",
 };
+
 export default function Page() {
-  return <div className="container" style={{padding:"90px 0"}}>
-    <p className="eyebrow">BUILDSKILLS</p>
-    <h1 style={{fontSize:"clamp(42px,6vw,72px)", letterSpacing:"-.05em", margin:"0 0 18px"}}>Resources</h1>
-    <p style={{maxWidth: "720px", color:"#667085", fontSize:"18px", lineHeight:1.7}}>Free practical checklists, worksheets and guides.</p>
-    <div style={{marginTop:"30px"}}><Link className="primary-btn" href="/">← Back to BuildSkills</Link></div>
-  </div>;
+  return (
+    <Interior
+      kicker="Resources"
+      title="Read the guides in an order that builds."
+      lede="Start with the question you have. If you want the long path, SEO is the complete sequence."
+    >
+      <ol className="index-list" style={{ borderTop: "1px solid var(--line)" }}>
+        {guides.map((guide, index) => (
+          <li key={guide.slug}>
+            <Link href={"/learn/" + guide.slug} className="index-row">
+              <span className="num tabular">{String(index + 1).padStart(2, "0")}</span>
+              <span>
+                <span className="title" style={{ display: "block" }}>{guide.title}</span>
+                <span className="meta" style={{ display: "block", marginTop: "0.25rem" }}>{guide.summary}</span>
+              </span>
+              <span className="meta">{guide.area}</span>
+            </Link>
+          </li>
+        ))}
+      </ol>
+    </Interior>
+  );
 }

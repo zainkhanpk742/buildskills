@@ -1,5 +1,14 @@
-import LearningHub from "@/components/LearningHub";
+import type { Metadata } from "next";
+import { AreaView } from "@/components/library";
+import { areaBySlug } from "@/data/site";
 
-export default function Page(){
-return <LearningHub title="AI & Productivity" eyebrow="WORK SMARTER" intro="Learn practical ways to use AI and digital tools for research, writing, planning, coding and everyday work." items={[["AI productivity basics","Understand where AI can help and where human judgment still matters.","/learn/ai-productivity/basics"],["Better prompts","Give AI clearer context, goals, constraints and examples.","/learn/ai-productivity/prompts"],["AI for research","Use structured questions and source checking for research tasks.","/learn/ai-productivity/research"],["AI for content","Use AI to brainstorm, outline and improve content responsibly.","/learn/ai-productivity/content"],["AI for developers","Explore AI-assisted planning, coding and debugging workflows.","/learn/ai-productivity/development"]]} />;
+const area = areaBySlug("ai-productivity")!;
+
+export const metadata: Metadata = {
+  title: area.title,
+  description: area.description,
+};
+
+export default function Page() {
+  return <AreaView slug="ai-productivity" />;
 }

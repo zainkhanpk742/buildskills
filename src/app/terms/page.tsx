@@ -1,13 +1,19 @@
-import Link from "next/link";
-export const metadata = {
+import type { Metadata } from "next";
+import { Interior } from "@/components/library";
+
+export const metadata: Metadata = {
   title: "Terms",
-  description: "BuildSkills terms of use."
+  description: "Terms for using the BuildSkills library and for studio work, which is scoped separately.",
 };
+
 export default function Page() {
-  return <div className="container" style={{padding:"90px 0"}}>
-    <p className="eyebrow">BUILDSKILLS</p>
-    <h1 style={{fontSize:"clamp(42px,6vw,72px)", letterSpacing:"-.05em", margin:"0 0 18px"}}>Terms</h1>
-    <p style={{maxWidth: "720px", color:"#667085", fontSize:"18px", lineHeight:1.7}}>BuildSkills terms of use.</p>
-    <div style={{marginTop:"30px"}}><Link className="primary-btn" href="/">← Back to BuildSkills</Link></div>
-  </div>;
+  return (
+    <Interior kicker="Legal" title="Terms" lede="Guides are educational. Studio work is a separate agreement.">
+      <div className="prose">
+        <p>The guides are written to be useful. They are not a promise of rankings, revenue, clients, or a particular outcome. Search, software, and markets change. Use the material with judgment.</p>
+        <p>Commissioned work — a website, an application, a search program, or anything else — is scoped in its own agreement. Nothing on this site is that agreement.</p>
+        <p>The writing, the design of the site, and the name BuildSkills belong to BuildSkills. You may use the ideas. You may not republish the pages as your own.</p>
+      </div>
+    </Interior>
+  );
 }

@@ -1,13 +1,27 @@
-import Link from "next/link";
-export const metadata = {
-  title: "Portfolio",
-  description: "Selected websites, applications, software, databases and design work."
+import type { Metadata } from "next";
+import { Interior } from "@/components/library";
+import { ProjectBoard } from "@/components/home/Sections";
+import { ButtonLink } from "@/components/ui";
+
+export const metadata: Metadata = {
+  title: "Work",
+  description: "A place for real BuildSkills projects: websites, business software, and search programs.",
 };
+
 export default function Page() {
-  return <div className="container" style={{padding:"90px 0"}}>
-    <p className="eyebrow">BUILDSKILLS</p>
-    <h1 style={{fontSize:"clamp(42px,6vw,72px)", letterSpacing:"-.05em", margin:"0 0 18px"}}>Portfolio</h1>
-    <p style={{maxWidth: "720px", color:"#667085", fontSize:"18px", lineHeight:1.7}}>Selected websites, applications, software, databases and design work.</p>
-    <div style={{marginTop:"30px"}}><Link className="primary-btn" href="/">← Back to BuildSkills</Link></div>
-  </div>;
+  return (
+    <Interior
+      kicker="Work"
+      title="Projects, when they are ready to show."
+      lede="These frames are the portfolio. A real screenshot, a real name, and a real link belong here. Nothing on this page is a made-up client."
+    >
+      <ProjectBoard />
+      <div className="actions" style={{ marginTop: "2.5rem" }}>
+        <ButtonLink href="/contact">Start a project</ButtonLink>
+        <ButtonLink href="/services" variant="secondary">
+          See the studio
+        </ButtonLink>
+      </div>
+    </Interior>
+  );
 }

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { GuideView } from "@/components/library";
 import { guideBySlug } from "@/data/site";
 
-const guide = guideBySlug("seo/how-to-increase-website-traffic")!;
+const guide = guideBySlug("freelancing/how-to-start-freelancing")!;
 
 export const metadata: Metadata = {
   title: guide.title,
@@ -10,5 +10,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <GuideView slug="seo/how-to-increase-website-traffic" />;
+  return <GuideView slug="freelancing/how-to-start-freelancing" />;
 }

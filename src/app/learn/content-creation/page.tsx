@@ -1,5 +1,14 @@
-import LearningHub from "@/components/LearningHub";
+import type { Metadata } from "next";
+import { AreaView } from "@/components/library";
+import { areaBySlug } from "@/data/site";
 
-export default function Page(){
-return <LearningHub title="Content Creation" eyebrow="CREATE USEFUL CONTENT" intro="Learn how to plan, create and improve articles, social posts, graphics, videos and other digital content." items={[["Content strategy","Choose topics and formats around real audience needs.","/learn/content-creation/strategy"],["How to write useful articles","Structure explanations so readers can find and use the answer.","/learn/content-creation/articles"],["Video content","Plan practical videos for YouTube and social platforms.","/learn/youtube"],["Content ideas","Turn questions, problems and customer needs into topics.","/questions"],["Content improvement","Update, organize and strengthen existing content.","/learn/content-creation/improvement"]]} />;
+const area = areaBySlug("content-creation")!;
+
+export const metadata: Metadata = {
+  title: area.title,
+  description: area.description,
+};
+
+export default function Page() {
+  return <AreaView slug="content-creation" />;
 }
