@@ -1,23 +1,12 @@
 import Link from "next/link";
 
-export function Header() {
-  return (
-    <header className="site-header">
-      <div className="container nav">
-        <Link className="logo" href="/">BUILD<span>skills</span></Link>
-        <nav>
-          <Link href="/learn">Learn</Link>
-          <Link href="/questions">Questions</Link>
-          <Link href="/services">Services</Link>
-          <Link href="/tools">Tools</Link>
-          <Link href="/resources">Resources</Link>
-          <Link href="/portfolio">Portfolio</Link>
-          <Link href="/about">About</Link>
-          <Link href="/contact">Contact</Link>
-        </nav>
-        <Link className="nav-search" href="/questions">⌕ <span>Search</span></Link>
-        <button className="mobile-menu" aria-label="Open menu">☰</button>
-      </div>
-    </header>
-  );
+const nav=[["Learn","/learn"],["Questions","/questions"],["Services","/services"],["Tools","/tools"],["Resources","/resources"],["Portfolio","/portfolio"]];
+
+export function Header(){
+  return <header className="bs-header-v3"><div className="bs-header-inner bs-container">
+    <Link href="/" className="bs-brand-v3"><span className="bs-brand-mark">B</span><span><strong>BUILD<span>skills</span></strong><small>Learn. Build. Grow.</small></span></Link>
+    <nav className="bs-nav-v3">{nav.map(([label,href])=><Link key={href} href={href}>{label}</Link>)}</nav>
+    <div className="bs-header-right"><Link href="/questions" className="bs-header-search-v3">⌕ <span>Search</span></Link><Link href="/contact" className="bs-header-cta-v3">Start a project</Link></div>
+    <button className="bs-mobile-v3" aria-label="Open navigation">☰</button>
+  </div></header>
 }
