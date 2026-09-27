@@ -1,4 +1,5 @@
 import { websiteLessons } from "@/data/websiteLessons";
+import { seoSocialGuides } from "@/data/seoSocialGuides";
 
 export const nav = [
   { label: "Learn", href: "/learn" },
@@ -271,9 +272,13 @@ const detailedWebsiteGuides: Guide[] = websiteLessons.map((lesson) => ({
 
 const websiteGuideSlugs = new Set(detailedWebsiteGuides.map((guide) => guide.slug));
 
+const detailedSeoSocialGuides: Guide[] = seoSocialGuides.map((guide) => ({ ...guide }));
+const detailedGuideSlugs = new Set(detailedSeoSocialGuides.map((guide) => guide.slug));
+
 export const guides: Guide[] = [
-  ...guidesBase.filter((guide) => !websiteGuideSlugs.has(guide.slug)),
+  ...guidesBase.filter((guide) => !websiteGuideSlugs.has(guide.slug) && !detailedGuideSlugs.has(guide.slug)),
   ...detailedWebsiteGuides,
+  ...detailedSeoSocialGuides,
 ];
 export const featuredQuestions = [
   "seo/what-is-seo",
