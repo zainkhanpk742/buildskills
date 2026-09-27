@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { guides } from "@/data/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const urls = [
@@ -8,7 +9,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/tools", "/resources", "/portfolio", "/about", "/contact",
     "/learn/websites/what-is-a-website", "/learn/websites/how-websites-work", "/learn/websites/domain-vs-hosting", "/learn/websites/html-css-javascript", "/learn/websites/responsive-web-design", "/learn/websites/website-vs-web-app", "/learn/websites/website-structure", "/learn/websites/business-website", "/learn/websites/website-cost", "/learn/websites/publish-a-website", "/learn/websites/website-maintenance", "/privacy-policy", "/terms"
   ];
-  return urls.map((path) => ({
+  const guideUrls = guides.map((guide) => `/learn/${guide.slug}`);
+  const allUrls = [...new Set([...urls, ...guideUrls])];
+  return allUrls.map((path) => ({
     url: `https://buildskills.com.pk${path}`,
     lastModified: new Date()
   }));
