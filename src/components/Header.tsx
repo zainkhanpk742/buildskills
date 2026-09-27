@@ -1,39 +1,81 @@
-import Link from "next/link";
+"use client";
 
-const nav = [
-  ["Learn", "/learn"],
-  ["Questions", "/questions"],
-  ["Services", "/services"],
-  ["Tools", "/tools"],
-  ["Resources", "/resources"],
-];
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+import { nav } from "@/data/site";
+import { ButtonLink, Mark, Wordmark } from "@/components/ui";
 
 export function Header() {
+  const pathname = usePathname();
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
+
   return (
     <header className="site-header">
-      <div className="site-shell header-inner">
-        <Link href="/" className="brand">
-          <span className="brand-mark">B</span>
-          <span className="brand-name">build<span>skills</span><small>LEARN · BUILD · GROW</small></span>
+      <a className="skip" href="#content">
+        Skip to content
+      </a>
+      <div className="page-wrap header-bar">
+        <Link href="/" className="brand" aria-label="BuildSkills, home">
+          <Mark />
+          <Wordmark />
         </Link>
-
-        <nav className="desktop-nav">
-          {nav.map(([label, href]) => <Link href={href} key={href}>{label}</Link>)}
+        <nav className="desktop-nav" aria-label="Primary">
+          {nav.map((item) => {
+            const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
+            return (
+              <Link key={item.href} href={item.href} aria-current={active ? "page" : undefined}>
+                {item.label}
+              </Link>
+            );
+          })}
         </nav>
-
-        <div className="header-actions">
-          <Link href="/questions" className="header-search">⌕ <span>Search</span></Link>
-          <Link href="/contact" className="header-cta">Start a project <span>↗</span></Link>
+        <div className="header-cta">
+          <ButtonLink href="/contact" compact>
+            Start a project
+          </ButtonLink>
         </div>
-
-        <details className="mobile-menu">
-          <summary aria-label="Open navigation">☰</summary>
-          <div className="mobile-menu-panel">
-            {nav.map(([label, href]) => <Link href={href} key={href}>{label}</Link>)}
-            <Link href="/contact" className="mobile-menu-cta">Start a project →</Link>
-          </div>
-        </details>
+        <button
+          type="button"
+          className="menu-btn"
+          aria-expanded={open}
+          aria-controls="mobile-nav"
+          onClick={() => setOpen((value) => !value)}
+        >
+          <span className="sr-only">{open ? "Close menu" : "Open menu"}</span>
+          <span className="menu-icon" aria-hidden="true">
+            <span />
+            <span />
+          </span>
+        </button>
       </div>
+      {open ? (
+        <nav id="mobile-nav" className="mobile-nav" aria-label="Mobile">
+          <div className="page-wrap">
+            {nav.map((item) => (
+              <Link key={item.href} href={item.href} className="nav-link">
+                {item.label}
+              </Link>
+            ))}
+            <div className="actions">
+              <ButtonLink href="/contact">Start a project</ButtonLink>
+            </div>
+          </div>
+        </nav>
+      ) : null}
     </header>
   );
 }

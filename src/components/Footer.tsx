@@ -1,20 +1,85 @@
 import Link from "next/link";
+import { areas } from "@/data/site";
+import { Mark } from "@/components/ui";
+
+const columns = [
+  {
+    title: "Learn",
+    links: [
+      ["All fields", "/learn"],
+      ["Questions", "/questions"],
+      ["SEO path", "/learn/seo"],
+      ["Websites", "/learn/websites"],
+      ["Freelancing", "/learn/freelancing"],
+    ],
+  },
+  {
+    title: "Services",
+    links: [
+      ["Studio", "/services"],
+      ["Websites", "/services#website-development"],
+      ["SEO", "/services#seo"],
+      ["Software", "/services#business-software"],
+      ["Start a project", "/contact"],
+    ],
+  },
+  {
+    title: "Resources",
+    links: [
+      ["Reading list", "/resources"],
+      ["Tools", "/tools"],
+      ["Portfolio", "/portfolio"],
+    ],
+  },
+  {
+    title: "Company",
+    links: [
+      ["About", "/about"],
+      ["Contact", "/contact"],
+      ["Privacy", "/privacy-policy"],
+      ["Terms", "/terms"],
+    ],
+  },
+] as const;
 
 export function Footer() {
   return (
     <footer className="site-footer">
-      <div className="site-shell footer-main">
+      <div className="page-wrap footer-grid section-pad">
         <div className="footer-brand">
-          <Link href="/" className="brand footer-brand-link"><span className="brand-mark">B</span><span className="brand-name">build<span>skills</span><small>LEARN · BUILD · GROW</small></span></Link>
-          <p>Practical digital knowledge and professional services for people who want to build useful things online.</p>
+          <Link href="/" className="brand" aria-label="BuildSkills, home">
+            <Mark onDark />
+            <span className="wordmark">
+              <b>Build</b>
+              <em>Skills</em>
+            </span>
+          </Link>
+          <p>Learn. Build. Grow.</p>
+          <p>
+            A knowledge studio for practical digital work — questions, learning paths, and the studio that can build the thing.
+          </p>
         </div>
-        <div className="footer-links">
-          <div><strong>Learn</strong><Link href="/learn">All topics</Link><Link href="/learn/websites">Websites</Link><Link href="/learn/seo">SEO</Link><Link href="/learn/freelancing">Freelancing</Link></div>
-          <div><strong>Build</strong><Link href="/services">Services</Link><Link href="/portfolio">Portfolio</Link><Link href="/contact">Start a project</Link></div>
-          <div><strong>Explore</strong><Link href="/questions">Questions</Link><Link href="/tools">Tools</Link><Link href="/resources">Resources</Link></div>
+        <div className="footer-cols">
+          {columns.map((column) => (
+            <div key={column.title}>
+              <p className="kicker plain" style={{ color: "var(--on-dark-muted)" }}>{column.title}</p>
+              <ul>
+                {column.links.map(([label, href]) => (
+                  <li key={href}>
+                    <Link href={href}>{label}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
-      <div className="site-shell footer-bottom"><span>© {new Date().getFullYear()} BuildSkills.com.pk</span><div><Link href="/privacy-policy">Privacy</Link><Link href="/terms">Terms</Link></div></div>
+      <div className="footer-base">
+        <div className="page-wrap">
+          <p>© {new Date().getFullYear()} BuildSkills</p>
+          <p>{areas.length} fields of practice. One way through.</p>
+        </div>
+      </div>
     </footer>
   );
 }
