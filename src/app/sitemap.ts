@@ -4,7 +4,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const urls = [
     "", "/learn", "/learn/websites", "/learn/seo", "/learn/mobile-apps",
     "/learn/databases", "/learn/business-software", "/learn/youtube",
-    "/learn/x-twitter", "/learn/make-money-online", "/questions", "/services",
+    "/learn/x-twitter", "/learn/facebook", "/learn/instagram", "/learn/tiktok", "/learn/linkedin", "/learn/make-money-online", "/questions", "/services",
     "/tools", "/resources", "/portfolio", "/about", "/contact",
     "/privacy-policy", "/terms"
   ];
