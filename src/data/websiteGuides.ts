@@ -4,7 +4,7 @@ export const websiteGuides = [
     area: "Websites",
     title: "What is a website?",
     summary: "A website is a collection of connected web pages and resources published under a web address so people can access information or functionality through a browser.",
-    paragraphs: [],,
+    paragraphs: [],
     sections: [
       {
         heading: "The simple definition",
@@ -57,7 +57,7 @@ export const websiteGuides = [
     area: "Websites",
     title: "How do websites work?",
     summary: "A browser uses a URL to find a server, requests resources over HTTP, and then assembles the returned HTML, CSS, JavaScript, and assets into a page.",
-    paragraphs: [],,
+    paragraphs: [],
     sections: [
       {
         heading: "From a URL to a page",
@@ -103,7 +103,7 @@ export const websiteGuides = [
     area: "Websites",
     title: "What is the difference between a domain and web hosting?",
     summary: "A domain is the human-readable address people use to reach a site; hosting is the server environment that delivers the site's files or application.",
-    paragraphs: [],,
+    paragraphs: [],
     sections: [
       {
         heading: "What is a domain?",
@@ -149,7 +149,7 @@ export const websiteGuides = [
     area: "Websites",
     title: "What are HTML, CSS, and JavaScript?",
     summary: "HTML structures a web page, CSS controls its presentation, and JavaScript adds programmable behavior and interactivity.",
-    paragraphs: [],,
+    paragraphs: [],
     sections: [
       {
         heading: "HTML: structure and meaning",
@@ -196,7 +196,7 @@ export const websiteGuides = [
     area: "Websites",
     title: "What is responsive web design?",
     summary: "Responsive web design makes a site adapt its layout and content to different screen sizes and device conditions.",
-    paragraphs: [],,
+    paragraphs: [],
     sections: [
       {
         heading: "What responsive means",
@@ -241,7 +241,7 @@ export const websiteGuides = [
     area: "Websites",
     title: "What is the difference between a website and a web app?",
     summary: "A website mainly communicates information or a service, while a web app is centered on interactive tasks, data, accounts, or workflows.",
-    paragraphs: [],,
+    paragraphs: [],
     sections: [
       {
         heading: "The practical difference",
@@ -281,7 +281,7 @@ export const websiteGuides = [
     area: "Websites",
     title: "How should I structure a website?",
     summary: "Structure a website around what visitors need to understand and do, then make each page responsible for one clear purpose.",
-    paragraphs: [],,
+    paragraphs: [],
     sections: [
       {
         heading: "Start with the user's tasks",
@@ -327,7 +327,7 @@ export const websiteGuides = [
     area: "Websites",
     title: "How do I build a business website?",
     summary: "Start with the business goal, audience, offer, proof, and next action; then build only the pages needed to support that journey.",
-    paragraphs: [],,
+    paragraphs: [],
     sections: [
       {
         heading: "Define the job",
@@ -372,7 +372,7 @@ export const websiteGuides = [
     area: "Websites",
     title: "How much does a website cost?",
     summary: "There is no single correct website price. Cost depends on scope, design, content, functionality, integrations, hosting, and ongoing maintenance.",
-    paragraphs: [],,
+    paragraphs: [],
     sections: [
       {
         heading: "Why prices vary",
@@ -421,7 +421,7 @@ export const websiteGuides = [
     area: "Websites",
     title: "How do I publish a website?",
     summary: "To publish a website, put its files or application on a public hosting environment, connect a domain if you have one, and verify the live site.",
-    paragraphs: [],,
+    paragraphs: [],
     sections: [
       {
         heading: "Prepare the site",
@@ -473,7 +473,7 @@ export const websiteGuides = [
     area: "Websites",
     title: "What does website maintenance include?",
     summary: "Website maintenance is the ongoing work of keeping content, software, links, security, performance, backups, and integrations reliable after launch.",
-    paragraphs: [],,
+    paragraphs: [],
     sections: [
       {
         heading: "Maintenance is more than editing text",
