@@ -44,7 +44,7 @@ export function Header() {
           })}
         </nav>
         <div className="header-cta">
-          <ButtonLink href="/contact" compact>
+          <ButtonLink href="/contact" variant="accent" compact>
             Start a project
           </ButtonLink>
         </div>

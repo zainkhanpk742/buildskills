@@ -14,28 +14,21 @@ const columns = [
     ],
   },
   {
-    title: "Services",
+    title: "Studio",
     links: [
-      ["Studio", "/services"],
+      ["Services", "/services"],
+      ["Work", "/portfolio"],
       ["Websites", "/services#website-development"],
       ["SEO", "/services#seo"],
-      ["Software", "/services#business-software"],
       ["Start a project", "/contact"],
-    ],
-  },
-  {
-    title: "Resources",
-    links: [
-      ["Reading list", "/resources"],
-      ["Tools", "/tools"],
-      ["Portfolio", "/portfolio"],
     ],
   },
   {
     title: "Company",
     links: [
       ["About", "/about"],
-      ["Contact", "/contact"],
+      ["Resources", "/resources"],
+      ["Tools", "/tools"],
       ["Privacy", "/privacy-policy"],
       ["Terms", "/terms"],
     ],
@@ -55,9 +48,7 @@ export function Footer() {
             </span>
           </Link>
           <p>Learn. Build. Grow.</p>
-          <p>
-            A knowledge studio for practical digital work — questions, learning paths, and the studio that can build the thing.
-          </p>
+          <p>Answers, learning paths, and a studio that can build the work. Websites, search, apps, and business software.</p>
         </div>
         <div className="footer-cols">
           {columns.map((column) => (
