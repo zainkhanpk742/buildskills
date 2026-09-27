@@ -1,3 +1,4 @@
+import { websiteGuides } from "./websiteGuides";
 export const nav = [
   { label: "Learn", href: "/learn" },
   { label: "Questions", href: "/questions" },
@@ -100,6 +101,14 @@ export type Guide = {
   summary: string;
   paragraphs: string[];
   next: { href: string; label: string };
+  sections?: {
+    heading: string;
+    body: string[];
+    bullets?: string[];
+  }[];
+  sources?: { label: string; url: string }[];
+  related?: { href: string; label: string }[];
+  lastReviewed?: string;
 };
 
 export const guides: Guide[] = [
@@ -201,6 +210,7 @@ export const guides: Guide[] = [
     ],
     next: { href: "/learn/websites", label: "Learn websites" },
   },
+  ...websiteGuides,
 ];
 
 export const featuredQuestions = [
