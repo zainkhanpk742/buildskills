@@ -1,0 +1,6 @@
+import Link from "next/link";
+
+type Item={title:string;description:string;href:string};
+export default function LearningHub({title,eyebrow,intro,items}:{title:string;eyebrow:string;intro:string;items:Item[]}){
+return <main className="bs-content-page"><section className="bs-content-hero"><div className="bs-container"><div className="bs-kicker"><span /> {eyebrow}</div><h1>{title}</h1><p>{intro}</p><div className="bs-content-actions"><Link href="/learn" className="bs-btn bs-btn-dark">All learning →</Link><Link href="/questions" className="bs-btn bs-btn-outline">Browse questions</Link></div></div></section><section className="bs-content-list bs-container"><div className="bs-content-list-head"><span>LEARNING GUIDES</span><strong>{items.length} practical topics</strong></div><div className="bs-guide-grid">{items.map((item,i)=><Link className="bs-guide-card" href={item.href} key={item.title}><span>{String(i+1).padStart(2,"0")}</span><h2>{item.title}</h2><p>{item.description}</p><b>Read guide →</b></Link>)}</div></section><section className="bs-content-cta"><div className="bs-container"><h2>Learn something. Then use it.</h2><p>BuildSkills connects explanations with tools, projects and professional services.</p><Link href="/contact" className="bs-btn bs-btn-light">Start a project →</Link></div></section></main>
+}
