@@ -501,4 +501,4 @@ export const websiteGuides = [
     ],
     next: { href: "/learn/websites/how-to-build-a-website", label: "How do I build a website?" }
   }
-] as const;
+];
