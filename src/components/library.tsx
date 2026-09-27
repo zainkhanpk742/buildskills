@@ -38,6 +38,10 @@ export function GuideView({ slug }: { slug: string }) {
       <article>
         <header className="page-head">
           <div className="page-wrap">
+            <nav aria-label="Breadcrumb" className="kicker plain faint" style={{ marginBottom: "1.25rem" }}>
+              <Link href="/learn">Learn</Link> <span aria-hidden="true">/</span>{" "}
+              <Link href={field ? `/learn/${field.slug}` : "/learn"}>{guide.area}</Link>
+            </nav>
             <p className="kicker plain" style={{ color: "var(--signal)" }}>
               {guide.area}
             </p>
@@ -50,17 +54,52 @@ export function GuideView({ slug }: { slug: string }) {
             {guide.paragraphs.map((paragraph) => (
               <p key={paragraph.slice(0, 32)}>{paragraph}</p>
             ))}
+            {guide.sections?.map((section) => (
+              <section key={section.heading}>
+                <h2>{section.heading}</h2>
+                {section.body.map((paragraph) => (
+                  <p key={paragraph.slice(0, 32)}>{paragraph}</p>
+                ))}
+                {section.bullets?.length ? (
+                  <ul>
+                    {section.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}
+                  </ul>
+                ) : null}
+              </section>
+            ))}
             <div className="continue">
               <p className="kicker plain faint">Continue</p>
               <Link href={guide.next.href}>{guide.next.label}</Link>
             </div>
+            {guide.related?.length ? (
+              <section className="continue">
+                <p className="kicker plain faint">Related questions</p>
+                <ul>
+                  {guide.related.map((item) => (
+                    <li key={item.href}><Link href={item.href}>{item.label}</Link></li>
+                  ))}
+                </ul>
+              </section>
+            ) : null}
+            {guide.sources?.length ? (
+              <section className="continue">
+                <p className="kicker plain faint">Sources & further reading</p>
+                <ul>
+                  {guide.sources.map((source) => (
+                    <li key={source.url}>
+                      <a href={source.url} target="_blank" rel="noreferrer">{source.label}</a>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ) : null}
           </div>
           <aside>
             <p className="kicker plain faint">Also in {guide.area}</p>
             <ul className="index-list" style={{ borderTop: "1px solid var(--line)", marginTop: "1rem" }}>
               {siblings.length === 0 ? (
                 <li className="index-row">
-                  <span className="meta">More guides in this field are still being written.</span>
+                  <span className="meta">This is currently the only guide in this field.</span>
                 </li>
               ) : (
                 siblings.map((item) => (
