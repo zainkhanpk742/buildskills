@@ -1,3 +1,5 @@
+import { websiteGuides } from "@/data/websiteGuides";
+
 export const nav = [
   { label: "Learn", href: "/learn" },
   { label: "Questions", href: "/questions" },
@@ -257,6 +259,25 @@ export const guides: Guide[] = [
   },
 ];
 
+
+const detailedWebsiteGuides: Guide[] = websiteGuides.map((guide) => ({
+  slug: guide.slug,
+  area: guide.area,
+  title: guide.title,
+  summary: guide.summary,
+  paragraphs: guide.sections.flatMap((section) => [
+    section.heading,
+    ...section.body,
+    ...(section.bullets ?? []),
+  ]),
+  next: { href: guide.next.href, label: guide.next.label },
+}));
+
+export const allGuides: Guide[] = [
+  ...guides.filter((guide) => !detailedWebsiteGuides.some((item) => item.slug === guide.slug)),
+  ...detailedWebsiteGuides,
+];
+
 export const featuredQuestions = [
   "seo/what-is-seo",
   "websites/how-to-build-a-website",
@@ -428,7 +449,7 @@ export type SearchHit = {
 };
 
 export function searchHits(): SearchHit[] {
-  const questions: SearchHit[] = guides.map((guide) => ({
+  const questions: SearchHit[] = allGuides.map((guide) => ({
     href: `/learn/${guide.slug}`,
     title: guide.title,
     kind: "Question",
@@ -464,7 +485,7 @@ export function filterHits(query: string): SearchHit[] {
   const q = query.trim().toLowerCase();
   if (!q) {
     return featuredQuestions.map((slug) => {
-      const guide = guides.find((item) => item.slug === slug)!;
+      const guide = allGuides.find((item) => item.slug === slug)!;
       return {
         href: `/learn/${guide.slug}`,
         title: guide.title,
@@ -478,7 +499,7 @@ export function filterHits(query: string): SearchHit[] {
 }
 
 export function guideBySlug(slug: string) {
-  return guides.find((guide) => guide.slug === slug);
+  return allGuides.find((guide) => guide.slug === slug);
 }
 
 export function areaBySlug(slug: string) {
@@ -486,5 +507,5 @@ export function areaBySlug(slug: string) {
 }
 
 export function guidesInArea(title: string) {
-  return guides.filter((guide) => guide.area === title);
+  return allGuides.filter((guide) => guide.area === title);
 }
