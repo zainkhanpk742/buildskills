@@ -1,12 +1,39 @@
 import Link from "next/link";
 
-const nav=[["Learn","/learn"],["Questions","/questions"],["Services","/services"],["Tools","/tools"],["Resources","/resources"],["Portfolio","/portfolio"]];
+const nav = [
+  ["Learn", "/learn"],
+  ["Questions", "/questions"],
+  ["Services", "/services"],
+  ["Tools", "/tools"],
+  ["Resources", "/resources"],
+];
 
-export function Header(){
-  return <header className="bs-header-v3"><div className="bs-header-inner bs-container">
-    <Link href="/" className="bs-brand-v3"><span className="bs-brand-mark">B</span><span><strong>BUILD<span>skills</span></strong><small>Learn. Build. Grow.</small></span></Link>
-    <nav className="bs-nav-v3">{nav.map(([label,href])=><Link key={href} href={href}>{label}</Link>)}</nav>
-    <div className="bs-header-right"><Link href="/questions" className="bs-header-search-v3">⌕ <span>Search</span></Link><Link href="/contact" className="bs-header-cta-v3">Start a project</Link></div>
-    <button className="bs-mobile-v3" aria-label="Open navigation">☰</button>
-  </div></header>
+export function Header() {
+  return (
+    <header className="site-header">
+      <div className="site-shell header-inner">
+        <Link href="/" className="brand">
+          <span className="brand-mark">B</span>
+          <span className="brand-name">build<span>skills</span><small>LEARN · BUILD · GROW</small></span>
+        </Link>
+
+        <nav className="desktop-nav">
+          {nav.map(([label, href]) => <Link href={href} key={href}>{label}</Link>)}
+        </nav>
+
+        <div className="header-actions">
+          <Link href="/questions" className="header-search">⌕ <span>Search</span></Link>
+          <Link href="/contact" className="header-cta">Start a project <span>↗</span></Link>
+        </div>
+
+        <details className="mobile-menu">
+          <summary aria-label="Open navigation">☰</summary>
+          <div className="mobile-menu-panel">
+            {nav.map(([label, href]) => <Link href={href} key={href}>{label}</Link>)}
+            <Link href="/contact" className="mobile-menu-cta">Start a project →</Link>
+          </div>
+        </details>
+      </div>
+    </header>
+  );
 }
