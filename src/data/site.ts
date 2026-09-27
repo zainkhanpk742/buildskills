@@ -10,6 +10,7 @@ export type Area = {
   slug: string;
   title: string;
   summary: string;
+  question: string;
   description: string;
 };
 
@@ -17,6 +18,7 @@ export const areas: Area[] = [
   {
     slug: "websites",
     title: "Websites",
+    question: "How do I build a website?",
     summary: "Plan, write, and publish a site that has a job.",
     description:
       "A website is a public structure. The useful order is the job, the pages, the words, then the build. This field covers that sequence without treating the tool as the point.",
@@ -24,6 +26,7 @@ export const areas: Area[] = [
   {
     slug: "seo",
     title: "SEO",
+    question: "How do I get my website found on Google?",
     summary: "Make useful pages easier to find in search.",
     description:
       "Search is a matching problem: a question, a page, and a reason to trust it. The path here runs from the definition to measurement, in the order the work actually happens.",
@@ -31,6 +34,7 @@ export const areas: Area[] = [
   {
     slug: "mobile-apps",
     title: "Mobile Apps",
+    question: "How do I make a mobile app?",
     summary: "Decide when an app is the right product, then shape it.",
     description:
       "An app earns its place when the job is repeated, personal, or tied to the phone. This field starts with that decision, then the workflow, the screens, and the data.",
@@ -38,6 +42,7 @@ export const areas: Area[] = [
   {
     slug: "databases",
     title: "Databases",
+    question: "How do I design a database?",
     summary: "Organize information so the rest of the system can trust it.",
     description:
       "Before tables and tools, name the things you need to remember and how they relate. A clear model saves more time than a clever query.",
@@ -45,6 +50,7 @@ export const areas: Area[] = [
   {
     slug: "business-software",
     title: "Business Software",
+    question: "How do I make software for my business?",
     summary: "Software shaped around a real workflow, not a generic suite.",
     description:
       "Business software should follow the work: who starts it, what they enter, what must be remembered, and what done looks like. The screens come after that description.",
@@ -52,6 +58,7 @@ export const areas: Area[] = [
   {
     slug: "digital-marketing",
     title: "Digital Marketing",
+    question: "How do I market my business online?",
     summary: "Reach the people who already have the problem.",
     description:
       "Marketing is distribution with a point. Choose the audience, the offer, and one channel you can sustain. Noise is not a strategy.",
@@ -59,6 +66,7 @@ export const areas: Area[] = [
   {
     slug: "content-creation",
     title: "Content Creation",
+    question: "How do I create content people want?",
     summary: "Make pieces people needed, in a form they can use.",
     description:
       "Useful content answers a specific question or teaches a specific move. Topics, structure, and a reason to publish come before the posting schedule.",
@@ -66,6 +74,7 @@ export const areas: Area[] = [
   {
     slug: "graphic-design",
     title: "Graphic Design",
+    question: "How do I design a logo and brand?",
     summary: "A visual system that makes the work recognizable.",
     description:
       "Design here means hierarchy, type, and a small set of decisions you can repeat. A logo is not a brand, and decoration is not a system.",
@@ -73,6 +82,7 @@ export const areas: Area[] = [
   {
     slug: "freelancing",
     title: "Freelancing",
+    question: "How do I start freelancing?",
     summary: "Turn a useful skill into paid, scoped work.",
     description:
       "Freelancing needs a skill someone will pay for, proof you can do it, and a way to start a conversation. The brand can be simple. The offer cannot be vague.",
@@ -80,13 +90,57 @@ export const areas: Area[] = [
   {
     slug: "online-business",
     title: "Online Business",
+    question: "How do I start an online business?",
     summary: "A offer, a way to deliver it, and a way to be found.",
     description:
       "An online business is an offer with a delivery system and a path to the right people. Start narrower than you want to. Breadth is what you earn.",
   },
   {
+    slug: "facebook",
+    title: "Facebook",
+    question: "How do I grow and make money on Facebook?",
+    summary: "Build a useful Facebook presence, reach the right audience, and understand routes to monetization.",
+    description: "Learn Facebook through practical questions about pages, content, audience growth, advertising, leads, and monetization.",
+  },
+  {
+    slug: "youtube",
+    title: "YouTube",
+    question: "How do I grow and make money on YouTube?",
+    summary: "Build a channel around useful videos, an audience, and a sustainable way to earn.",
+    description: "Learn YouTube through questions about channels, video ideas, titles, thumbnails, audience growth, analytics, and monetization.",
+  },
+  {
+    slug: "x-twitter",
+    title: "X / Twitter",
+    question: "How do I grow and make money on X?",
+    summary: "Turn useful ideas into posts, conversations, an audience, and business opportunities.",
+    description: "Learn X through questions about profile setup, posting, audience growth, replies, communities, business use, and monetization.",
+  },
+  {
+    slug: "instagram",
+    title: "Instagram",
+    question: "How do I grow and make money on Instagram?",
+    summary: "Use posts, Reels, Stories, and a clear offer to build an audience and business.",
+    description: "Learn Instagram through questions about profiles, content, Reels, Stories, reach, audience growth, and monetization.",
+  },
+  {
+    slug: "tiktok",
+    title: "TikTok",
+    question: "How do I grow and make money on TikTok?",
+    summary: "Create useful short-form content, understand distribution, and connect attention to an offer.",
+    description: "Learn TikTok through questions about content ideas, short videos, audience growth, analytics, brand work, and monetization.",
+  },
+  {
+    slug: "linkedin",
+    title: "LinkedIn",
+    question: "How do I use LinkedIn to get clients or a job?",
+    summary: "Build a credible professional presence and turn useful conversations into opportunities.",
+    description: "Learn LinkedIn through questions about profiles, networking, content, jobs, clients, and professional outreach.",
+  },
+  {
     slug: "ai-productivity",
     title: "AI & Productivity",
+    question: "How do I use AI to get more done?",
     summary: "Use new tools on real work, without the theatre.",
     description:
       "AI is useful when it shortens a task you already understand. This field is about workflows, review, and judgment — not a pile of prompts with nowhere to go.",
