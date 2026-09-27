@@ -1,4 +1,3 @@
-import { websiteGuides } from "./websiteGuides";
 export const nav = [
   { label: "Learn", href: "/learn" },
   { label: "Questions", href: "/questions" },
@@ -101,14 +100,6 @@ export type Guide = {
   summary: string;
   paragraphs: string[];
   next: { href: string; label: string };
-  sections?: {
-    heading: string;
-    body: string[];
-    bullets?: string[];
-  }[];
-  sources?: { label: string; url: string }[];
-  related?: { href: string; label: string }[];
-  lastReviewed?: string;
 };
 
 export const guides: Guide[] = [
@@ -210,61 +201,6 @@ export const guides: Guide[] = [
     ],
     next: { href: "/learn/websites", label: "Learn websites" },
   },
-  {
-    slug: "seo/what-are-good-backlinks",
-    area: "SEO",
-    title: "What are good backlinks?",
-    summary: "A useful backlink is a relevant, editorially earned link from a page that genuinely helps its readers; buying or manipulating links for rankings is a different practice and can violate Google's spam policies.",
-    sections: [
-      {
-        heading: "What a backlink is",
-        body: [
-          "A backlink is a link from another website to a page on your site. Links can help people discover resources and can also help search engines understand relationships between pages.",
-          "Not every link has the same context or value. A relevant link placed because it helps the reader is fundamentally different from a link created mainly to manipulate search rankings."
-        ]
-      },
-      {
-        heading: "What makes a backlink useful",
-        body: [
-          "The strongest reason to earn a link is that another publisher genuinely wants to reference your work. Relevance matters: a link makes more sense when the source and destination are connected by a real topic or purpose.",
-          "Useful original resources, research, practical guides, tools, case studies, and genuinely noteworthy work can give other sites a reason to cite your page."
-        ]
-      },
-      {
-        heading: "What to avoid",
-        body: [
-          "Do not build a backlink strategy around buying links for ranking credit, automated link creation, excessive link exchanges, low-quality directories, or other schemes designed primarily to manipulate rankings.",
-          "Google's spam policies specifically address link spam. A link strategy should therefore begin with creating something worth referencing and making the resource easy to discover."
-        ],
-        bullets: [
-          "Avoid buying or selling links for ranking purposes.",
-          "Avoid automated programs that create links.",
-          "Avoid excessive link exchanges made primarily for SEO.",
-          "Avoid low-quality directories or bookmark sites created mainly for links.",
-          "Do not stuff keywords into anchor text unnaturally."
-        ]
-      },
-      {
-        heading: "A practical approach",
-        body: [
-          "Create a useful page, publish it on a site that is easy to crawl, and tell relevant people about it. If someone independently chooses to reference it because it helps their audience, that is a much healthier foundation than trying to manufacture link volume.",
-          "Also use internal links on your own site. Google says links help it discover pages and understand the relationships between them, so important pages should be reachable through descriptive links."
-        ]
-      }
-    ],
-    sources: [
-      { label: "Google Search Central: Link best practices", url: "https://developers.google.com/search/docs/crawling-indexing/links-crawlable" },
-      { label: "Google Search Central: Spam policies", url: "https://developers.google.com/search/docs/essentials/spam-policies" },
-      { label: "Google Search Central: SEO Starter Guide", url: "https://developers.google.com/search/docs/fundamentals/seo-starter-guide" }
-    ],
-    related: [
-      { href: "/learn/seo/what-is-seo", label: "What is SEO?" },
-      { href: "/learn/seo/how-to-get-website-on-google", label: "How do I get my website on Google?" },
-      { href: "/learn/websites/website-structure", label: "How should I structure a website?" }
-    ],
-    next: { href: "/learn/seo/what-is-seo", label: "Return to the SEO foundation" }
-  },
-  ...websiteGuides,
 ];
 
 export const featuredQuestions = [
