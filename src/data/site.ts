@@ -1,3 +1,5 @@
+import { websiteLessons } from "@/data/websiteLessons";
+
 export const nav = [
   { label: "Learn", href: "/learn" },
   { label: "Questions", href: "/questions" },
@@ -156,7 +158,7 @@ export type Guide = {
   next: { href: string; label: string };
 };
 
-export const guides: Guide[] = [
+const guidesBase: Guide[] = [
   {
     slug: "seo/what-is-seo",
     area: "SEO",
@@ -257,6 +259,22 @@ export const guides: Guide[] = [
   },
 ];
 
+
+const detailedWebsiteGuides: Guide[] = websiteLessons.map((lesson) => ({
+  slug: lesson.slug,
+  area: lesson.area,
+  title: lesson.title,
+  summary: lesson.summary,
+  paragraphs: [...lesson.paragraphs],
+  next: { ...lesson.next },
+}));
+
+const websiteGuideSlugs = new Set(detailedWebsiteGuides.map((guide) => guide.slug));
+
+export const guides: Guide[] = [
+  ...guidesBase.filter((guide) => !websiteGuideSlugs.has(guide.slug)),
+  ...detailedWebsiteGuides,
+];
 export const featuredQuestions = [
   "seo/what-is-seo",
   "websites/how-to-build-a-website",
