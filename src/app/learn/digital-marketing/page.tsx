@@ -1,0 +1,5 @@
+import LearningHub from "@/components/LearningHub";
+
+export default function Page(){
+return <LearningHub title="Digital Marketing" eyebrow="GROW ONLINE" intro="Learn practical digital marketing: audiences, content, search, social channels, email and measurement." items={[["Digital marketing basics","Understand channels, audiences, offers and the customer journey.","/learn/digital-marketing/basics"],["Content marketing","Create useful content that attracts and helps the right audience.","/learn/content-creation"],["SEO and search visibility","Learn how search can support long-term discovery.","/learn/seo"],["Social media marketing","Plan useful social content without posting blindly.","/learn/facebook"],["Measuring digital marketing","Understand traffic, conversions and useful performance signals.","/learn/digital-marketing/measurement"]]} />;
+}
