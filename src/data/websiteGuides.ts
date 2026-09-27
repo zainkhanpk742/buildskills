@@ -266,7 +266,7 @@ export const websiteGuides = [
     related: [
       { href: "/learn/websites/what-is-a-website", label: "What is a website?" },
       { href: "/learn/business-software/software-for-your-business", label: "How do I create software for my business?" },
-      { href: "/services/web-applications", label: "Web application development" }
+      { href: "/services/software", label: "Web application development" }
     ],
     next: { href: "/learn/websites/website-structure", label: "How should I structure a website?" }
   },
@@ -403,7 +403,7 @@ export const websiteGuides = [
     related: [
       { href: "/learn/websites/business-website", label: "How do I build a business website?" },
       { href: "/learn/websites/domain-vs-hosting", label: "Domain vs hosting" },
-      { href: "/services/website-development", label: "Website development service" }
+      { href: "/services", label: "Website development service" }
     ],
     next: { href: "/learn/websites/publish-a-website", label: "How do I publish a website?" }
   },
@@ -497,7 +497,7 @@ export const websiteGuides = [
     related: [
       { href: "/learn/websites/publish-a-website", label: "How do I publish a website?" },
       { href: "/learn/seo/what-is-seo", label: "What is SEO?" },
-      { href: "/services/website-development", label: "Website development service" }
+      { href: "/services", label: "Website development service" }
     ],
     next: { href: "/learn/websites/how-to-build-a-website", label: "How do I build a website?" }
   }
