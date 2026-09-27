@@ -21,13 +21,13 @@ const serif = Instrument_Serif({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://buildskills.com.pk"),
-  title: { default: "BuildSkills — Learn digital skills. Build something real.", template: "%s | BuildSkills" },
+  title: { default: "BuildSkills \u2014 Learn something useful. Build something real.", template: "%s | BuildSkills" },
   description:
-    "BuildSkills is a knowledge studio for practical digital work. Ask a real question, follow a learning path, or have the work built — websites, SEO, apps, and business software.",
+    "BuildSkills helps you find an answer, learn a practical skill, and have the work built. Websites, SEO, apps, and business software.",
   keywords: ["website development", "SEO", "website traffic", "mobile app development", "business software", "databases", "online business", "digital skills"],
   openGraph: {
-    title: "BuildSkills — Learn digital skills. Build something real.",
-    description: "Ask a real question, follow a learning path, or have the work built.",
+    title: "BuildSkills \u2014 Learn something useful. Build something real.",
+    description: "Find an answer, follow a learning path, or have the work built.",
     url: "https://buildskills.com.pk",
     siteName: "BuildSkills",
     type: "website",
