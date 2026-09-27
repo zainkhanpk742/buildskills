@@ -1,0 +1,5 @@
+import LearningHub from "@/components/LearningHub";
+
+export default function Page(){
+return <LearningHub title="Graphic Design" eyebrow="DESIGN" intro="Learn the foundations of visual communication for logos, social graphics, websites and business materials." items={[["Graphic design basics","Understand layout, hierarchy, typography and visual consistency.","/learn/graphic-design/basics"],["Logo design","Learn what makes a logo useful, recognizable and practical.","/learn/graphic-design/logo-design"],["Social media graphics","Create clear graphics for posts, campaigns and announcements.","/learn/graphic-design/social-graphics"],["Brand identity","Connect colors, typography and visuals into a consistent system.","/learn/graphic-design/branding"],["Design for websites","Use visual hierarchy to make websites easier to understand.","/learn/websites"]]} />;
+}
