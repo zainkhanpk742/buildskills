@@ -1,0 +1,5 @@
+import LearningHub from "@/components/LearningHub";
+
+export default function Page(){
+return <LearningHub title="ONLINE BUSINESS" eyebrow="BUILD ONLINE" intro="Explore websites, digital products, services, content and systems that can support an online business." items={[["Online business models","Compare services, products, content and software models.","/learn/online-business/models"],["Build a business website","Understand the pages and information a credible business needs.","/learn/websites/how-to-build-a-website"],["Sell digital services","Turn a useful skill into a clear service offer.","/learn/freelancing"],["Create useful content","Use questions and educational content to attract an audience.","/learn/content-creation"],["Grow an online business","Connect discovery, trust, conversion and retention.","/learn/online-business/growth"]]} />;
+}
