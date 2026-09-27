@@ -1,0 +1,707 @@
+/* =========================================================
+   BUILDSKILLS HOMEPAGE V2
+   ========================================================= */
+
+/* ---------- HERO V2 ---------- */
+
+.bs-hero-v2 {
+  padding: 82px 0 34px;
+  background:
+    radial-gradient(circle at 78% 18%, rgba(37, 99, 235, 0.10), transparent 28%),
+    radial-gradient(circle at 10% 85%, rgba(14, 165, 233, 0.07), transparent 25%),
+    #f8fafc;
+}
+
+.bs-hero-v2-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(380px, 0.95fr);
+  gap: 70px;
+  align-items: center;
+}
+
+.bs-hero-v2 .bs-hero-copy {
+  padding: 10px 0;
+}
+
+.bs-hero-v2 h1 {
+  max-width: 720px;
+  margin: 0;
+  font-size: clamp(44px, 5.4vw, 72px);
+  line-height: 0.99;
+  letter-spacing: -0.055em;
+}
+
+.bs-hero-v2 h1 span {
+  display: block;
+  color: #2563eb;
+}
+
+.bs-hero-v2 .bs-hero-text {
+  max-width: 610px;
+  margin: 25px 0 28px;
+  color: #64748b;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Hero visual */
+
+.bs-hero-visual {
+  position: relative;
+  min-height: 465px;
+  padding: 28px;
+  overflow: hidden;
+  color: white;
+  background:
+    linear-gradient(145deg, #172554 0%, #0f172a 55%, #111827 100%);
+  border-radius: 26px;
+  box-shadow: 0 30px 80px rgba(15, 23, 42, 0.20);
+}
+
+.bs-hero-visual::before {
+  content: "";
+  position: absolute;
+  width: 310px;
+  height: 310px;
+  right: -120px;
+  top: -130px;
+  border: 1px solid rgba(96, 165, 250, 0.18);
+  border-radius: 50%;
+}
+
+.bs-hero-visual::after {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  left: -100px;
+  bottom: -100px;
+  background: rgba(37, 99, 235, 0.12);
+  border-radius: 50%;
+}
+
+.bs-hero-visual-top {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  color: #93c5fd;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.bs-visual-title {
+  position: relative;
+  z-index: 2;
+  max-width: 460px;
+  margin: 70px 0 30px;
+  color: #f8fafc;
+  font-size: clamp(27px, 3vw, 39px);
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+}
+
+.bs-visual-title strong {
+  color: #60a5fa;
+  font-weight: 500;
+}
+
+.bs-visual-question {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+.bs-visual-question span {
+  display: block;
+  margin-bottom: 8px;
+  color: #93c5fd;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.bs-visual-question strong {
+  display: block;
+  margin-bottom: 12px;
+  color: white;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.bs-visual-question a {
+  color: #60a5fa;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.bs-visual-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.bs-visual-grid > div {
+  min-height: 110px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+}
+
+.bs-visual-grid small {
+  display: block;
+  margin-bottom: 13px;
+  color: #60a5fa;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.bs-visual-grid strong {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.bs-visual-grid span {
+  display: block;
+  color: #94a3b8;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.bs-hero-bottom {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 25px 3px 0;
+  color: #475569;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.bs-hero-bottom i {
+  width: 22px;
+  height: 1px;
+  background: #cbd5e1;
+}
+
+.bs-hero-bottom p {
+  margin: 0 0 0 auto;
+  color: #94a3b8;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+/* ---------- QUESTION SECTION ---------- */
+
+.bs-question-section {
+  padding-top: 95px;
+}
+
+.bs-question-grid-v2 {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.bs-question-card-v2 {
+  display: block;
+  position: relative;
+  min-height: 255px;
+  padding: 25px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+}
+
+.bs-question-card-v2:hover {
+  border-color: #93c5fd;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+  transform: translateY(-4px);
+}
+
+.bs-question-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 43px;
+}
+
+.bs-question-top span {
+  color: #2563eb;
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: 0.12em;
+}
+
+.bs-question-top b {
+  color: #94a3b8;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.bs-question-card-v2 h3 {
+  max-width: 310px;
+  margin: 0;
+  font-size: 19px;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+.bs-question-card-v2 p {
+  max-width: 340px;
+  margin: 10px 0 18px;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.bs-card-link {
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+/* ---------- SKILLS ---------- */
+
+.bs-skills-section {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.bs-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.bs-skill-card {
+  display: grid;
+  grid-template-columns: 38px 1fr 18px;
+  gap: 15px;
+  align-items: start;
+  min-height: 175px;
+  padding: 22px;
+  color: #0f172a;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  transition: 0.2s ease;
+}
+
+.bs-skill-card:hover {
+  border-color: #93c5fd;
+  box-shadow: 0 16px 38px rgba(15, 23, 42, 0.07);
+  transform: translateY(-3px);
+}
+
+.bs-skill-card > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  color: white;
+  background: #0f172a;
+  border-radius: 8px;
+  font-size: 9px;
+  font-weight: 850;
+}
+
+.bs-skill-card h3 {
+  margin: 2px 0 7px;
+  font-size: 17px;
+  letter-spacing: -0.02em;
+}
+
+.bs-skill-card p {
+  margin: 0;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.bs-skill-card b {
+  color: #94a3b8;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* ---------- LEARNING PATH V2 ---------- */
+
+.bs-path-v2 {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 65px;
+  padding: 58px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+}
+
+.bs-path-v2-intro h2 {
+  max-width: 490px;
+  margin: 0;
+  font-size: clamp(34px, 4vw, 51px);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.bs-path-v2-intro p {
+  max-width: 450px;
+  margin: 20px 0 26px;
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.bs-path-v2-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.bs-path-v2-step {
+  display: grid;
+  grid-template-columns: 42px 1fr 20px;
+  gap: 14px;
+  align-items: center;
+  padding: 15px 17px;
+  color: #0f172a;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  transition: 0.18s ease;
+}
+
+.bs-path-v2-step:hover {
+  border-color: #93c5fd;
+  transform: translateX(4px);
+}
+
+.bs-path-v2-step span {
+  color: #2563eb;
+  font-size: 10px;
+  font-weight: 850;
+}
+
+.bs-path-v2-step strong {
+  font-size: 13px;
+}
+
+.bs-path-v2-step b {
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+/* ---------- SERVICES V2 ---------- */
+
+.bs-services-v2 {
+  padding-top: 92px;
+  padding-bottom: 92px;
+}
+
+.bs-services-v2-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.bs-service-v2-card {
+  position: relative;
+  min-height: 275px;
+  padding: 25px;
+  color: white;
+  background: #172033;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  transition: 0.2s ease;
+}
+
+.bs-service-v2-card:hover {
+  background: #1e293b;
+  border-color: rgba(147, 197, 253, 0.25);
+  transform: translateY(-4px);
+}
+
+.bs-service-v2-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bs-service-v2-top span {
+  color: #60a5fa;
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+}
+
+.bs-service-v2-top b {
+  color: #64748b;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.bs-service-v2-card h3 {
+  max-width: 250px;
+  margin: 67px 0 11px;
+  font-size: 19px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.bs-service-v2-card p {
+  margin: 0 0 24px;
+  color: #94a3b8;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.bs-service-v2-card > span {
+  color: #60a5fa;
+  font-size: 11px;
+  font-weight: 750;
+}
+
+/* ---------- PROOF ---------- */
+
+.bs-proof-section {
+  padding-top: 105px;
+  padding-bottom: 105px;
+}
+
+.bs-proof-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 85px;
+  align-items: center;
+}
+
+.bs-proof-grid h2 {
+  max-width: 570px;
+  margin: 0;
+  font-size: clamp(35px, 4vw, 53px);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.bs-proof-grid h2 span {
+  display: block;
+  color: #2563eb;
+}
+
+.bs-proof-grid > div:first-child > p {
+  max-width: 570px;
+  margin: 24px 0 25px;
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.bs-proof-actions {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.bs-proof-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+}
+
+.bs-proof-panel > div {
+  min-height: 175px;
+  padding: 24px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+}
+
+.bs-proof-panel span {
+  display: block;
+  margin-bottom: 42px;
+  color: #2563eb;
+  font-size: 10px;
+  font-weight: 850;
+}
+
+.bs-proof-panel strong {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 17px;
+}
+
+.bs-proof-panel p {
+  margin: 0;
+  color: #64748b;
+  font-size: 12px;
+}
+
+/* ---------- FINAL CTA V2 ---------- */
+
+.bs-final-cta-v2 {
+  padding: 90px 0;
+}
+
+.bs-final-cta-v2 h2 {
+  max-width: 700px;
+}
+
+.bs-final-cta-v2 p {
+  font-size: 15px;
+}
+
+/* =========================================================
+   HOMEPAGE V2 — RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1050px) {
+  .bs-hero-v2-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .bs-hero-visual {
+    max-width: 760px;
+  }
+
+  .bs-question-grid-v2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bs-skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bs-services-v2-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bs-path-v2 {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .bs-proof-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+}
+
+@media (max-width: 760px) {
+  .bs-hero-v2 {
+    padding-top: 60px;
+  }
+
+  .bs-hero-v2 h1 {
+    font-size: clamp(41px, 12vw, 60px);
+  }
+
+  .bs-hero-v2 .bs-hero-text {
+    font-size: 16px;
+  }
+
+  .bs-hero-visual {
+    min-height: auto;
+    padding: 22px;
+    border-radius: 20px;
+  }
+
+  .bs-visual-title {
+    margin-top: 50px;
+    font-size: 29px;
+  }
+
+  .bs-visual-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bs-visual-grid > div {
+    min-height: auto;
+  }
+
+  .bs-hero-bottom {
+    flex-wrap: wrap;
+  }
+
+  .bs-hero-bottom p {
+    width: 100%;
+    margin: 8px 0 0;
+  }
+
+  .bs-question-grid-v2,
+  .bs-skills-grid,
+  .bs-services-v2-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bs-question-card-v2 {
+    min-height: 220px;
+  }
+
+  .bs-path-v2 {
+    padding: 30px 20px;
+    border-radius: 18px;
+  }
+
+  .bs-proof-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .bs-proof-actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .bs-proof-actions .bs-button {
+    width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .bs-hero-v2 h1 {
+    font-size: 42px;
+  }
+
+  .bs-hero-bottom {
+    display: none;
+  }
+
+  .bs-visual-title {
+    font-size: 26px;
+  }
+
+  .bs-hero-visual {
+    margin-top: 5px;
+  }
+
+  .bs-question-card-v2 {
+    min-height: auto;
+    padding: 21px;
+  }
+
+  .bs-question-top {
+    margin-bottom: 32px;
+  }
+
+  .bs-skill-card {
+    min-height: 145px;
+  }
+
+  .bs-final-cta-v2 {
+    padding: 70px 0;
+  }
+}
