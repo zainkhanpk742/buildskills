@@ -18,7 +18,7 @@ export const seoSocialGuides: DetailedGuide[] = [
       "Crawling is the process of fetching and processing a URL. Indexing is the process of deciding whether and how that content should be stored. Serving is the later step where the search engine selects and orders results for a query.",
       "Your job as a site owner is to make important content accessible, understandable, and useful. Pages should have stable URLs, crawlable links, meaningful titles and headings, and content that answers the user's need.",
       "Search Console helps you inspect individual URLs and monitor indexing and search performance. Use it to diagnose real problems instead of guessing from rankings alone.",
-      "A useful mental model is: discover → crawl → understand → index → serve. SEO work becomes much easier once you know which stage you are actually trying to improve."
+      "A useful mental model is: discover → crawl → understand → index → serve. SEO work becomes much easier once you know which stage you are actually trying to improve.",
     ],
     next: { href: "/learn/seo/search-intent", label: "Learn search intent" }
   },
@@ -32,7 +32,7 @@ export const seoSocialGuides: DetailedGuide[] = [
       "Before creating a page, write the question in plain language and describe the expected answer. Then inspect the kinds of results Google shows for that query. This gives you evidence about the format and depth people are being served.",
       "Common intents include learning, comparing, finding a specific site or service, evaluating an option, and completing a transaction. One page can support more than one intent, but it should have a clear primary job.",
       "Do not force a product page to answer a beginner question just because the keyword has volume. Build the page that genuinely satisfies the visitor, then connect it to the next commercial step with relevant internal links.",
-      "For BuildSkills, this means a learning guide can answer the question thoroughly while a service page explains how the work can be done for a client. They support each other without becoming duplicate pages."
+      "For BuildSkills, this means a learning guide can answer the question thoroughly while a service page explains how the work can be done for a client. They support each other without becoming duplicate pages.",
     ],
     next: { href: "/learn/seo/keyword-research", label: "Learn keyword research" }
   },
@@ -46,7 +46,7 @@ export const seoSocialGuides: DetailedGuide[] = [
       "Start with your audience and offer. List the problems they experience, the tasks they need to complete, and the terms they might use. Add questions from customer conversations, support requests, forums, search suggestions, and your own expertise.",
       "Group related queries by intent rather than creating one thin page for every variation. Several phrases may belong on one authoritative guide. A separate page makes sense when the user needs a meaningfully different answer.",
       "Prioritize topics where you can provide something useful: first-hand experience, original examples, clearer explanations, better structure, or a practical tool. Search volume alone does not make a topic valuable.",
-      "Build a content map: topic → primary question → authoritative URL → supporting questions → internal links → next action. This turns research into a publishing system instead of a spreadsheet of disconnected keywords."
+      "Build a content map: topic → primary question → authoritative URL → supporting questions → internal links → next action. This turns research into a publishing system instead of a spreadsheet of disconnected keywords.",
     ],
     next: { href: "/learn/seo/on-page-seo", label: "Learn on-page SEO" }
   },
@@ -60,7 +60,7 @@ export const seoSocialGuides: DetailedGuide[] = [
       "Give each important page a descriptive, unique title and a clear main heading. Explain the topic early, then organize the rest into sections that answer natural follow-up questions.",
       "Use the words people actually use when they make sense, but write for humans. Descriptive image alt text, useful link text, semantic HTML, and readable structure help both accessibility and search understanding.",
       "Internal links are part of on-page SEO. Link from relevant pages using anchor text that tells the visitor what they will find. Important pages should be reachable through normal crawlable links.",
-      "Review the page as a visitor: Can I tell what this page answers in a few seconds? Can I find the next question without searching again? Does the page provide enough substance to finish the task?"
+      "Review the page as a visitor: Can I tell what this page answers in a few seconds? Can I find the next question without searching again? Does the page provide enough substance to finish the task?",
     ],
     next: { href: "/learn/seo/technical-seo", label: "Learn technical SEO" }
   },
@@ -74,7 +74,7 @@ export const seoSocialGuides: DetailedGuide[] = [
       "Start with fundamentals. Important pages should return successful responses, be publicly accessible, contain useful HTML, and be reachable through crawlable links. Do not accidentally block important pages with robots.txt, authentication, or noindex rules.",
       "Use a sitemap to help communicate the URLs you care about. Keep URLs stable and understandable. When content moves, use appropriate redirects and review canonical URLs rather than creating several competing versions.",
       "Technical SEO is not a license to add complexity. A simple site with clean HTML and clear links can be easier to crawl than an elaborate system full of unnecessary scripts and duplicate URLs.",
-      "Use Search Console, browser tools, server logs, and URL inspection to diagnose actual problems. Fix the specific failure you can observe instead of applying a generic checklist to every page."
+      "Use Search Console, browser tools, server logs, and URL inspection to diagnose actual problems. Fix the specific failure you can observe instead of applying a generic checklist to every page.",
     ],
     next: { href: "/learn/seo/internal-linking", label: "Learn internal linking" }
   },
@@ -88,7 +88,7 @@ export const seoSocialGuides: DetailedGuide[] = [
       "Start with the pages that matter most. Give each important guide links from relevant hub pages and from other guides where the connection is genuinely useful. Avoid adding a giant list of unrelated links just to increase link counts.",
       "Use descriptive anchor text. 'Learn technical SEO' tells a reader what the destination is; 'click here' does not. Keep the surrounding sentence natural and make the relationship between the two pages obvious.",
       "Think in clusters. A broad SEO guide can link to search intent, keyword research, on-page SEO, technical SEO, and measurement. Each detailed guide can then link back to the hub and forward to the next useful concept.",
-      "Audit for orphan pages: important URLs that have no useful internal links pointing to them. If a page matters enough to publish, it usually deserves a clear place in the site's navigation or content network."
+      "Audit for orphan pages: important URLs that have no useful internal links pointing to them. If a page matters enough to publish, it usually deserves a clear place in the site's navigation or content network.",
     ],
     next: { href: "/learn/seo/search-console", label: "Learn Search Console" }
   },
@@ -102,7 +102,7 @@ export const seoSocialGuides: DetailedGuide[] = [
       "Start by verifying the correct property. Submit your sitemap when appropriate, then use URL Inspection for important pages. Inspection can help you see indexing status and request crawling after meaningful changes.",
       "Performance reports show metrics such as clicks, impressions, click-through rate, and average position. Read these together. A page can receive many impressions without many clicks, or many clicks without converting into the action the business actually wants.",
       "When traffic changes, investigate before rewriting everything. Check whether the change affects one page, a topic cluster, a device type, a query group, or the whole site. Then compare the timing with site changes and search documentation.",
-      "Search Console is not a ranking guarantee. It is evidence about Google's systems and your site's search performance. Use it alongside analytics, business outcomes, and direct review of the pages."
+      "Search Console is not a ranking guarantee. It is evidence about Google's systems and your site's search performance. Use it alongside analytics, business outcomes, and direct review of the pages.",
     ],
     next: { href: "/learn/seo/seo-content-strategy", label: "Build an SEO content strategy" }
   },
@@ -116,7 +116,7 @@ export const seoSocialGuides: DetailedGuide[] = [
       "Create topic clusters. Give each major subject one strong hub or guide, then publish supporting pages for distinct questions. Link them together so a visitor can move from beginner concepts to practical tasks and finally to a relevant service or product.",
       "Use different page types deliberately. Definitions can attract beginners. Tutorials can help people act. Comparisons can support decisions. Case studies and portfolio pages can provide evidence. Service pages explain delivery. Mixing these roles on every page makes the site harder to understand.",
       "Update content when facts, tools, screenshots, policies, or procedures change. Do not manufacture freshness by changing dates without improving the content.",
-      "Measure the strategy by useful outcomes: relevant search impressions, qualified visits, enquiries, sign-ups, completed tasks, and the growth of your authoritative topic coverage. Rankings are one signal, not the whole business."
+      "Measure the strategy by useful outcomes: relevant search impressions, qualified visits, enquiries, sign-ups, completed tasks, and the growth of your authoritative topic coverage. Rankings are one signal, not the whole business.",
     ],
     next: { href: "/learn/seo/local-seo", label: "Learn local SEO" }
   },
@@ -130,7 +130,7 @@ export const seoSocialGuides: DetailedGuide[] = [
       "Make the website clear about what the business does, where it serves customers, and how people can contact or visit it. Use a dedicated page when a location or service area deserves a genuinely useful explanation, not a collection of near-identical city pages.",
       "Keep business information consistent where it matters. Use the business's real name, address or service area, phone, hours, and website details. Claim and maintain the relevant business profile provided by the search platform.",
       "Create useful local content when you have something specific to say: service information, area-specific guidance, project examples, FAQs, or practical resources. Avoid doorway pages that exist only to capture location keywords.",
-      "Ask for genuine customer feedback through legitimate channels and respond professionally. Never invent reviews or offer misleading incentives. Local trust is part of the product, not just a ranking tactic."
+      "Ask for genuine customer feedback through legitimate channels and respond professionally. Never invent reviews or offer misleading incentives. Local trust is part of the product, not just a ranking tactic.",
     ],
     next: { href: "/learn/seo", label: "Return to the SEO path" }
   },
@@ -145,12 +145,10 @@ export const seoSocialGuides: DetailedGuide[] = [
       "Before publishing, define the channel promise: who is it for, what will they learn or experience, and why should they return? 'Technology' is broad; 'practical website tutorials for small businesses' is a usable editorial direction.",
       "Set up the profile so a visitor can understand the subject quickly. Use a recognizable name, profile image, banner, description, and useful links. Organize early videos into playlists when they form a learning sequence.",
       "Plan the first ten videos before obsessing over equipment. A phone, clear audio, good lighting, and useful teaching can be enough to begin. Improve production when the audience and workflow justify it.",
-      "Your first goal is not to look like a large channel. It is to publish a repeatable format, learn from viewer behavior, and build a library that answers related questions."
+      "Your first goal is not to look like a large channel. It is to publish a repeatable format, learn from viewer behavior, and build a library that answers related questions.",
       "Think about search intent as well as subscribers. People search phrases such as how to start a YouTube channel, how to create a YouTube channel, how to start a YouTube channel for beginners, and how to start a YouTube channel for business. Your video should answer the exact problem clearly instead of forcing several unrelated keywords into one title.",
-      "A useful beginner channel can be built with a simple workflow: choose the audience, choose the recurring topic, plan the first ten videos, record clearly, edit for understanding, write an accurate title and description, publish, then study the response in YouTube Analytics. That process matters more than expensive equipment.",
+      "A useful beginner channel can be built with a simple workflow: choose the audience, choose the recurring topic, plan the first ten videos, record clearly, edit for understanding, write an accurate title and description, publish, then study the response in YouTube Analytics. That process matters more than expensive equipment."
     ]
-      "Think about search intent as well as subscribers. People search phrases such as how to start a YouTube channel, how to create a YouTube channel, how to start a YouTube channel for beginners, and how to start a YouTube channel for business. Your video should answer the exact problem clearly instead of forcing several unrelated keywords into one title.",
-      "A useful beginner channel can be built with a simple workflow: choose the audience, choose the recurring topic, plan the first ten videos, record clearly, edit for understanding, write an accurate title and description, publish, then study the response in YouTube Analytics. That process matters more than expensive equipment.",
     next: { href: "/learn/youtube/video-ideas", label: "Find YouTube video ideas" }
   },
   {
@@ -163,12 +161,10 @@ export const seoSocialGuides: DetailedGuide[] = [
       "Build several formats around one subject: beginner explanation, step-by-step tutorial, mistakes to avoid, comparison, case study, workflow demonstration, and answer to a specific question.",
       "Package the idea before recording. Write the viewer's problem, the promised result, the three to five points you need to cover, and the action they should be able to take after watching.",
       "Avoid making every video a trend chase. Trends can be useful, but an evergreen library of practical answers can continue attracting viewers after publication.",
-      "Keep an idea backlog with a reason for each idea. When analytics show that a topic attracts the right audience, expand that topic into related videos rather than starting from zero every week."
+      "Keep an idea backlog with a reason for each idea. When analytics show that a topic attracts the right audience, expand that topic into related videos rather than starting from zero every week.",
       "Use keyword research as an idea source, not as a command to make thin videos. A search phrase such as how to make money on YouTube can lead to several genuinely different lessons: YouTube monetization requirements, ways to monetize a small channel, how ads work, how memberships work, how to sell a service, and how to avoid monetization problems.",
-      "Build clusters around successful topics. If one video about website SEO attracts the right viewers, create connected videos that answer the next questions they are likely to have. This gives the channel a coherent subject and gives viewers a reason to watch more than one video.",
+      "Build clusters around successful topics. If one video about website SEO attracts the right viewers, create connected videos that answer the next questions they are likely to have. This gives the channel a coherent subject and gives viewers a reason to watch more than one video."
     ]
-      "Use keyword research as an idea source, not as a command to make thin videos. A search phrase such as how to make money on YouTube can lead to several genuinely different lessons: YouTube monetization requirements, ways to monetize a small channel, how ads work, how memberships work, how to sell a service, and how to avoid monetization problems.",
-      "Build clusters around successful topics. If one video about website SEO attracts the right viewers, create connected videos that answer the next questions they are likely to have. This gives the channel a coherent subject and gives viewers a reason to watch more than one video.",
     next: { href: "/learn/youtube/titles-thumbnails", label: "Learn titles and thumbnails" }
   },
   {
@@ -181,12 +177,10 @@ export const seoSocialGuides: DetailedGuide[] = [
       "Start with one clear promise. A title such as 'How to build a website' is broad; 'How to build a small business website: pages, content, and launch' tells a more specific audience what they will learn.",
       "A thumbnail should support the same idea rather than repeating a paragraph of the title. Use one visual focal point, readable text when needed, and enough contrast for the small display sizes where thumbnails often appear.",
       "Avoid misleading packaging. A high click rate that creates immediate disappointment can hurt the viewing experience. YouTube's own retention guidance recommends reviewing the introduction and considering whether the title and thumbnail accurately reflect the video.",
-      "Test ideas over time instead of judging a video only by its first hours. Compare packaging with the video's audience, topic, traffic source, and retention."
+      "Test ideas over time instead of judging a video only by its first hours. Compare packaging with the video's audience, topic, traffic source, and retention.",
       "Include the main search phrase when it naturally describes the video. For example, 'How to Monetize YouTube: 7 Ways Creators Can Earn Money' is clearer than a vague title such as 'My YouTube Income Secrets.' The important phrase should still match what the video actually teaches.",
-      "Think about related search language too: YouTube monetization, monetize YouTube channel, make money on YouTube, YouTube Partner Program, YouTube ads, Shorts monetization, channel memberships, and YouTube Premium. Use those concepts where they genuinely belong in the title, description, spoken content, chapters, or related videos.",
+      "Think about related search language too: YouTube monetization, monetize YouTube channel, make money on YouTube, YouTube Partner Program, YouTube ads, Shorts monetization, channel memberships, and YouTube Premium. Use those concepts where they genuinely belong in the title, description, spoken content, chapters, or related videos."
     ]
-      "Include the main search phrase when it naturally describes the video. For example, 'How to Monetize YouTube: 7 Ways Creators Can Earn Money' is clearer than a vague title such as 'My YouTube Income Secrets.' The important phrase should still match what the video actually teaches.",
-      "Think about related search language too: YouTube monetization, monetize YouTube channel, make money on YouTube, YouTube Partner Program, YouTube ads, Shorts monetization, channel memberships, and YouTube Premium. Use those concepts where they genuinely belong in the title, description, spoken content, chapters, or related videos.",
     next: { href: "/learn/youtube/audience-retention", label: "Learn audience retention" }
   },
   {
@@ -199,12 +193,10 @@ export const seoSocialGuides: DetailedGuide[] = [
       "Open with the problem and the value of the video. Do not spend the first minute explaining why you made the video if the viewer came for an answer. Give enough context to understand the task, then start doing it.",
       "Use structure to maintain clarity: show the destination, move through logical steps, and use examples when an abstract explanation becomes difficult. Remove repeated phrases, long pauses, and sections that do not help the viewer finish the promised job.",
       "YouTube's retention guidance specifically highlights the first 30 seconds and recommends experimenting with the introduction and with title/thumbnail alignment. It also identifies spikes as moments that may have been rewatched or shared.",
-      "Retention is not a single target percentage that every video must hit. Compare videos of similar type and ask what the audience behavior says about the structure."
+      "Retention is not a single target percentage that every video must hit. Compare videos of similar type and ask what the audience behavior says about the structure.",
       "Retention begins before the video starts. If someone searched how to monetize YouTube and your title promises a monetization guide, answer that question early instead of spending the opening on a long introduction. Then move from the basic answer into examples, requirements, mistakes, and practical next steps.",
-      "Use the retention graph to find repeated patterns. A sharp early drop can indicate a mismatch between the title, thumbnail, and opening. A later drop can reveal a section that is too slow or too detailed. Strong sections can become standalone videos, Shorts, or follow-up lessons.",
+      "Use the retention graph to find repeated patterns. A sharp early drop can indicate a mismatch between the title, thumbnail, and opening. A later drop can reveal a section that is too slow or too detailed. Strong sections can become standalone videos, Shorts, or follow-up lessons."
     ]
-      "Retention begins before the video starts. If someone searched how to monetize YouTube and your title promises a monetization guide, answer that question early instead of spending the opening on a long introduction. Then move from the basic answer into examples, requirements, mistakes, and practical next steps.",
-      "Use the retention graph to find repeated patterns. A sharp early drop can indicate a mismatch between the title, thumbnail, and opening. A later drop can reveal a section that is too slow or too detailed. Strong sections can become standalone videos, Shorts, or follow-up lessons.",
     next: { href: "/learn/youtube/youtube-analytics", label: "Learn YouTube Analytics" }
   },
   {
@@ -217,12 +209,10 @@ export const seoSocialGuides: DetailedGuide[] = [
       "Start with a simple funnel: impressions or exposure → click → watch → useful action. If people see the video but do not click, review the topic and packaging. If they click but leave early, review the opening and delivery.",
       "Look at traffic sources to understand how viewers found the video. Search, suggested viewing, browse features, external links, and other sources can produce different audience behavior.",
       "Use the data to choose your next experiment. Change one major thing at a time when possible: topic, opening, title, thumbnail, length, format, or audience. Then compare with similar videos.",
-      "Do not optimize for a dashboard number in isolation. A smaller video that reaches the exact people who need your service can be more useful to a business than a large unrelated audience."
+      "Do not optimize for a dashboard number in isolation. A smaller video that reaches the exact people who need your service can be more useful to a business than a large unrelated audience.",
       "Connect analytics to search intent and business goals. Look at which topics bring viewers, where viewers come from, whether they continue watching, and whether the audience matches the people you want to reach. A video can have fewer views but still be valuable if it attracts customers or the right community.",
-      "For monetization planning, do not focus only on subscriber count. Watch time, qualified Shorts views, audience geography, content type, advertiser suitability, and eligibility for individual YouTube monetization features all matter. YouTube reviews channels against its monetization policies, and individual features can have separate requirements.",
+      "For monetization planning, do not focus only on subscriber count. Watch time, qualified Shorts views, audience geography, content type, advertiser suitability, and eligibility for individual YouTube monetization features all matter. YouTube reviews channels against its monetization policies, and individual features can have separate requirements."
     ]
-      "Connect analytics to search intent and business goals. Look at which topics bring viewers, where viewers come from, whether they continue watching, and whether the audience matches the people you want to reach. A video can have fewer views but still be valuable if it attracts customers or the right community.",
-      "For monetization planning, do not focus only on subscriber count. Watch time, qualified Shorts views, audience geography, content type, advertiser suitability, and eligibility for individual YouTube monetization features all matter. YouTube reviews channels against its monetization policies, and individual features can have separate requirements.",
     next: { href: "/learn/youtube/make-money-on-youtube", label: "Learn YouTube monetization" }
   },
   {
@@ -235,16 +225,12 @@ export const seoSocialGuides: DetailedGuide[] = [
       "Platform eligibility changes over time and can vary by country and program. Always check current YouTube Partner Program and monetization documentation before treating a threshold or feature as permanent.",
       "A business channel can monetize indirectly. A tutorial may bring a visitor who later buys a service, requests a quote, joins a mailing list, or uses a paid product. The video does not have to make money directly to have business value.",
       "Build the audience and the offer together. If you want clients, make videos that demonstrate expertise around the problems your service solves. If you want product sales, teach the surrounding problem and show how the product fits.",
-      "Avoid shortcuts that create policy or trust problems. Do not buy fake engagement, reuse content without the necessary rights, or promise guaranteed income from a platform whose rules and distribution can change."
+      "Avoid shortcuts that create policy or trust problems. Do not buy fake engagement, reuse content without the necessary rights, or promise guaranteed income from a platform whose rules and distribution can change.",
       "People often search 'how to monetize YouTube,' 'how to monetize a YouTube channel,' 'how to make money on YouTube,' 'YouTube monetization requirements,' and 'how many subscribers do you need to monetize YouTube.' These are related questions, but they should not be treated as one simple threshold. YouTube Partner Program access and individual monetization features have different requirements.",
       "As of September 2026, YouTube says eligible YPP creators can earn through advertising, YouTube Premium revenue, channel memberships, Super Chat and Super Stickers, Super Thanks, and Shopping, with feature-specific eligibility. Current guidance says ad revenue eligibility uses 1,000 subscribers plus either 4,000 qualified long-form watch hours in the last 365 days or 10 million qualified Shorts views in the last 90 days. YouTube has also announced changes beginning February 1, 2027, so readers should verify the current YPP requirements before applying.",
       "Monetization is not only about ads. A creator can build a business around sponsorships, products, affiliate relationships, consulting, courses, memberships, or services. For a freelancer, a YouTube video can be a lead-generation asset: answer a real problem, demonstrate expertise, then give the viewer a relevant next step.",
-      "Originality matters. YouTube says monetized content should be original and authentic, and its policies address mass-produced, repetitive, and reused content. A channel should add real educational, creative, or entertainment value rather than producing near-identical videos simply to capture search traffic.",
+      "Originality matters. YouTube says monetized content should be original and authentic, and its policies address mass-produced, repetitive, and reused content. A channel should add real educational, creative, or entertainment value rather than producing near-identical videos simply to capture search traffic."
     ]
-      "People often search 'how to monetize YouTube,' 'how to monetize a YouTube channel,' 'how to make money on YouTube,' 'YouTube monetization requirements,' and 'how many subscribers do you need to monetize YouTube.' These are related questions, but they should not be treated as one simple threshold. YouTube Partner Program access and individual monetization features have different requirements.",
-      "As of September 2026, YouTube says eligible YPP creators can earn through advertising, YouTube Premium revenue, channel memberships, Super Chat and Super Stickers, Super Thanks, and Shopping, with feature-specific eligibility. Current guidance says ad revenue eligibility uses 1,000 subscribers plus either 4,000 qualified long-form watch hours in the last 365 days or 10 million qualified Shorts views in the last 90 days. YouTube has also announced changes beginning February 1, 2027, so readers should verify the current YPP requirements before applying.",
-      "Monetization is not only about ads. A creator can build a business around sponsorships, products, affiliate relationships, consulting, courses, memberships, or services. For a freelancer, a YouTube video can be a lead-generation asset: answer a real problem, demonstrate expertise, then give the viewer a relevant next step.",
-      "Originality matters. YouTube says monetized content should be original and authentic, and its policies address mass-produced, repetitive, and reused content. A channel should add real educational, creative, or entertainment value rather than producing near-identical videos simply to capture search traffic.",
     next: { href: "/learn/youtube", label: "Return to the YouTube path" }
   },
 
@@ -258,12 +244,10 @@ export const seoSocialGuides: DetailedGuide[] = [
       "Complete the information that customers actually need. Explain what the business does, where it operates, how to contact it, and what someone can expect after sending a message or visiting the website.",
       "Choose a simple content role for the Page. It might answer customer questions, show work, announce updates, teach useful tips, or support a local community. The role should match the business rather than copying another Page.",
       "Connect the Page to the website and other relevant channels. Keep important business information consistent and review access so more than one trusted person can administer the Page when appropriate.",
-      "Treat the Page as a customer-facing asset. Complete information, reliable replies, and useful posts matter more than filling every field with marketing language."
+      "Treat the Page as a customer-facing asset. Complete information, reliable replies, and useful posts matter more than filling every field with marketing language.",
       "Think about search phrases such as how to create a Facebook Page, how to create a Facebook business page, how to set up a Facebook Page for business, and how to monetize a Facebook Page. The Page itself should clearly explain the business so both visitors and search engines can understand the subject.",
-      "Before trying to grow or monetize Facebook, make the foundation trustworthy: correct business name, category, contact details, website, location where relevant, profile image, cover image, response process, and secure administrator access. A complete Page gives later content and advertising a clear destination.",
+      "Before trying to grow or monetize Facebook, make the foundation trustworthy: correct business name, category, contact details, website, location where relevant, profile image, cover image, response process, and secure administrator access. A complete Page gives later content and advertising a clear destination."
     ]
-      "Think about search phrases such as how to create a Facebook Page, how to create a Facebook business page, how to set up a Facebook Page for business, and how to monetize a Facebook Page. The Page itself should clearly explain the business so both visitors and search engines can understand the subject.",
-      "Before trying to grow or monetize Facebook, make the foundation trustworthy: correct business name, category, contact details, website, location where relevant, profile image, cover image, response process, and secure administrator access. A complete Page gives later content and advertising a clear destination.",
     next: { href: "/learn/facebook/facebook-content-strategy", label: "Build a Facebook content strategy" }
   },
   {
@@ -276,12 +260,10 @@ export const seoSocialGuides: DetailedGuide[] = [
       "Create recurring formats so publishing does not require inventing a new strategy every day. For example: one practical tip, one project breakdown, one customer question, and one offer each week.",
       "Make posts self-contained when possible. Give enough context for someone seeing the post in their feed to understand the point, then link to a deeper page when the topic deserves more detail.",
       "Conversation can be valuable, but do not manufacture engagement with misleading questions or bait. Ask questions when the answers genuinely help you understand customers or the community.",
-      "Review which topics produce meaningful actions: comments from the right people, visits to useful pages, enquiries, bookings, or sales. High reactions are not automatically business results."
+      "Review which topics produce meaningful actions: comments from the right people, visits to useful pages, enquiries, bookings, or sales. High reactions are not automatically business results.",
       "Build content around questions customers actually ask. A Facebook content plan can include educational posts, demonstrations, customer questions, project stories, product information, short videos, community posts, and offers. Use natural language that includes the subject people are looking for, such as Facebook marketing, Facebook Page growth, Facebook business, Facebook leads, or Facebook monetization, when those terms accurately describe the post.",
-      "Turn strong questions into a content series. A post answering 'How do I get customers from Facebook?' can lead to a longer guide, a video, a case study, a lead-generation post, and a service page. This creates a connected content system instead of isolated social posts.",
+      "Turn strong questions into a content series. A post answering 'How do I get customers from Facebook?' can lead to a longer guide, a video, a case study, a lead-generation post, and a service page. This creates a connected content system instead of isolated social posts."
     ]
-      "Build content around questions customers actually ask. A Facebook content plan can include educational posts, demonstrations, customer questions, project stories, product information, short videos, community posts, and offers. Use natural language that includes the subject people are looking for, such as Facebook marketing, Facebook Page growth, Facebook business, Facebook leads, or Facebook monetization, when those terms accurately describe the post.",
-      "Turn strong questions into a content series. A post answering 'How do I get customers from Facebook?' can lead to a longer guide, a video, a case study, a lead-generation post, and a service page. This creates a connected content system instead of isolated social posts.",
     next: { href: "/learn/facebook/facebook-page-growth", label: "Learn Facebook growth" }
   },
   {
@@ -294,12 +276,10 @@ export const seoSocialGuides: DetailedGuide[] = [
       "Invite existing customers and relevant contacts to follow where appropriate, and connect the Page to your website, email signature, packaging, and other legitimate touchpoints.",
       "Use native content when it helps people consume the idea without leaving the platform, then link to deeper resources when a click has a clear purpose. Test different formats instead of assuming one format works for every audience.",
       "Participate in relevant communities according to their rules. Contribute useful answers instead of dropping promotional links everywhere. Trust built through useful participation can create stronger attention than repeated advertising.",
-      "Paid promotion is a separate lever. Use it when you have a clear audience and offer worth promoting, and measure the business action rather than optimizing only for cheap impressions."
+      "Paid promotion is a separate lever. Use it when you have a clear audience and offer worth promoting, and measure the business action rather than optimizing only for cheap impressions.",
       "Search-driven growth and social distribution can work together. Create useful Facebook content around questions such as how to grow a Facebook Page, how to get followers on Facebook, how to promote a Facebook business Page, and how to reach more people on Facebook. Then make the actual content answer those questions instead of repeating keywords.",
-      "Growth should be measured against the purpose of the Page. For a local business, useful measures may include messages, calls, bookings, directions, website visits, and leads. For a creator, meaningful followers, video views, watch time, returning viewers, and eligible monetization opportunities may matter more.",
+      "Growth should be measured against the purpose of the Page. For a local business, useful measures may include messages, calls, bookings, directions, website visits, and leads. For a creator, meaningful followers, video views, watch time, returning viewers, and eligible monetization opportunities may matter more."
     ]
-      "Search-driven growth and social distribution can work together. Create useful Facebook content around questions such as how to grow a Facebook Page, how to get followers on Facebook, how to promote a Facebook business Page, and how to reach more people on Facebook. Then make the actual content answer those questions instead of repeating keywords.",
-      "Growth should be measured against the purpose of the Page. For a local business, useful measures may include messages, calls, bookings, directions, website visits, and leads. For a creator, meaningful followers, video views, watch time, returning viewers, and eligible monetization opportunities may matter more.",
     next: { href: "/learn/facebook/facebook-leads", label: "Learn Facebook lead generation" }
   },
   {
@@ -312,12 +292,10 @@ export const seoSocialGuides: DetailedGuide[] = [
       "Build content around the problem before pushing the offer. Explain common mistakes, show examples, answer objections, and demonstrate the process. Then connect those posts to the service that solves the problem.",
       "Make the landing experience match the post. If a post promises website development, the destination should explain that service clearly rather than sending the visitor to a generic homepage with no context.",
       "Respond to genuine enquiries promptly and professionally. Use a simple qualification process: what do they need, when, what already exists, and what outcome are they trying to achieve?",
-      "Track the full path where possible. A post with fewer reactions but several qualified enquiries may be more useful than a viral post with no commercial relevance."
+      "Track the full path where possible. A post with fewer reactions but several qualified enquiries may be more useful than a viral post with no commercial relevance.",
       "Create a clear conversion path. A useful Facebook post can answer a problem, demonstrate a result, explain an offer, and send an interested person to a message, form, website page, booking flow, or product page. The destination should continue the same promise as the post.",
-      "Questions such as how to get leads from Facebook, how to generate leads on Facebook, Facebook lead generation, and how to get customers from Facebook describe different searches around the same business problem. Build separate useful explanations when the intent is genuinely different instead of creating several near-identical pages.",
+      "Questions such as how to get leads from Facebook, how to generate leads on Facebook, Facebook lead generation, and how to get customers from Facebook describe different searches around the same business problem. Build separate useful explanations when the intent is genuinely different instead of creating several near-identical pages."
     ]
-      "Create a clear conversion path. A useful Facebook post can answer a problem, demonstrate a result, explain an offer, and send an interested person to a message, form, website page, booking flow, or product page. The destination should continue the same promise as the post.",
-      "Questions such as how to get leads from Facebook, how to generate leads on Facebook, Facebook lead generation, and how to get customers from Facebook describe different searches around the same business problem. Build separate useful explanations when the intent is genuinely different instead of creating several near-identical pages.",
     next: { href: "/learn/facebook/facebook-monetization", label: "Learn Facebook monetization" }
   },
   {
@@ -330,14 +308,11 @@ export const seoSocialGuides: DetailedGuide[] = [
       "A business can also earn indirectly through Facebook by generating leads, selling products, promoting services, building an audience for another channel, or creating relationships that later become customers.",
       "Choose the model that matches what you can actually deliver. If you sell websites, use Facebook content to demonstrate useful website knowledge and invite suitable businesses to start a conversation. If you sell products, make the path from discovery to purchase clear.",
       "Do not treat follower count as income. A smaller audience with a strong match to your offer can be commercially useful, while a large general audience may not be.",
-      "Protect trust. Avoid fake engagement, misleading claims, copied content without rights, and promises of guaranteed earnings."
+      "Protect trust. Avoid fake engagement, misleading claims, copied content without rights, and promises of guaranteed earnings.",
       "Common searches include how to monetize Facebook, Facebook monetization, how to make money on Facebook, Facebook Page monetization, Facebook content monetization, and how to qualify for Facebook monetization. These phrases should appear naturally where the guide actually answers them, while the page avoids promising that every account can earn from every feature.",
       "Facebook platform monetization is only one business model. Depending on eligibility and current Meta programs, creators may have access to different monetization tools, while businesses can generate revenue through products, services, leads, advertising, partnerships, and audiences they build on Facebook. Program availability, eligibility, and policy requirements can change, so users should check Meta's current monetization dashboard and official documentation before planning around a specific feature.",
-      "Build for revenue you can control. A Facebook audience can lead to website traffic, enquiries, product sales, appointments, sponsorships, or service work. A sustainable Facebook monetization strategy should connect attention to a real offer rather than treating followers or reactions as income by themselves.",
+      "Build for revenue you can control. A Facebook audience can lead to website traffic, enquiries, product sales, appointments, sponsorships, or service work. A sustainable Facebook monetization strategy should connect attention to a real offer rather than treating followers or reactions as income by themselves."
     ]
-      "Common searches include how to monetize Facebook, Facebook monetization, how to make money on Facebook, Facebook Page monetization, Facebook content monetization, and how to qualify for Facebook monetization. These phrases should appear naturally where the guide actually answers them, while the page avoids promising that every account can earn from every feature.",
-      "Facebook platform monetization is only one business model. Depending on eligibility and current Meta programs, creators may have access to different monetization tools, while businesses can generate revenue through products, services, leads, advertising, partnerships, and audiences they build on Facebook. Program availability, eligibility, and policy requirements can change, so users should check Meta's current monetization dashboard and official documentation before planning around a specific feature.",
-      "Build for revenue you can control. A Facebook audience can lead to website traffic, enquiries, product sales, appointments, sponsorships, or service work. A sustainable Facebook monetization strategy should connect attention to a real offer rather than treating followers or reactions as income by themselves.",
     next: { href: "/learn/facebook", label: "Return to Facebook" }
   },
 
@@ -351,7 +326,7 @@ export const seoSocialGuides: DetailedGuide[] = [
       "Choose a visual identity you can maintain. Consistency does not require every post to look identical; it means the account feels like the same business through its subject, voice, typography, imagery, and recurring formats.",
       "Use the account type and contact features that fit the business. Add accurate contact information and review privacy, access, and security settings.",
       "Create a few content pillars before posting heavily. For a web studio, these might be website tips, project walkthroughs, before-and-after improvements, and practical business education.",
-      "Treat the profile as a landing page. The bio and pinned content should answer the questions a new visitor has: what is this, is it for me, and what should I do next?"
+      "Treat the profile as a landing page. The bio and pinned content should answer the questions a new visitor has: what is this, is it for me, and what should I do next?",
     ],
     next: { href: "/learn/instagram/instagram-content-strategy", label: "Build an Instagram content strategy" }
   },
@@ -365,7 +340,7 @@ export const seoSocialGuides: DetailedGuide[] = [
       "Use different formats for different jobs. A carousel can explain a process step by step. A Reel can demonstrate a transformation or quick concept. Stories can support ongoing conversation, updates, and behind-the-scenes context.",
       "Make the first frame or opening clear. People decide quickly whether the content is relevant, so lead with the question, result, or visual evidence rather than a long introduction.",
       "Write captions that add context rather than simply repeating the image. Use accessible language, descriptive text, and a clear call to action when an action is actually needed.",
-      "Create series instead of isolated posts. A weekly 'website mistake' or 'SEO question' series makes the content easier to plan and gives the audience a reason to return."
+      "Create series instead of isolated posts. A weekly 'website mistake' or 'SEO question' series makes the content easier to plan and gives the audience a reason to return.",
     ],
     next: { href: "/learn/instagram/instagram-reels", label: "Learn Instagram Reels" }
   },
@@ -379,7 +354,7 @@ export const seoSocialGuides: DetailedGuide[] = [
       "Open with the problem or promise. For example: 'Your homepage has three problems' is clearer than a long greeting. Then show the evidence and explain the fix.",
       "Use readable on-screen text and captions where appropriate. Keep important information within the safe visual area and make the video understandable even when the viewer has limited context.",
       "Turn strong Reels into a series. If a website tip performs well with the right audience, create related examples rather than copying the same video repeatedly.",
-      "Review performance and audience response, but do not chase every trend. A trend is useful when it helps communicate your subject; it is not a strategy by itself."
+      "Review performance and audience response, but do not chase every trend. A trend is useful when it helps communicate your subject; it is not a strategy by itself.",
     ],
     next: { href: "/learn/instagram/instagram-growth", label: "Learn Instagram growth" }
   },
@@ -393,7 +368,7 @@ export const seoSocialGuides: DetailedGuide[] = [
       "Make discovery easy with clear subjects, descriptive captions, relevant topics, and content people can understand when they encounter it without knowing your account.",
       "Engage genuinely. Reply to comments, participate in relevant conversations, and collaborate when there is a real shared audience. Do not use automated or purchased engagement as a substitute for useful content.",
       "Use profile structure to convert discovery into a relationship. Pinned posts, highlights, bio text, and the link should help a new visitor understand the account and take the next relevant step.",
-      "Measure growth together with quality. Look at which content attracts the people you actually want, then build more of that subject and format."
+      "Measure growth together with quality. Look at which content attracts the people you actually want, then build more of that subject and format.",
     ],
     next: { href: "/learn/instagram/instagram-monetization", label: "Learn Instagram monetization" }
   },
@@ -407,7 +382,7 @@ export const seoSocialGuides: DetailedGuide[] = [
       "Eligibility and available monetization features can change by country, account type, and current platform rules. Treat official Instagram and Meta documentation as the source of truth for current requirements.",
       "For a service business, the simplest model may be lead generation. Teach the audience something useful, demonstrate your expertise, show real work, and give suitable prospects a clear way to contact you.",
       "For creators, sponsorships can be valuable when the audience and subject are a strong match. Disclose commercial relationships as required and protect audience trust.",
-      "Do not measure monetization only by follower count. Measure enquiries, sales, qualified conversations, recurring customers, and revenue from the specific content or campaign when you can."
+      "Do not measure monetization only by follower count. Measure enquiries, sales, qualified conversations, recurring customers, and revenue from the specific content or campaign when you can.",
     ],
     next: { href: "/learn/instagram", label: "Return to Instagram" }
   },
@@ -422,7 +397,7 @@ export const seoSocialGuides: DetailedGuide[] = [
       "TikTok's own educational resources cover getting started, creation essentials, content strategy, safety, and ways creators can earn. The platform also maintains current help documentation for account and profile setup.",
       "Choose a format you can repeat. Talking to camera, screen demonstrations, tutorials, storytelling, product demonstrations, and short explanations can all work when the idea is clear.",
       "Record several ideas in one session when possible. A sustainable workflow is more useful than waiting for inspiration every day.",
-      "Start with the audience problem rather than the platform feature. The app is the distribution environment; your useful idea is the product."
+      "Start with the audience problem rather than the platform feature. The app is the distribution environment; your useful idea is the product.",
     ],
     next: { href: "/learn/tiktok/tiktok-content-ideas", label: "Find TikTok content ideas" }
   },
@@ -436,7 +411,7 @@ export const seoSocialGuides: DetailedGuide[] = [
       "Collect questions from your customers and community. Turn one broad subject into many small videos. 'SEO' can become videos about titles, internal links, indexing, search intent, local pages, and common mistakes.",
       "Use series to reduce planning. A recurring format such as 'one website fix in 30 seconds' creates a clear promise and lets you build a library without inventing a new style every time.",
       "Trends can help with discovery, but adapt them only when they fit your subject. Do not let a trend replace the actual information or story.",
-      "Keep a backlog with the hook, key point, proof or example, and desired next action. This makes recording faster and keeps the account focused."
+      "Keep a backlog with the hook, key point, proof or example, and desired next action. This makes recording faster and keeps the account focused.",
     ],
     next: { href: "/learn/tiktok/tiktok-growth", label: "Learn TikTok growth" }
   },
@@ -450,7 +425,7 @@ export const seoSocialGuides: DetailedGuide[] = [
       "Build around topics that attract the audience you want. If you want business clients, make content that demonstrates your understanding of business problems instead of only chasing broad entertainment.",
       "Use comments as research. Questions and disagreements can reveal the next video to make. Replying with a useful video can also turn one conversation into a small learning series.",
       "Keep quality sustainable. Clear audio, readable visuals, a focused script, and a strong example often matter more than expensive production.",
-      "Review analytics regularly and compare similar videos. Look for topics and structures that hold attention and attract the right audience, then iterate instead of copying a viral clip."
+      "Review analytics regularly and compare similar videos. Look for topics and structures that hold attention and attract the right audience, then iterate instead of copying a viral clip.",
     ],
     next: { href: "/learn/tiktok/tiktok-analytics", label: "Learn TikTok analytics" }
   },
@@ -464,7 +439,7 @@ export const seoSocialGuides: DetailedGuide[] = [
       "Compare videos by format and topic rather than treating the account as one number. A tutorial, story, trend, and product demonstration have different jobs and may have different normal behavior.",
       "Look for patterns in successful videos. Was the question clearer? Did the example arrive earlier? Was the audience more specific? Did the video come from a recurring series?",
       "Use analytics to choose experiments. Change one major element at a time where possible, publish enough examples to see a pattern, then keep or discard the approach based on evidence.",
-      "Do not confuse reach with business value. If the purpose is lead generation, track whether viewers move from content to profile, website, message, or enquiry."
+      "Do not confuse reach with business value. If the purpose is lead generation, track whether viewers move from content to profile, website, message, or enquiry.",
     ],
     next: { href: "/learn/tiktok/tiktok-monetization", label: "Learn TikTok monetization" }
   },
@@ -478,7 +453,7 @@ export const seoSocialGuides: DetailedGuide[] = [
       "Creators can potentially earn through eligible platform programs, brand partnerships, product-related commerce, affiliate relationships, or by directing an audience to their own products and services.",
       "For a freelancer or agency, TikTok can function as an expertise channel. Short practical lessons can demonstrate competence and lead interested viewers to a service page, portfolio, or contact form.",
       "Build trust before selling heavily. Show the work, explain the reasoning, answer questions, and be honest about what you know. A useful audience is more valuable than a large audience that does not need what you sell.",
-      "Never promise guaranteed earnings. Platform distribution and monetization rules change, and creator income varies substantially."
+      "Never promise guaranteed earnings. Platform distribution and monetization rules change, and creator income varies substantially.",
     ],
     next: { href: "/learn/tiktok", label: "Return to TikTok" }
   },
@@ -493,7 +468,7 @@ export const seoSocialGuides: DetailedGuide[] = [
       "Describe outcomes and responsibilities accurately. Instead of listing tools alone, explain the work you performed and the problem it addressed. Add projects, portfolio links, or other evidence when appropriate.",
       "Use a professional profile image and complete the information that matters to your audience. For a service provider, the profile should make it easy for a potential client to understand the offer and start a conversation.",
       "Do not turn the profile into a keyword wall. LinkedIn itself emphasizes clear organization information and relevant terms for Pages; the same principle of clarity applies to personal professional positioning.",
-      "Review the profile from the perspective of a stranger who has just found you through a post. The next step should be obvious."
+      "Review the profile from the perspective of a stranger who has just found you through a post. The next step should be obvious.",
     ],
     next: { href: "/learn/linkedin/linkedin-content-strategy", label: "Build a LinkedIn content strategy" }
   },
@@ -507,7 +482,7 @@ export const seoSocialGuides: DetailedGuide[] = [
       "Use a clear opening. State the problem, observation, or lesson first, then support it with examples. Avoid long introductions before the reader reaches the point.",
       "Vary the format. LinkedIn's creator guidance has highlighted images and video, polls, and documents as ways to communicate different kinds of information.",
       "Treat posts as conversations rather than broadcasts. Respond to thoughtful comments, ask useful questions when you genuinely want responses, and add insight to other people's discussions.",
-      "Keep your own perspective. LinkedIn's current guidance on AI-assisted content says AI can help refine writing, but the content should still reflect the member's own voice, perspective, and experience."
+      "Keep your own perspective. LinkedIn's current guidance on AI-assisted content says AI can help refine writing, but the content should still reflect the member's own voice, perspective, and experience.",
     ],
     next: { href: "/learn/linkedin/get-clients", label: "Learn how to get clients" }
   },
@@ -521,7 +496,7 @@ export const seoSocialGuides: DetailedGuide[] = [
       "Publish useful material that demonstrates how you think. Explain common problems, show before-and-after work, answer questions, and document real projects where you have permission to share them.",
       "Use networking deliberately. Connect with people who are genuinely relevant to your work, participate in their conversations, and learn what problems they are discussing before making an offer.",
       "When outreach is appropriate, make it specific. Explain why you contacted the person, what you noticed, and what you can help with. Avoid pretending you know details about their business that you have not actually checked.",
-      "Move qualified conversations to a clear next step: a short discovery call, written brief, audit, proposal, or another process that fits the service. Keep scope and expectations explicit."
+      "Move qualified conversations to a clear next step: a short discovery call, written brief, audit, proposal, or another process that fits the service. Keep scope and expectations explicit.",
     ],
     next: { href: "/learn/linkedin/linkedin-job-search", label: "Learn LinkedIn job search" }
   },
@@ -535,7 +510,7 @@ export const seoSocialGuides: DetailedGuide[] = [
       "Show evidence. Projects, work samples, certifications, case studies, open-source contributions, and clearly described responsibilities can make skills easier to evaluate.",
       "Use job search filters and alerts where available, but do not rely only on the application button. Research the role, understand the company, and use your network appropriately to learn about the work.",
       "When contacting someone, be respectful and specific. Ask for information or advice when that is what you need rather than immediately demanding a referral.",
-      "Keep a simple record of applications, conversations, follow-ups, and outcomes. This turns job searching into a process you can improve rather than a stream of disconnected applications."
+      "Keep a simple record of applications, conversations, follow-ups, and outcomes. This turns job searching into a process you can improve rather than a stream of disconnected applications.",
     ],
     next: { href: "/learn/linkedin/linkedin-content-strategy", label: "Build your professional content" }
   },
@@ -549,7 +524,7 @@ export const seoSocialGuides: DetailedGuide[] = [
       "Add the real organization name, logo, overview, website, location, industry, and company size where applicable. Use a concise description that explains what the organization does and who it serves.",
       "Give the Page a clear role. It can publish company updates, explain products or services, share expertise, support hiring, and provide another place for customers or professionals to understand the organization.",
       "Invite appropriate employees to associate with the organization and add additional trusted administrators when necessary. Review security and access regularly.",
-      "Keep the Page active enough to be useful. LinkedIn's business guidance suggests companies that post weekly can see stronger engagement, but the quality and relevance of the posts still matter more than posting for its own sake."
+      "Keep the Page active enough to be useful. LinkedIn's business guidance suggests companies that post weekly can see stronger engagement, but the quality and relevance of the posts still matter more than posting for its own sake.",
     ],
     next: { href: "/learn/linkedin/linkedin-analytics", label: "Learn LinkedIn analytics" }
   },
@@ -563,7 +538,7 @@ export const seoSocialGuides: DetailedGuide[] = [
       "Review impressions and engagement to understand distribution and response, then look for meaningful actions such as profile visits, Page visits, link clicks, enquiries, applications, or conversations.",
       "Compare posts by topic and format. If practical educational posts consistently attract the right audience, build more around that subject. If a format produces attention but no useful action, decide whether awareness alone is actually the goal.",
       "Use LinkedIn analytics alongside your website analytics and CRM or enquiry records where possible. The platform dashboard cannot tell you the entire business story.",
-      "Keep a monthly learning log: what you published, what audience responded, what generated meaningful conversations, and what you will test next."
+      "Keep a monthly learning log: what you published, what audience responded, what generated meaningful conversations, and what you will test next.",
     ],
     next: { href: "/learn/linkedin", label: "Return to LinkedIn" }
   },
@@ -578,12 +553,10 @@ export const seoSocialGuides: DetailedGuide[] = [
       "State the subject you consistently discuss. If you want clients, make the relationship between your expertise and your service understandable without turning the bio into a sales paragraph.",
       "Pin a useful post when the feature is available and relevant. It can introduce your work, explain your approach, show a strong example, or direct visitors to a useful resource.",
       "Secure the account and review access settings. Use strong authentication practices and keep recovery information current.",
-      "Your profile is the landing page for everything else you publish. Make sure a new visitor can understand why following you would be useful."
+      "Your profile is the landing page for everything else you publish. Make sure a new visitor can understand why following you would be useful.",
       "Use clear profile language around the subject you want to be found for. A professional account might naturally describe itself with terms such as X marketing, Twitter marketing, X for business, Twitter for business, creator, SEO, web development, or consulting when those terms accurately describe the work.",
-      "A profile should also support monetization later. If the goal is to monetize X or make money on Twitter, visitors need to understand what you know, what you create, and where they can go next. That next step could be a website, newsletter, product, service, or subscription.",
+      "A profile should also support monetization later. If the goal is to monetize X or make money on Twitter, visitors need to understand what you know, what you create, and where they can go next. That next step could be a website, newsletter, product, service, or subscription."
     ]
-      "Use clear profile language around the subject you want to be found for. A professional account might naturally describe itself with terms such as X marketing, Twitter marketing, X for business, Twitter for business, creator, SEO, web development, or consulting when those terms accurately describe the work.",
-      "A profile should also support monetization later. If the goal is to monetize X or make money on Twitter, visitors need to understand what you know, what you create, and where they can go next. That next step could be a website, newsletter, product, service, or subscription.",
     next: { href: "/learn/x-twitter/x-content-strategy", label: "Build an X content strategy" }
   },
   {
@@ -596,12 +569,10 @@ export const seoSocialGuides: DetailedGuide[] = [
       "Write one idea per post when possible. Short posts can stand alone; longer threads or multi-post explanations should have a clear progression so the reader knows why to continue.",
       "Use replies as part of the strategy. Add useful information to conversations where you have something relevant to contribute. Do not treat every reply as a sales opportunity.",
       "Curate responsibly. If you share someone else's work, add context and credit rather than presenting it as your own.",
-      "Build recurring themes instead of chasing every trending topic. A recognizable subject helps the right audience understand why they should follow."
+      "Build recurring themes instead of chasing every trending topic. A recognizable subject helps the right audience understand why they should follow.",
       "Build content around the language of the problems you solve. Useful search phrases might include how to grow on X, how to grow on Twitter, X marketing, Twitter marketing, X content strategy, and how to make money on X. Use these concepts because they describe the lesson, not because a keyword list told you to repeat them.",
-      "Create content in layers: short answer, example, deeper explanation, and resource. A strong X post can introduce a question; a longer article on BuildSkills can teach it fully; a service or project page can show how the skill becomes real work. This makes social content part of the wider learning system.",
+      "Create content in layers: short answer, example, deeper explanation, and resource. A strong X post can introduce a question; a longer article on BuildSkills can teach it fully; a service or project page can show how the skill becomes real work. This makes social content part of the wider learning system."
     ]
-      "Build content around the language of the problems you solve. Useful search phrases might include how to grow on X, how to grow on Twitter, X marketing, Twitter marketing, X content strategy, and how to make money on X. Use these concepts because they describe the lesson, not because a keyword list told you to repeat them.",
-      "Create content in layers: short answer, example, deeper explanation, and resource. A strong X post can introduce a question; a longer article on BuildSkills can teach it fully; a service or project page can show how the skill becomes real work. This makes social content part of the wider learning system.",
     next: { href: "/learn/x-twitter/x-growth", label: "Learn X growth" }
   },
   {
@@ -614,12 +585,10 @@ export const seoSocialGuides: DetailedGuide[] = [
       "Publish useful original ideas and participate in relevant conversations. Thoughtful replies can introduce your work to people who already care about the subject.",
       "Use examples and proof. Explain what you learned from a real project, show a process, or turn a common question into a concise lesson.",
       "Avoid follower exchanges, fake engagement, and automated behavior that creates low-value interactions. The goal is a relevant professional or community audience.",
-      "Measure growth together with quality: relevant followers, meaningful conversations, profile visits, website clicks, enquiries, or other actions that match your goal."
+      "Measure growth together with quality: relevant followers, meaningful conversations, profile visits, website clicks, enquiries, or other actions that match your goal.",
       "Growth is not just follower growth. Searchers looking for how to grow on X, how to grow on Twitter, how to get followers on X, or X audience growth usually need a repeatable system. Teach them how to choose a niche or subject, publish useful ideas, participate in relevant conversations, review analytics, and improve the profile.",
-      "Do not buy followers or artificial engagement. A larger number with little relevance can make the account less useful for business. Track the actions that matter to your goal: profile visits, qualified followers, replies, website clicks, enquiries, subscribers, or sales.",
+      "Do not buy followers or artificial engagement. A larger number with little relevance can make the account less useful for business. Track the actions that matter to your goal: profile visits, qualified followers, replies, website clicks, enquiries, subscribers, or sales."
     ]
-      "Growth is not just follower growth. Searchers looking for how to grow on X, how to grow on Twitter, how to get followers on X, or X audience growth usually need a repeatable system. Teach them how to choose a niche or subject, publish useful ideas, participate in relevant conversations, review analytics, and improve the profile.",
-      "Do not buy followers or artificial engagement. A larger number with little relevance can make the account less useful for business. Track the actions that matter to your goal: profile visits, qualified followers, replies, website clicks, enquiries, subscribers, or sales.",
     next: { href: "/learn/x-twitter/x-for-business", label: "Use X for business" }
   },
   {
@@ -632,12 +601,10 @@ export const seoSocialGuides: DetailedGuide[] = [
       "Create a path from content to service. A useful post can link to a detailed guide, portfolio project, service page, or contact process when the destination genuinely expands on the topic.",
       "Listen before pitching. Look for conversations where someone has clearly described a problem you can solve. If you respond, add useful insight and let the person decide whether they want help.",
       "Build credibility over time. A profile with dozens of useful posts gives a prospect more evidence than a profile that appears only when you want to sell.",
-      "Keep claims precise. Do not invent results, clients, or expertise. Professional trust is an asset that compounds slowly and can disappear quickly."
+      "Keep claims precise. Do not invent results, clients, or expertise. Professional trust is an asset that compounds slowly and can disappear quickly.",
       "Business searches often use several names for the same platform: X for business, Twitter for business, X marketing, Twitter marketing, and how to get clients on Twitter. Explain the relationship without pretending that the old and new names are separate platforms. The business question is how public expertise can create attention and trust.",
-      "Build a simple funnel: useful post → relevant profile → deeper resource → proof → enquiry or offer. This can work for freelancers, consultants, agencies, creators, and product businesses. The social post creates the conversation; the owned website or business system handles the deeper conversion.",
+      "Build a simple funnel: useful post → relevant profile → deeper resource → proof → enquiry or offer. This can work for freelancers, consultants, agencies, creators, and product businesses. The social post creates the conversation; the owned website or business system handles the deeper conversion."
     ]
-      "Business searches often use several names for the same platform: X for business, Twitter for business, X marketing, Twitter marketing, and how to get clients on Twitter. Explain the relationship without pretending that the old and new names are separate platforms. The business question is how public expertise can create attention and trust.",
-      "Build a simple funnel: useful post → relevant profile → deeper resource → proof → enquiry or offer. This can work for freelancers, consultants, agencies, creators, and product businesses. The social post creates the conversation; the owned website or business system handles the deeper conversion.",
     next: { href: "/learn/x-twitter", label: "Return to X / Twitter" }
   },
   {
@@ -650,14 +617,11 @@ export const seoSocialGuides: DetailedGuide[] = [
       "For a freelancer, direct service revenue may be more relevant than platform payouts. Use posts to demonstrate expertise, answer questions, and connect interested people with a clear service process.",
       "For a creator, partnerships can work when the audience and subject are a strong fit. Be transparent about commercial relationships and protect the credibility that makes the audience valuable.",
       "Do not treat follower count as a financial model. Ask what the audience does after discovering you and whether that action can support a sustainable offer.",
-      "Build the business independently enough that a platform change does not destroy the entire model. Your website, portfolio, email list, product, or client relationships can provide continuity."
+      "Build the business independently enough that a platform change does not destroy the entire model. Your website, portfolio, email list, product, or client relationships can provide continuity.",
       "Search intent around this topic includes how to monetize X, how to monetize Twitter, X monetization, Twitter monetization, how to make money on X, how to earn money on Twitter, and X Creator monetization. These phrases describe closely related questions, so the guide should explain both platform payouts and wider business models.",
       "As of September 2026, X says new enrollments in Creator Revenue Sharing stopped on August 7, 2026 and the program was retired on September 7, 2026. X says Original Content Rewards began rolling out from September 8, 2026 to eligible existing participants, with payouts based on qualified impressions from Premium users and other program requirements. X also lists Creator Subscriptions as a monetization feature for eligible creators.",
-      "Do not build a business around one platform payout. X can help creators and businesses earn through services, products, sponsorships, subscriptions, partnerships, and traffic to websites or other assets. The strongest long-term approach is to use X to develop an audience and then give that audience a useful next step you control.",
+      "Do not build a business around one platform payout. X can help creators and businesses earn through services, products, sponsorships, subscriptions, partnerships, and traffic to websites or other assets. The strongest long-term approach is to use X to develop an audience and then give that audience a useful next step you control."
     ]
-      "Search intent around this topic includes how to monetize X, how to monetize Twitter, X monetization, Twitter monetization, how to make money on X, how to earn money on Twitter, and X Creator monetization. These phrases describe closely related questions, so the guide should explain both platform payouts and wider business models.",
-      "As of September 2026, X says new enrollments in Creator Revenue Sharing stopped on August 7, 2026 and the program was retired on September 7, 2026. X says Original Content Rewards began rolling out from September 8, 2026 to eligible existing participants, with payouts based on qualified impressions from Premium users and other program requirements. X also lists Creator Subscriptions as a monetization feature for eligible creators.",
-      "Do not build a business around one platform payout. X can help creators and businesses earn through services, products, sponsorships, subscriptions, partnerships, and traffic to websites or other assets. The strongest long-term approach is to use X to develop an audience and then give that audience a useful next step you control.",
     next: { href: "/learn/x-twitter", label: "Return to X / Twitter" }
   }
 ];
