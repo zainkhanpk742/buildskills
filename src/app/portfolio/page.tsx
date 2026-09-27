@@ -1,24 +1,27 @@
 import type { Metadata } from "next";
 import { Interior } from "@/components/library";
-import Link from "next/link";
+import { ProjectBoard } from "@/components/home/Sections";
+import { ButtonLink } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "Work",
-  description: "Websites, business software, and search programs from the BuildSkills studio.",
+  description: "A place for real BuildSkills projects: websites, business software, and search programs.",
 };
 
 export default function Page() {
   return (
     <Interior
       kicker="Work"
-      title="Websites, software, and search."
-      lede="Websites, operating software, and search programs. The frames on the homepage are the system these projects use."
+      title="Projects, when they are ready to show."
+      lede="These frames are the portfolio. A real screenshot, a real name, and a real link belong here. Nothing on this page is a made-up client."
     >
-      <ul className="index-list" style={{ borderTop: "1px solid var(--line)" }}>
-        <li><Link className="index-row" href="/services#website-development"><span className="num tabular">01</span><span className="title">Business websites</span></Link></li>
-        <li><Link className="index-row" href="/services#business-software"><span className="num tabular">02</span><span className="title">Operating software</span></Link></li>
-        <li><Link className="index-row" href="/services#seo"><span className="num tabular">03</span><span className="title">Search programs</span></Link></li>
-      </ul>
+      <ProjectBoard />
+      <div className="actions" style={{ marginTop: "2.5rem" }}>
+        <ButtonLink href="/contact">Start a project</ButtonLink>
+        <ButtonLink href="/services" variant="secondary">
+          See the studio
+        </ButtonLink>
+      </div>
     </Interior>
   );
 }

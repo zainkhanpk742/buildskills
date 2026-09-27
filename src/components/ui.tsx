@@ -31,6 +31,7 @@ const variants = {
   secondary: "btn btn-secondary",
   inverse: "btn btn-inverse",
   ghost: "btn btn-ghost",
+  accent: "btn btn-accent",
 } as const;
 
 export function ButtonLink({

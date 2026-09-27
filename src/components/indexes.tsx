@@ -1,49 +1,46 @@
 import Link from "next/link";
-import { areas, services } from "@/data/site";
+import { areas, guidesInArea, services } from "@/data/site";
 import { Arrow } from "@/components/ui";
 
 export function AreaIndex() {
   return (
-    <ol className="index-list" style={{ borderTop: "1px solid var(--line)" }}>
-      {areas.map((area, index) => (
-        <li key={area.slug}>
-          <Link href={`/learn/${area.slug}`} className="index-row">
-            <span className="num tabular">{String(index + 1).padStart(2, "0")}</span>
-            <span>
-              <span className="title" style={{ display: "block", fontSize: "1.15rem" }}>
-                {area.title}
+    <ul className="area-cards">
+      {areas.map((area, index) => {
+        const count = guidesInArea(area.title).length;
+        const countLabel = count === 0 ? "Guides in progress" : count === 1 ? "1 guide" : `${count} guides`;
+        return (
+          <li key={area.slug}>
+            <Link href={`/learn/${area.slug}`} className="area-card">
+              <span className="area-num">{String(index + 1).padStart(2, "0")}</span>
+              <span className="area-title">{area.title}</span>
+              <span className="area-copy">{area.summary}</span>
+              <span className="area-foot">
+                <span>{countLabel}</span>
+                <Arrow />
               </span>
-              <span className="meta" style={{ display: "block", marginTop: "0.25rem" }}>
-                {area.summary}
-              </span>
-            </span>
-            <Arrow />
-          </Link>
-        </li>
-      ))}
-    </ol>
+            </Link>
+          </li>
+        );
+      })}
+    </ul>
   );
 }
 
-export function ServiceIndex({ dark = false }: { dark?: boolean }) {
+export function ServiceIndex() {
   return (
-    <ol className="services">
+    <ul className="svc-grid">
       {services.map((service, index) => (
-        <li key={service.id} id={dark ? undefined : service.id} style={{ scrollMarginTop: "6rem" }}>
-          <Link href={`/services#${service.id}`} className="service-row">
-            <span className="num tabular">{String(index + 1).padStart(2, "0")}</span>
-            <span>
-              <span className="title" style={{ display: "block", fontSize: "1.125rem" }}>
-                {service.title}
-              </span>
-              <span className="meta" style={{ display: "block", marginTop: "0.25rem", color: dark ? "var(--on-dark-muted)" : "var(--muted)" }}>
-                {service.summary}
-              </span>
-            </span>
-            <Arrow />
+        <li key={service.id} id={service.id} className="svc">
+          <span className="area-num">{String(index + 1).padStart(2, "0")}</span>
+          <h3>
+            <Link href={`/services#${service.id}`}>{service.title}</Link>
+          </h3>
+          <p>{service.summary}</p>
+          <Link href="/contact" className="text-link">
+            Start a project <Arrow />
           </Link>
         </li>
       ))}
-    </ol>
+    </ul>
   );
 }
