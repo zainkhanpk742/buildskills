@@ -6,7 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/learn/databases", "/learn/business-software", "/learn/youtube",
     "/learn/x-twitter", "/learn/facebook", "/learn/instagram", "/learn/tiktok", "/learn/linkedin", "/learn/make-money-online", "/questions", "/services",
     "/tools", "/resources", "/portfolio", "/about", "/contact",
-    "/privacy-policy", "/terms"
+    "/learn/websites/what-is-a-website", "/learn/websites/how-websites-work", "/learn/websites/domain-vs-hosting", "/learn/websites/html-css-javascript", "/learn/websites/responsive-web-design", "/learn/websites/website-vs-web-app", "/learn/websites/website-structure", "/learn/websites/business-website", "/learn/websites/website-cost", "/learn/websites/publish-a-website", "/learn/websites/website-maintenance", "/privacy-policy", "/terms"
   ];
   return urls.map((path) => ({
     url: `https://buildskills.com.pk${path}`,
