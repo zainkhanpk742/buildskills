@@ -12,7 +12,8 @@ export function AreaIndex() {
           <li key={area.slug}>
             <Link href={`/learn/${area.slug}`} className="area-card">
               <span className="area-num">{String(index + 1).padStart(2, "0")}</span>
-              <span className="area-title">{area.title}</span>
+              <span className="chip">{area.title}</span>
+              <span className="area-title">{area.question}</span>
               <span className="area-copy">{area.summary}</span>
               <span className="area-foot">
                 <span>{countLabel}</span>
