@@ -1,0 +1,5 @@
+import LearningHub from "@/components/LearningHub";
+
+export default function Page(){
+return <LearningHub title="Freelancing" eyebrow="BUILD A FREELANCE CAREER" intro="Learn how to package digital skills, find opportunities, communicate with clients and deliver professional work." items={[["What is freelancing?","Understand the freelance model and how projects typically work.","/learn/freelancing/what-is-freelancing"],["Choose a digital skill","Match your interests with skills businesses actually need.","/learn/freelancing/choose-a-skill"],["Build a portfolio","Show practical evidence of what you can do.","/portfolio"],["Find clients","Learn outreach, platforms, referrals and useful positioning.","/learn/freelancing/find-clients"],["Price a project","Think about scope, deliverables, time and ongoing support.","/learn/freelancing/pricing"]]} />;
+}
