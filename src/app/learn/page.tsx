@@ -6,7 +6,7 @@ import { ButtonLink } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "Learn",
-  description: "Eleven fields of practical digital work. Start with the problem you have \u2014 websites, SEO, apps, software, design, and freelancing.",
+  description: "Eleven fields of practical digital work. Start with the problem you have — websites, SEO, apps, software, design, and freelancing.",
 };
 
 export default function Page() {
