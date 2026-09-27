@@ -39,6 +39,7 @@ export type ProjectSlot = {
   tags: readonly string[];
   href: string;
   image?: string;
+  imageAlt?: string;
 };
 
 export const portfolioSlots: ProjectSlot[] = [
@@ -66,35 +67,26 @@ export const portfolioSlots: ProjectSlot[] = [
 ];
 
 export function KnowledgeMap() {
+  const stations = [
+    { n: "01", kicker: "Question", title: "What is SEO?", detail: "A direct answer." },
+    { n: "02", kicker: "Path", title: "Eight lessons", detail: "Fundamentals through results." },
+    { n: "03", kicker: "Studio", title: "Or have it built.", detail: "The same subject, finished." },
+  ];
   return (
     <div className="map" aria-hidden="true">
-      <svg className="map-line" viewBox="0 0 400 460" preserveAspectRatio="none">
-        <path d="M110 100 C 190 130, 250 170, 290 220 S 210 340, 130 400" />
-      </svg>
-      <article className="map-card map-a">
-        <p className="chip">Question</p>
-        <h3>What is SEO?</h3>
-        <p>A direct answer, then the next lesson.</p>
-      </article>
-      <article className="map-card map-b">
-        <p className="chip">Path</p>
-        <ol>
-          <li>
-            <span>01</span> Fundamentals
+      <p className="map-label">One visit</p>
+      <ol className="map-steps">
+        {stations.map((station) => (
+          <li key={station.n}>
+            <span className="node">{station.n}</span>
+            <div>
+              <p>{station.kicker}</p>
+              <strong>{station.title}</strong>
+              <span>{station.detail}</span>
+            </div>
           </li>
-          <li className="on">
-            <span>02</span> How search works
-          </li>
-          <li>
-            <span>03</span> Search intent
-          </li>
-        </ol>
-      </article>
-      <article className="map-card map-c">
-        <p className="chip">Studio</p>
-        <h3>Or have it built.</h3>
-        <p>Same subject. Finished work.</p>
-      </article>
+        ))}
+      </ol>
     </div>
   );
 }
@@ -161,7 +153,7 @@ export function QuestionCards() {
           <p className="lede">These are the questions people actually bring. Each one opens a guide you can use.</p>
         </div>
         <ul className="q-cards">
-          {featuredQuestions.map((slug) => {
+          {featuredQuestions.slice(0, 4).map((slug) => {
             const guide = guideBySlug(slug);
             if (!guide) return null;
             const minutes = readingMinutes([guide.summary, ...guide.paragraphs]);
@@ -180,6 +172,11 @@ export function QuestionCards() {
             );
           })}
         </ul>
+        <p className="more-link">
+          <Link href="/questions" className="text-link">
+            All questions <Arrow />
+          </Link>
+        </p>
       </div>
     </section>
   );
@@ -262,12 +259,12 @@ export function ProjectBoard({ items = portfolioSlots }: { items?: readonly Proj
         <li key={item.title} className="work-card">
           {item.image ? (
             <div className="shot">
-              <img src={item.image} alt="" />
+              <img src={item.image} alt={item.imageAlt ?? ""} />
             </div>
           ) : (
             <div className="shot shot-empty">
-              <span>Project image</span>
-              <small>This frame is waiting for a real screenshot.</small>
+              <span>Image</span>
+              <small>Add a screenshot when this work is public.</small>
             </div>
           )}
           <div className="work-body">
@@ -300,9 +297,7 @@ export function WorkSection() {
               Places for real projects.
             </h2>
           </div>
-          <p className="lede">
-            Websites, software, and search programs. The frames are empty on purpose until a finished piece of work can sit in them.
-          </p>
+          <p className="lede">Three kinds of work. Each frame takes a real image when you have one. Nothing here is a stand-in client.</p>
         </div>
         <ProjectBoard />
       </div>

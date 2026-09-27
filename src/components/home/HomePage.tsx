@@ -7,7 +7,7 @@ export function HomePage() {
     <main id="content">
       <section className="hero" aria-labelledby="hero-title">
         <div className="page-wrap hero-top">
-          <div className="rise">
+          <div className="rise hero-copy">
             <Kicker>Knowledge studio</Kicker>
             <h1 id="hero-title" className="display balance">
               <span>Learn something useful.</span>
@@ -22,11 +22,9 @@ export function HomePage() {
                 Start a project
               </ButtonLink>
             </div>
+            <SearchIndex />
           </div>
           <KnowledgeMap />
-        </div>
-        <div className="page-wrap">
-          <SearchIndex />
         </div>
       </section>
 
