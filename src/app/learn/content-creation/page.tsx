@@ -1,0 +1,5 @@
+import LearningHub from "@/components/LearningHub";
+
+export default function Page(){
+return <LearningHub title="Content Creation" eyebrow="CREATE USEFUL CONTENT" intro="Learn how to plan, create and improve articles, social posts, graphics, videos and other digital content." items={[["Content strategy","Choose topics and formats around real audience needs.","/learn/content-creation/strategy"],["How to write useful articles","Structure explanations so readers can find and use the answer.","/learn/content-creation/articles"],["Video content","Plan practical videos for YouTube and social platforms.","/learn/youtube"],["Content ideas","Turn questions, problems and customer needs into topics.","/questions"],["Content improvement","Update, organize and strengthen existing content.","/learn/content-creation/improvement"]]} />;
+}
