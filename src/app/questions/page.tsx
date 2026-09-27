@@ -1,13 +1,20 @@
-import Link from "next/link";
-export const metadata = {
+import type { Metadata } from "next";
+import { QuestionExplorer } from "@/components/home/Interactive";
+import { Interior } from "@/components/library";
+
+export const metadata: Metadata = {
   title: "Questions",
-  description: "Find practical answers to the questions people ask about digital skills and online business."
+  description: "Start with a real question. SEO, websites, apps, business software, and freelancing — answered as guides you can use.",
 };
+
 export default function Page() {
-  return <div className="container" style={{padding:"90px 0"}}>
-    <p className="eyebrow">BUILDSKILLS</p>
-    <h1 style={{fontSize:"clamp(42px,6vw,72px)", letterSpacing:"-.05em", margin:"0 0 18px"}}>Questions</h1>
-    <p style={{maxWidth: "720px", color:"#667085", fontSize:"18px", lineHeight:1.7}}>Find practical answers to the questions people ask about digital skills and online business.</p>
-    <div style={{marginTop:"30px"}}><Link className="primary-btn" href="/">← Back to BuildSkills</Link></div>
-  </div>;
+  return (
+    <Interior
+      kicker="Questions"
+      title="Start with the problem in front of you."
+      lede="Search engines are full of fragments. These are complete starting points: a direct answer, the field it belongs to, and where to go next."
+    >
+      <QuestionExplorer />
+    </Interior>
+  );
 }

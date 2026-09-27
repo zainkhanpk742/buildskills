@@ -1,10 +1,15 @@
 import Link from "next/link";
 
 export default function NotFound() {
-  return <div className="container" style={{padding:"120px 0"}}>
-    <p className="eyebrow">404</p>
-    <h1>We couldn't find that page.</h1>
-    <p>Try searching BuildSkills or return to the homepage.</p>
-    <Link className="primary-btn" href="/">Go home →</Link>
-  </div>;
+  return (
+    <main id="content" className="page-wrap section-pad">
+      <p className="kicker">Missing</p>
+      <h1 className="display-section balance stack-4 max-3">This page is not in the library.</h1>
+      <p className="lede pretty stack-5">The address does not match a guide, a field, or a studio page.</p>
+      <div className="actions">
+        <Link href="/" className="btn btn-primary">Back to BuildSkills</Link>
+        <Link href="/questions" className="btn btn-secondary">Browse questions</Link>
+      </div>
+    </main>
+  );
 }
