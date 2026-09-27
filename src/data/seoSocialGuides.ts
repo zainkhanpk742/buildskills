@@ -141,7 +141,7 @@ export const seoSocialGuides: DetailedGuide[] = [
     title: "How do I start a YouTube channel?",
     summary: "Set up a channel around a clear audience, subject, and repeatable type of video.",
     paragraphs: [
-      "A YouTube channel is a home for your videos, playlists, identity, and audience. You need a Google Account and a YouTube channel to upload videos, comment, or create playlists. A channel can be personal or use a different business name through the available channel setup options. citeturn0search1",
+      "A YouTube channel is a home for your videos, playlists, identity, and audience. You need a Google Account and a YouTube channel to upload videos, comment, or create playlists. A channel can be personal or use a different business name through the available channel setup options.",
       "Before publishing, define the channel promise: who is it for, what will they learn or experience, and why should they return? 'Technology' is broad; 'practical website tutorials for small businesses' is a usable editorial direction.",
       "Set up the profile so a visitor can understand the subject quickly. Use a recognizable name, profile image, banner, description, and useful links. Organize early videos into playlists when they form a learning sequence.",
       "Plan the first ten videos before obsessing over equipment. A phone, clear audio, good lighting, and useful teaching can be enough to begin. Improve production when the audience and workflow justify it.",
@@ -172,7 +172,7 @@ export const seoSocialGuides: DetailedGuide[] = [
       "A title and thumbnail are the entry point to a video. They should accurately represent the content and make the intended viewer understand why the video is relevant.",
       "Start with one clear promise. A title such as 'How to build a website' is broad; 'How to build a small business website: pages, content, and launch' tells a more specific audience what they will learn.",
       "A thumbnail should support the same idea rather than repeating a paragraph of the title. Use one visual focal point, readable text when needed, and enough contrast for the small display sizes where thumbnails often appear.",
-      "Avoid misleading packaging. A high click rate that creates immediate disappointment can hurt the viewing experience. YouTube's own retention guidance recommends reviewing the introduction and considering whether the title and thumbnail accurately reflect the video. citeturn1search13",
+      "Avoid misleading packaging. A high click rate that creates immediate disappointment can hurt the viewing experience. YouTube's own retention guidance recommends reviewing the introduction and considering whether the title and thumbnail accurately reflect the video.",
       "Test ideas over time instead of judging a video only by its first hours. Compare packaging with the video's audience, topic, traffic source, and retention."
     ],
     next: { href: "/learn/youtube/audience-retention", label: "Learn audience retention" }
@@ -186,7 +186,7 @@ export const seoSocialGuides: DetailedGuide[] = [
       "Audience retention describes how viewers continue through a video. It can reveal whether the introduction matches the promise, where attention drops, and which moments people rewatch or share.",
       "Open with the problem and the value of the video. Do not spend the first minute explaining why you made the video if the viewer came for an answer. Give enough context to understand the task, then start doing it.",
       "Use structure to maintain clarity: show the destination, move through logical steps, and use examples when an abstract explanation becomes difficult. Remove repeated phrases, long pauses, and sections that do not help the viewer finish the promised job.",
-      "YouTube's retention guidance specifically highlights the first 30 seconds and recommends experimenting with the introduction and with title/thumbnail alignment. It also identifies spikes as moments that may have been rewatched or shared. citeturn1search13",
+      "YouTube's retention guidance specifically highlights the first 30 seconds and recommends experimenting with the introduction and with title/thumbnail alignment. It also identifies spikes as moments that may have been rewatched or shared.",
       "Retention is not a single target percentage that every video must hit. Compare videos of similar type and ask what the audience behavior says about the structure."
     ],
     next: { href: "/learn/youtube/youtube-analytics", label: "Learn YouTube Analytics" }
@@ -197,7 +197,7 @@ export const seoSocialGuides: DetailedGuide[] = [
     title: "How do I use YouTube Analytics?",
     summary: "Use impressions, traffic sources, watch behavior, and audience data to decide what to improve next.",
     paragraphs: [
-      "YouTube Analytics gives channel and video-level information about how content is discovered and watched. The current YouTube Help documentation describes overview, content, reach, and audience-related reporting, with additional detail available in Advanced Mode. citeturn1search12",
+      "YouTube Analytics gives channel and video-level information about how content is discovered and watched. The current YouTube Help documentation describes overview, content, reach, and audience-related reporting, with additional detail available in Advanced Mode.",
       "Start with a simple funnel: impressions or exposure → click → watch → useful action. If people see the video but do not click, review the topic and packaging. If they click but leave early, review the opening and delivery.",
       "Look at traffic sources to understand how viewers found the video. Search, suggested viewing, browse features, external links, and other sources can produce different audience behavior.",
       "Use the data to choose your next experiment. Change one major thing at a time when possible: topic, opening, title, thumbnail, length, format, or audience. Then compare with similar videos.",
@@ -369,7 +369,7 @@ export const seoSocialGuides: DetailedGuide[] = [
     summary: "Set up a clear profile and build a repeatable short-form content practice around a specific audience.",
     paragraphs: [
       "Start with a clear account subject and profile. Explain what you create, who it is for, and what viewers can expect. Use a recognizable profile image and a handle that is easy to remember.",
-      "TikTok's own educational resources cover getting started, creation essentials, content strategy, safety, and ways creators can earn. The platform also maintains current help documentation for account and profile setup. citeturn0search15turn0search22",
+      "TikTok's own educational resources cover getting started, creation essentials, content strategy, safety, and ways creators can earn. The platform also maintains current help documentation for account and profile setup.",
       "Choose a format you can repeat. Talking to camera, screen demonstrations, tutorials, storytelling, product demonstrations, and short explanations can all work when the idea is clear.",
       "Record several ideas in one session when possible. A sustainable workflow is more useful than waiting for inspiration every day.",
       "Start with the audience problem rather than the platform feature. The app is the distribution environment; your useful idea is the product."
@@ -424,7 +424,7 @@ export const seoSocialGuides: DetailedGuide[] = [
     title: "How can I make money on TikTok?",
     summary: "Combine eligible platform programs with products, services, partnerships, and other business models.",
     paragraphs: [
-      "TikTok provides creator and business education covering creation, strategy, measurement, policy, and monetization. Current eligibility for particular programs and features should be checked against TikTok's official documentation because requirements can change. citeturn0search21turn0search20",
+      "TikTok provides creator and business education covering creation, strategy, measurement, policy, and monetization. Current eligibility for particular programs and features should be checked against TikTok's official documentation because requirements can change.",
       "Creators can potentially earn through eligible platform programs, brand partnerships, product-related commerce, affiliate relationships, or by directing an audience to their own products and services.",
       "For a freelancer or agency, TikTok can function as an expertise channel. Short practical lessons can demonstrate competence and lead interested viewers to a service page, portfolio, or contact form.",
       "Build trust before selling heavily. Show the work, explain the reasoning, answer questions, and be honest about what you know. A useful audience is more valuable than a large audience that does not need what you sell.",
@@ -442,7 +442,7 @@ export const seoSocialGuides: DetailedGuide[] = [
       "A useful LinkedIn profile answers three questions quickly: What do you do? Who is it relevant to? Why should someone trust your work? Use a clear headline, relevant about section, work history, skills, and evidence.",
       "Describe outcomes and responsibilities accurately. Instead of listing tools alone, explain the work you performed and the problem it addressed. Add projects, portfolio links, or other evidence when appropriate.",
       "Use a professional profile image and complete the information that matters to your audience. For a service provider, the profile should make it easy for a potential client to understand the offer and start a conversation.",
-      "Do not turn the profile into a keyword wall. LinkedIn itself emphasizes clear organization information and relevant terms for Pages; the same principle of clarity applies to personal professional positioning. citeturn0search0",
+      "Do not turn the profile into a keyword wall. LinkedIn itself emphasizes clear organization information and relevant terms for Pages; the same principle of clarity applies to personal professional positioning.",
       "Review the profile from the perspective of a stranger who has just found you through a post. The next step should be obvious."
     ],
     next: { href: "/learn/linkedin/linkedin-content-strategy", label: "Build a LinkedIn content strategy" }
@@ -455,9 +455,9 @@ export const seoSocialGuides: DetailedGuide[] = [
     paragraphs: [
       "LinkedIn content works best when it has a professional reason to exist. Teach something you know, explain a lesson from real work, break down a project, discuss a problem, or share a useful framework.",
       "Use a clear opening. State the problem, observation, or lesson first, then support it with examples. Avoid long introductions before the reader reaches the point.",
-      "Vary the format. LinkedIn's creator guidance has highlighted images and video, polls, and documents as ways to communicate different kinds of information. citeturn0search60",
+      "Vary the format. LinkedIn's creator guidance has highlighted images and video, polls, and documents as ways to communicate different kinds of information.",
       "Treat posts as conversations rather than broadcasts. Respond to thoughtful comments, ask useful questions when you genuinely want responses, and add insight to other people's discussions.",
-      "Keep your own perspective. LinkedIn's current guidance on AI-assisted content says AI can help refine writing, but the content should still reflect the member's own voice, perspective, and experience. citeturn0search17"
+      "Keep your own perspective. LinkedIn's current guidance on AI-assisted content says AI can help refine writing, but the content should still reflect the member's own voice, perspective, and experience."
     ],
     next: { href: "/learn/linkedin/get-clients", label: "Learn how to get clients" }
   },
@@ -495,11 +495,11 @@ export const seoSocialGuides: DetailedGuide[] = [
     title: "How do I create a LinkedIn Page for a business?",
     summary: "Build a complete company presence with accurate information, a clear value proposition, and consistent professional activity.",
     paragraphs: [
-      "LinkedIn Pages are designed for organizations such as companies, universities, and schools. LinkedIn's current guidance recommends completing the Page's core information and using relevant terms so members can understand and find the organization. citeturn0search0",
+      "LinkedIn Pages are designed for organizations such as companies, universities, and schools. LinkedIn's current guidance recommends completing the Page's core information and using relevant terms so members can understand and find the organization.",
       "Add the real organization name, logo, overview, website, location, industry, and company size where applicable. Use a concise description that explains what the organization does and who it serves.",
       "Give the Page a clear role. It can publish company updates, explain products or services, share expertise, support hiring, and provide another place for customers or professionals to understand the organization.",
       "Invite appropriate employees to associate with the organization and add additional trusted administrators when necessary. Review security and access regularly.",
-      "Keep the Page active enough to be useful. LinkedIn's business guidance suggests companies that post weekly can see stronger engagement, but the quality and relevance of the posts still matter more than posting for its own sake. citeturn0search11"
+      "Keep the Page active enough to be useful. LinkedIn's business guidance suggests companies that post weekly can see stronger engagement, but the quality and relevance of the posts still matter more than posting for its own sake."
     ],
     next: { href: "/learn/linkedin/linkedin-analytics", label: "Learn LinkedIn analytics" }
   },
