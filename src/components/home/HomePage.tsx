@@ -1,6 +1,7 @@
 import { ButtonLink, Kicker } from "@/components/ui";
 import { SearchIndex } from "@/components/home/Interactive";
-import { AreaGrid, FinalCta, Journey, KnowledgeMap, PathRail, PrincipleGrid, QuestionCards, ServiceGrid } from "@/components/home/Sections";
+import { AreaGrid, FinalCta, Journey, PathRail, PrincipleGrid, QuestionCards, ServiceGrid } from "@/components/home/Sections";
+import { heroImage } from "@/data/heroImage";
 
 export function HomePage() {
   return (
@@ -13,11 +14,10 @@ export function HomePage() {
               <span className="hero-status"><span aria-hidden="true" /> Guides for curious beginners</span>
             </div>
             <h1 id="hero-title" className="display balance">
-              <span>What would you</span>
-              <span className="hero-title-blue">like to learn today?</span>
+              BuildSkills is an online community to help young people build their careers.
             </h1>
             <p className="lede pretty">
-              Find a clear answer, follow a step-by-step guide, or get help building a real project. Start with websites, SEO, creative work, social platforms, apps, or online business.
+              Learn practical skills, explore real opportunities, and turn what you learn into projects.
             </p>
             <div className="hero-actions">
               <ButtonLink href="/learn" variant="accent">
@@ -31,10 +31,8 @@ export function HomePage() {
             <SearchIndex />
           </div>
           <div className="hero-side">
-            <KnowledgeMap />
-            <div className="hero-side-note">
-              <span className="hero-note-icon" aria-hidden="true">✓</span>
-              <p><strong>Learn it, then use it.</strong><span>Practical explanations, connected guides, and clear next steps.</span></p>
+            <div className="hero-side-image">
+              <img src={heroImage} alt="Students learning programming in a classroom" />
             </div>
           </div>
         </div>
