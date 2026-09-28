@@ -1,5 +1,6 @@
 import Link from "next/link";
 import {
+  areas,
   featuredQuestions,
   guideBySlug,
   pathSteps,
@@ -30,40 +31,6 @@ const journey = [
   { n: "04", title: "Explore", body: "Move into the field around that question." },
   { n: "05", title: "Build", body: "Turn it into a page, a product, or a system." },
   { n: "06", title: "Hire", body: "Or have the studio do the work with you." },
-];
-
-export type ProjectSlot = {
-  title: string;
-  category: string;
-  summary: string;
-  tags: readonly string[];
-  href: string;
-  image?: string;
-  imageAlt?: string;
-};
-
-export const portfolioSlots: ProjectSlot[] = [
-  {
-    title: "Business websites",
-    category: "Website development",
-    summary: "A public site with one job: say what you do, who it is for, and how to begin.",
-    tags: ["Websites", "Content"],
-    href: "/services#website-development",
-  },
-  {
-    title: "Operating software",
-    category: "Business software",
-    summary: "A tool that follows a workflow the team already has, instead of the other way around.",
-    tags: ["Software", "Databases"],
-    href: "/services#business-software",
-  },
-  {
-    title: "Search programs",
-    category: "SEO",
-    summary: "Pages matched to real queries, structured so they can be found and used.",
-    tags: ["SEO", "Content"],
-    href: "/services#seo",
-  },
 ];
 
 export function KnowledgeMap() {
@@ -126,11 +93,11 @@ export function AreaGrid() {
           <div>
             <Kicker>Learning areas</Kicker>
             <h2 id="fields-title" className="display-section balance">
-              Eleven fields. Pick the problem you have.
+              {areas.length} learning areas. Pick the problem you have.
             </h2>
           </div>
           <p className="lede">
-            Each field is a shelf. The guides on it answer a real question, and the studio can build the same kind of work.
+            Start with a real question. Each learning area has a practical guide, with more connected lessons to help you keep going.
           </p>
         </div>
         <AreaIndex />
@@ -150,23 +117,30 @@ export function QuestionCards() {
               Start with the problem in front of you.
             </h2>
           </div>
-          <p className="lede">These are the questions people actually bring. Each one opens a guide you can use.</p>
+          <p className="lede">Choose a practical question and follow its guide to a useful next step.</p>
         </div>
         <ul className="q-cards">
-          {featuredQuestions.slice(0, 4).map((slug) => {
+          {featuredQuestions.map((slug) => {
             const guide = guideBySlug(slug);
             if (!guide) return null;
-            const minutes = readingMinutes([guide.summary, ...guide.paragraphs]);
+            const sectionText = guide.sections?.flatMap((section) => [
+              section.heading,
+              ...section.paragraphs,
+              ...(section.bullets ?? []),
+            ]) ?? [];
+            const minutes = readingMinutes([guide.summary, ...guide.paragraphs, ...sectionText]);
             return (
               <li key={slug}>
                 <Link href={`/learn/${guide.slug}`} className="q-card">
                   <span className="chip">Question</span>
                   <span className="q-title">{guide.title}</span>
+                  <span className="q-summary">{guide.summary}</span>
                   <span className="q-meta">
                     <span>{guide.area}</span>
                     <span>{levels[slug] ?? "Guide"}</span>
                     <span>{minutes} min</span>
                   </span>
+                  <span className="q-card-action">Read the guide <Arrow /></span>
                 </Link>
               </li>
             );
@@ -247,59 +221,6 @@ export function ServiceGrid() {
           </p>
         </div>
         <ServiceIndex />
-      </div>
-    </section>
-  );
-}
-
-export function ProjectBoard({ items = portfolioSlots }: { items?: readonly ProjectSlot[] }) {
-  return (
-    <ul className="work-cards">
-      {items.map((item) => (
-        <li key={item.title} className="work-card">
-          {item.image ? (
-            <div className="shot">
-              <img src={item.image} alt={item.imageAlt ?? ""} />
-            </div>
-          ) : (
-            <div className="shot shot-empty">
-              <span>Image</span>
-              <small>Add a screenshot when this work is public.</small>
-            </div>
-          )}
-          <div className="work-body">
-            <p className="chip">{item.category}</p>
-            <h3>{item.title}</h3>
-            <p>{item.summary}</p>
-            <ul className="tags">
-              {item.tags.map((tag) => (
-                <li key={tag}>{tag}</li>
-              ))}
-            </ul>
-            <Link href={item.href} className="text-link">
-              See the service <Arrow />
-            </Link>
-          </div>
-        </li>
-      ))}
-    </ul>
-  );
-}
-
-export function WorkSection() {
-  return (
-    <section id="work" className="section-pad band-sheet" aria-labelledby="work-title">
-      <div className="page-wrap">
-        <div className="section-head">
-          <div>
-            <Kicker>Work</Kicker>
-            <h2 id="work-title" className="display-section balance">
-              Places for real projects.
-            </h2>
-          </div>
-          <p className="lede">Three kinds of work. Each frame takes a real image when you have one. Nothing here is a stand-in client.</p>
-        </div>
-        <ProjectBoard />
       </div>
     </section>
   );

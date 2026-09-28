@@ -24,7 +24,6 @@ export const metadata: Metadata = {
   title: { default: "BuildSkills — Learn something useful. Build something real.", template: "%s | BuildSkills" },
   description:
     "BuildSkills helps you find an answer, learn a practical skill, and have the work built. Websites, SEO, apps, and business software.",
-  keywords: ["website development", "SEO", "website traffic", "mobile app development", "business software", "databases", "online business", "digital skills"],
   openGraph: {
     title: "BuildSkills — Learn something useful. Build something real.",
     description: "Find an answer, follow a learning path, or have the work built.",

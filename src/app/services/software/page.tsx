@@ -1,7 +1,8 @@
 import Link from "next/link";
 export const metadata = {
   title: "Business Software",
-  description: "Custom business software and workflow solutions."
+  description: "Custom business software and workflow solutions.",
+  robots: { index: false, follow: true },
 };
 export default function Page() {
   return <div className="container" style={{padding:"90px 0"}}>

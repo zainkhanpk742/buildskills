@@ -47,9 +47,39 @@ export function GuideView({ slug }: { slug: string }) {
         </header>
         <div className="page-wrap article-grid section-pad">
           <div className="prose">
-            {guide.paragraphs.map((paragraph) => (
-              <p key={paragraph.slice(0, 32)}>{paragraph}</p>
-            ))}
+            {guide.sections?.length
+              ? guide.sections.map((section) => (
+                  <section key={section.heading}>
+                    <h2>{section.heading}</h2>
+                    {section.paragraphs.map((paragraph) => (
+                      <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+                    ))}
+                    {section.bullets?.length ? (
+                      <ul>
+                        {section.bullets.map((bullet) => (
+                          <li key={bullet}>{bullet}</li>
+                        ))}
+                      </ul>
+                    ) : null}
+                  </section>
+                ))
+              : guide.paragraphs.map((paragraph) => (
+                  <p key={paragraph.slice(0, 32)}>{paragraph}</p>
+                ))}
+            {guide.sources?.length ? (
+              <section className="article-sources" aria-labelledby="sources-title">
+                <h2 id="sources-title">Sources and further reading</h2>
+                <ul>
+                  {guide.sources.map((source) => (
+                    <li key={source.url}>
+                      <a href={source.url} target="_blank" rel="noreferrer">
+                        {source.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ) : null}
             <div className="continue">
               <p className="kicker plain faint">Continue</p>
               <Link href={guide.next.href}>{guide.next.label}</Link>
@@ -60,7 +90,7 @@ export function GuideView({ slug }: { slug: string }) {
             <ul className="index-list" style={{ borderTop: "1px solid var(--line)", marginTop: "1rem" }}>
               {siblings.length === 0 ? (
                 <li className="index-row">
-                  <span className="meta">More guides in this field are still being written.</span>
+                  <span className="meta">This is a starting guide for {guide.area}. Browse the learning library for related subjects and practical next steps.</span>
                 </li>
               ) : (
                 siblings.map((item) => (

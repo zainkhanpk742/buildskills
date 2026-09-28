@@ -172,13 +172,12 @@ export default function Page() {
               Platform payouts can change
             </h2>
             <p className="muted" style={{ maxWidth: "50rem", lineHeight: 1.75, marginTop: "1rem" }}>
-              X stopped accepting new enrollments in Creator Revenue Sharing on
-              August 7, 2026 and began rolling out the Original Content Rewards
-              program to eligible existing participants from September 8, 2026.
-              Eligibility includes requirements around location, age, account
-              standing, Premium subscription, impressions, followers, and
-              original content. Check X&apos;s current eligibility page before
-              planning a business around platform payouts.
+              X&apos;s creator payout programs and eligibility rules can
+              change, and access may depend on factors such as location, account
+              standing, and the feature itself. Check the current terms in
+              X&apos;s official help and in-account monetization settings
+              before relying on platform payouts or quoting eligibility
+              thresholds.
             </p>
             <p className="muted" style={{ maxWidth: "50rem", lineHeight: 1.75 }}>
               X also offers Creator Subscriptions for eligible creators. The
@@ -187,8 +186,8 @@ export default function Page() {
               traffic to assets you control such as your website.
             </p>
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", marginTop: "1rem" }}>
-              <a className="search-submit" href="https://help.x.com/en/using-x/original-content-rewards" target="_blank" rel="noreferrer">
-                X Original Content Rewards
+              <a className="search-submit" href="https://help.x.com/en" target="_blank" rel="noreferrer">
+                X Help Center
               </a>
               <a className="search-submit" href="https://help.x.com/en/using-x/subscriptions-creator" target="_blank" rel="noreferrer">
                 X Creator Subscriptions
