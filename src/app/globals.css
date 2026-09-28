@@ -320,7 +320,31 @@ h1, h2, h3 { text-wrap: balance; }
 .area-card-top { display: flex; align-items: center; justify-content: space-between; gap: 0.8rem; margin-bottom: 0.35rem; }
 .area-card .area-num { width: 2.55rem; height: 2.55rem; border-radius: 12px; font-size: 0.88rem; letter-spacing: -0.02em; }
 .area-count { color: var(--muted); font-size: 0.75rem; font-weight: 600; }
-.area-title, .q-title { font-size: 1.2rem; font-weight: 600; letter-spacing: -0.03em; }
+.area-title, .q-title {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  width: fit-content;
+  max-width: 100%;
+  padding: 0.62rem 0.9rem;
+  border-radius: 11px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--sans);
+  font-size: 0.96rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+  box-shadow: 0 7px 16px rgba(23, 73, 173, 0.16);
+  transition: background 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+.area-card:hover .area-title,
+.q-card:hover .q-title {
+  background: var(--accent-hot);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 9px 20px rgba(23, 73, 173, 0.2);
+}
 .area-copy { color: var(--muted); font-size: 0.9rem; line-height: 1.5; flex: 1; }
 .area-foot { display: flex; justify-content: space-between; align-items: center; margin-top: 0.6rem; color: var(--accent); font-size: 0.83rem; font-weight: 700; }
 .area-arrow { display: grid; place-items: center; width: 2rem; height: 2rem; border-radius: 50%; background: var(--accent-soft); transition: transform 180ms ease, background 180ms ease; }
