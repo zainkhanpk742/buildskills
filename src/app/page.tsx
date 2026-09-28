@@ -4,7 +4,7 @@ import { HomePage } from "@/components/home/HomePage";
 export const metadata: Metadata = {
   title: { absolute: "BuildSkills — Learn something useful. Build something real." },
   description:
-    "Find a straight answer, follow a learning path, or have the work built. BuildSkills covers websites, SEO, apps, and business software.",
+    "Learn about websites, SEO, creator platforms, apps, and business software—or get a practical project built with BuildSkills.",
 };
 
 export default function Page() {

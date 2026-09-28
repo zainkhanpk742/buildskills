@@ -1,7 +1,8 @@
 import Link from "next/link";
 export const metadata = {
   title: "SEO Services",
-  description: "SEO audits, technical optimization, content strategy and organic growth support."
+  description: "SEO audits, technical optimization, content strategy and organic growth support.",
+  robots: { index: false, follow: true },
 };
 export default function Page() {
   return <div className="container" style={{padding:"90px 0"}}>

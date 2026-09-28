@@ -18,7 +18,11 @@ export async function generateMetadata({
   const { area, slug } = await params;
   const guide = guideBySlug(`${area}/${slug}`);
   if (!guide) return {};
-  return { title: guide.title, description: guide.summary };
+  return {
+    title: guide.title,
+    description: guide.summary,
+    alternates: { canonical: `/learn/${guide.slug}` },
+  };
 }
 
 export default async function Page({

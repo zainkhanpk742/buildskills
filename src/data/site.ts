@@ -1,5 +1,6 @@
 import { websiteLessons } from "@/data/websiteLessons";
 import { seoSocialGuides } from "@/data/seoSocialGuides";
+import { foundationGuides } from "@/data/foundationsGuides";
 
 export const nav = [
   { label: "Learn", href: "/learn" },
@@ -62,7 +63,7 @@ export const areas: Area[] = [
     slug: "digital-marketing",
     title: "Digital Marketing",
     question: "How do I market my business online?",
-    summary: "Reach the people who already have the problem.",
+    summary: "Find the right audience, choose a channel, and measure useful results.",
     description:
       "Marketing is distribution with a point. Choose the audience, the offer, and one channel you can sustain. Noise is not a strategy.",
   },
@@ -77,7 +78,7 @@ export const areas: Area[] = [
   {
     slug: "graphic-design",
     title: "Graphic Design",
-    question: "How do I design a logo and brand?",
+    question: "How do I design a logo and brand identity?",
     summary: "A visual system that makes the work recognizable.",
     description:
       "Design here means hierarchy, type, and a small set of decisions you can repeat. A logo is not a brand, and decoration is not a system.",
@@ -94,7 +95,7 @@ export const areas: Area[] = [
     slug: "online-business",
     title: "Online Business",
     question: "How do I start an online business?",
-    summary: "A offer, a way to deliver it, and a way to be found.",
+    summary: "Test a useful offer, learn the basics, and build a way to sell it.",
     description:
       "An online business is an offer with a delivery system and a path to the right people. Start narrower than you want to. Breadth is what you earn.",
   },
@@ -143,7 +144,7 @@ export const areas: Area[] = [
   {
     slug: "ai-productivity",
     title: "AI & Productivity",
-    question: "How do I use AI to get more done?",
+    question: "How can I use AI tools safely and productively?",
     summary: "Use new tools on real work, without the theatre.",
     description:
       "AI is useful when it shortens a task you already understand. This field is about workflows, review, and judgment — not a pile of prompts with nowhere to go.",
@@ -151,6 +152,12 @@ export const areas: Area[] = [
 ];
 
 export type Guide = {
+  sources?: { label: string; url: string }[];
+  sections?: {
+    heading: string;
+    paragraphs: string[];
+    bullets?: string[];
+  }[];
   slug: string;
   area: string;
   title: string;
@@ -274,11 +281,16 @@ const websiteGuideSlugs = new Set(detailedWebsiteGuides.map((guide) => guide.slu
 
 const detailedSeoSocialGuides: Guide[] = seoSocialGuides.map((guide) => ({ ...guide }));
 const detailedGuideSlugs = new Set(detailedSeoSocialGuides.map((guide) => guide.slug));
+const detailedFoundationGuides: Guide[] = foundationGuides.map((guide) => ({
+  ...guide,
+  paragraphs: [],
+}));
 
 export const guides: Guide[] = [
   ...guidesBase.filter((guide) => !websiteGuideSlugs.has(guide.slug) && !detailedGuideSlugs.has(guide.slug)),
   ...detailedWebsiteGuides,
   ...detailedSeoSocialGuides,
+  ...detailedFoundationGuides,
 ];
 export const featuredQuestions = [
   "seo/what-is-seo",
@@ -288,6 +300,7 @@ export const featuredQuestions = [
   "mobile-apps/how-to-build-a-mobile-app",
   "business-software/software-for-your-business",
   "freelancing/how-to-start-freelancing",
+  "youtube/make-money-on-youtube",
 ] as const;
 
 export const pathSteps = [
@@ -301,43 +314,43 @@ export const pathSteps = [
     n: "02",
     title: "How search engines work",
     body: "Crawl, index, rank. The only model you need before tactics.",
-    href: "/learn/seo",
+    href: "/learn/seo/how-search-engines-work",
   },
   {
     n: "03",
     title: "Search intent",
     body: "Why the query exists, and what a good result is supposed to do.",
-    href: "/learn/seo",
+    href: "/learn/seo/search-intent",
   },
   {
     n: "04",
     title: "Keyword research",
     body: "Finding the language people already use, then choosing what you can honestly answer.",
-    href: "/learn/seo",
+    href: "/learn/seo/keyword-research",
   },
   {
     n: "05",
     title: "On-page SEO",
     body: "Titles, structure, and pages that answer one thing cleanly.",
-    href: "/learn/seo",
+    href: "/learn/seo/on-page-seo",
   },
   {
     n: "06",
     title: "Technical SEO",
     body: "The parts that let a good page be discovered, crawled, and kept.",
-    href: "/learn/seo/how-to-get-website-on-google",
+    href: "/learn/seo/technical-seo",
   },
   {
     n: "07",
     title: "Authority",
     body: "Why other pages point to you, and how that happens without theatre.",
-    href: "/learn/seo",
+    href: "/learn/seo/what-are-good-backlinks",
   },
   {
     n: "08",
     title: "Measuring results",
     body: "The visits that matter, and whether people did the thing the page was for.",
-    href: "/learn/seo/how-to-increase-website-traffic",
+    href: "/learn/seo/search-console",
   },
 ] as const;
 
@@ -456,7 +469,7 @@ export function searchHits(): SearchHit[] {
     title: guide.title,
     kind: "Question",
     detail: guide.area,
-    hay: `${guide.title} ${guide.summary} ${guide.area}`.toLowerCase(),
+    hay: `${guide.title} ${guide.summary} ${guide.area} ${guide.paragraphs.join(" ")} ${guide.sections?.map((section) => `${section.heading} ${section.paragraphs.join(" ")} ${(section.bullets ?? []).join(" ")}`).join(" ") ?? ""}`.toLowerCase(),
   }));
   const fields: SearchHit[] = areas.map((area) => ({
     href: `/learn/${area.slug}`,
@@ -497,7 +510,16 @@ export function filterHits(query: string): SearchHit[] {
       };
     });
   }
-  return all.filter((hit) => hit.hay.includes(q)).slice(0, 8);
+  const terms = q.split(/\s+/).filter(Boolean);
+  return all
+    .map((hit) => {
+      const score = terms.reduce((count, term) => count + (hit.hay.includes(term) ? 1 : 0), 0);
+      return { hit, score };
+    })
+    .filter(({ score }) => score > 0 && score / terms.length >= 0.6)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 8)
+    .map(({ hit }) => hit);
 }
 
 export function guideBySlug(slug: string) {

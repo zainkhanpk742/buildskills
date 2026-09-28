@@ -1,7 +1,8 @@
 import Link from "next/link";
 export const metadata = {
   title: "Mobile App Services",
-  description: "Custom mobile app development for business and product ideas."
+  description: "Custom mobile app development for business and product ideas.",
+  robots: { index: false, follow: true },
 };
 export default function Page() {
   return <div className="container" style={{padding:"90px 0"}}>

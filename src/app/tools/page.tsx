@@ -4,21 +4,21 @@ import { Interior } from "@/components/library";
 
 export const metadata: Metadata = {
   title: "Tools",
-  description: "Small utilities that sit beside the BuildSkills guides. The project brief is available now.",
+  description: "Practical planning resources and learning guides for website and search projects.",
 };
 
 const tools = [
-  ["Project brief", "Turn a vague idea into a short, copyable brief.", "/contact", "Ready"],
-  ["Search intent notes", "Name the query, the intent, and the page that should answer it.", "/learn/seo", "With the guide"],
-  ["Page outline", "Heading, point, proof, and the next action — before any visual design.", "/learn/websites", "With the guide"],
+  ["Project enquiry", "Describe your goal, current setup, audience, and what a successful result means.", "/contact", "Contact form"],
+  ["Search intent", "Understand the task behind a search and choose a page that can answer it.", "/learn/seo/search-intent", "Learning guide"],
+  ["Website structure", "Plan the pages and navigation around what visitors need to do.", "/learn/websites/website-structure", "Learning guide"],
 ];
 
 export default function Page() {
   return (
     <Interior
       kicker="Tools"
-      title="Utilities for the work, not a drawer of gadgets."
-      lede="Tools belong next to the guides. The brief builder is live. The others open as each one is actually useful."
+      title="Practical resources for the work."
+      lede="This page links to useful planning guides and the project enquiry form. It does not claim to offer interactive calculators or generators."
     >
       <ul className="index-list" style={{ borderTop: "1px solid var(--line)" }}>
         {tools.map(([title, detail, href, state], index) => (

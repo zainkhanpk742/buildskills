@@ -97,8 +97,8 @@ export default function Page() {
           <Link className="primary-btn" href="#learning-path">
             Start the learning path ↓
           </Link>
-          <Link className="secondary-btn" href="/questions/youtube">
-            Explore YouTube questions
+          <Link className="secondary-btn" href="/questions">
+            Browse all questions
           </Link>
         </div>
       </section>
@@ -220,12 +220,15 @@ export default function Page() {
               sponsorships, affiliate relationships, courses, or memberships.
             </p>
             <p style={{ color: "#667085", lineHeight: 1.7 }}>
-              As of September 2026, YouTube's current help documentation lists
-              ad-revenue eligibility at 1,000 subscribers plus either 4,000
-              qualified public watch hours in the previous 365 days or 10
-              million qualified Shorts views in the previous 90 days. YouTube
-              has announced changes beginning February 1, 2027, so always check
-              the current official requirements before applying.
+              The full advertising eligibility rules include audience
+              thresholds, account setup, regional availability, and policy
+              review. These rules change; use our{" "}
+              <Link href="/learn/youtube/make-money-on-youtube">
+                detailed YouTube monetization guide
+              </Link>{" "}
+              for the current requirements and official references, then
+              confirm your own eligibility in YouTube Studio before making
+              plans.
             </p>
             <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", marginTop: "18px" }}>
               <a
