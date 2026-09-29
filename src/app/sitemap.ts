@@ -20,7 +20,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...guides.map((guide) => `/learn/${guide.slug}`),
   ];
 
-  return [...new Set(pages)].map((path) => ({
-    url: path === "/" ? "https://buildskills.com.pk" : `https://buildskills.com.pk${path}`,
-  }));
+  return [...new Set(pages)].map((path) => {
+    const guide = guides.find((item) => `/learn/${item.slug}` === path);
+    return {
+      url: path === "/" ? "https://buildskills.com.pk" : `https://buildskills.com.pk${path}`,
+      ...(guide?.checkedDate ? { lastModified: guide.checkedDate } : {}),
+    };
+  });
 }
