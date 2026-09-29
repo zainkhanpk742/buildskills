@@ -6,7 +6,7 @@ import {
   pathSteps,
   principles,
 } from "@/data/site";
-import { AreaIndex, ServiceIndex } from "@/components/indexes";
+import { AreaIndex } from "@/components/indexes";
 import { Arrow, ButtonLink, Kicker } from "@/components/ui";
 
 function readingMinutes(parts: string[]) {
@@ -26,18 +26,18 @@ const levels: Record<string, string> = {
 
 const journey = [
   { n: "01", title: "Question", body: "Arrive with the problem, in your own words." },
-  { n: "02", title: "Answer", body: "Read a direct guide, not a pile of fragments." },
+  { n: "02", title: "Answer", body: "Start with a direct explanation and useful context." },
   { n: "03", title: "Learn", body: "Follow the skill in an order that builds." },
-  { n: "04", title: "Explore", body: "Move into the field around that question." },
-  { n: "05", title: "Build", body: "Turn it into a page, a product, or a system." },
-  { n: "06", title: "Hire", body: "Or have the studio do the work with you." },
+  { n: "04", title: "Explore", body: "Discover tools and related topics for the task." },
+  { n: "05", title: "Practice", body: "Try the steps with a small, achievable exercise." },
+  { n: "06", title: "Continue", body: "Follow the next guide and keep building confidence." },
 ];
 
 export function KnowledgeMap() {
   const stations = [
     { n: "01", kicker: "Question", title: "What is SEO?", detail: "A direct answer." },
     { n: "02", kicker: "Path", title: "Eight lessons", detail: "Fundamentals through results." },
-    { n: "03", kicker: "Studio", title: "Or have it built.", detail: "The same subject, finished." },
+    { n: "03", kicker: "Practice", title: "Put it to use.", detail: "Apply the idea to a real page." },
   ];
   return (
     <div className="map" aria-hidden="true">
@@ -65,10 +65,10 @@ export function Journey() {
         <div className="section-intro">
           <Kicker>What BuildSkills is</Kicker>
           <h2 id="idea-title" className="display-section balance">
-            A question can become the work.
+            A question can become a skill.
           </h2>
           <p className="lede pretty">
-            Find an answer, learn the skill behind it, and hire the studio when you want the thing made. One progression, not four separate products.
+            Find an answer, learn the skill behind it, and practice it with a useful project. One connected path from curiosity to confidence.
           </p>
         </div>
         <ol className="journey">
@@ -202,25 +202,33 @@ export function PathRail() {
   );
 }
 
-export function ServiceGrid() {
+export function ToolDiscovery() {
+  const collections = [
+    ["AI tools", "Understand AI assistants, image tools, and safe ways to use them.", "/tools#ai-tools"],
+    ["Video editing", "Compare editing workflows and learn the basics of a clear cut.", "/learn/video-editing"],
+    ["Photo editing", "Explore image editing, design basics, and thumbnail skills.", "/learn/photo-editing"],
+    ["Learning resources", "Find practical guides and places to keep learning.", "/resources"],
+  ];
   return (
-    <section id="studio" className="section-pad" aria-labelledby="studio-title">
+    <section id="discover" className="section-pad" aria-labelledby="discover-title">
       <div className="page-wrap">
         <div className="section-head">
           <div>
-            <Kicker>Studio</Kicker>
-            <h2 id="studio-title" className="display-section balance">
-              Learn it yourself.
-              <span className="italic" style={{ display: "block" }}>
-                Or have us build it.
-              </span>
-            </h2>
+            <Kicker>Explore tools and skills</Kicker>
+            <h2 id="discover-title" className="display-section balance">Find a useful place to start.</h2>
           </div>
-          <p className="lede">
-            The same subjects, practiced as client work. Scoped, quiet, and finished. A studio, not a marketplace of strangers.
-          </p>
+          <p className="lede">Discover practical learning collections by the kind of work you want to do.</p>
         </div>
-        <ServiceIndex />
+        <ul className="svc-grid">
+          {collections.map(([title, summary, href], index) => (
+            <li key={href} className="svc">
+              <span className="area-num">{String(index + 1).padStart(2, "0")}</span>
+              <h3><Link href={href}>{title}</Link></h3>
+              <p>{summary}</p>
+              <Link href={href} className="text-link">Explore guides <Arrow /></Link>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );
@@ -255,14 +263,14 @@ export function FinalCta() {
       <div className="page-wrap">
         <h2 id="close-title" className="display-close balance">
           <span>Have a question? Learn it.</span>
-          <span className="italic">Have a project? Build it.</span>
+          <span className="italic">Have a skill? Practice it.</span>
         </h2>
         <div className="actions">
           <ButtonLink href="/learn" variant="inverse">
             Explore learning
           </ButtonLink>
-          <ButtonLink href="/contact" variant="ghost">
-            Start a project
+          <ButtonLink href="/questions" variant="ghost">
+            Browse questions
           </ButtonLink>
         </div>
       </div>

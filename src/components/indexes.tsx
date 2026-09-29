@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { areas, guidesInArea, services } from "@/data/site";
+import { areas, guidesInArea } from "@/data/site";
 import { Arrow } from "@/components/ui";
 
 export function AreaIndex() {
@@ -24,25 +24,6 @@ export function AreaIndex() {
           </li>
         );
       })}
-    </ul>
-  );
-}
-
-export function ServiceIndex() {
-  return (
-    <ul className="svc-grid">
-      {services.map((service, index) => (
-        <li key={service.id} id={service.id} className="svc">
-          <span className="area-num">{String(index + 1).padStart(2, "0")}</span>
-          <h3>
-            <Link href={`/services#${service.id}`}>{service.title}</Link>
-          </h3>
-          <p>{service.summary}</p>
-          <Link href="/contact" className="text-link">
-            Start a project <Arrow />
-          </Link>
-        </li>
-      ))}
     </ul>
   );
 }

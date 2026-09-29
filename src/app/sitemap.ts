@@ -8,12 +8,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...areas
       .filter((area) => guidesInArea(area.title).length > 0)
       .map((area) => `/learn/${area.slug}`),
-    "/learn/make-money-online",
     "/learn/seo/what-are-good-backlinks",
     "/questions",
-    "/services",
     "/tools",
     "/resources",
+    "/projects",
     "/about",
     "/contact",
     "/privacy-policy",

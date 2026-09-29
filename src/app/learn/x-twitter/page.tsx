@@ -2,9 +2,22 @@ import Link from "next/link";
 import { guidesInArea } from "@/data/site";
 
 export const metadata = {
-  title: "How do I grow and make money on X? | BuildSkills",
+  title: "X learning path: profiles, posts, and audience growth",
   description:
-    "Learn X step by step: build a useful profile, create content, grow an audience, get clients, and understand current monetization options.",
+    "Learn how to set up an X profile, publish useful posts, join conversations, understand analytics, and review current platform features.",
+  alternates: { canonical: "/learn/x-twitter" },
+  openGraph: {
+    type: "website",
+    title: "X learning path: profiles, posts, and audience growth",
+    description: "Practical guides to using X for learning, publishing, and professional development.",
+    url: "/learn/x-twitter",
+    siteName: "BuildSkills",
+  },
+  twitter: {
+    card: "summary",
+    title: "X learning path: profiles, posts, and audience growth",
+    description: "Learn how to use X for publishing and professional development.",
+  },
 };
 
 export default function Page() {

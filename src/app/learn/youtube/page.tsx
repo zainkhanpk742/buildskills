@@ -58,9 +58,23 @@ const mistakes = [
 ];
 
 export const metadata = {
-  title: "YouTube Learning Path",
+  title: "YouTube learning path: channels, videos, and analytics",
   description:
     "Learn how to start a YouTube channel, find video ideas, improve titles and retention, use YouTube Analytics, and understand YouTube monetization.",
+  alternates: { canonical: "/learn/youtube" },
+  openGraph: {
+    type: "website",
+    title: "YouTube learning path: channels, videos, and analytics",
+    description:
+      "Learn how to start a YouTube channel, find video ideas, improve titles and retention, use analytics, and understand monetization.",
+    url: "/learn/youtube",
+    siteName: "BuildSkills",
+  },
+  twitter: {
+    card: "summary",
+    title: "YouTube learning path: channels, videos, and analytics",
+    description: "Practical guides for starting and improving a YouTube channel.",
+  },
 };
 
 export default function Page() {

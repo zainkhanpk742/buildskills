@@ -35,7 +35,9 @@ export function Header() {
         </Link>
         <nav className="desktop-nav" aria-label="Primary">
           {nav.map((item) => {
-            const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
+            const active = pathname === item.href || (
+              item.href !== "/learn" && pathname.startsWith(`${item.href}/`)
+            );
             return (
               <Link key={item.href} href={item.href} aria-current={active ? "page" : undefined}>
                 {item.label}
@@ -45,7 +47,7 @@ export function Header() {
         </nav>
         <div className="header-cta">
           <ButtonLink href="/contact" variant="accent" compact>
-            Start a project
+            Suggest a guide
           </ButtonLink>
         </div>
         <button
@@ -71,7 +73,7 @@ export function Header() {
               </Link>
             ))}
             <div className="actions">
-              <ButtonLink href="/contact">Start a project</ButtonLink>
+              <ButtonLink href="/contact">Suggest a guide</ButtonLink>
             </div>
           </div>
         </nav>

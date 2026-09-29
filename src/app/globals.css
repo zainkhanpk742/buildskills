@@ -417,6 +417,11 @@ h1, h2, h3 { text-wrap: balance; }
 
 .page-head { padding-block: clamp(3rem, 2rem + 3vw, 5.2rem); border-bottom: 1px solid var(--line); }
 .prose { max-width: 40rem; }
+.article-breadcrumb { margin-bottom: 1.25rem; color: var(--muted); font-size: 0.85rem; }
+.article-breadcrumb a { color: inherit; text-underline-offset: 0.2em; }
+.article-meta { margin: 0; color: var(--muted); font-size: 0.85rem; }
+.learning-path-steps { display: grid; gap: 0.35rem; margin: 0; padding-left: 1.25rem; color: var(--muted); font-size: 0.9rem; }
+.learning-path-steps a { text-underline-offset: 0.2em; }
 .prose p { margin: 0 0 1.15rem; color: var(--ink-soft); font-size: 1.05rem; line-height: 1.7; }
 .prose h2 { margin: 2.1rem 0 0.8rem; color: var(--ink); font-family: var(--sans); font-size: clamp(1.25rem, 1.1rem + 0.5vw, 1.55rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.25; }
 .prose ul, .prose ol { margin: 0 0 1.25rem; padding-left: 1.4rem; color: var(--ink-soft); line-height: 1.75; }
