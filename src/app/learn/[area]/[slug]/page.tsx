@@ -18,10 +18,23 @@ export async function generateMetadata({
   const { area, slug } = await params;
   const guide = guideBySlug(`${area}/${slug}`);
   if (!guide) return {};
+  const canonical = `/learn/${guide.slug}`;
   return {
     title: guide.title,
     description: guide.summary,
-    alternates: { canonical: `/learn/${guide.slug}` },
+    alternates: { canonical },
+    openGraph: {
+      type: "article",
+      title: guide.title,
+      description: guide.summary,
+      url: canonical,
+      siteName: "BuildSkills",
+    },
+    twitter: {
+      card: "summary",
+      title: guide.title,
+      description: guide.summary,
+    },
   };
 }
 

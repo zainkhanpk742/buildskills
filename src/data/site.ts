@@ -1,12 +1,15 @@
 import { websiteLessons } from "@/data/websiteLessons";
+import { websiteGuides } from "@/data/websiteGuides";
 import { seoSocialGuides } from "@/data/seoSocialGuides";
 import { foundationGuides } from "@/data/foundationsGuides";
+import { digitalSkillsGuides } from "@/data/digitalSkillsGuides";
 
 export const nav = [
   { label: "Learn", href: "/learn" },
   { label: "Questions", href: "/questions" },
-  { label: "Services", href: "/services" },
-  { label: "Work", href: "/portfolio" },
+  { label: "AI", href: "/learn/ai-productivity" },
+  { label: "Tools", href: "/tools" },
+  { label: "Resources", href: "/resources" },
   { label: "About", href: "/about" },
 ] as const;
 
@@ -149,9 +152,31 @@ export const areas: Area[] = [
     description:
       "AI is useful when it shortens a task you already understand. This field is about workflows, review, and judgment — not a pile of prompts with nowhere to go.",
   },
+  {
+    slug: "video-editing",
+    title: "Video Editing",
+    question: "How do I edit a video?",
+    summary: "Learn editing basics, choose software for your device, and make clear videos.",
+    description:
+      "Learn a repeatable editing workflow: organize footage, shape a story, improve sound, add captions, and export for the place people will watch.",
+  },
+  {
+    slug: "photo-editing",
+    title: "Photo Editing",
+    question: "How do I edit a photo?",
+    summary: "Improve photos and graphics with approachable editing workflows.",
+    description:
+      "Understand crops, light, color, image formats, and accessible design choices before you choose an editing app.",
+  },
 ];
 
 export type Guide = {
+  checkedDate?: string;
+  difficulty?: "Beginner" | "Intermediate" | "Practical";
+  estimatedMinutes?: number;
+  faqs?: { question: string; answer: string }[];
+  kind?: "Question" | "Guide";
+  related?: string[];
   sources?: { label: string; url: string }[];
   sections?: {
     heading: string;
@@ -163,6 +188,8 @@ export type Guide = {
   title: string;
   summary: string;
   paragraphs: string[];
+  tools?: string[];
+  topics?: string[];
   next: { href: string; label: string };
 };
 
@@ -177,7 +204,7 @@ const guidesBase: Guide[] = [
       "Search engine optimization is not a trick, and it is not a traffic machine. A search engine tries to match a query with a page that answers it. SEO is how you make that match more likely: the language people use, the structure of the page, the ability to crawl it, and the reasons another page would treat yours as a source.",
       "Start with the question, not the tactic. If you cannot say who is searching and what a good answer does for them, keywords and plugins will not save the page. A clear page about one subject beats a vague page trying to rank for everything.",
       "The practical parts sit in a fixed order. Understand what search is. Learn how a page is discovered and indexed. Match the intent of the query. Write and structure the page. Remove technical barriers. Earn references. Then measure whether the right people arrived — not whether a chart went up.",
-      "BuildSkills treats SEO as that path. You can follow it yourself, or the studio can do the structural and content work with you.",
+      "BuildSkills treats SEO as a learning path: understand how search works, make useful pages discoverable, and measure whether they help the people who find them.",
     ],
     next: { href: "/learn/seo", label: "Open the SEO path" },
   },
@@ -249,7 +276,7 @@ const guidesBase: Guide[] = [
       "The data model is that description made precise: the things, the relationships, and what must never be lost. Screens are how a person moves through the same description. Automation is only the steps that are boring and reliable enough to hand over.",
       "Build the smallest loop that a real person can finish. Use it. Then extend it. A wide system that nobody trusts is more expensive than a narrow one that is true.",
     ],
-    next: { href: "/services", label: "Have the studio build it" },
+    next: { href: "/learn/business-software", label: "Learn about business software" },
   },
   {
     slug: "freelancing/how-to-start-freelancing",
@@ -260,7 +287,7 @@ const guidesBase: Guide[] = [
     paragraphs: [
       "Freelancing starts when someone will pay you for a skill they need and you can deliver. Websites, search, design, writing, and software are common because the output is visible. The skill comes first. The personal brand is a later refinement.",
       "Proof can be small. Three examples with a clear brief — what the work was for, what you did, what changed — are more convincing than a moodboard. Practice projects count if the brief is honest and the result is specific.",
-      "You need a page that says what you do, who it is for, and how a project starts. A price, or a clear way you scope a price. Then go where the problem already is. Waiting to be discovered is not a plan.",
+      "You need a portfolio page that says what you do, who it is for, and what a client can expect. Then go where the problem already is. Waiting to be discovered is not a plan.",
       "Scope the work in writing. What is included, what is not, when it is done. Most early freelance pain is an unclear edge, not a weak logo.",
     ],
     next: { href: "/learn/websites", label: "Learn websites" },
@@ -268,16 +295,35 @@ const guidesBase: Guide[] = [
 ];
 
 
-const detailedWebsiteGuides: Guide[] = websiteLessons.map((lesson) => ({
-  slug: lesson.slug,
-  area: lesson.area,
-  title: lesson.title,
-  summary: lesson.summary,
-  paragraphs: [...lesson.paragraphs],
-  next: { ...lesson.next },
+const structuredWebsiteGuides: Guide[] = websiteGuides.map((guide) => ({
+  slug: guide.slug,
+  area: guide.area,
+  title: guide.title,
+  summary: guide.summary,
+  paragraphs: [],
+  sections: guide.sections.map((section) => ({
+    heading: section.heading,
+    paragraphs: section.body,
+    ...(section.bullets ? { bullets: section.bullets } : {}),
+  })),
+  sources: guide.sources,
+  related: guide.related?.map((item) => item.href.replace(/^\/learn\//, "")),
+  next: { ...guide.next },
 }));
 
-const websiteGuideSlugs = new Set(detailedWebsiteGuides.map((guide) => guide.slug));
+const structuredWebsiteSlugs = new Set(structuredWebsiteGuides.map((guide) => guide.slug));
+const supplementalWebsiteGuides: Guide[] = websiteLessons
+  .filter((lesson) => !structuredWebsiteSlugs.has(lesson.slug))
+  .map((lesson) => ({
+    slug: lesson.slug,
+    area: lesson.area,
+    title: lesson.title,
+    summary: lesson.summary,
+    paragraphs: [...lesson.paragraphs],
+    next: { ...lesson.next },
+  }));
+
+const websiteGuideSlugs = new Set([...structuredWebsiteGuides, ...supplementalWebsiteGuides].map((guide) => guide.slug));
 
 const detailedSeoSocialGuides: Guide[] = seoSocialGuides.map((guide) => ({ ...guide }));
 const detailedGuideSlugs = new Set(detailedSeoSocialGuides.map((guide) => guide.slug));
@@ -288,9 +334,11 @@ const detailedFoundationGuides: Guide[] = foundationGuides.map((guide) => ({
 
 export const guides: Guide[] = [
   ...guidesBase.filter((guide) => !websiteGuideSlugs.has(guide.slug) && !detailedGuideSlugs.has(guide.slug)),
-  ...detailedWebsiteGuides,
+  ...structuredWebsiteGuides,
+  ...supplementalWebsiteGuides,
   ...detailedSeoSocialGuides,
   ...detailedFoundationGuides,
+  ...digitalSkillsGuides,
 ];
 export const featuredQuestions = [
   "seo/what-is-seo",
@@ -300,6 +348,7 @@ export const featuredQuestions = [
   "mobile-apps/how-to-build-a-mobile-app",
   "business-software/software-for-your-business",
   "freelancing/how-to-start-freelancing",
+  "freelancing/how-to-make-money-online-safely",
   "youtube/make-money-on-youtube",
 ] as const;
 
@@ -354,64 +403,68 @@ export const pathSteps = [
   },
 ] as const;
 
-export type Service = {
-  id: string;
-  title: string;
-  summary: string;
-};
-
-export const services: Service[] = [
+export const learningPaths = [
   {
-    id: "website-development",
-    title: "Website Development",
-    summary: "A business site with a clear structure, calm type, and a job to do.",
+    slug: "seo-basics",
+    title: "Learn SEO step by step",
+    href: "/learn/seo",
+    description: "Understand how search works, make useful pages discoverable, and measure progress without ranking promises.",
+    steps: pathSteps.map((step) => ({ title: step.title, href: step.href })),
   },
   {
-    id: "web-applications",
-    title: "Web Applications",
-    summary: "Tools in the browser: workflows, accounts, and the screens people use.",
+    slug: "website-basics",
+    title: "Build a website",
+    href: "/learn/websites",
+    description: "Go from the basics of the web to planning and publishing a first site.",
+    steps: [
+      { title: "What is a website?", href: "/learn/websites/what-is-a-website" },
+      { title: "How websites work", href: "/learn/websites/how-websites-work" },
+      { title: "Domain vs hosting", href: "/learn/websites/domain-vs-hosting" },
+      { title: "HTML, CSS, and JavaScript", href: "/learn/websites/html-css-javascript" },
+      { title: "Build and publish a website", href: "/learn/websites/how-to-build-a-website" },
+      { title: "Learn SEO basics", href: "/learn/seo/what-is-seo" },
+    ],
   },
   {
-    id: "seo",
-    title: "SEO",
-    summary: "Search visibility from structure, content, and technical clarity.",
+    slug: "ai-foundations",
+    title: "Understand and use AI",
+    href: "/learn/ai-productivity",
+    description: "Learn the basics, write clearer instructions, practice with AI, and protect your privacy.",
+    steps: [
+      { title: "What is generative AI?", href: "/learn/ai-productivity/what-is-generative-ai" },
+      { title: "How to write better AI prompts", href: "/learn/ai-productivity/how-to-write-ai-prompts" },
+      { title: "How to use ChatGPT", href: "/learn/ai-productivity/how-to-use-chatgpt" },
+      { title: "Use AI for studying", href: "/learn/ai-productivity/how-to-use-ai-for-studying" },
+      { title: "AI safety and privacy", href: "/learn/ai-productivity/ai-safety-and-privacy" },
+      { title: "Choose an AI tool", href: "/learn/ai-productivity/how-to-choose-an-ai-tool" },
+    ],
   },
   {
-    id: "mobile-apps",
-    title: "Mobile Apps",
-    summary: "Practical apps for a repeated workflow, not a feature tour.",
+    slug: "creator-skills",
+    title: "Practice creator skills",
+    href: "/learn/video-editing",
+    description: "Connect visual design, editing, publishing, and platform learning.",
+    steps: [
+      { title: "Edit a photo", href: "/learn/photo-editing/how-to-edit-photos" },
+      { title: "Make a video thumbnail", href: "/learn/photo-editing/how-to-make-a-thumbnail" },
+      { title: "Edit a video", href: "/learn/video-editing/how-to-edit-a-video" },
+      { title: "Add subtitles", href: "/learn/video-editing/how-to-add-subtitles" },
+      { title: "Explore YouTube", href: "/learn/youtube" },
+    ],
   },
   {
-    id: "databases",
-    title: "Databases",
-    summary: "Information modeled so the rest of the system can trust it.",
+    slug: "online-work",
+    title: "Learn about online work",
+    href: "/learn/freelancing",
+    description: "Build a skill, present your work honestly, and evaluate online opportunities carefully.",
+    steps: [
+      { title: "Choose a skill and build proof", href: "/learn/freelancing/how-to-start-freelancing" },
+      { title: "Make money online safely", href: "/learn/freelancing/how-to-make-money-online-safely" },
+      { title: "Build a portfolio website", href: "/learn/websites/how-to-build-a-website" },
+      { title: "Explore freelancing guides", href: "/learn/freelancing" },
+    ],
   },
-  {
-    id: "business-software",
-    title: "Business Software",
-    summary: "Software shaped around how the work already happens.",
-  },
-  {
-    id: "automation",
-    title: "Automation",
-    summary: "Repetitive steps handed to a process that does not drift.",
-  },
-  {
-    id: "graphic-design",
-    title: "Graphic Design",
-    summary: "A visual system the work can repeat without starting over.",
-  },
-  {
-    id: "content",
-    title: "Content",
-    summary: "Pages and pieces people needed, written to be found and used.",
-  },
-  {
-    id: "digital-marketing",
-    title: "Digital Marketing",
-    summary: "Reaching the right people, without noise for its own sake.",
-  },
-];
+] as const;
 
 export const method = [
   {
@@ -447,18 +500,20 @@ export const principles = [
   },
   {
     title: "Useful",
-    body: "Every page points somewhere: a deeper guide, a path, or a project.",
+    body: "Every page points somewhere: a deeper guide, a path, or a chance to practice.",
   },
   {
     title: "Connected",
-    body: "A question can become a skill. A skill can become something we build with you.",
+    body: "A question can become a skill. A skill can become a project you make yourself.",
   },
 ] as const;
+
+export type SearchHitKind = "Question" | "Guide" | "Learning Path" | "Tool" | "Topic";
 
 export type SearchHit = {
   href: string;
   title: string;
-  kind: "Question" | "Field" | "Studio" | "Path";
+  kind: SearchHitKind;
   detail: string;
   hay: string;
 };
@@ -467,32 +522,40 @@ export function searchHits(): SearchHit[] {
   const questions: SearchHit[] = guides.map((guide) => ({
     href: `/learn/${guide.slug}`,
     title: guide.title,
-    kind: "Question",
+    kind: guide.kind ?? (guide.title.trim().endsWith("?") ? "Question" : "Guide"),
     detail: guide.area,
-    hay: `${guide.title} ${guide.summary} ${guide.area} ${guide.paragraphs.join(" ")} ${guide.sections?.map((section) => `${section.heading} ${section.paragraphs.join(" ")} ${(section.bullets ?? []).join(" ")}`).join(" ") ?? ""}`.toLowerCase(),
+    hay: `${guide.title} ${guide.summary} ${guide.area} ${(guide.topics ?? []).join(" ")} ${(guide.tools ?? []).join(" ")} ${guide.paragraphs.join(" ")} ${guide.sections?.map((section) => `${section.heading} ${section.paragraphs.join(" ")} ${(section.bullets ?? []).join(" ")}`).join(" ") ?? ""}`.toLowerCase(),
   }));
   const fields: SearchHit[] = areas.map((area) => ({
     href: `/learn/${area.slug}`,
     title: area.title,
-    kind: "Field",
+    kind: "Topic",
     detail: "Learning area",
-    hay: `${area.title} ${area.summary}`.toLowerCase(),
+    hay: `${area.title} ${area.question} ${area.summary} ${area.description}`.toLowerCase(),
   }));
-  const studio: SearchHit[] = services.map((service) => ({
-    href: `/services#${service.id}`,
-    title: service.title,
-    kind: "Studio",
-    detail: "Service",
-    hay: `${service.title} ${service.summary}`.toLowerCase(),
+  const paths: SearchHit[] = learningPaths.map((path) => ({
+    href: path.href,
+    title: path.title,
+    kind: "Learning Path",
+    detail: `${path.steps.length} lessons`,
+    hay: `${path.title} ${path.description} ${path.steps.map((step) => step.title).join(" ")}`.toLowerCase(),
   }));
-  const path: SearchHit = {
-    href: "/learn/seo",
-    title: "SEO learning path",
-    kind: "Path",
-    detail: "8 lessons",
-    hay: "seo learning path search engines keywords rankings",
-  };
-  return [...questions, path, ...fields, ...studio];
+  const guideByTool = new Map<string, Guide>();
+  for (const guide of guides) {
+    for (const tool of guide.tools ?? []) {
+      if (!tool.toLowerCase().includes("documentation") && !guideByTool.has(tool)) {
+        guideByTool.set(tool, guide);
+      }
+    }
+  }
+  const tools: SearchHit[] = [...guideByTool].map(([tool, guide]) => ({
+    href: `/learn/${guide.slug}`,
+    title: tool,
+    kind: "Tool",
+    detail: `${guide.area} guide`,
+    hay: `${tool} ${guide.title} ${guide.summary} ${guide.area}`.toLowerCase(),
+  }));
+  return [...questions, ...paths, ...fields, ...tools];
 }
 
 export function filterHits(query: string): SearchHit[] {
@@ -504,7 +567,7 @@ export function filterHits(query: string): SearchHit[] {
       return {
         href: `/learn/${guide.slug}`,
         title: guide.title,
-        kind: "Question" as const,
+        kind: guide.kind ?? (guide.title.trim().endsWith("?") ? "Question" as const : "Guide" as const),
         detail: guide.area,
         hay: "",
       };

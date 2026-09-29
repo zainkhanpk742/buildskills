@@ -6,29 +6,29 @@ const columns = [
   {
     title: "Learn",
     links: [
-      ["All fields", "/learn"],
+      ["All learning", "/learn"],
       ["Questions", "/questions"],
-      ["SEO path", "/learn/seo"],
       ["Websites", "/learn/websites"],
+      ["AI", "/learn/ai-productivity"],
+      ["SEO", "/learn/seo"],
       ["Freelancing", "/learn/freelancing"],
     ],
   },
   {
-    title: "Studio",
+    title: "Explore",
     links: [
-      ["Services", "/services"],
-      ["Work", "/portfolio"],
-      ["Websites", "/services#website-development"],
-      ["SEO", "/services#seo"],
-      ["Start a project", "/contact"],
+      ["AI tools", "/tools#ai-tools"],
+      ["Video editing", "/learn/video-editing"],
+      ["Photo editing", "/learn/photo-editing"],
+      ["Tools", "/tools"],
+      ["Resources", "/resources"],
     ],
   },
   {
     title: "Company",
     links: [
       ["About", "/about"],
-      ["Resources", "/resources"],
-      ["Tools", "/tools"],
+      ["Contact", "/contact"],
       ["Privacy", "/privacy-policy"],
       ["Terms", "/terms"],
     ],
@@ -47,8 +47,8 @@ export function Footer() {
               <em>Skills</em>
             </span>
           </Link>
-          <p>Learn. Build. Grow.</p>
-          <p>Answers, learning paths, and a studio that can build the work. Websites, search, apps, and business software.</p>
+          <p>Learn. Practice. Grow.</p>
+          <p>Clear answers and practical learning paths for digital skills, modern tools, and online work.</p>
         </div>
         <div className="footer-cols">
           {columns.map((column) => (
@@ -68,7 +68,7 @@ export function Footer() {
       <div className="footer-base">
         <div className="page-wrap">
           <p>© {new Date().getFullYear()} BuildSkills</p>
-          <p>{areas.length} fields of practice. One way through.</p>
+          <p>{areas.length} learning areas. One way through.</p>
         </div>
       </div>
     </footer>

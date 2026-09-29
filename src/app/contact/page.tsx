@@ -3,16 +3,17 @@ import { ContactForm } from "@/components/ContactForm";
 import { Interior } from "@/components/library";
 
 export const metadata: Metadata = {
-  title: "Start a project",
-  description: "Describe what you want to learn or build. BuildSkills turns it into a clear project brief.",
+  title: "Contact and guide suggestions",
+  description: "Suggest a practical guide, report outdated information or a broken link, or share a useful digital tool.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function Page() {
   return (
     <Interior
       kicker="Contact"
-      title="Tell us what you are trying to build."
-      lede="A project starts as a clear brief: who it is for, what it must do, and whether you want to learn it or have it made. Write that here."
+      title="Help make the learning library more useful."
+      lede="Suggest a topic, report outdated information or a broken link, or recommend a tool worth explaining. Your message is prepared in your browser and is not sent automatically."
     >
       <ContactForm />
     </Interior>

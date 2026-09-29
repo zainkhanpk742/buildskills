@@ -33,16 +33,69 @@ export function GuideView({ slug }: { slug: string }) {
   if (!guide) return null;
   const field = areas.find((item) => item.title === guide.area);
   const siblings = guidesInArea(guide.area).filter((item) => item.slug !== guide.slug);
+  const related = (guide.related ?? [])
+    .map((relatedSlug) => guideBySlug(relatedSlug))
+    .filter((item) => item && item.slug !== guide.slug);
+  const readingMinutes = guide.estimatedMinutes ??
+    Math.max(1, Math.ceil(
+      [
+        guide.summary,
+        ...guide.paragraphs,
+        ...(guide.sections ?? []).flatMap((section) => [
+          section.heading,
+          ...section.paragraphs,
+          ...(section.bullets ?? []),
+        ]),
+      ].join(" ").trim().split(/\s+/).filter(Boolean).length / 200,
+    ));
+  const pageUrl = `https://buildskills.com.pk/learn/${guide.slug}`;
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: guide.title,
+      description: guide.summary,
+      url: pageUrl,
+      mainEntityOfPage: pageUrl,
+      articleSection: guide.area,
+      keywords: guide.topics,
+      isAccessibleForFree: true,
+      publisher: {
+        "@type": "Organization",
+        name: "BuildSkills",
+        url: "https://buildskills.com.pk",
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://buildskills.com.pk/" },
+        { "@type": "ListItem", position: 2, name: "Learn", item: "https://buildskills.com.pk/learn" },
+        { "@type": "ListItem", position: 3, name: guide.area, item: `https://buildskills.com.pk/learn/${field?.slug ?? guide.slug.split("/")[0]}` },
+        { "@type": "ListItem", position: 4, name: guide.title, item: pageUrl },
+      ],
+    },
+  ];
   return (
     <main id="content">
       <article>
         <header className="page-head">
           <div className="page-wrap">
+            <nav aria-label="Breadcrumb" className="article-breadcrumb">
+              <Link href="/learn">Learn</Link>
+              <span aria-hidden="true"> / </span>
+              {field ? <Link href={`/learn/${field.slug}`}>{guide.area}</Link> : <span>{guide.area}</span>}
+            </nav>
             <p className="kicker plain" style={{ color: "var(--signal)" }}>
               {guide.area}
             </p>
             <h1 className="display-section balance stack-4 max-3">{guide.title}</h1>
             <p className="lede pretty stack-5">{guide.summary}</p>
+            <p className="article-meta">
+              {guide.difficulty ?? "Practical guide"} <span aria-hidden="true">·</span> {readingMinutes} min read
+              {guide.checkedDate ? <> <span aria-hidden="true">·</span> Last checked {guide.checkedDate}</> : null}
+            </p>
           </div>
         </header>
         <div className="page-wrap article-grid section-pad">
@@ -80,6 +133,35 @@ export function GuideView({ slug }: { slug: string }) {
                 </ul>
               </section>
             ) : null}
+            {guide.tools?.length ? (
+              <section aria-labelledby="tools-title">
+                <h2 id="tools-title">Tools mentioned</h2>
+                <p>{guide.tools.join(", ")}. Features and availability can change; check each provider's official information before choosing a tool.</p>
+              </section>
+            ) : null}
+            {guide.faqs?.length ? (
+              <section aria-labelledby="faq-title">
+                <h2 id="faq-title">Frequently asked questions</h2>
+                {guide.faqs.map((faq) => (
+                  <div key={faq.question}>
+                    <h3>{faq.question}</h3>
+                    <p>{faq.answer}</p>
+                  </div>
+                ))}
+              </section>
+            ) : null}
+            {related.length ? (
+              <section aria-labelledby="related-title">
+                <h2 id="related-title">Related guides</h2>
+                <ul>
+                  {related.map((item) => item ? (
+                    <li key={item.slug}>
+                      <Link href={`/learn/${item.slug}`}>{item.title}</Link>
+                    </li>
+                  ) : null)}
+                </ul>
+              </section>
+            ) : null}
             <div className="continue">
               <p className="kicker plain faint">Continue</p>
               <Link href={guide.next.href}>{guide.next.label}</Link>
@@ -109,6 +191,10 @@ export function GuideView({ slug }: { slug: string }) {
             ) : null}
           </aside>
         </div>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
+        />
       </article>
     </main>
   );
@@ -123,9 +209,7 @@ export function AreaView({ slug }: { slug: string }) {
     <main id="content">
       <header className="page-head">
         <div className="page-wrap">
-          <p className="kicker plain" style={{ color: "var(--signal)" }}>
-            Field
-          </p>
+          <p className="kicker plain" style={{ color: "var(--signal)" }}>Learning area</p>
           <h1 className="display-section balance stack-4">{area.title}</h1>
           <p className="lede pretty stack-5">{area.description}</p>
         </div>
@@ -137,7 +221,7 @@ export function AreaView({ slug }: { slug: string }) {
           </h2>
           {related.length === 0 ? (
             <p className="muted stack-4" style={{ maxWidth: "36rem" }}>
-              Guides for {area.title} are being written in the same form as the SEO and website pieces: a real question, a direct answer, a next step.
+              Explore the related topics below or browse the complete question library to find another practical guide.
             </p>
           ) : (
             <ul className="index-list" style={{ borderTop: "1px solid var(--line)", marginTop: "1.5rem" }}>
@@ -182,11 +266,15 @@ export function AreaView({ slug }: { slug: string }) {
           </div>
         ) : (
           <aside>
+            <p className="kicker plain faint">Keep learning</p>
             <p className="muted" style={{ fontSize: "0.875rem" }}>
-              When the learning should become a finished piece of work, the studio takes the same subject and builds it.
+              Connect this topic to other practical skills and continue at your own pace.
             </p>
-            <Link href="/services" className="search-submit stack-4">
-              See services
+            <Link href="/questions" className="search-submit stack-4">
+              Browse all questions
+            </Link>
+            <Link href="/tools" className="search-submit stack-4">
+              Explore learning tools
             </Link>
           </aside>
         )}

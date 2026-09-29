@@ -241,13 +241,14 @@ export const seoSocialGuides: DetailedGuide[] = [
     area: "YouTube",
     title: "How can I make money on YouTube?",
     summary: "Understand advertising, memberships, products, services, sponsorships, and the requirements attached to each route.",
+    checkedDate: "2026-09-29",
     paragraphs: [
       "YouTube income can come from more than advertising. Depending on eligibility and region, creators may use platform monetization features as well as sponsorships, affiliate relationships, products, courses, memberships, or their own services.",
       "Platform eligibility changes over time and can vary by country and program. Always check current YouTube Partner Program and monetization documentation before treating a threshold or feature as permanent.",
       "A business channel can monetize indirectly. A tutorial may bring a visitor who later buys a service, requests a quote, joins a mailing list, or uses a paid product. The video does not have to make money directly to have business value.",
       "Build the audience and the offer together. If you want clients, make videos that demonstrate expertise around the problems your service solves. If you want product sales, teach the surrounding problem and show how the product fits.",
       "Avoid shortcuts that create policy or trust problems. Do not buy fake engagement, reuse content without the necessary rights, or promise guaranteed income from a platform whose rules and distribution can change.",
-      "As checked on September 28, 2026, YouTube's full advertising threshold is 1,000 subscribers plus either 4,000 valid public watch hours in the previous 12 months or 10 million valid public Shorts views in the previous 90 days. Shorts Feed watch time does not count toward the long-form watch-hour threshold. Joining also requires an eligible country or region, no active Community Guidelines strikes, 2-Step Verification, access to advanced features, compliance with monetization policies, and an active AdSense for YouTube account. YouTube reviews the channel before acceptance; confirm the live requirements in YouTube Studio before applying.",
+      "As checked on September 29, 2026, YouTube's full advertising threshold is 1,000 subscribers plus either 4,000 valid public watch hours in the previous 12 months or 10 million valid public Shorts views in the previous 90 days. Shorts Feed watch time does not count toward the long-form watch-hour threshold. Joining also requires an eligible country or region, no active Community Guidelines strikes, 2-Step Verification, access to advanced features, compliance with monetization policies, and an active AdSense for YouTube account. YouTube reviews the channel before acceptance; confirm the live requirements in YouTube Studio before applying.",
       "Originality matters. YouTube says monetized content should be original and authentic, and its policies address mass-produced, repetitive, and reused content. A channel should add real educational, creative, or entertainment value rather than producing near-identical videos simply to capture search traffic."
     ],
     sources: [
@@ -351,7 +352,7 @@ export const seoSocialGuides: DetailedGuide[] = [
       "Start with a recognizable username, profile image, concise bio, and a link that leads to the most useful next step. A visitor should understand the account's subject without reading dozens of posts.",
       "Choose a visual identity you can maintain. Consistency does not require every post to look identical; it means the account feels like the same business through its subject, voice, typography, imagery, and recurring formats.",
       "Use the account type and contact features that fit the business. Add accurate contact information and review privacy, access, and security settings.",
-      "Create a few content pillars before posting heavily. For a web studio, these might be website tips, project walkthroughs, before-and-after improvements, and practical business education.",
+      "Create a few content pillars before posting heavily. For a channel that teaches website skills, these might be beginner tips, demonstrations, before-and-after explanations, and practical learning resources.",
       "Treat the profile as a landing page. The bio and pinned content should answer the questions a new visitor has: what is this, is it for me, and what should I do next?",
     ],
     next: { href: "/learn/instagram/instagram-content-strategy", label: "Build an Instagram content strategy" }
@@ -481,8 +482,8 @@ export const seoSocialGuides: DetailedGuide[] = [
     paragraphs: [
       "TikTok provides creator and business education covering creation, strategy, measurement, policy, and monetization. Current eligibility for particular programs and features should be checked against TikTok's official documentation because requirements can change.",
       "Creators can potentially earn through eligible platform programs, brand partnerships, product-related commerce, affiliate relationships, or by directing an audience to their own products and services.",
-      "For a freelancer or agency, TikTok can function as an expertise channel. Short practical lessons can demonstrate competence and lead interested viewers to a service page, portfolio, or contact form.",
-      "Build trust before selling heavily. Show the work, explain the reasoning, answer questions, and be honest about what you know. A useful audience is more valuable than a large audience that does not need what you sell.",
+      "For a creator learning a skill, TikTok can be a place to explain useful ideas through short demonstrations, examples, and practical learning resources.",
+      "Build trust before promoting anything. Show the work, explain the reasoning, answer questions, and be honest about what you know. A useful audience is more valuable than a large audience that does not need what you share.",
       "Never promise guaranteed earnings. Platform distribution and monetization rules change, and creator income varies substantially.",
     ],
     sources: [

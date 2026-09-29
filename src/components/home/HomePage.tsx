@@ -1,6 +1,6 @@
 import { ButtonLink, Kicker } from "@/components/ui";
 import { SearchIndex } from "@/components/home/Interactive";
-import { AreaGrid, FinalCta, Journey, PathRail, PrincipleGrid, QuestionCards, ServiceGrid } from "@/components/home/Sections";
+import { AreaGrid, FinalCta, Journey, PathRail, PrincipleGrid, QuestionCards, ToolDiscovery } from "@/components/home/Sections";
 
 export function HomePage() {
   return (
@@ -13,18 +13,18 @@ export function HomePage() {
               <span className="hero-status"><span aria-hidden="true" /> Guides for curious beginners</span>
             </div>
             <h1 id="hero-title" className="display balance">
-              <span>BuildSkills is an online community</span>
-              <span className="hero-title-blue">to help young people build their careers.</span>
+              <span>BuildSkills is a practical learning hub</span>
+              <span className="hero-title-blue">for young people and beginners.</span>
             </h1>
             <p className="lede pretty">
-              Learn practical skills, explore real opportunities, and turn what you learn into projects.
+              Learn practical digital skills, discover useful tools, and follow clear guides you can put to work.
             </p>
             <div className="hero-actions">
               <ButtonLink href="/learn" variant="accent">
                 Browse learning paths <span aria-hidden="true">→</span>
               </ButtonLink>
-              <ButtonLink href="/contact" variant="secondary">
-                Get help with a project
+              <ButtonLink href="/questions" variant="secondary">
+                Explore questions
               </ButtonLink>
             </div>
             <p className="hero-search-hint">Have a question in mind? Search the guide library.</p>
@@ -42,7 +42,7 @@ export function HomePage() {
       <QuestionCards />
       <Journey />
       <PathRail />
-      <ServiceGrid />
+      <ToolDiscovery />
       <PrincipleGrid />
       <FinalCta />
 
@@ -51,11 +51,21 @@ export function HomePage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "WebSite",
-            name: "BuildSkills",
-            url: "https://buildskills.com.pk/",
-            description: "Find an answer, follow a learning path, or have the studio build it. Websites, SEO, creator platforms, apps, and business software.",
-          }),
+            "@graph": [
+              {
+                "@type": "Organization",
+                name: "BuildSkills",
+                url: "https://buildskills.com.pk/",
+              },
+              {
+                "@type": "WebSite",
+                name: "BuildSkills",
+                url: "https://buildskills.com.pk/",
+                description: "Practical digital skills, clear learning guides, and useful tools for young people and beginners.",
+                publisher: { "@type": "Organization", name: "BuildSkills", url: "https://buildskills.com.pk/" },
+              },
+            ],
+          }).replace(/</g, "\\u003c"),
         }}
       />
     </main>

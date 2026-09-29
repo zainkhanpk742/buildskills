@@ -21,15 +21,20 @@ const serif = Instrument_Serif({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://buildskills.com.pk"),
-  title: { default: "BuildSkills — Learn something useful. Build something real.", template: "%s | BuildSkills" },
+  title: { default: "BuildSkills — Practical digital skills for everyone", template: "%s | BuildSkills" },
   description:
-    "BuildSkills helps you find an answer, learn a practical skill, and have the work built. Websites, SEO, apps, and business software.",
+    "BuildSkills helps young people and beginners learn practical digital skills, understand useful tools, and follow clear step-by-step guides.",
   openGraph: {
-    title: "BuildSkills — Learn something useful. Build something real.",
-    description: "Find an answer, follow a learning path, or have the work built.",
+    title: "BuildSkills — Practical digital skills for everyone",
+    description: "Learn practical digital skills, explore useful tools, and follow clear guides.",
     url: "https://buildskills.com.pk",
     siteName: "BuildSkills",
     type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "BuildSkills — Practical digital skills for everyone",
+    description: "Learn practical digital skills, explore useful tools, and follow clear guides.",
   },
   robots: { index: true, follow: true },
 };

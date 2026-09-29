@@ -5,15 +5,16 @@ import { method, principles } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "BuildSkills is a knowledge studio: practical answers, learning paths, and a digital studio for websites, SEO, apps, and software.",
+  description: "BuildSkills makes practical digital skills easier to understand for young people and beginners.",
+  alternates: { canonical: "/about" },
 };
 
 export default function Page() {
   return (
     <Interior
       kicker="About"
-      title="A serious place to learn the work, and to have it done."
-      lede="BuildSkills is a hybrid. It is a knowledge library for people with a real question, and a studio for people who want the thing built. The two are the same subjects, at different distances."
+      title="Practical digital skills should be easier to learn."
+      lede="BuildSkills is a learning project for young people and beginners. It turns everyday questions about digital tools, online work, and creative skills into clear guides people can use."
     >
       <ol className="method">
         {method.map((step) => (
@@ -34,7 +35,7 @@ export default function Page() {
       </dl>
       <div className="actions" style={{ marginTop: "3rem" }}>
         <ButtonLink href="/learn">Explore the library</ButtonLink>
-        <ButtonLink href="/contact" variant="secondary">Start a project</ButtonLink>
+        <ButtonLink href="/questions" variant="secondary">Browse questions</ButtonLink>
       </div>
     </Interior>
   );

@@ -9,8 +9,8 @@ import { Arrow } from "@/components/ui";
 const prompts = [
   "seo/how-to-get-website-on-google",
   "websites/how-to-build-a-website",
-  "business-software/software-for-your-business",
-  "freelancing/how-to-start-freelancing",
+  "ai-productivity/how-to-use-chatgpt",
+  "video-editing/how-to-edit-a-video",
 ] as const;
 
 export function SearchIndex() {
@@ -29,7 +29,7 @@ export function SearchIndex() {
   return (
     <div className="finder">
       <form onSubmit={onSubmit} role="search">
-        <label htmlFor="q">What do you want to learn or build?</label>
+        <label htmlFor="q">What do you want to learn?</label>
         <div className="finder-row">
           <input
             id="q"
@@ -53,9 +53,9 @@ export function SearchIndex() {
       {query.trim() ? (
         results.length === 0 ? (
           <div className="finder-empty">
-            <p>Nothing in the library matches that yet. Try SEO, websites, or apps, or describe the work to the studio.</p>
+            <p>Nothing in the library matches that yet. Try a topic such as AI, websites, video editing, or freelancing.</p>
             <Link href="/contact" className="text-link">
-              Start a project <Arrow />
+              Suggest a guide <Arrow />
             </Link>
           </div>
         ) : (
