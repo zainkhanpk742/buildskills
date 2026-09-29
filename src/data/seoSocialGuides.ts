@@ -1,4 +1,5 @@
 export type DetailedGuide = {
+  checkedDate?: string;
   sources?: { label: string; url: string }[];
   slug: string;
   area: string;

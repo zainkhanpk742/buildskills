@@ -303,11 +303,13 @@ const structuredWebsiteGuides: Guide[] = websiteGuides.map((guide) => ({
   paragraphs: [],
   sections: guide.sections.map((section) => ({
     heading: section.heading,
-    paragraphs: section.body,
-    ...(section.bullets ? { bullets: section.bullets } : {}),
+    paragraphs: [...section.body],
+    ...("bullets" in section && section.bullets ? { bullets: [...section.bullets] } : {}),
   })),
-  sources: guide.sources,
-  related: guide.related?.map((item) => item.href.replace(/^\/learn\//, "")),
+  ...("sources" in guide && guide.sources ? { sources: [...guide.sources] } : {}),
+  ...("related" in guide && guide.related
+    ? { related: guide.related.map((item) => item.href.replace(/^\/learn\//, "")) }
+    : {}),
   next: { ...guide.next },
 }));
 
