@@ -60,6 +60,12 @@ export function GuideView({ slug }: { slug: string }) {
       articleSection: guide.area,
       keywords: guide.topics,
       isAccessibleForFree: true,
+      ...(guide.checkedDate ? { dateModified: guide.checkedDate } : {}),
+      author: {
+        "@type": "Organization",
+        name: "BuildSkills",
+        url: "https://buildskills.com.pk",
+      },
       publisher: {
         "@type": "Organization",
         name: "BuildSkills",
