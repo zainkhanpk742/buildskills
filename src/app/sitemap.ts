@@ -21,6 +21,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   return [...new Set(pages)].map((path) => ({
-    url: `https://buildskills.com.pk${path}`,
+    url: path === "/" ? "https://buildskills.com.pk" : `https://buildskills.com.pk${path}`,
   }));
 }

@@ -326,6 +326,14 @@ export const digitalSkillsGuides: Guide[] = [
           "Choose the aspect ratio, resolution, and file format required by the destination platform. Export a test if unsure, then check the resulting file on a phone or computer. Keep a project copy so you can make later changes.",
         ],
       },
+      {
+        heading: "Prepare versions for each platform",
+        paragraphs: [
+          "A standard YouTube video is usually edited in a horizontal 16:9 frame, while YouTube Shorts, TikTok, and Instagram Reels are designed for vertical viewing. A common starting export is 1920 × 1080 for landscape or 1080 × 1920 for vertical, but check the current requirements of the platform and your editor before publishing.",
+          "Do not rely on an automatic crop to turn one edit into every format. Reframe the subject, keep faces and on-screen text away from interface overlays, and check that captions remain readable on a phone. A clip that works in a vertical feed may need a different opening and pacing from a longer YouTube video.",
+          "Export a clean master, then make a separate version for each destination. Watch each export from beginning to end, check the audio and captions, and confirm the selected audience, privacy, and cover image before posting.",
+        ],
+      },
     ],
     tools: ["CapCut", "DaVinci Resolve", "Adobe Premiere Pro"],
     checkedDate: "2026-09-29",
@@ -361,7 +369,7 @@ export const digitalSkillsGuides: Guide[] = [
       {
         heading: "Compare options without ranking them universally",
         paragraphs: [
-          "CapCut is commonly used for approachable short-form editing across supported devices. DaVinci Resolve is a desktop editor with a broad post-production workflow. Adobe Premiere Pro is a professional desktop editing product within Adobe's ecosystem. Features, supported platforms, and plan details can change, so confirm current information with each provider.",
+          "CapCut is a familiar option for short-form edits on supported phones and computers. Apple iMovie and Microsoft Clipchamp are approachable starting points on supported Apple and Windows devices. DaVinci Resolve offers a deeper desktop editing and color workflow, while Adobe Premiere Pro is a professional editor that fits into Adobe's creative apps. These tools differ in device support, features, cost, and export limits; check each provider's current details before choosing.",
           "Compare free availability, watermarking, export limits, captions, templates, collaboration, storage, and whether advanced controls are accessible to you. Test a small project before committing to a workflow or subscription.",
         ],
       },
@@ -450,6 +458,14 @@ export const digitalSkillsGuides: Guide[] = [
           "Resize a copy for sharing, use a descriptive filename, and review the exported image on the device where it will appear. If publishing a person's image, consider consent and any relevant privacy or usage rights.",
         ],
       },
+      {
+        heading: "Prepare images for websites and social platforms",
+        paragraphs: [
+          "Keep a high-quality original, then create separate copies for the actual placements: a product page, a YouTube thumbnail, a square profile image, or a vertical social post. Check each platform's latest dimensions and file-size limits instead of stretching one crop everywhere.",
+          "For a photograph, a compressed JPEG is often a practical web export; use PNG when you need transparent areas or crisp interface-style graphics. Convert and resize copies rather than repeatedly recompressing the original, and check that the result still looks sharp at its displayed size.",
+          "For images that carry information, add useful alternative text when publishing on your own website. Keep text in graphics brief and readable, and do not make an image the only way to communicate an essential instruction. Preview the final image on a phone as well as a larger screen.",
+        ],
+      },
     ],
     tools: ["Canva", "GIMP", "Adobe Photoshop"],
     checkedDate: "2026-09-29",
@@ -474,7 +490,7 @@ export const digitalSkillsGuides: Guide[] = [
       {
         heading: "Match the app to the job",
         paragraphs: [
-          "For cropping a photo or making a simple graphic, a lightweight mobile or browser editor may be enough. For detailed image adjustments, layers, or complex retouching, look for more precise controls and a workflow that suits your device.",
+          "For quick crops, layouts, and social graphics, Canva is an accessible browser and mobile option. Snapseed is a capable mobile editor for common photo adjustments; Adobe Lightroom is often chosen for organizing and refining photographs; GIMP and Adobe Photoshop offer more control over layers and detailed image work on supported computers. Adobe Photoshop Express is another lighter mobile option. Product features and free or paid plans change, so verify current availability for your device.",
           "Decide whether you need batch edits, layers, background removal, RAW support, collaboration, or export controls. Test the features you need rather than choosing by a general popularity claim.",
         ],
       },
