@@ -6,6 +6,8 @@ export const hubContent: Record<string, { paragraphs: string[]; steps: string[];
       "The data comes next. Name what the app must remember: a profile, a list, a photo, a status. If two people can change the same item, say who wins. If the phone is offline, say what still works. Tools such as a website builder, a no-code app tool, or a coded framework are ways to implement that description. They are not the description.",
       "Test on a real phone, not only a desktop preview. Check type size, tap targets, and what happens when the network fails. Ship a small loop one person can finish. Then add the next screen only because that person got stuck.",
       "Costs and store rules are global and local at the same time. Apple and Google both review apps, and developer accounts are paid. Prices and country availability change, so confirm them on the official developer sites before you budget. A web app you can install from the browser is a valid first step when a store listing is not the point.",
+      "When you are ready to build, read the guide linked on this page and then look at websites and databases. An app that cannot explain its data will be rewritten. An app that copies a whole website into a store listing wastes the review. Keep the phone job smaller than the marketing site.",
+      "Publish notes as you learn: the sentence, the screen list, and what failed in the first test. That record is more useful to an employer or a client than a certificate that only says you opened a tool. Beginners in every country can do this with a phone and a free builder. The store account is optional until the product needs it.",
     ],
     steps: [
       "Write the job of the app in one sentence.",
@@ -30,6 +32,8 @@ export const hubContent: Record<string, { paragraphs: string[]; steps: string[];
       "Keep the first model small. A list of people and a list of the work they did is enough for many school and freelance projects. Add a table only when a fact would otherwise be copied. If you copy a customer’s address onto every invoice row, you will eventually update one copy and forget the others.",
       "Access is part of the design. Who can read a row, who can change it, and what is personal data. Passwords are never stored in plain text. Back up the data before you experiment. A database that only lives on one laptop is a single accident away from disappearing.",
       "This hub is global. Privacy rules differ. The GDPR applies in Europe, and other countries have their own laws. The practical habit is the same: collect less, protect what you keep, and do not publish a database of real people as a demo.",
+      "Practice on fake rows before you touch a live list. Invent ten students or ten orders and try the questions you will really ask: who has not paid, which item sold twice, which record is missing an email. If the question is hard, the model is wrong, not you.",
+      "The guide on this page is the next step. After that, website and business-software guides show where the database sits in a product. You do not need a server on day one. You do need names for the things you store and a backup of the file.",
     ],
     steps: [
       "List the things the system must remember.",
@@ -54,6 +58,8 @@ export const hubContent: Record<string, { paragraphs: string[]; steps: string[];
       "Screens come after the description. A form is how a person enters the facts. A list is how another person finds them. A status is how the team knows what is waiting. Buttons are not features until they change a fact someone needs.",
       "Off-the-shelf software is the right answer when your work matches it. Custom software is the right answer when a generic tool forces people into steps they do not actually do. Either way, name the owner of the data and how you will export it if you leave the tool.",
       "Prices for builders and hosts change, and tax differs by country. Do not lock a budget from a blog. Check the vendor’s current pricing page. Keep personal customer data out of a demo account.",
+      "Show the first loop to the person who does the work, not only to the person who asked for the software. Watch where they hesitate. Rename the button to the words they use. A tool people trust is usually smaller than the diagram in the first meeting.",
+      "Related guides on this site cover databases, websites, and freelancing. Use them when the internal tool needs a public page or when you are building the software for someone else and need a written scope.",
     ],
     steps: [
       "Write the workflow, including one common exception.",
@@ -78,6 +84,8 @@ export const hubContent: Record<string, { paragraphs: string[]; steps: string[];
       "Organic and paid are different jobs. Organic means a page, a video, or a post that earns attention because it is useful. Paid means you rent attention and you can measure the cost of a click. Beginners should learn the organic version of one channel before they spend money. When you do advertise, set a limit you can afford to lose and read the platform’s current ad policies.",
       "Measurement is a small set of numbers. How many of the right people saw the offer, how many acted, and what it cost. A like is not a customer. Search Console, a marketplace inbox, or a simple tally of enquiries is enough at the start.",
       "Rules differ by country and by platform. Some ad products and some payout programs are missing in some places. Email and messaging also have consent rules. Do not buy lists. Write to people who asked to hear from you, and say how they can stop.",
+      "A simple month looks like this. Week one, write the offer. Week two, publish one page or one video that answers a real question. Week three, share it where the audience already is. Week four, count enquiries and fix the sentence that confused people. Repeat on the same channel before you open another.",
+      "SEO, content, and freelancing guides on this site are the neighboring skills. Marketing without a page to land on wastes the visit. A page without a clear next step wastes the ranking.",
     ],
     steps: [
       "Name the audience and the offer in one sentence.",
@@ -102,6 +110,8 @@ export const hubContent: Record<string, { paragraphs: string[]; steps: string[];
       "Match the form to the job. A short video shows a motion. A post can make one argument. A guide can hold the steps someone will follow later. Do not film a tutorial that should have been a checklist, and do not write a thread that needed a diagram.",
       "Say what is yours. If you use AI, music, or a photo, you still need the right to publish it and you still need to check the facts. Platform rules on reused content and unlabeled ads are real. Disclose a paid mention when the platform or the law requires it.",
       "Distribution is part of the piece. A guide that is not linked from anywhere will not be found. Put the new piece on the channel your audience already uses, and link related pieces together. Measure whether the right people finished it, not whether a chart moved.",
+      "Keep a folder of questions, drafts, and the published link. Note the date and what you would change next time. That habit matters more than a growth hack. Beginners improve by comparing two pieces on the same topic, not by copying a viral format they cannot repeat.",
+      "When the piece is a video, use the video-editing guides. When it should be found in search, use the SEO guides. When it should bring a client, say the offer in the piece itself. Content that never names a next step is a diary, not a guide.",
     ],
     steps: [
       "Collect ten questions your audience already asks.",
@@ -126,6 +136,8 @@ export const hubContent: Record<string, { paragraphs: string[]; steps: string[];
       "Limit the system. One or two typefaces. A small set of colors that still work in grayscale. The same spacing on every page or post. A brand people recognize is a brand that does not change its mind every week.",
       "Tools such as Canva, Figma, or any editor are optional. The Free plan of a design tool is enough to learn alignment, contrast, and export. Check the current price before you subscribe, because plans differ by country and tax. Use images you have a license for. A client’s logo is their property.",
       "Accessibility is part of the design, not a later polish. Small gray text on a photo fails for many readers. Check contrast and do not put the only copy of the message inside an image if a screen reader should read it.",
+      "Practice on real jobs, even small ones: a class poster, a shop sign, a thumbnail, a one-page flyer. Write the purpose on the file name. Compare the first version with the second after you remove one color and one font. The quieter version is usually the more professional one.",
+      "The Canva tutorial and the photo-editing guides are the practical next pages. They do not replace the decisions on this hub. Open the tool only after the headline is written.",
     ],
     steps: [
       "Write the headline and the next action before you open a tool.",
@@ -150,6 +162,8 @@ export const hubContent: Record<string, { paragraphs: string[]; steps: string[];
       "Delivery is the part beginners skip. A digital file needs a download that works. A service needs a scope and a calendar. A physical product needs shipping you can actually do from your country. Test the path yourself, including the payment step, before you announce it.",
       "Payments are local. Cards, bank transfer, PayPal, Payoneer, and cash on delivery are not all available everywhere. Use a method your customers can complete and that pays you in a way your bank accepts. Read the provider’s country list. Do not send customers to a personal account you cannot track.",
       "Legal basics differ by country: tax registration, consumer returns, and what you may claim in an advertisement. This site cannot give that advice. Keep records, do not promise income to other people, and check the official rule where you live before you scale.",
+      "A first month is enough to learn. Ten conversations with people who have the problem teach more than a logo. Write down what they asked, what they refused, and what they paid. Change the offer before you change the colors.",
+      "Freelancing guides on this site cover the service version of this work. Website guides cover the page. Use both. An online business without a clear deliverable is a hobby with a domain name.",
     ],
     steps: [
       "Write one offer for one audience.",
@@ -173,6 +187,8 @@ export const hubContent: Record<string, { paragraphs: string[]; steps: string[];
       "Read the current plan on the company’s own pricing page. Credit systems make a cheap monthly price expensive if every usable clip takes many tries. Commercial rights, watermarks, and whether you may upload a client’s face are part of the price. Those terms change and differ by country.",
       "Write a shot list before you generate. Audience, length, aspect ratio, and where the video will be published. Generate a few variations, keep the strongest, and edit them in a normal editor. Random prompts spend credits and teach less.",
       "Do not present synthetic footage as real news or as proof of an event. Do not clone a person’s voice or face without permission. If a fact matters, the video still needs a human to check it. AI video is a production tool, not a source.",
+      "Compare tools on the same three-second idea, not on their demo reels. Save the prompt, the credit cost, and whether you could use the clip in a client project. After two tests, stop shopping and edit. The guide below lists twenty generators and the official pricing pages to recheck, because those prices move.",
+      "Video-editing and CapCut guides are the step after generation. A generated clip still needs a cut, a voice, and captions. Beginners in any country can learn that order without subscribing to five apps at once.",
     ],
     steps: [
       "Name the video job: scene, avatar, or edit.",
