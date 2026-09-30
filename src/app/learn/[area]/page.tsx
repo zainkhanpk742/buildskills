@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { AreaView } from "@/components/library";
-import { areaBySlug, areas } from "@/data/site";
+import { AreaView, GuideView } from "@/components/library";
+import { areaBySlug, areas, guideBySlug } from "@/data/site";
+
+const guideOnHub: Record<string, string> = {
+  "chatgpt-prompts": "chatgpt-prompts/useful-chatgpt-prompts",
+};
 
 export function generateStaticParams() {
   return areas
@@ -15,6 +19,25 @@ export async function generateMetadata({
   params: Promise<{ area: string }>;
 }): Promise<Metadata> {
   const { area: slug } = await params;
+  const featured = guideOnHub[slug];
+  if (featured) {
+    const guide = guideBySlug(featured);
+    if (!guide) return {};
+    const canonical = `/learn/${slug}`;
+    return {
+      title: guide.title,
+      description: guide.summary,
+      alternates: { canonical },
+      openGraph: {
+        type: "article",
+        title: guide.title,
+        description: guide.summary,
+        url: canonical,
+        siteName: "BuildSkills",
+      },
+      twitter: { card: "summary", title: guide.title, description: guide.summary },
+    };
+  }
   const area = areaBySlug(slug);
   if (!area) return {};
   const canonical = `/learn/${area.slug}`;
@@ -43,6 +66,8 @@ export default async function Page({
   params: Promise<{ area: string }>;
 }) {
   const { area } = await params;
+  const featured = guideOnHub[area];
+  if (featured && guideBySlug(featured)) return <GuideView slug={featured} />;
   if (!areaBySlug(area)) notFound();
   return <AreaView slug={area} />;
 }
