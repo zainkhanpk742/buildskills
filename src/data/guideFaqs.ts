@@ -195,14 +195,6 @@ export const addedFaqs: Record<string, Faq[]> = {
     faq("Should I back up the site?", "Yes before big changes. Know how to restore the backup. A backup you have never tried is a hope."),
     faq("Who should know the logins?", "More than one trusted person, stored safely. A site that only one person can open is fragile."),
   ],
-  "mobile-apps/how-to-build-a-mobile-app": [
-    faq("How do I make a mobile app as a beginner?", "Write the one job the app does, list the screens, and build that path. A website is often the better first version if people only need to read or send a message."),
-    faq("Do I need to learn Swift and Kotlin?", "Only if you are building a native app. A no-code tool or a web app can ship a simple version. The screens and the data still have to be clear."),
-    faq("How much does an app store account cost?", "Apple and Google publish their own fees, and the fees change. Read the current price on their developer sites before you budget."),
-    faq("Can I build an app without a Mac?", "You can build Android apps and many cross-platform apps without one. Publishing to Apple's store has its own requirements. Check the current rule."),
-    faq("What should version one include?", "One task a person can finish, including the usual mistake, such as a failed network. Leave extra tabs for later."),
-    faq("Are app rules the same in every country?", "Review rules are global. Payments, tax forms, and store availability are not. Check the console for your country."),
-  ],
   "business-software/software-for-your-business": [
     faq("How do I create software for my business?", "Write the workflow first: who starts it, what they enter, what must be saved, and what done looks like. Then build the smallest screen that completes that loop."),
     faq("Should I buy software or build it?", "Buy it when a product already matches the work. Build it when a generic tool forces steps nobody actually does."),

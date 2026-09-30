@@ -24,7 +24,7 @@ export const thinHubGuides: Guide[] = [
         heading: "What a first version should include",
         paragraphs: [
           "One path a person can finish on a phone, including the usual failure, such as no network. Extra tabs, accounts, and payments can wait. Test on a real phone, not only a desktop preview.",
-          "Apple and Google charge for developer accounts, and the fees change. Read the current price on their own developer sites before you budget. A web page you can open on a phone is a valid launch in every country that can reach your site.",
+          "Apple and Google publish the account price on their own sites. On 30 September 2026, the Apple Developer Program was 99 US dollars a year, and Google Play was a one-time 25 US dollars. A new personal Play account also needs a closed test with 12 testers for 14 days. A website both phones can open is a valid first launch.",
         ],
       },
     ],

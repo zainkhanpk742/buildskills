@@ -321,14 +321,63 @@ const guidesBase: Guide[] = [
     area: "Mobile Apps",
     title: "How do I build a mobile app?",
     summary:
-      "Build an app when the phone is part of the job. Otherwise start with a site.",
-    paragraphs: [
-      "A mobile app is worth building when the job is repeated, personal, or needs the phone itself: a camera, notifications, offline use, a workflow someone opens daily. If the job is to explain a service and take a message, a website is usually the right first product.",
-      "If it is an app, name one workflow. Not a feature list. Who opens it, what they are trying to finish, and what the phone must remember. The screens are the steps of that workflow. Anything that does not serve the workflow waits.",
-      "Then choose how to build: a native app, a cross-platform app, or a carefully made web app. The choice follows the workflow — performance, offline needs, and how often it will change — not whichever framework is fashionable.",
-      "Write the workflow in plain language before you draw the interface. The drawing is easier when the sentences are already true.",
+      "An Apple app is built in Xcode on a Mac. An Android app is built in Android Studio. Publishing costs $99 a year on Apple and a one-time $25 on Google Play, as of 30 September 2026.",
+    checkedDate: "2026-09-30",
+    difficulty: "Beginner",
+    paragraphs: [],
+    sections: [
+      {
+        heading: "Do I need an app, or a website?",
+        paragraphs: [
+          "A mobile app means a program people install from Apple's App Store or Google Play. A website that opens in the phone's browser is not that, and it is the better first product for most beginners. Build an app when the job is repeated on the phone: a login, the camera, offline use, or a notification.",
+          "Write the job in one sentence before you pick a tool. If the sentence is \"read this\" or \"contact us,\" make the site. If it is \"open this every day and update a record,\" an app may be the product.",
+        ],
+      },
+      {
+        heading: "How do I make an Apple app?",
+        paragraphs: [
+          "Apple's own path is a Mac, the Xcode app, and the Swift language. SwiftUI is Apple's current way to lay out iPhone screens. You install Xcode from the Mac App Store. A Windows PC cannot run Xcode.",
+          "A free Apple Account can install a test build on your own iPhone, with limits. To put the app on the App Store you enroll in the Apple Developer Program. Apple's enrollment page, checked 30 September 2026, lists the membership at 99 US dollars per year. The price can be shown in local currency. You need an Apple Account with two-factor authentication, and you must be the age of majority where you live. Some nonprofits, schools, and government bodies that publish only free apps can request a fee waiver in the countries Apple lists. A normal beginner pays the fee.",
+        ],
+      },
+      {
+        heading: "How do I make an Android app?",
+        paragraphs: [
+          "Google's own path is Android Studio, which runs on Windows, Mac, and Linux, and the Kotlin language. You can test on an Android phone or on the emulator inside Android Studio before you pay anything.",
+          "Google Play Console, checked 30 September 2026, charges a one-time registration fee of 25 US dollars. You must be 18 or older. Prepaid cards are not accepted, and the cards that work can differ by country. You choose a personal account or an organization account. Google may ask for a government ID and a card in your legal name. If that check fails, the fee is not refunded.",
+          "A newly created personal Play account cannot go straight to the public store. Google's help page says you must run a closed test with at least 12 testers who have stayed opted in for the last 14 days continuously, then apply for production. Do not pay a stranger who sells testers.",
+        ],
+      },
+      {
+        heading: "What tools are better for a beginner?",
+        paragraphs: [
+          "Use the store's own tool when you are learning that one phone. Xcode and Swift for Apple. Android Studio and Kotlin for Android. Those are the tools Apple and Google document, and the job ads use the same names.",
+          "If one app must go to both stores, Flutter or React Native can share a lot of the code. You still need a Mac and the Apple membership for the iPhone version, and a Play account for Android. A no-code builder can ship a simple app. It does not remove the store fee or the review. Pick the tool after the screens are written, not before.",
+        ],
+      },
+      {
+        heading: "What should the first version include?",
+        paragraphs: [
+          "One path a person can finish, including what happens with no network. A home, the work screen, and a way to save or send the result is enough. Accounts, payments, and a second platform can wait until someone has used the first path on a real phone.",
+          "Both stores review the app. Read the current App Store Review Guidelines and Google Play's policy before you submit. A broken login, a misleading description, or content you do not have the rights to use is a common reason for a rejection.",
+        ],
+      },
     ],
-    next: { href: "/learn/business-software", label: "Business software" },
+    faqs: [
+      { question: "How do I make an iPhone app?", answer: "Use a Mac, install Xcode, and build the screens in Swift with SwiftUI. The App Store needs an Apple Developer Program membership, listed at 99 US dollars a year on 30 September 2026." },
+      { question: "How do I make an Android app?", answer: "Install Android Studio and write the app in Kotlin. You can test on your own phone for free. Google Play charges a one-time 25 US dollar registration fee, and a new personal account must complete a closed test first." },
+      { question: "Which is cheaper, Apple or Google Play?", answer: "Google Play is a one-time 25 US dollars. Apple is 99 US dollars every year. Local currency and tax can change the amount you are charged. Read the total on the enrollment screen." },
+      { question: "Can I build an Apple app without a Mac?", answer: "Not with Apple's own tools. Xcode runs on a Mac. You can still build the Android version, or a website, on Windows." },
+      { question: "What is the 12-tester rule on Google Play?", answer: "A newly created personal developer account must keep at least 12 testers opted into a closed test for 14 days in a row before applying for production. Do not buy a tester group." },
+      { question: "Should a beginner start with Flutter or React Native?", answer: "Only if you already know you need both stores. For one store, use Xcode or Android Studio. A shared framework still needs both developer accounts." },
+      { question: "Can I publish from Pakistan?", answer: "Apple says the program is available in many countries, and Google Play accepts cards that vary by location. The fee, tax form, and payout country are checked on the enrollment screen. Do not use another person's identity." },
+    ],
+    sources: [
+      { label: "Apple Developer Program enrollment", url: "https://developer.apple.com/programs/enroll/" },
+      { label: "Google Play Console: get started", url: "https://support.google.com/googleplay/android-developer/answer/6112435" },
+      { label: "Google Play: app testing requirements", url: "https://support.google.com/googleplay/android-developer/answer/14151465" },
+    ],
+    next: { href: "/learn/mobile-apps/do-i-need-an-app", label: "Do I need an app or a website?" },
   },
   {
     slug: "business-software/software-for-your-business",
