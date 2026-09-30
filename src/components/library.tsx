@@ -117,7 +117,20 @@ export function GuideView({ slug }: { slug: string }) {
               {guide.area}
             </p>
             <h1 className="display-section balance stack-4 max-3">{guide.title}</h1>
-            <p className="lede pretty stack-5">{guide.summary}</p>
+            <aside className="answer-box stack-5" aria-label="Short answer">
+              <p className="kicker plain">Short answer</p>
+              <p>{guide.summary}</p>
+              {guide.sections?.length ? (
+                <ol className="step-bar">
+                  {guide.sections.slice(0, 4).map((section, index) => (
+                    <li key={section.heading}>
+                      <span>{index + 1}</span>
+                      <strong>{section.heading}</strong>
+                    </li>
+                  ))}
+                </ol>
+              ) : null}
+            </aside>
             <p className="article-meta">
               BuildSkills Editorial Team <span aria-hidden="true">·</span> {guide.difficulty ?? "Practical guide"} <span aria-hidden="true">·</span> {readingMinutes} min read
               {guide.checkedDate ? <> <span aria-hidden="true">·</span> Updated {guide.checkedDate}</> : null}

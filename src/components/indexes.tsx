@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { areas, guidesInArea } from "@/data/site";
+import { AreaIcon } from "@/components/AreaIcon";
 import { Arrow } from "@/components/ui";
 
 export function AreaIndex() {
@@ -11,7 +12,7 @@ export function AreaIndex() {
           <li key={area.slug}>
             <Link href={`/learn/${area.slug}`} className="area-card">
               <span className="area-card-top">
-                <span className="area-num">{area.title.replace(/[^A-Za-z0-9]/g, "").slice(0, 2).toUpperCase()}</span>
+                <span className="area-num"><AreaIcon slug={area.slug} /></span>
                 <span className="area-count">{count} {count === 1 ? "guide" : "guides"}</span>
               </span>
               <span className="area-title">{area.question}</span>

@@ -28,24 +28,49 @@ export function HomePage({ initialQuery = "" }: { initialQuery?: string }) {
                 Explore questions
               </ButtonLink>
             </div>
+            <p className="hero-trust">Free · Updated 2026 · Written for beginners worldwide</p>
             <p className="hero-search-hint">Have a question in mind? Search the guide library.</p>
             <SearchIndex initialQuery={initialQuery} />
           </div>
           <div className="hero-side">
-            <div className="hero-side-image">
-              <Image
-                src="/hero.webp"
-                alt="Students learning programming in a classroom"
-                fill
-                priority
-                sizes="(max-width: 900px) 100vw, 470px"
-              />
+            <div className="hero-photos">
+              <figure className="hero-side-image">
+                <Image
+                  src="/hero.webp"
+                  alt="Two students studying together at a laptop"
+                  fill
+                  priority
+                  sizes="(max-width: 900px) 68vw, 340px"
+                />
+              </figure>
+              <figure className="hero-side-small">
+                <Image
+                  src="/hero-detail.webp"
+                  alt="Hands writing notes beside a laptop"
+                  fill
+                  sizes="(max-width: 900px) 32vw, 160px"
+                />
+              </figure>
             </div>
+            <p className="hero-caption">A practical place to learn a skill, then use it.</p>
           </div>
         </div>
       </section>
 
       <AreaGrid />
+      <section className="home-photo" aria-label="Someone learning at a desk">
+        <div className="page-wrap">
+          <figure className="home-photo-frame">
+            <Image
+              src="/learn-wide.webp"
+              alt="A student writing notes beside a laptop in warm daylight"
+              fill
+              sizes="(max-width: 900px) 100vw, 1200px"
+            />
+            <figcaption>Learn one skill, then use it on a real piece of work.</figcaption>
+          </figure>
+        </div>
+      </section>
       <QuestionCards />
       <Journey />
       <PathRail />
