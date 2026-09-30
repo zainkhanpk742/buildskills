@@ -63,8 +63,8 @@ export function GuideView({ slug }: { slug: string }) {
       ...(guide.checkedDate ? { dateModified: guide.checkedDate } : {}),
       author: {
         "@type": "Organization",
-        name: "BuildSkills",
-        url: "https://buildskills.com.pk",
+        name: "BuildSkills Editorial Team",
+        url: "https://buildskills.com.pk/about",
       },
       publisher: {
         "@type": "Organization",
@@ -82,6 +82,17 @@ export function GuideView({ slug }: { slug: string }) {
         { "@type": "ListItem", position: 4, name: guide.title, item: pageUrl },
       ],
     },
+    ...(guide.faqs?.length
+      ? [{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: guide.faqs.map((faq) => ({
+            "@type": "Question",
+            name: faq.question,
+            acceptedAnswer: { "@type": "Answer", text: faq.answer },
+          })),
+        }]
+      : []),
   ];
   return (
     <main id="content">
@@ -216,7 +227,7 @@ export function AreaView({ slug }: { slug: string }) {
       <header className="page-head">
         <div className="page-wrap">
           <p className="kicker plain" style={{ color: "var(--signal)" }}>Learning area</p>
-          <h1 className="display-section balance stack-4">{area.title}</h1>
+          <h1 className="display-section balance stack-4">{area.question}</h1>
           <p className="lede pretty stack-5">{area.description}</p>
         </div>
       </header>
