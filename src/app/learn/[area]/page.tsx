@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { AreaView, GuideView } from "@/components/library";
 import { areaBySlug, areas, guideBySlug } from "@/data/site";
+import { pageMeta } from "@/lib/meta";
 
 const guideOnHub: Record<string, string> = {
   "chatgpt-prompts": "chatgpt-prompts/useful-chatgpt-prompts",
@@ -23,41 +24,20 @@ export async function generateMetadata({
   if (featured) {
     const guide = guideBySlug(featured);
     if (!guide) return {};
-    const canonical = `/learn/${slug}`;
-    return {
+    return pageMeta({
       title: guide.title,
       description: guide.summary,
-      alternates: { canonical },
-      openGraph: {
-        type: "article",
-        title: guide.title,
-        description: guide.summary,
-        url: canonical,
-        siteName: "BuildSkills",
-      },
-      twitter: { card: "summary", title: guide.title, description: guide.summary },
-    };
+      path: `/learn/${slug}`,
+      type: "article",
+    });
   }
   const area = areaBySlug(slug);
   if (!area) return {};
-  const canonical = `/learn/${area.slug}`;
-  return {
-    title: `${area.title} learning guides`,
+  return pageMeta({
+    title: area.question,
     description: area.description,
-    alternates: { canonical },
-    openGraph: {
-      type: "website",
-      title: `${area.title} learning guides`,
-      description: area.description,
-      url: canonical,
-      siteName: "BuildSkills",
-    },
-    twitter: {
-      card: "summary",
-      title: `${area.title} learning guides`,
-      description: area.description,
-    },
-  };
+    path: `/learn/${area.slug}`,
+  });
 }
 
 export default async function Page({

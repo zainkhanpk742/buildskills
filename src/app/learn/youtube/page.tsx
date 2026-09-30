@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { pageMeta } from "@/lib/meta";
 
 const lessons = [
   {
@@ -57,25 +58,12 @@ const mistakes = [
   "Assuming today's monetization thresholds or features will never change.",
 ];
 
-export const metadata = {
-  title: "YouTube learning path: channels, videos, and analytics",
+export const metadata = pageMeta({
+  title: "How do I grow and make money on YouTube?",
   description:
-    "Learn how to start a YouTube channel, find video ideas, improve titles and retention, use YouTube Analytics, and understand YouTube monetization.",
-  alternates: { canonical: "/learn/youtube" },
-  openGraph: {
-    type: "website",
-    title: "YouTube learning path: channels, videos, and analytics",
-    description:
-      "Learn how to start a YouTube channel, find video ideas, improve titles and retention, use analytics, and understand monetization.",
-    url: "/learn/youtube",
-    siteName: "BuildSkills",
-  },
-  twitter: {
-    card: "summary",
-    title: "YouTube learning path: channels, videos, and analytics",
-    description: "Practical guides for starting and improving a YouTube channel.",
-  },
-};
+    "Start a YouTube channel, find video ideas, improve titles and retention, use YouTube Analytics, and understand YouTube monetization.",
+  path: "/learn/youtube",
+});
 
 export default function Page() {
   return (

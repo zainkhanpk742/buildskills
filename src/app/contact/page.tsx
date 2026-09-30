@@ -1,20 +1,14 @@
 import type { Metadata } from "next";
 import { ContactForm } from "@/components/ContactForm";
 import { Interior } from "@/components/library";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Contact BuildSkills",
   description:
     "Email BuildSkills at salimpk742@gmail.com to suggest a guide, report an error, or ask a question about the site.",
-  alternates: { canonical: "/contact" },
-  openGraph: {
-    title: "Contact BuildSkills",
-    description: "Email salimpk742@gmail.com to suggest a guide or report an error.",
-    url: "/contact",
-    siteName: "BuildSkills",
-    type: "website",
-  },
-};
+  path: "/contact",
+});
 
 export default function Page() {
   return (

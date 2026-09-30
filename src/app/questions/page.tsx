@@ -3,12 +3,13 @@ import Link from "next/link";
 import { QuestionExplorer } from "@/components/home/Interactive";
 import { Interior } from "@/components/library";
 import { areas, guidesInArea } from "@/data/site";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Questions and practical answers",
   description: "Browse practical questions and step-by-step guides about AI, websites, SEO, video, photo, design, coding, freelancing, and online work.",
-  alternates: { canonical: "/questions" },
-};
+  path: "/questions",
+});
 
 export default function Page() {
   return (

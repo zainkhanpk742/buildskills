@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Interior } from "@/components/library";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Digital tools directory",
   description: "Discover AI, design, video, photo, coding, website, productivity, and creator tools through practical learning guides.",
-  alternates: { canonical: "/tools" },
-};
+  path: "/tools",
+});
 
 const collections = [
   {

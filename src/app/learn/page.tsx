@@ -4,12 +4,13 @@ import { AreaIndex } from "@/components/indexes";
 import { Interior } from "@/components/library";
 import { ButtonLink } from "@/components/ui";
 import { learningPaths } from "@/data/site";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Learn practical digital skills",
   description: "Explore practical beginner guides for AI, websites, SEO, video and photo editing, freelancing, social platforms, and more.",
-  alternates: { canonical: "/learn" },
-};
+  path: "/learn",
+});
 
 export default function Page() {
   return (

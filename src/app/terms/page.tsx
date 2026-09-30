@@ -1,20 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Interior } from "@/components/library";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Terms of Use",
   description:
     "Terms for using BuildSkills guides. Educational content only, with no guarantee of earnings, rankings, or jobs.",
-  alternates: { canonical: "/terms" },
-  openGraph: {
-    title: "Terms of Use",
-    description: "Terms for using BuildSkills guides. Educational content only, with no guarantee of earnings.",
-    url: "/terms",
-    siteName: "BuildSkills",
-    type: "website",
-  },
-};
+  path: "/terms",
+});
 
 export default function Page() {
   return (

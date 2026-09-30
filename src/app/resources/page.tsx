@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { areas, guideBySlug, guidesInArea } from "@/data/site";
 import { Interior } from "@/components/library";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Digital learning resources",
   description: "Browse practical learning resources for websites, AI, SEO, creative tools, online work, and digital platforms.",
-  alternates: { canonical: "/resources" },
-};
+  path: "/resources",
+});
 
 const featuredResources = [
   { title: "Start with websites", slug: "websites/how-to-build-a-website" },

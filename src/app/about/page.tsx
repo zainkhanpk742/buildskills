@@ -3,20 +3,14 @@ import Link from "next/link";
 import { Interior } from "@/components/library";
 import { ButtonLink } from "@/components/ui";
 import { method, principles } from "@/data/site";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "About BuildSkills",
   description:
     "BuildSkills is a free beginner learning site for digital skills, run by the BuildSkills Editorial Team. Contact salimpk742@gmail.com.",
-  alternates: { canonical: "/about" },
-  openGraph: {
-    title: "About BuildSkills",
-    description: "Who runs BuildSkills, what the site is for, and how guides are checked.",
-    url: "/about",
-    siteName: "BuildSkills",
-    type: "website",
-  },
-};
+  path: "/about",
+});
 
 export default function Page() {
   return (

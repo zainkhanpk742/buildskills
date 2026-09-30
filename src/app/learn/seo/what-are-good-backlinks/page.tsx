@@ -1,24 +1,14 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata: Metadata = {
-  title: "What Makes a Good Backlink?",
+export const metadata: Metadata = pageMeta({
+  title: "What makes a good backlink?",
   description:
     "Learn how useful, relevant links are earned, how to avoid link schemes, and what to do instead of buying backlinks.",
-  alternates: { canonical: "/learn/seo/what-are-good-backlinks" },
-  openGraph: {
-    type: "article",
-    title: "What makes a good backlink?",
-    description: "Learn how useful, relevant links are earned and how to avoid link schemes.",
-    url: "/learn/seo/what-are-good-backlinks",
-    siteName: "BuildSkills",
-  },
-  twitter: {
-    card: "summary",
-    title: "What makes a good backlink?",
-    description: "Learn how useful, relevant links are earned and how to avoid link schemes.",
-  },
-};
+  path: "/learn/seo/what-are-good-backlinks",
+  type: "article",
+});
 
 export default function Page() {
   return (

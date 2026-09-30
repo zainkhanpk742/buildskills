@@ -1,20 +1,13 @@
 import type { Metadata } from "next";
 import { Interior } from "@/components/library";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Privacy Policy",
   description:
     "How BuildSkills uses cookies, analytics, and advertising, including Google AdSense, and how to opt out. Last updated 30 September 2026.",
-  alternates: { canonical: "/privacy-policy" },
-  openGraph: {
-    title: "Privacy Policy",
-    description:
-      "How BuildSkills uses cookies, analytics, and advertising, including Google AdSense, and how to opt out.",
-    url: "/privacy-policy",
-    siteName: "BuildSkills",
-    type: "website",
-  },
-};
+  path: "/privacy-policy",
+});
 
 export default function Page() {
   return (

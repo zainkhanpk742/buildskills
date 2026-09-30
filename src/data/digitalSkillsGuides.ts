@@ -352,7 +352,7 @@ export const digitalSkillsGuides: Guide[] = [
   {
     slug: "video-editing/best-video-editing-apps",
     area: "Video Editing",
-    title: "How do I choose a video editing app?",
+    title: "What are the best video editing apps?",
     summary: "Compare editors by device support, learning curve, export needs, accessibility, and the work you want to do.",
     paragraphs: [],
     difficulty: "Beginner",
@@ -367,9 +367,9 @@ export const digitalSkillsGuides: Guide[] = [
         ],
       },
       {
-        heading: "Compare options without ranking them universally",
+        heading: "Best video editing apps for the job you have",
         paragraphs: [
-          "CapCut is a familiar option for short-form edits on supported phones and computers. Apple iMovie and Microsoft Clipchamp are approachable starting points on supported Apple and Windows devices. DaVinci Resolve offers a deeper desktop editing and color workflow, while Adobe Premiere Pro is a professional editor that fits into Adobe's creative apps. These tools differ in device support, features, cost, and export limits; check each provider's current details before choosing.",
+          "The best video editing apps depend on the device and the job. CapCut is a familiar option for short-form edits on supported phones and computers. Apple iMovie and Microsoft Clipchamp are approachable starting points on supported Apple and Windows devices. DaVinci Resolve offers a deeper desktop editing and color workflow, while Adobe Premiere Pro is a professional editor that fits into Adobe's creative apps. These tools differ in device support, features, cost, and export limits; check each provider's current details before choosing.",
           "Compare free availability, watermarking, export limits, captions, templates, collaboration, storage, and whether advanced controls are accessible to you. Test a small project before committing to a workflow or subscription.",
         ],
       },
@@ -480,7 +480,7 @@ export const digitalSkillsGuides: Guide[] = [
   {
     slug: "photo-editing/best-photo-editing-apps",
     area: "Photo Editing",
-    title: "How do I choose a photo editing app?",
+    title: "What are the best photo editing apps?",
     summary: "Choose an editor by device, editing goals, file formats, accessibility, and how much control you need.",
     paragraphs: [],
     difficulty: "Beginner",
@@ -488,9 +488,9 @@ export const digitalSkillsGuides: Guide[] = [
     topics: ["photo editing apps", "photo editing software", "Canva", "GIMP"],
     sections: [
       {
-        heading: "Match the app to the job",
+        heading: "Best photo editing apps for beginners",
         paragraphs: [
-          "For quick crops, layouts, and social graphics, Canva is an accessible browser and mobile option. Snapseed is a capable mobile editor for common photo adjustments; Adobe Lightroom is often chosen for organizing and refining photographs; GIMP and Adobe Photoshop offer more control over layers and detailed image work on supported computers. Adobe Photoshop Express is another lighter mobile option. Product features and free or paid plans change, so verify current availability for your device.",
+          "The best photo editing apps depend on the job. For quick crops, layouts, and social graphics, Canva is an accessible browser and mobile option. Snapseed is a capable mobile editor for common photo adjustments; Adobe Lightroom is often chosen for organizing and refining photographs; GIMP and Adobe Photoshop offer more control over layers and detailed image work on supported computers. Adobe Photoshop Express is another lighter mobile option. Product features and free or paid plans change, so verify current availability for your device.",
           "Decide whether you need batch edits, layers, background removal, RAW support, collaboration, or export controls. Test the features you need rather than choosing by a general popularity claim.",
         ],
       },

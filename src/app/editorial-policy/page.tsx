@@ -1,20 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Interior } from "@/components/library";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Editorial Policy",
   description:
     "How BuildSkills checks guides, dates pages, cites official sources, and corrects mistakes. Contact salimpk742@gmail.com.",
-  alternates: { canonical: "/editorial-policy" },
-  openGraph: {
-    title: "Editorial Policy",
-    description: "How BuildSkills checks guides, cites official sources, and corrects mistakes.",
-    url: "/editorial-policy",
-    siteName: "BuildSkills",
-    type: "website",
-  },
-};
+  path: "/editorial-policy",
+});
 
 export default function Page() {
   return (

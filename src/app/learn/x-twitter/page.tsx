@@ -1,24 +1,13 @@
 import Link from "next/link";
 import { guidesInArea } from "@/data/site";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata = {
-  title: "X learning path: profiles, posts, and audience growth",
+export const metadata = pageMeta({
+  title: "How do I grow and make money on X?",
   description:
-    "Learn how to set up an X profile, publish useful posts, join conversations, understand analytics, and review current platform features.",
-  alternates: { canonical: "/learn/x-twitter" },
-  openGraph: {
-    type: "website",
-    title: "X learning path: profiles, posts, and audience growth",
-    description: "Practical guides to using X for learning, publishing, and professional development.",
-    url: "/learn/x-twitter",
-    siteName: "BuildSkills",
-  },
-  twitter: {
-    card: "summary",
-    title: "X learning path: profiles, posts, and audience growth",
-    description: "Learn how to use X for publishing and professional development.",
-  },
-};
+    "Set up an X profile, publish useful posts, join conversations, grow an audience, and review the platform's current features.",
+  path: "/learn/x-twitter",
+});
 
 export default function Page() {
   const guides = guidesInArea("X / Twitter");

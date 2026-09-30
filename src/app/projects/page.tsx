@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Interior } from "@/components/library";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Digital skills practice projects",
   description: "Try small, self-directed projects to practice website, coding, AI, design, and creator skills.",
-  alternates: { canonical: "/projects" },
-};
+  path: "/projects",
+});
 
 const practiceProjects = [
   {

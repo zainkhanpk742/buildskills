@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { GuideView } from "@/components/library";
 import { guideBySlug, guides } from "@/data/site";
+import { pageMeta } from "@/lib/meta";
 
 export function generateStaticParams() {
   return guides.map((guide) => {
@@ -18,24 +19,12 @@ export async function generateMetadata({
   const { area, slug } = await params;
   const guide = guideBySlug(`${area}/${slug}`);
   if (!guide) return {};
-  const canonical = `/learn/${guide.slug}`;
-  return {
+  return pageMeta({
     title: guide.title,
     description: guide.summary,
-    alternates: { canonical },
-    openGraph: {
-      type: "article",
-      title: guide.title,
-      description: guide.summary,
-      url: canonical,
-      siteName: "BuildSkills",
-    },
-    twitter: {
-      card: "summary",
-      title: guide.title,
-      description: guide.summary,
-    },
-  };
+    path: `/learn/${guide.slug}`,
+    type: "article",
+  });
 }
 
 export default async function Page({

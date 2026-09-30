@@ -1,20 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Interior } from "@/components/library";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Disclaimer",
   description:
     "BuildSkills guides are educational. They do not guarantee earnings, clients, rankings, or acceptance into any platform program.",
-  alternates: { canonical: "/disclaimer" },
-  openGraph: {
-    title: "Disclaimer",
-    description: "BuildSkills guides are educational and do not guarantee earnings or platform acceptance.",
-    url: "/disclaimer",
-    siteName: "BuildSkills",
-    type: "website",
-  },
-};
+  path: "/disclaimer",
+});
 
 export default function Page() {
   return (
