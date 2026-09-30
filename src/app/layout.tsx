@@ -3,7 +3,6 @@ import { Instrument_Sans, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { SiteAnalytics } from "@/components/SiteAnalytics";
 
 const sans = Instrument_Sans({
   subsets: ["latin"],
@@ -61,12 +60,18 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3672700167787763"
           crossOrigin="anonymous"
         />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-HK9VC2VGVW" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-HK9VC2VGVW');",
+          }}
+        />
       </head>
       <body>
         <Header />
         {children}
         <Footer />
-        <SiteAnalytics />
       </body>
     </html>
   );
