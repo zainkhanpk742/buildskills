@@ -4,6 +4,7 @@ import { seoSocialGuides } from "@/data/seoSocialGuides";
 import { foundationGuides } from "@/data/foundationsGuides";
 import { digitalSkillsGuides } from "@/data/digitalSkillsGuides";
 import { aiVideoGenerationArea, aiVideoGuide } from "@/data/aiVideoGuide";
+import { chatgptPromptsArea, chatgptPromptsGuide } from "@/data/chatgptPromptsGuide";
 
 export const nav = [
   { label: "Learn", href: "/learn" },
@@ -170,6 +171,7 @@ export const areas: Area[] = [
       "Understand crops, light, color, image formats, and accessible design choices before you choose an editing app.",
   },
   aiVideoGenerationArea,
+  chatgptPromptsArea,
 ];
 
 export type Guide = {
@@ -344,6 +346,7 @@ export const guides: Guide[] = [
   ...detailedFoundationGuides,
   ...digitalSkillsGuides,
   aiVideoGuide,
+  chatgptPromptsGuide,
 ];
 export const featuredQuestions = [
   "seo/what-is-seo",
