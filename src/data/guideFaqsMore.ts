@@ -162,14 +162,6 @@ export const addedFaqsMore: Record<string, Faq[]> = {
     faq("Do hashtags grow an account?", "They can help a post be found. They do not replace a clear subject. Do not paste a block of unrelated tags."),
     faq("Why do some accounts grow faster?", "The topic, the consistency, and sometimes ads or a trend. You cannot see their full history from one screenshot."),
   ],
-  "instagram/instagram-monetization": [
-    faq("How can I make money on Instagram?", "Through your own product or service, brand work you can verify, or bonuses and subscriptions where Instagram offers them to your account."),
-    faq("Is Instagram pay available in every country?", "No. Features and countries change. Check the professional dashboard and Instagram's help, not a list on a random site."),
-    faq("Do I need 10,000 followers to earn?", "Not to sell your own work. Some platform features have thresholds. Those numbers change. Read the current requirement in the app."),
-    faq("Should I buy followers before applying?", "No. Fake followers do not qualify you and can get the account restricted."),
-    faq("How do brand deals usually work?", "A brand asks for a specific post, you agree on the fee and the usage in writing, and you disclose the partnership as the rules require."),
-    faq("What is a scam on Instagram?", "A stranger who promises income, asks for a fee to get you verified, or asks for your password. Instagram does not do that."),
-  ],
   "tiktok/how-to-start-tiktok": [
     faq("How do I start on TikTok?", "Install the official app, create an account, and post a short video that makes one point. The profile should say who it is for."),
     faq("Do I need a ring light?", "No. Clear sound and a steady shot matter more. A window is enough light for a first video."),

@@ -444,19 +444,53 @@ export const seoSocialGuides: DetailedGuide[] = [
     slug: "instagram/instagram-monetization",
     area: "Instagram",
     title: "How can I make money on Instagram?",
-    summary: "Use Instagram to support products, services, partnerships, and eligible platform monetization features.",
-    paragraphs: [
-      "Instagram can support several business models: selling products, generating service enquiries, affiliate relationships, brand partnerships, subscriptions or other platform features where available, and sending an audience to another business asset.",
-      "Eligibility and available monetization features can change by country, account type, and current platform rules. Treat official Instagram and Meta documentation as the source of truth for current requirements.",
-      "For a service business, the simplest model may be lead generation. Teach the audience something useful, demonstrate your expertise, show real work, and give suitable prospects a clear way to contact you.",
-      "For creators, sponsorships can be valuable when the audience and subject are a strong match. Disclose commercial relationships as required and protect audience trust.",
-      "Do not measure monetization only by follower count. Measure enquiries, sales, qualified conversations, recurring customers, and revenue from the specific content or campaign when you can.",
+    summary: "Instagram pays through Gifts, Subscriptions, Live badges, and invite-only bonuses. A large account's bigger money usually comes from a brand, and those fees are not a fixed Instagram rate.",
+    checkedDate: "2026-09-30",
+    difficulty: "Beginner",
+    paragraphs: [],
+    sections: [
+      {
+        heading: "How does Instagram pay creators?",
+        paragraphs: [
+          "Instagram does not pay every account a salary. The official tools, checked on 30 September 2026, are separate, and each one has its own follower number, age rule, and country list. You need a professional account, you need to be 18 or older, and you need to follow Meta's Partner Monetization Policies. A personal profile that has not switched to professional does not qualify.",
+          "Bonuses are invitation-only, and only in countries where Instagram is testing them. Instagram's bonus rules say it will not pay for branded content, for a post with a collaborator, or for a post you delete. Do not pay a stranger who offers to unlock a bonus.",
+        ],
+        bullets: [
+          "Gifts on Reels: at least 500 followers, plus a payout account. A collaborative post cannot earn Gifts.",
+          "Subscriptions: at least 10,000 followers. Fans pay for content you put behind a subscription. Check Professional dashboard, then Set up subscriptions, if the option is there.",
+          "Badges on Live: at least 10,000 followers. A viewer can spend up to $250 on badges in one Live. The badge lasts only for that Live.",
+          "Your own product or service: no follower minimum. This works in countries where the tools above are closed.",
+        ],
+      },
+      {
+        heading: "Which countries are included?",
+        paragraphs: [
+          "On 30 September 2026, Instagram's Gifts list and Subscriptions list both included India, the United States, and the United Kingdom. Pakistan was on neither list. Bangladesh, Nigeria, and the United Arab Emirates were not on the Subscriptions list either. The lists are not the same for every tool, and Meta changes them. Open the help page, or the Professional dashboard, for your own account.",
+        ],
+      },
+      {
+        heading: "How much can a bigger Instagram account make?",
+        paragraphs: [
+          "Instagram does not publish what a large account earns. A creator with hundreds of thousands or millions of followers is usually paid by a brand for a post or a Reel, not by a set rate inside the app. Two public 2026 surveys do not even agree. Influencer Advisory, from its own deal records, put a typical mega account (1 million followers or more) around $18,000 for one post. A Gigapay roundup of other 2026 rate guides put one Reel from that size of account in a band of about $25,000 to $100,000. The same roundup also cites a much lower median, about $1,500 for a Reel, for accounts around 100,000 to 150,000 followers.",
+          "Treat those as examples of how wide the market is, not as your price. Niche, country, engagement, and whether the brand can reuse the video all move the fee. Many accounts at the same follower count earn nothing from brands. A screenshot of someone else's payout is not a quote. Agree the fee and the usage in writing, and label the post as a paid partnership. Instagram's own bonus program does not pay for branded posts.",
+        ],
+      },
+    ],
+    faqs: [
+      { question: "How do I get monetized on Instagram?", answer: "Switch to a professional account, be 18 or older, and live where the tool is offered. Gifts on Reels start at 500 followers. Subscriptions and Live badges start at 10,000. Bonuses are invite-only." },
+      { question: "How much do big Instagram influencers make?", answer: "Instagram does not publish a salary. 2026 brand-deal surveys put one post from an account with over 1 million followers anywhere from about $18,000 to $100,000 for a Reel. Many deals are outside that range. It is not a guaranteed income." },
+      { question: "Can I monetize Instagram from Pakistan?", answer: "Pakistan was not on Instagram's Gifts list or Subscriptions list on 30 September 2026. India, the United States, and the United Kingdom were. You can still sell your own work from a Pakistani account." },
+      { question: "Do I need 10,000 followers to make money?", answer: "Only for Subscriptions and Live badges. Gifts start at 500 followers. Selling your own product or service has no follower minimum." },
+      { question: "Does Instagram pay for sponsored posts?", answer: "The brand pays you, if you agree a fee. Instagram's bonus program says branded content is not eligible for an Instagram payout." },
+      { question: "Should I buy followers to qualify?", answer: "No. Bought followers can get the account restricted, and a brand can see that the audience is not real." },
     ],
     sources: [
-      { label: "Instagram for Creators", url: "https://creators.instagram.com/" },
-      { label: "Instagram Help Center", url: "https://help.instagram.com/" },
+      { label: "Instagram Help: Subscriptions eligibility", url: "https://help.instagram.com/478012211024479" },
+      { label: "Instagram Help: Gifts", url: "https://www.facebook.com/help/instagram/738469380549477" },
+      { label: "Instagram Help: Badges", url: "https://help.instagram.com/1119102301790334" },
+      { label: "Instagram Help: Bonus program rules", url: "https://www.facebook.com/help/instagram/434406642308284" },
     ],
-    next: { href: "/learn/instagram", label: "Return to Instagram" }
+    next: { href: "/learn/instagram", label: "Return to Instagram" },
   },
 
   {
