@@ -202,14 +202,6 @@ export const addedFaqsMore: Record<string, Faq[]> = {
     faq("Should I change the account based on one hit?", "No. Wait for a pattern. One spike can be a sound or a share you cannot repeat."),
     faq("Where is the official explanation?", "In TikTok's own analytics help and inside the app. Third-party scores are not TikTok's numbers."),
   ],
-  "tiktok/tiktok-monetization": [
-    faq("How can I make money on TikTok?", "Creator Rewards where it is offered, plus brand work, affiliates, and your own product. Many creators earn from the last three, not from the app."),
-    faq("Is Creator Rewards available in every country?", "No. It is a limited list. Pakistan is not on the list commonly published from TikTok's Creator Academy. Open TikTok Studio on your own account to see your eligibility."),
-    faq("What are the usual requirements?", "Where it is open, creators are commonly asked to be 18 or older, with 10,000 followers and 100,000 views in 30 days, and original videos of at least a minute. Confirm the live numbers in the app."),
-    faq("Can I get paid if my country is not eligible?", "Not through Creator Rewards. You can still be paid by a client or for your own product."),
-    faq("Should I pay someone to enable TikTok pay?", "No. Eligibility is decided in the app. A fee to unlock it is a scam pattern."),
-    faq("Do gifts and live features pay everywhere?", "No. Live features have their own country and age rules. Check the app."),
-  ],
   "linkedin/how-to-build-a-linkedin-profile": [
     faq("How do I build a LinkedIn profile?", "Use a real photo, a headline that says what you do, and an about section with proof. List work you can discuss."),
     faq("What should the headline say?", "The work and who it is for. A pile of buzzwords is harder to understand than one plain sentence."),

@@ -519,22 +519,62 @@ export const seoSocialGuides: DetailedGuide[] = [
     slug: "tiktok/tiktok-monetization",
     area: "TikTok",
     title: "How can I make money on TikTok?",
-    summary: "Combine eligible platform programs with products, services, partnerships, and other business models. Creator Rewards is not available in every country.",
+    summary: "TikTok's Creator Rewards Program pays for original videos of at least one minute in eight countries. It replaced the Creator Fund. Pakistan and India are not on the list.",
     checkedDate: "2026-09-30",
-    paragraphs: [
-      "TikTok provides creator and business education covering creation, strategy, measurement, policy, and monetization. Current eligibility for particular programs and features should be checked inside TikTok Studio, because the country list and the rules change.",
-      "The Creator Rewards Program is the view-based payout program that replaced the old Creator Fund. It is not global. Summaries of TikTok's Creator Academy in 2026 list it for accounts based in the United States, the United Kingdom, Germany, France, Japan, South Korea, Brazil, and Mexico. Pakistan is not on that list. If your account is in Pakistan, do not plan on Creator Rewards income. Open TikTok Studio on your own account to see whether the program is offered to you.",
-      "Where the program is open, published requirements are commonly 18 or older, a personal account, at least 10,000 followers, and 100,000 video views in the last 30 days, with original videos of at least one minute. Treat those numbers as a starting point and confirm them in the app before you rely on them.",
-      "Creators outside eligible countries can still earn in other ways: brand partnerships, affiliate links, selling a product or service, or sending viewers to a website. Those routes do not require Creator Rewards.",
-      "For a creator learning a skill, TikTok can be a place to explain useful ideas through short demonstrations, examples, and practical learning resources.",
-      "Build trust before promoting anything. Show the work, explain the reasoning, answer questions, and be honest about what you know. A useful audience is more valuable than a large audience that does not need what you share.",
-      "Never promise guaranteed earnings. Platform distribution and monetization rules change, and creator income varies substantially.",
+    difficulty: "Beginner",
+    paragraphs: [],
+    sections: [
+      {
+        heading: "How do I get monetized on TikTok?",
+        paragraphs: [
+          "The view-based program is Creator Rewards. It replaced the Creator Fund, which TikTok's help pages say is no longer available. Money already earned in the old fund does not expire.",
+          "TikTok's Creator Academy says the program is open to creators in the United States, the United Kingdom, Germany, Japan, South Korea, France, Mexico, and Brazil. You have to live in one of those places and use an account registered there. Pakistan and India are not on that list. Open TikTok Studio on your own account before you plan around a payout, because TikTok can change the list.",
+        ],
+      },
+      {
+        heading: "What does TikTok require?",
+        paragraphs: [
+          "Where the program is open, TikTok's terms, last updated 20 July 2026, and the Creator Academy say you need all of the following. Meeting them does not by itself pay you. The video still has to qualify.",
+        ],
+        bullets: [
+          "Be 18 or older, or the age of majority where you live. The Creator Academy states 18.",
+          "Use a personal account in good standing. Business accounts, organization accounts, and government or political accounts are not eligible.",
+          "Have at least 10,000 authentic followers.",
+          "Have at least 100,000 authentic video views in the 30 days before you apply or are invited.",
+          "Link a payment account in your own name and finish the tax steps the app asks for.",
+          "Post original videos. A video needs to be at least one minute, get at least 1,000 views on the For You feed, and not be a duet, a stitch, a photo-mode post, an ad, or sponsored.",
+        ],
+      },
+      {
+        heading: "Which views actually pay?",
+        paragraphs: [
+          "TikTok's Creator Academy says a qualified view is not every play. It needs at least five seconds of watch time. Views from the same account count once. A view does not count if the person taps Not interested. A view from Search needs at least 30 seconds. The viewer has to be in a Creator Rewards country: the United States, Mexico, Brazil, South Korea, Japan, Germany, the United Kingdom, or France. Bought views, fraud, ads, and sponsored posts do not count.",
+          "The US program terms say rewards go through PayPal via Hyperwallet, on the 15th of the month, once the balance is at least $50. Other countries can show a different payout method. Read the screen in your own account.",
+        ],
+      },
+      {
+        heading: "What if my country is not on the list?",
+        paragraphs: [
+          "You cannot collect Creator Rewards from a country that is not on the list, even with 10,000 followers. Do not use a VPN or an account registered in another country. That breaks the rule that you live where the account is registered.",
+          "You can still be paid by a client, for your own product, or for a sponsorship you disclose. Those payments do not go through Creator Rewards. LIVE gifts and other TikTok tools have separate country rules. Check them in the app instead of assuming they match this program.",
+        ],
+      },
+    ],
+    faqs: [
+      { question: "How do I get monetized on TikTok in 2026?", answer: "Join Creator Rewards if you live in the United States, the United Kingdom, Germany, Japan, South Korea, France, Mexico, or Brazil, with a personal account, 10,000 followers, and 100,000 views in 30 days. Videos that earn are original and at least one minute." },
+      { question: "Is the TikTok Creator Fund still open?", answer: "No. TikTok's help pages say the Creator Fund is no longer available and was replaced by Creator Rewards. Old fund balances do not expire." },
+      { question: "Can I join Creator Rewards from Pakistan or India?", answer: "No. Neither country is on the eight-country list in TikTok's Creator Academy. Check TikTok Studio in case the list changes. Do not apply through another country." },
+      { question: "How long does a TikTok video need to be to get paid?", answer: "At least one minute, plus at least 1,000 For You views. Duets, stitches, photo-mode posts, ads, and sponsored videos do not qualify." },
+      { question: "Do all views count for TikTok pay?", answer: "No. A qualified view needs five seconds of watch time, and search views need 30 seconds. Repeat views from one account count once. The viewer must be in a Creator Rewards country." },
+      { question: "How does TikTok pay?", answer: "The US terms, updated 20 July 2026, pay through PayPal via Hyperwallet on the 15th once you reach $50. Your country may show a different method in the app." },
+      { question: "Can I earn on TikTok without Creator Rewards?", answer: "Yes. Sell your own product or service, or take a sponsorship you disclose. That does not require the eight-country program." },
     ],
     sources: [
-      { label: "TikTok Creator Academy", url: "https://www.tiktok.com/creator-academy/en/" },
-      { label: "TikTok Support", url: "https://support.tiktok.com/" },
+      { label: "TikTok: Creator Rewards Program terms, updated 20 July 2026", url: "https://www.tiktok.com/legal/page/global/creator-rewards-program-us/en" },
+      { label: "TikTok Creator Academy", url: "https://www.tiktok.com/creator-academy" },
+      { label: "TikTok Support: Creator Fund replaced by Creator Rewards", url: "https://support.tiktok.com/en/business-and-creator/tiktok-creator-fund-us" },
     ],
-    next: { href: "/learn/tiktok", label: "Return to TikTok" }
+    next: { href: "/learn/tiktok", label: "Return to TikTok" },
   },
 
   {

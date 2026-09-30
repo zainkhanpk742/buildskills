@@ -20,6 +20,27 @@ export const hubContent: Record<string, { paragraphs: string[]; steps: string[];
       { question: "Can I monetize Facebook from every country?", answer: "No. Pakistan was not on Meta's published list on 30 September 2026. India and Bangladesh were. Check Meta's country page before you count on a payout." },
     ],
   },
+  tiktok: {
+    paragraphs: [
+      "People searching this page want to know how to grow on TikTok and how to get paid. Growth is the videos you can keep making. The payout program is Creator Rewards, and it is not worldwide.",
+      "TikTok's Creator Academy says Creator Rewards is open in the United States, the United Kingdom, Germany, Japan, South Korea, France, Mexico, and Brazil. You must live there and use an account registered there. Pakistan and India are not on the list. The old Creator Fund is closed.",
+      "Where it is open, you need a personal account, to be 18 or older, at least 10,000 followers, and at least 100,000 video views in the last 30 days. A video that earns must be original, at least one minute long, and not a duet, a stitch, or an ad. A qualified view needs five seconds of watch time, and the viewer has to be in one of those eight countries.",
+      "If your country is not listed, do not buy a workaround. Use TikTok to show work people will pay you for directly. The full steps and the official sources are in the monetization guide.",
+    ],
+    steps: [
+      "Pick one subject and post original videos you can repeat.",
+      "If you want Creator Rewards, make those videos at least one minute.",
+      "Check TikTok Studio to see whether the program is offered on your account.",
+      "Ignore anyone who asks for a fee to turn on TikTok pay.",
+      "If your country is not eligible, sell your own service or product.",
+    ],
+    faqs: [
+      { question: "How do I get monetized on TikTok?", answer: "Join Creator Rewards only if you live in one of the eight countries TikTok lists, with 10,000 followers and 100,000 views in 30 days. The video must be original and at least one minute." },
+      { question: "Is TikTok Creator Rewards available in Pakistan?", answer: "No. TikTok's Creator Academy list is the United States, the United Kingdom, Germany, Japan, South Korea, France, Mexico, and Brazil. Check the app in case that list changes." },
+      { question: "Did the TikTok Creator Fund end?", answer: "Yes. TikTok says it is no longer available and Creator Rewards replaced it. Money already earned in the fund does not expire." },
+      { question: "Do short TikToks get paid?", answer: "Not by Creator Rewards. The video has to be at least one minute, with at least 1,000 views on the For You feed." },
+    ],
+  },
   "mobile-apps": {
     paragraphs: [
       "A mobile app is worth building when the job is repeated, personal, or tied to the phone: a login, offline use, a camera, notifications, or a workflow people open every day. If the job is “read this once” or “send us a message,” a website is usually the better first product. This hub is for beginners who need that decision before they pick a tool.",
