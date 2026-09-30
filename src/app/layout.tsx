@@ -46,6 +46,9 @@ export const metadata: Metadata = {
     description: "Learn practical digital skills, explore useful tools, and follow clear guides.",
   },
   robots: { index: true, follow: true },
+  other: {
+    "google-adsense-account": "ca-pub-3672700167787763",
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
