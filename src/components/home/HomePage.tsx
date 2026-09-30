@@ -33,26 +33,16 @@ export function HomePage({ initialQuery = "" }: { initialQuery?: string }) {
             <SearchIndex initialQuery={initialQuery} />
           </div>
           <div className="hero-side">
-            <div className="hero-photos">
-              <figure className="hero-side-image">
-                <Image
-                  src="/hero.webp"
-                  alt="Students learning together in a computer classroom"
-                  fill
-                  priority
-                  sizes="(max-width: 900px) 68vw, 340px"
-                />
-              </figure>
-              <figure className="hero-side-small">
-                <Image
-                  src="/hero-detail.webp"
-                  alt="Hands writing notes beside a laptop"
-                  fill
-                  sizes="(max-width: 900px) 32vw, 160px"
-                />
-              </figure>
-            </div>
-            <p className="hero-caption">A practical place to learn a skill, then use it.</p>
+            <figure className="hero-side-image">
+              <Image
+                src="/hero.webp"
+                alt="Students learning together in a computer classroom"
+                fill
+                priority
+                sizes="(max-width: 900px) 100vw, 470px"
+              />
+            </figure>
+            <p className="hero-caption">A digital classroom. Ask anything, learn anything.</p>
           </div>
         </div>
       </section>
