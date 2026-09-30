@@ -6,6 +6,8 @@ import { digitalSkillsGuides } from "@/data/digitalSkillsGuides";
 import { aiVideoGenerationArea, aiVideoGuide } from "@/data/aiVideoGuide";
 import { chatgptPromptsArea, chatgptPromptsGuide } from "@/data/chatgptPromptsGuide";
 import { earningGuides } from "@/data/earningGuides";
+import { addedFaqs } from "@/data/guideFaqs";
+import { addedFaqsMore } from "@/data/guideFaqsMore";
 
 export const nav = [
   { label: "Learn", href: "/learn" },
@@ -351,7 +353,18 @@ export const guides: Guide[] = [
   aiVideoGuide,
   chatgptPromptsGuide,
   ...earningGuides,
-];
+].map((guide) => {
+  const more = [...(addedFaqs[guide.slug] ?? []), ...(addedFaqsMore[guide.slug] ?? [])];
+  if (!more.length) return guide;
+  const seen = new Set((guide.faqs ?? []).map((item) => item.question));
+  const faqs = [...(guide.faqs ?? [])];
+  for (const item of more) {
+    if (seen.has(item.question)) continue;
+    seen.add(item.question);
+    faqs.push(item);
+  }
+  return { ...guide, faqs };
+});
 export const featuredQuestions = [
   "seo/what-is-seo",
   "websites/how-to-build-a-website",
