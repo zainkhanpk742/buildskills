@@ -92,10 +92,12 @@ export const seoSocialGuides: DetailedGuide[] = [
       "Use a sitemap to help communicate the URLs you care about. Keep URLs stable and understandable. When content moves, use appropriate redirects and review canonical URLs rather than creating several competing versions.",
       "Technical SEO is not a license to add complexity. A simple site with clean HTML and clear links can be easier to crawl than an elaborate system full of unnecessary scripts and duplicate URLs.",
       "Use Search Console, browser tools, server logs, and URL inspection to diagnose actual problems. Fix the specific failure you can observe instead of applying a generic checklist to every page.",
+      "Google's Core Web Vitals are three page-experience measures: Largest Contentful Paint, Interaction to Next Paint, and Cumulative Layout Shift. web.dev calls a visit good when the largest content paints within 2.5 seconds, the page responds to an interaction within 200 milliseconds, and layout shift stays at 0.1 or below. Interaction to Next Paint replaced First Input Delay in 2024. A perfect score is not a ranking promise. A page people cannot load is still a problem.",
     ],
     sources: [
       { label: "Google Search Central: Search Essentials", url: "https://developers.google.com/search/docs/essentials" },
       { label: "Google Search Central: Build and submit a sitemap", url: "https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap" },
+      { label: "web.dev: Core Web Vitals", url: "https://web.dev/articles/vitals" },
     ],
     next: { href: "/learn/seo/internal-linking", label: "Learn internal linking" }
   },
@@ -156,6 +158,11 @@ export const seoSocialGuides: DetailedGuide[] = [
       "Keep business information consistent where it matters. Use the business's real name, address or service area, phone, hours, and website details. Claim and maintain the relevant business profile provided by the search platform.",
       "Create useful local content when you have something specific to say: service information, area-specific guidance, project examples, FAQs, or practical resources. Avoid doorway pages that exist only to capture location keywords.",
       "Ask for genuine customer feedback through legitimate channels and respond professionally. Never invent reviews or offer misleading incentives. Local trust is part of the product, not just a ranking tactic.",
+      "For Google, the public listing is a Google Business Profile, not the old name Google My Business. Claim the real business at business.google.com, use the same name, address or service area, phone, and website as the site, and follow Google's current rules on reviews. A profile does not replace the website page.",
+    ],
+    sources: [
+      { label: "Google Business Profile", url: "https://business.google.com/" },
+      { label: "Google Search Central: SEO Starter Guide", url: "https://developers.google.com/search/docs/fundamentals/seo-starter-guide" },
     ],
     next: { href: "/learn/seo", label: "Return to the SEO path" }
   },

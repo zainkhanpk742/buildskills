@@ -207,12 +207,36 @@ const guidesBase: Guide[] = [
     area: "SEO",
     title: "What is SEO?",
     summary:
-      "SEO is the work of helping a useful page get found for a question someone actually types.",
-    paragraphs: [
-      "Search engine optimization is not a trick, and it is not a traffic machine. A search engine tries to match a query with a page that answers it. SEO is how you make that match more likely: the language people use, the structure of the page, the ability to crawl it, and the reasons another page would treat yours as a source.",
-      "Start with the question, not the tactic. If you cannot say who is searching and what a good answer does for them, keywords and plugins will not save the page. A clear page about one subject beats a vague page trying to rank for everything.",
-      "The practical parts sit in a fixed order. Understand what search is. Learn how a page is discovered and indexed. Match the intent of the query. Write and structure the page. Remove technical barriers. Earn references. Then measure whether the right people arrived — not whether a chart went up.",
-      "BuildSkills treats SEO as a learning path: understand how search works, make useful pages discoverable, and measure whether they help the people who find them.",
+      "SEO means search engine optimization: making a useful page easier to find in Google when someone searches for that topic. It is not an ad, and it is not a trick.",
+    checkedDate: "2026-09-30",
+    difficulty: "Beginner",
+    paragraphs: [],
+    sections: [
+      {
+        heading: "What does SEO mean?",
+        paragraphs: [
+          "SEO is the work of helping the right page show up when someone types a question into a search engine. Google tries to match that search with a page that answers it. You make the match more likely by using the words people actually type, structuring the page so it can be read, and not blocking the crawler.",
+          "Search engine optimization is free to practice. You do not pay Google for an organic result. Google Ads is a separate product: you pay to show an ad. A page can do both, but they are not the same job.",
+        ],
+      },
+      {
+        heading: "How does SEO work?",
+        paragraphs: [
+          "Google finds pages by following links and by reading a sitemap. It then decides whether to keep the page in its index. Only an indexed page can appear in search. After that, many systems decide which indexed pages to show, and in what order, for a particular query.",
+          "A beginner does the work in this order. Say who the page is for. Write one clear answer. Give the page a title and a heading that match the question. Link it from the rest of the site. Check in Google Search Console that Google can see it. Improve the page when the report shows people found it but did not click, or clicked and left.",
+        ],
+      },
+      {
+        heading: "What is not SEO?",
+        paragraphs: [
+          "Repeating a keyword, hiding text, buying links, or copying another site are not SEO. Google's spam policies treat those as abuse. A plugin cannot rank a page that does not answer anything. Nobody can honestly sell you a guaranteed position.",
+          "The next pages in this path cover how search engines work, keyword research, on-page SEO, technical SEO, and Search Console. Start with the question your reader types. Then make one page that answers it.",
+        ],
+      },
+    ],
+    sources: [
+      { label: "Google Search Central: SEO Starter Guide", url: "https://developers.google.com/search/docs/fundamentals/seo-starter-guide" },
+      { label: "Google Search Central: How Search works", url: "https://developers.google.com/search/docs/fundamentals/how-search-works" },
     ],
     next: { href: "/learn/seo", label: "Open the SEO path" },
   },
@@ -235,12 +259,29 @@ const guidesBase: Guide[] = [
     area: "SEO",
     title: "How do I get my website on Google?",
     summary:
-      "Google has to discover the site, be allowed to crawl it, and decide to keep it.",
-    paragraphs: [
-      "Publishing a website is not the same as being findable. Google has to discover a URL, be allowed to read it, and consider it worth storing in the index. Until that happens, rankings are not the problem. Discovery is.",
-      "Give the site a public address. Make sure the important pages are linked from the homepage, not orphaned. A simple sitemap and a clear title on each page help a crawler understand what exists. Block nothing important with a stray noindex or a password wall.",
-      "Search Console is the honest check. It tells you whether Google has seen the property, which pages it indexed, and which it refused. Submit the site, then read the coverage instead of guessing.",
-      "After a page is indexed, you can work on whether it deserves to rank. That is a different job: intent, content, internal links, and technical health. Do not skip the first job to chase the second.",
+      "Publish the site on a public address, let Google crawl it, and check the result in Search Console. Paying for an ad does not put the page in the free results.",
+    checkedDate: "2026-09-30",
+    difficulty: "Beginner",
+    paragraphs: [],
+    sections: [
+      {
+        heading: "How to get a website on Google",
+        paragraphs: [
+          "A new site is not in Google just because the host says it is live. Google has to discover the address, be allowed to read the page, and decide to keep it. Until that happens, rankings are not the problem. Discovery is.",
+          "Put the important pages on a public URL that does not ask for a password. Link them from the homepage. Give each page its own title. Do not leave a noindex tag or a robots.txt block on a page you want found. A sitemap lists the URLs you care about. Submit that sitemap in Google Search Console after you verify that you own the site.",
+        ],
+      },
+      {
+        heading: "Indexing is not the same as ranking",
+        paragraphs: [
+          "Indexed means Google stored the page. Ranking means Google chose to show it for a search. You can ask Google to recrawl a URL in Search Console. That request does not guarantee the page will be kept, and it does not buy a position.",
+          "If the site still does not appear, inspect the exact URL. Search Console will say whether the page is indexed or why it was left out. Common causes are a new site with no links, a block you added by accident, or a page with almost no text. Do not pay a service that claims it can force Google to index you.",
+        ],
+      },
+    ],
+    sources: [
+      { label: "Google Search Console", url: "https://search.google.com/search-console/about" },
+      { label: "Google Search Central: sitemaps", url: "https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview" },
     ],
     next: { href: "/learn/seo/how-to-increase-website-traffic", label: "How do I increase website traffic?" },
   },
@@ -249,12 +290,29 @@ const guidesBase: Guide[] = [
     area: "SEO",
     title: "How do I increase website traffic?",
     summary:
-      "Choose the visits you want, then earn them with pages that answer specific questions.",
-    paragraphs: [
-      "More traffic is a result, not a task. The useful question is which visits you want, and which page should earn them. A hundred people with the problem you solve are worth more than a thousand who landed by accident.",
-      "Most sites grow from a short list. Publish pages that answer specific questions. Title them the way a person would ask. Link those pages together so a crawler and a reader can move. Fix anything that blocks indexing. Then distribute: search, a place your audience already is, and a reason to pass the page on.",
-      "Chasing every channel at once usually means finishing none of them. Pick one query you can answer better than the current results, and make that page the proof. Measure whether those people arrived and whether they did the thing the page was for.",
-      "If the site has no clear offer, traffic will not know what to do when it arrives. Fix the page before you buy the audience.",
+      "Increase website traffic by publishing pages that match real searches, earning clicks, and not buying fake visits.",
+    checkedDate: "2026-09-30",
+    difficulty: "Beginner",
+    paragraphs: [],
+    sections: [
+      {
+        heading: "How to increase website traffic from search",
+        paragraphs: [
+          "More traffic is a result, not a task. Decide which visits you want, then give each group a page. A hundred people who needed the answer are worth more than a thousand who arrived by accident.",
+          "The usual path is simple. Find the question in your own words and in Search Console. Write one page that answers it in the title, the heading, and the first paragraph. Link that page from related guides. Share it where your readers already are. Then read the Performance report: impressions mean the page was shown, clicks mean someone chose it.",
+        ],
+      },
+      {
+        heading: "What does not increase useful traffic",
+        paragraphs: [
+          "Buying visitors, buying links, or publishing dozens of thin pages can raise a chart and still hurt the site. Google's spam policies cover link schemes and scaled pages that add nothing. Social posts can bring people in, but they do not replace a page that matches a search.",
+          "If traffic falls, do not rewrite the whole site in one day. Check whether one page, one query, or the whole site changed, and whether you edited something that week. Fix the page people already find before you chase a bigger keyword.",
+        ],
+      },
+    ],
+    sources: [
+      { label: "Google Search Central: helpful content", url: "https://developers.google.com/search/docs/fundamentals/creating-helpful-content" },
+      { label: "Google Search Central: spam policies", url: "https://developers.google.com/search/docs/essentials/spam-policies" },
     ],
     next: { href: "/learn/seo", label: "Follow the full SEO path" },
   },
