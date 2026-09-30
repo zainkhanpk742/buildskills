@@ -99,8 +99,8 @@ export function GuideView({ slug }: { slug: string }) {
             <h1 className="display-section balance stack-4 max-3">{guide.title}</h1>
             <p className="lede pretty stack-5">{guide.summary}</p>
             <p className="article-meta">
-              {guide.difficulty ?? "Practical guide"} <span aria-hidden="true">·</span> {readingMinutes} min read
-              {guide.checkedDate ? <> <span aria-hidden="true">·</span> Last checked {guide.checkedDate}</> : null}
+              BuildSkills Editorial Team <span aria-hidden="true">·</span> {guide.difficulty ?? "Practical guide"} <span aria-hidden="true">·</span> {readingMinutes} min read
+              {guide.checkedDate ? <> <span aria-hidden="true">·</span> Updated {guide.checkedDate}</> : null}
             </p>
           </div>
         </header>

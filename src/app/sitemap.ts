@@ -17,6 +17,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/contact",
     "/privacy-policy",
     "/terms",
+    "/disclaimer",
+    "/editorial-policy",
     ...guides.map((guide) => `/learn/${guide.slug}`),
   ];
 

@@ -27,10 +27,13 @@ const columns = [
   {
     title: "Company",
     links: [
+      ["Projects", "/projects"],
       ["About", "/about"],
+      ["Editorial policy", "/editorial-policy"],
       ["Contact", "/contact"],
       ["Privacy", "/privacy-policy"],
       ["Terms", "/terms"],
+      ["Disclaimer", "/disclaimer"],
     ],
   },
 ] as const;

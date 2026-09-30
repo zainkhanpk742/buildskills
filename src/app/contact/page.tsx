@@ -3,18 +3,31 @@ import { ContactForm } from "@/components/ContactForm";
 import { Interior } from "@/components/library";
 
 export const metadata: Metadata = {
-  title: "Contact and guide suggestions",
-  description: "Suggest a practical guide, report outdated information or a broken link, or share a useful digital tool.",
+  title: "Contact BuildSkills",
+  description:
+    "Email BuildSkills at salimpk742@gmail.com to suggest a guide, report an error, or ask a question about the site.",
   alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "Contact BuildSkills",
+    description: "Email salimpk742@gmail.com to suggest a guide or report an error.",
+    url: "/contact",
+    siteName: "BuildSkills",
+    type: "website",
+  },
 };
 
 export default function Page() {
   return (
     <Interior
       kicker="Contact"
-      title="Help make the learning library more useful."
-      lede="Suggest a topic, report outdated information or a broken link, or recommend a tool worth explaining. Your message is prepared in your browser and is not sent automatically."
+      title="Contact BuildSkills"
+      lede="Email salimpk742@gmail.com. Use it to suggest a guide, report a wrong fact or a broken link, or ask about the site."
     >
+      <div className="prose" style={{ marginBottom: "2rem" }}>
+        <p>
+          Write to <a href="mailto:salimpk742@gmail.com">salimpk742@gmail.com</a>. The form below opens that address in your email app with your message filled in. It does not store the message on this site.
+        </p>
+      </div>
       <ContactForm />
     </Interior>
   );

@@ -21,8 +21,8 @@ export function ContactForm() {
       message,
     ].join("\n");
     setBrief(next);
-    setCopied(false);
-    setCopyMessage("");
+    const href = `mailto:salimpk742@gmail.com?subject=${encodeURIComponent(intent)}&body=${encodeURIComponent(next)}`;
+    window.location.href = href;
   }
 
   async function copy() {
@@ -67,7 +67,7 @@ export function ContactForm() {
           />
         </label>
         <button type="submit" className="btn btn-primary" style={{ width: "fit-content" }}>
-          Prepare message
+          Prepare message and email it
         </button>
       </form>
       {brief ? (
