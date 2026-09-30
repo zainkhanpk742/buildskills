@@ -37,7 +37,7 @@ export function HomePage({ initialQuery = "" }: { initialQuery?: string }) {
               <figure className="hero-side-image">
                 <Image
                   src="/hero.webp"
-                  alt="Two students studying together at a laptop"
+                  alt="Students learning together in a computer classroom"
                   fill
                   priority
                   sizes="(max-width: 900px) 68vw, 340px"
