@@ -62,11 +62,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         />
       </head>
       <body>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-HK9VC2VGVW" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-MK9VC2VGYW" />
         <script
           dangerouslySetInnerHTML={{
             __html:
-              "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-HK9VC2VGVW');",
+              "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-MK9VC2VGYW');",
           }}
         />
         <Header />
