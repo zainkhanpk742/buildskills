@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ButtonLink, Kicker } from "@/components/ui";
 import { SearchIndex } from "@/components/home/Interactive";
 import { AreaGrid, FinalCta, Journey, PathRail, PrincipleGrid, QuestionCards, ToolDiscovery } from "@/components/home/Sections";
@@ -32,7 +33,13 @@ export function HomePage() {
           </div>
           <div className="hero-side">
             <div className="hero-side-image">
-              <img src="https://images.unsplash.com/photo-1778489769184-45868633c527?auto=format&fit=crop&fm=jpg&q=82&w=1000" alt="Students learning programming in a classroom" loading="eager" />
+              <Image
+                src="/hero.webp"
+                alt="Students learning programming in a classroom"
+                fill
+                priority
+                sizes="(max-width: 900px) 100vw, 470px"
+              />
             </div>
           </div>
         </div>
