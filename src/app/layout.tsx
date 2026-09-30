@@ -60,6 +60,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3672700167787763"
           crossOrigin="anonymous"
         />
+      </head>
+      <body>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-HK9VC2VGVW" />
         <script
           dangerouslySetInnerHTML={{
@@ -67,8 +69,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-HK9VC2VGVW');",
           }}
         />
-      </head>
-      <body>
         <Header />
         {children}
         <Footer />
