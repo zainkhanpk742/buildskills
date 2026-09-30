@@ -61,7 +61,9 @@ export function GuideView({ slug }: { slug: string }) {
       articleSection: guide.area,
       keywords: guide.topics,
       isAccessibleForFree: true,
-      ...(guide.checkedDate ? { dateModified: guide.checkedDate } : {}),
+      image: "https://buildskills.com.pk/og.png",
+      datePublished: guide.checkedDate ?? "2026-09-30",
+      dateModified: guide.checkedDate ?? "2026-09-30",
       author: {
         "@type": "Organization",
         name: "BuildSkills Editorial Team",
@@ -71,6 +73,12 @@ export function GuideView({ slug }: { slug: string }) {
         "@type": "Organization",
         name: "BuildSkills",
         url: "https://buildskills.com.pk",
+        logo: {
+          "@type": "ImageObject",
+          url: "https://buildskills.com.pk/apple-touch-icon.png",
+          width: 180,
+          height: 180,
+        },
       },
     },
     {
@@ -332,6 +340,20 @@ export function AreaView({ slug }: { slug: string }) {
       {hubSchema ? (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(hubSchema).replace(/</g, "\\u003c") }} />
       ) : null}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://buildskills.com.pk/" },
+              { "@type": "ListItem", position: 2, name: "Learn", item: "https://buildskills.com.pk/learn" },
+              { "@type": "ListItem", position: 3, name: area.title, item: `https://buildskills.com.pk/learn/${area.slug}` },
+            ],
+          }).replace(/</g, "\\u003c"),
+        }}
+      />
     </main>
   );
 }

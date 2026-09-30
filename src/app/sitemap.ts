@@ -26,7 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const guide = guides.find((item) => `/learn/${item.slug}` === path);
     return {
       url: path === "/" ? "https://buildskills.com.pk" : `https://buildskills.com.pk${path}`,
-      ...(guide?.checkedDate ? { lastModified: guide.checkedDate } : {}),
+      lastModified: guide?.checkedDate ?? "2026-09-30",
     };
   });
 }

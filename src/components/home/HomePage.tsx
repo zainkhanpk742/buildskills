@@ -3,7 +3,7 @@ import { ButtonLink, Kicker } from "@/components/ui";
 import { SearchIndex } from "@/components/home/Interactive";
 import { AreaGrid, FinalCta, Journey, PathRail, PrincipleGrid, QuestionCards, ToolDiscovery } from "@/components/home/Sections";
 
-export function HomePage() {
+export function HomePage({ initialQuery = "" }: { initialQuery?: string }) {
   return (
     <main id="content">
       <section className="hero hero-dashboard" aria-labelledby="hero-title">
@@ -29,7 +29,7 @@ export function HomePage() {
               </ButtonLink>
             </div>
             <p className="hero-search-hint">Have a question in mind? Search the guide library.</p>
-            <SearchIndex />
+            <SearchIndex initialQuery={initialQuery} />
           </div>
           <div className="hero-side">
             <div className="hero-side-image">
@@ -61,15 +61,32 @@ export function HomePage() {
             "@graph": [
               {
                 "@type": "Organization",
+                "@id": "https://buildskills.com.pk/#organization",
                 name: "BuildSkills",
                 url: "https://buildskills.com.pk/",
+                email: "salimpk742@gmail.com",
+                logo: {
+                  "@type": "ImageObject",
+                  url: "https://buildskills.com.pk/apple-touch-icon.png",
+                  width: 180,
+                  height: 180,
+                },
               },
               {
                 "@type": "WebSite",
+                "@id": "https://buildskills.com.pk/#website",
                 name: "BuildSkills",
                 url: "https://buildskills.com.pk/",
                 description: "Practical digital skills, clear learning guides, and useful tools for young people and beginners.",
-                publisher: { "@type": "Organization", name: "BuildSkills", url: "https://buildskills.com.pk/" },
+                publisher: { "@id": "https://buildskills.com.pk/#organization" },
+                potentialAction: {
+                  "@type": "SearchAction",
+                  target: {
+                    "@type": "EntryPoint",
+                    urlTemplate: "https://buildskills.com.pk/?q={search_term_string}",
+                  },
+                  "query-input": "required name=search_term_string",
+                },
               },
             ],
           }).replace(/</g, "\\u003c"),

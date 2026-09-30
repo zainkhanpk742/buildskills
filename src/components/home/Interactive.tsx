@@ -13,8 +13,8 @@ const prompts = [
   "video-editing/how-to-edit-a-video",
 ] as const;
 
-export function SearchIndex() {
-  const [query, setQuery] = useState("");
+export function SearchIndex({ initialQuery = "" }: { initialQuery?: string }) {
+  const [query, setQuery] = useState(initialQuery);
   const router = useRouter();
   const listId = useId();
   const results = useMemo(() => (query.trim() ? filterHits(query) : []), [query]);
