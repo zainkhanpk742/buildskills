@@ -19,7 +19,7 @@ export default function Page() {
     >
       <div className="prose" style={{ marginBottom: "2rem" }}>
         <p>
-          Write to <a href="mailto:salimpk742@gmail.com">salimpk742@gmail.com</a>. The form below opens that address in your email app with your message filled in. It does not store the message on this site.
+          Write to <a href="mailto:salimpk742@gmail.com">salimpk742@gmail.com</a>. The form opens a Gmail message with your text filled in. You still press Send in Gmail. If Gmail does not open, copy the message and send it yourself. This site does not store the message.
         </p>
       </div>
       <ContactForm />
