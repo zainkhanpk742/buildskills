@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { areaBySlug, areas, guideBySlug, guidesInArea, pathSteps } from "@/data/site";
+import { hubContent } from "@/data/hubContent";
 import { Kicker } from "@/components/ui";
 
 export function Interior({
@@ -160,10 +161,10 @@ export function GuideView({ slug }: { slug: string }) {
               <section aria-labelledby="faq-title">
                 <h2 id="faq-title">Frequently asked questions</h2>
                 {guide.faqs.map((faq) => (
-                  <div key={faq.question}>
-                    <h3>{faq.question}</h3>
+                  <details key={faq.question}>
+                    <summary><h3 style={{ display: "inline" }}>{faq.question}</h3></summary>
                     <p>{faq.answer}</p>
-                  </div>
+                  </details>
                 ))}
               </section>
             ) : null}
@@ -222,6 +223,18 @@ export function AreaView({ slug }: { slug: string }) {
   if (!area) return null;
   const related = guidesInArea(area.title);
   const isSeo = area.slug === "seo";
+  const extra = hubContent[area.slug];
+  const hubSchema = extra?.faqs.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: extra.faqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: { "@type": "Answer", text: faq.answer },
+        })),
+      }
+    : null;
   return (
     <main id="content">
       <header className="page-head">
@@ -233,6 +246,26 @@ export function AreaView({ slug }: { slug: string }) {
       </header>
       <div className="page-wrap area-grid section-pad">
         <div>
+          {extra ? (
+            <div className="prose" style={{ marginBottom: "2.5rem" }}>
+              {extra.paragraphs.map((paragraph) => (
+                <p key={paragraph.slice(0, 40)}>{paragraph}</p>
+              ))}
+              <h2>What you will learn</h2>
+              <ul>
+                {extra.steps.map((step) => (
+                  <li key={step}>{step}</li>
+                ))}
+              </ul>
+              <h2>Frequently asked questions</h2>
+              {extra.faqs.map((faq) => (
+                <details key={faq.question}>
+                  <summary><h3 style={{ display: "inline" }}>{faq.question}</h3></summary>
+                  <p>{faq.answer}</p>
+                </details>
+              ))}
+            </div>
+          ) : null}
           <h2 className="serif" style={{ fontSize: "1.875rem", margin: 0 }}>
             Guides
           </h2>
@@ -296,6 +329,9 @@ export function AreaView({ slug }: { slug: string }) {
           </aside>
         )}
       </div>
+      {hubSchema ? (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(hubSchema).replace(/</g, "\\u003c") }} />
+      ) : null}
     </main>
   );
 }
