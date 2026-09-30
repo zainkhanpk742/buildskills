@@ -6,6 +6,7 @@ import { digitalSkillsGuides } from "@/data/digitalSkillsGuides";
 import { aiVideoGenerationArea, aiVideoGuide } from "@/data/aiVideoGuide";
 import { chatgptPromptsArea, chatgptPromptsGuide } from "@/data/chatgptPromptsGuide";
 import { earningGuides } from "@/data/earningGuides";
+import { thinHubGuides } from "@/data/thinHubGuides";
 import { addedFaqs } from "@/data/guideFaqs";
 import { addedFaqsMore } from "@/data/guideFaqsMore";
 
@@ -353,6 +354,7 @@ export const guides: Guide[] = [
   aiVideoGuide,
   chatgptPromptsGuide,
   ...earningGuides,
+  ...thinHubGuides,
 ].map((guide) => {
   const more = [...(addedFaqs[guide.slug] ?? []), ...(addedFaqsMore[guide.slug] ?? [])];
   if (!more.length) return guide;

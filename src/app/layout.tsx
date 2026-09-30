@@ -3,6 +3,7 @@ import { Instrument_Sans, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SiteAnalytics } from "@/components/SiteAnalytics";
 
 const sans = Instrument_Sans({
   subsets: ["latin"],
@@ -54,6 +55,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Header />
         {children}
         <Footer />
+        <SiteAnalytics />
       </body>
     </html>
   );
