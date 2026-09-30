@@ -36,7 +36,13 @@ const lessons = [
     n: "06",
     title: "How can I make money on YouTube?",
     slug: "make-money-on-youtube",
-    body: "Understand YouTube monetization, YPP, and the wider business models that can turn attention into income.",
+    body: "Ads, memberships, products, services, and sponsorships, and which ones need the Partner Program.",
+  },
+  {
+    n: "07",
+    title: "What are the YouTube monetization requirements in 2026?",
+    slug: "youtube-monetization-requirements-2026",
+    body: "The current watch-hour and Shorts thresholds, and the higher bar for new channels from 1 February 2027.",
   },
 ];
 
@@ -212,42 +218,25 @@ export default function Page() {
           <div className="card" style={{ padding: "28px" }}>
             <p className="eyebrow">MONETIZATION</p>
             <h2 style={{ fontSize: "30px", letterSpacing: "-.03em", margin: "0 0 14px" }}>
-              Monetization is a business model, not a magic button.
+              YouTube monetization requirements in 2026
             </h2>
             <p style={{ color: "#667085", lineHeight: 1.7 }}>
-              YouTube's Partner Program can provide access to advertising and
-              other monetization features, but eligibility is reviewed and
-              individual features have their own requirements. A creator can
-              also earn outside the platform through services, products,
-              sponsorships, affiliate relationships, courses, or memberships.
+              Until 31 January 2027, a new channel needs 1,000 subscribers plus either 4,000 valid public watch hours in 12 months or 10 million valid public Shorts views in 90 days. From 1 February 2027, new applicants need 1,000 subscribers plus either 8,000 qualified watch hours in 365 days or 20 million qualified Shorts views in 90 days. TeamYouTube announced that change on 10 August 2026. Channels already in the Partner Program are not removed only because they sit under the new numbers.
             </p>
             <p style={{ color: "#667085", lineHeight: 1.7 }}>
-              The full advertising eligibility rules include audience
-              thresholds, account setup, regional availability, and policy
-              review. These rules change; use our{" "}
-              <Link href="/learn/youtube/make-money-on-youtube">
-                detailed YouTube monetization guide
-              </Link>{" "}
-              for the current requirements and official references, then
-              confirm your own eligibility in YouTube Studio before making
-              plans.
+              Fan funding stays lower: 500 subscribers and either 3,000 qualified watch hours in 365 days or 3 million qualified Shorts views in 90 days. From 1 February 2027, Shorts pay needs 10 million qualified Shorts views in 90 days. You also need an eligible country, no active Community Guidelines strikes, 2-Step Verification, and an AdSense for YouTube account. Confirm the live checklist in YouTube Studio.
             </p>
             <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", marginTop: "18px" }}>
+              <Link className="secondary-btn" href="/learn/youtube/youtube-monetization-requirements-2026">
+                Read the 2026 requirements
+              </Link>
               <a
                 className="secondary-btn"
                 href="https://support.google.com/youtube/answer/72851"
                 target="_blank"
                 rel="noreferrer"
               >
-                YPP eligibility ↗
-              </a>
-              <a
-                className="secondary-btn"
-                href="https://support.google.com/youtube/answer/72857"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Ways to earn ↗
+                Official YPP rules ↗
               </a>
             </div>
           </div>
