@@ -5,9 +5,11 @@ function measurementId() {
   return value && /^G-[A-Z0-9]+$/.test(value) ? value : null;
 }
 
+const ADSENSE_CLIENT = "ca-pub-3672700167787763";
+
 function adsenseClient() {
-  const value = process.env.NEXT_PUBLIC_ADSENSE_CLIENT?.trim();
-  return value && /^ca-pub-\d+$/.test(value) ? value : null;
+  const value = process.env.NEXT_PUBLIC_ADSENSE_CLIENT?.trim() || ADSENSE_CLIENT;
+  return /^ca-pub-\d+$/.test(value) ? value : ADSENSE_CLIENT;
 }
 
 export function SiteAnalytics() {
@@ -30,7 +32,7 @@ export function SiteAnalytics() {
           async
           src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsense}`}
           crossOrigin="anonymous"
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
         />
       ) : null}
     </>
