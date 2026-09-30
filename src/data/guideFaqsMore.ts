@@ -130,14 +130,6 @@ export const addedFaqsMore: Record<string, Faq[]> = {
     faq("How do I avoid spam enquiries?", "Be specific about price range or who you cannot help. Vague offers attract vague messages."),
     faq("What records should I keep?", "The request, what you promised, and whether it became work. A Page inbox is not a filing system."),
   ],
-  "facebook/facebook-monetization": [
-    faq("How can I make money on Facebook?", "Content monetization where Meta offers it, ads you run for a business, or your own products and services. Check the tools inside your Page."),
-    faq("Is Facebook monetization available in every country?", "No. Meta's eligibility and country list change. Open the professional dashboard and Meta's help pages rather than trusting a screenshot."),
-    faq("Do I need a huge Page first?", "Platform payouts have their own thresholds. Selling your own service does not. Do not buy followers to chase a payout."),
-    faq("Can Reels pay on Facebook?", "Some formats qualify only in eligible setups. The in-product screen is the source, not a blog."),
-    faq("What is a safe way to earn from a Page?", "Use it to explain a service you can deliver, then get paid by invoice or a checkout you control."),
-    faq("Should I trust a message that offers Page monetization for a fee?", "No. Meta does not ask you to pay a stranger to unlock payouts."),
-  ],
   "instagram/how-to-set-up-instagram-for-business": [
     faq("How do I set up Instagram for a business?", "Create an account, switch to a professional account if you need the business tools, and write a bio that says what you do and how to enquire."),
     faq("Do I need a creator or a business account?", "Choose the type Instagram offers for your use. You can read the difference in Instagram's own settings. A personal account is fine while you are only practicing."),

@@ -1,4 +1,25 @@
 export const hubContent: Record<string, { paragraphs: string[]; steps: string[]; faqs: { question: string; answer: string }[] }> = {
+  facebook: {
+    paragraphs: [
+      "People searching this page usually want two things: how to grow a Facebook Page, and how to get monetized on Facebook. Growth is the content you can keep publishing. Monetization, in 2026, is a separate program called Facebook Content Monetization, and Meta says it is invite-only.",
+      "The older ways of getting paid have ended. In-stream ads, ads on Reels, and the Performance Bonus stopped on 31 August 2025. In-stream ads for Live ended on 15 June 2026. If a guide still tells you to turn on in-stream ads, it is out of date.",
+      "To be considered, use a Page or a profile in professional mode, keep it public, and post original Reels, photos, Stories, or text. A Reel needs to be at least 10 seconds. Views under 5 seconds do not qualify. Open the Professional dashboard, then Monetization, then Content Monetization. You can also send Meta's interest form. Neither step is a promise that you will be invited, and Meta has not published a follower count that guarantees it.",
+      "The program is not in every country. On 30 September 2026, Meta's list included India and Bangladesh and did not include Pakistan. Check the official country page, because it changes. If your country is not listed, use Facebook to find customers for work you control. The full rules, Creator Fast Track, and the sources are in the monetization guide.",
+    ],
+    steps: [
+      "Create a Page or switch on professional mode, and keep the content public.",
+      "Post original Reels of at least 10 seconds, plus photos, Stories, or text people actually watch.",
+      "Open Professional dashboard, then Monetization, then Content Monetization, or use Meta's interest form.",
+      "Ignore anyone who asks for a fee to enable Facebook monetization.",
+      "If you are not invited, or your country is not listed, sell your own service or product.",
+    ],
+    faqs: [
+      { question: "How do I get monetized on Facebook in 2026?", answer: "Facebook Content Monetization is invite-only. Look for an official invite, or submit Meta's interest form. The form does not guarantee an invite, and there is no public follower number that does either." },
+      { question: "Are Facebook in-stream ads still available?", answer: "No. They ended on 31 August 2025, along with ads on Reels and the Performance Bonus. In-stream ads for Live ended on 15 June 2026." },
+      { question: "How many views do I need for Facebook Reels monetization?", answer: "Meta has not published a view count that gets you invited. After you are in, a Reel must be at least 10 seconds, and a view under 5 seconds does not earn." },
+      { question: "Can I monetize Facebook from every country?", answer: "No. Pakistan was not on Meta's published list on 30 September 2026. India and Bangladesh were. Check Meta's country page before you count on a payout." },
+    ],
+  },
   "mobile-apps": {
     paragraphs: [
       "A mobile app is worth building when the job is repeated, personal, or tied to the phone: a login, offline use, a camera, notifications, or a workflow people open every day. If the job is “read this once” or “send us a message,” a website is usually the better first product. This hub is for beginners who need that decision before they pick a tool.",

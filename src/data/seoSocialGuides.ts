@@ -332,20 +332,56 @@ export const seoSocialGuides: DetailedGuide[] = [
     slug: "facebook/facebook-monetization",
     area: "Facebook",
     title: "How can I make money on Facebook?",
-    summary: "Separate platform monetization from the wider business opportunities created by an audience.",
-    paragraphs: [
-      "There are several possible ways to earn through Facebook, and eligibility for platform features can depend on account status, location, content, and current program rules. Check Meta's current creator and monetization documentation before relying on a particular feature.",
-      "A business can also earn indirectly through Facebook by generating leads, selling products, promoting services, building an audience for another channel, or creating relationships that later become customers.",
-      "Choose the model that matches what you can actually deliver. If you sell websites, use Facebook content to demonstrate useful website knowledge and invite suitable businesses to start a conversation. If you sell products, make the path from discovery to purchase clear.",
-      "Do not treat follower count as income. A smaller audience with a strong match to your offer can be commercially useful, while a large general audience may not be.",
-      "Protect trust. Avoid fake engagement, misleading claims, copied content without rights, and promises of guaranteed earnings.",
-      "Treat views and followers as distribution signals, not revenue. Track what happens after people see your content—qualified enquiries, purchases, bookings, or repeat customers—and choose a model that you can actually deliver. Keep a business model that does not depend entirely on one platform feature."
+    summary: "In 2026, Facebook pays invited creators through Content Monetization. In-stream ads, ads on Reels, and the Performance Bonus ended on 31 August 2025. A Page can still earn from your own product or service without an invite.",
+    checkedDate: "2026-09-30",
+    difficulty: "Beginner",
+    paragraphs: [],
+    sections: [
+      {
+        heading: "How do I get monetized on Facebook in 2026?",
+        paragraphs: [
+          "The current program is Facebook Content Monetization. Meta says it is invite-only. An invite comes from Facebook itself: the app, an email, Meta Business Suite, or the Professional dashboard. If you are not sure a message is real, look in the monetization section of those same places. Do not pay someone who says they can turn monetization on. Meta does not sell invites.",
+          "If you have not been invited, you can tell Meta you are interested. On the Facebook mobile app, open the Professional dashboard, then Monetization, then Content Monetization. Meta also has an interest form. The form is not an application, and sending it does not mean you will be invited. There is no public follower number that guarantees a yes.",
+        ],
+      },
+      {
+        heading: "What content can earn, and what no longer pays?",
+        paragraphs: [
+          "In-stream ads, ads on Reels, and the Performance Bonus ended on 31 August 2025. That was the last day creators could earn from those programs. Meta also said in-stream ads for Live would end on 15 June 2026. After that, eligible creators earn through Facebook Content Monetization instead.",
+          "Content that can earn, once you are in the program, includes public Reels, photos, Stories, and text posts that follow Meta's policies. A Reel must be at least 10 seconds. A Story must be at least 5 seconds. If people watch for less than 5 seconds, that view does not qualify. Meta also excludes repeat views from the same person in one session. The amount is based on qualified views and watch time, and Meta can change it.",
+        ],
+      },
+      {
+        heading: "Who is allowed to monetize?",
+        paragraphs: [
+          "Monetization is for public content on a Facebook Page, a profile in professional mode, an event, or a group. A personal profile that is not in professional mode cannot use these tools. Meta's partner rules also say you need an established presence of at least 30 days, and you must live in a country where the product is offered. The bank or payout account connected to you must be in an eligible country too.",
+          "On 30 September 2026, Meta's published country list included India, Bangladesh, the United States, the United Kingdom, Nigeria, and the United Arab Emirates, among others. Pakistan was not on that list. Open the country page again before you plan on a payout. Bought likes, follows, or views can get monetization removed. Post for people who actually watch you.",
+        ],
+      },
+      {
+        heading: "What is Creator Fast Track?",
+        paragraphs: [
+          "On 18 March 2026, Meta announced Creator Fast Track for established creators who are new to Facebook or coming back. Creators with at least 100,000 followers on Instagram, TikTok, or YouTube could earn $1,000 a month for three months. Creators with more than 1 million followers on at least one of those platforms could earn $3,000 a month for three months. Meta said the program also gives immediate access to Facebook Content Monetization. Read the terms and apply only on Meta's own page. Do not assume the offer is still open, or that every country can join.",
+          "Most beginners will not qualify for Fast Track. That is normal. Use the Page to explain a service or product you can deliver, and get paid by invoice or your own checkout. That income does not need an invite.",
+        ],
+      },
+    ],
+    faqs: [
+      { question: "How do I get monetized on Facebook?", answer: "Facebook Content Monetization is invite-only. Watch for an invite in the app, email, Meta Business Suite, or the Professional dashboard. You can also submit Meta's interest form, but that is not an application and it does not guarantee an invite." },
+      { question: "Did Facebook in-stream ads end?", answer: "Yes. In-stream ads, ads on Reels, and the Performance Bonus ended on 31 August 2025. In-stream ads for Live ended on 15 June 2026. The current program is Facebook Content Monetization." },
+      { question: "How many followers do I need for Facebook monetization?", answer: "Meta has not published a follower number that guarantees an invite to Content Monetization. Ignore posts that invent one. Creator Fast Track is separate: it uses followers you already have on Instagram, TikTok, or YouTube." },
+      { question: "Do Facebook Reels still pay?", answer: "Reels can earn inside Content Monetization if you are invited and the Reel is public and at least 10 seconds. A view under 5 seconds does not qualify. The old Ads on Reels program ended on 31 August 2025." },
+      { question: "Can I monetize a Facebook Page from Pakistan?", answer: "Pakistan was not on Meta's published Content Monetization country list on 30 September 2026. India and Bangladesh were. Check the official country page, because the list changes. Your payout account must be in an eligible country too." },
+      { question: "What is Facebook Creator Fast Track?", answer: "A March 2026 program for creators who already have 100,000 followers on Instagram, TikTok, or YouTube ($1,000 a month for three months) or more than 1 million ($3,000 a month). It includes access to Content Monetization. Confirm the offer is still open on Meta's page before you apply." },
+      { question: "Can I make money on Facebook without an invite?", answer: "Yes. Use the Page to get customers for a service or product you control. That does not depend on Content Monetization or on living in a listed country." },
     ],
     sources: [
-      { label: "Meta for Creators", url: "https://www.facebook.com/creators/" },
-      { label: "Meta Business Help Center", url: "https://www.facebook.com/business/help" },
+      { label: "Meta: About Facebook Content Monetization", url: "https://www.facebook.com/business/help/1049081556813520" },
+      { label: "Meta: Content Monetization countries", url: "https://www.facebook.com/business/help/267128784014981" },
+      { label: "Meta: Partner Monetization Policies", url: "https://www.facebook.com/business/help/169845596919485" },
+      { label: "Meta news: Creator Fast Track, 18 March 2026", url: "https://about.fb.com/news/2026/03/creator-fast-track-grow-your-audience-earn-money-on-facebook/" },
     ],
-    next: { href: "/learn/facebook", label: "Return to Facebook" }
+    next: { href: "/learn/facebook", label: "Return to Facebook" },
   },
 
   {
