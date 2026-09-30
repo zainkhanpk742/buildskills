@@ -60,6 +60,13 @@ export const thinHubGuides: Guide[] = [
         ],
       },
       {
+        heading: "What is SQL, and which database should I learn?",
+        paragraphs: [
+          "SQL is the language used to ask a relational database a question: show the unpaid orders, or the students in one class. You write the question. The database returns the rows. You do not need SQL on day one if you are still naming the things the product must remember.",
+          "SQLite is the usual first install. It is one file on your computer, and it is enough to practice tables. PostgreSQL is the usual next step when a website has many visitors and the data must live on a server. A spreadsheet is still the right tool for a short list one person edits. Do not start by picking a famous brand.",
+        ],
+      },
+      {
         heading: "What to store, and what to leave out",
         paragraphs: [
           "Store the facts you will look up again. Do not collect personal data you have no use for. Passwords are never stored as plain text. Practice on fake rows before you import anyone real.",
@@ -73,7 +80,8 @@ export const thinHubGuides: Guide[] = [
       { question: "What is a relationship?", answer: "A link between things, such as which orders belong to which customer. The link is usually an ID, not a copied name." },
       { question: "Which database should I learn first?", answer: "SQLite is enough on your own computer. The names of the things matter more than the brand." },
       { question: "Can a website work without a database?", answer: "Yes, if the pages do not remember visitors or records. A contact form that only sends email does not need one." },
-      { question: "What is a backup?", answer: "A copy you can restore. Make one before you change a live list, and try the restore once so you know it works." },
+      { question: "What is SQL?", answer: "The language for asking a relational database for rows, such as every unpaid order. Learn the tables first. SQL is how you question them." },
+      { question: "Should I learn MySQL or PostgreSQL?", answer: "Either can run a real app. PostgreSQL is a common beginner server database. SQLite is easier for practice on your own computer. The table design transfers." },
     ],
     next: { href: "/learn/databases/how-to-design-a-database", label: "How to design a database" },
   },
@@ -92,6 +100,13 @@ export const thinHubGuides: Guide[] = [
         paragraphs: [
           "A spreadsheet is the right tool when one person maintains a list and the columns stay stable. Custom software is the right tool when several people need the same live status, or when a step keeps getting skipped because the sheet cannot enforce it.",
           "Write the workflow before you choose. Who starts the task, what they type, what must be remembered, and what done looks like, including the usual exception such as a cancellation. If you cannot write that, software will not invent it.",
+        ],
+      },
+      {
+        heading: "Google Sheets, Excel, or your own software?",
+        paragraphs: [
+          "Google Sheets, Microsoft Excel, and LibreOffice Calc are spreadsheets. They are enough when one person keeps a list and can see a mistake. They fail when two people overwrite the same row, or when the same customer address is typed in ten places.",
+          "Build a small tool when the list is how the work gets done: a form, a status, and a rule the sheet cannot enforce, such as \"a cancelled order cannot also be marked paid.\" Do not store passwords or card numbers in a sheet. Do not rebuild accounting software if a product you can buy already matches the books. Read that vendor's current price and export options first.",
         ],
       },
       {
@@ -127,6 +142,13 @@ export const thinHubGuides: Guide[] = [
         paragraphs: [
           "A channel is a place people already look: search, a social app, email they asked for, or a marketplace. Choose the one where your audience asks the question you can answer, and that you can keep going for a month.",
           "Search fits when people type the problem. A social app fits when they already follow that topic. Email fits after they asked to hear from you. Ads rent attention. Learn the free version of one channel before you pay.",
+        ],
+      },
+      {
+        heading: "What is digital marketing?",
+        paragraphs: [
+          "Digital marketing is the set of ways a person finds an offer online: a page in search, a post, an email they asked for, or an ad you pay for. SEO is the search part. Social is the post. Ads rent a click. None of them works if the page does not say what you sell and what to do next.",
+          "A beginner month is one channel. Write the offer. Publish one page or video that answers a question those people type or ask. Count messages or orders, not likes. Ignore anyone selling guaranteed leads or a fixed number of customers. A real platform shows its ad rules and its price on its own site.",
         ],
       },
       {
@@ -197,6 +219,13 @@ export const thinHubGuides: Guide[] = [
         paragraphs: [
           "A poster has one job: the reader sees the most important words first, then what to do. Write that headline before you open a tool. If the words are vague, no typeface will save them.",
           "Limit the system. One typeface. A few colors that still work in black and white. The same spacing. A logo is optional. Decoration that competes with the headline is the usual beginner mistake.",
+        ],
+      },
+      {
+        heading: "Canva, Figma, or a pen?",
+        paragraphs: [
+          "Sketch the headline on paper first. Then use a tool that can set type and export. Canva is the usual start for a poster, a story, or a social post. Figma is the usual start when you are designing a screen or a set of layouts you will reuse. Adobe's apps are for later, when a job needs their specific tools.",
+          "Both Canva and Figma have a free way to start. Paid plans, taxes, and what the free plan locks change by country. Read the price on canva.com/pricing or figma.com/pricing before you subscribe. A search result is not a photo license. Export the size the destination's own help page asks for.",
         ],
       },
       {

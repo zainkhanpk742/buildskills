@@ -91,6 +91,7 @@ export const hubContent: Record<string, { paragraphs: string[]; steps: string[];
       { question: "How do I avoid messy data?", answer: "Store each fact once. Relate rows with IDs. Do not type the same address or product name into every record." },
       { question: "Is it safe to put real names in a practice database?", answer: "Prefer fake data. If you must use real records, limit who can open the file, do not upload it to a public repository, and follow the privacy rules where you live." },
       { question: "Which database software should a beginner install?", answer: "SQLite is enough to learn tables on your own computer. PostgreSQL is a common next step for an app. The model matters more than the brand." },
+      { question: "What is SQL?", answer: "The language for asking a relational database for rows, such as unpaid orders. Learn the tables first. SQL is how you question them." },
     ],
   },
   "business-software": {
@@ -117,6 +118,7 @@ export const hubContent: Record<string, { paragraphs: string[]; steps: string[];
       { question: "How do I avoid building too much?", answer: "One loop. If a screen does not help someone finish that loop, it waits." },
       { question: "Who owns the data?", answer: "The business does. Before you choose a tool, know how to export the records. A tool you cannot leave is a risk." },
       { question: "Does this apply outside one country?", answer: "The workflow method is global. Invoicing, tax, and privacy duties are local. This hub does not replace an accountant or a lawyer." },
+      { question: "Should I use Google Sheets or Excel?", answer: "Either is fine for a list one person can keep true. LibreOffice Calc is a free option. Move to software when two people overwrite the same row or a rule must be enforced." },
     ],
   },
   "digital-marketing": {
@@ -143,6 +145,7 @@ export const hubContent: Record<string, { paragraphs: string[]; steps: string[];
       { question: "How do I know marketing is working?", answer: "Count useful actions: messages, orders, bookings, or completed lessons. A rising follower count without those actions is not the goal." },
       { question: "Can I email people who did not ask?", answer: "Do not buy addresses. Many countries require consent for marketing email. Invite people from your own page and include a way to unsubscribe." },
       { question: "Is SEO part of marketing?", answer: "Yes. SEO is how a useful page gets found for a question someone types. It sits beside, not instead of, a clear offer." },
+      { question: "What is digital marketing?", answer: "Search, social posts, email people asked for, and ads you pay for. Start with one of those and a page that says what you sell. Ignore offers of guaranteed leads." },
     ],
   },
   "content-creation": {
@@ -195,6 +198,7 @@ export const hubContent: Record<string, { paragraphs: string[]; steps: string[];
       { question: "How do I know the design is readable?", answer: "Squint at it. If you cannot see what matters, the hierarchy is wrong. Also check color contrast and the size on a phone." },
       { question: "Can I use any photo from the internet?", answer: "No. Use photos you made, photos the client supplied, or assets whose license allows your use. Read the license, including whether commercial use is included." },
       { question: "Do design rules change by country?", answer: "The craft is global. Symbols, colors, and reading direction are cultural. Arabic and Urdu layouts need right-to-left type. Test with a reader from the audience, not only with your own taste." },
+      { question: "Should I use Canva or Figma?", answer: "Canva for a poster or a social post. Figma for a screen or a set of layouts you will reuse. Both have a free start. Read the current price on the company's own site before you pay." },
     ],
   },
   "online-business": {
