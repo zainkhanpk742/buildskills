@@ -169,30 +169,22 @@ export default function Page() {
 
         <section className="section-pad">
           <div className="card" style={{ padding: "1.5rem" }}>
-            <p className="kicker plain faint">Monetization — current guidance</p>
+            <p className="kicker plain faint">Monetization — checked 30 September 2026</p>
             <h2 className="serif" style={{ fontSize: "2rem", margin: 0 }}>
-              Platform payouts can change
+              How do I get monetized on X?
             </h2>
             <p className="muted" style={{ maxWidth: "50rem", lineHeight: 1.75, marginTop: "1rem" }}>
-              X&apos;s creator payout programs and eligibility rules can
-              change, and access may depend on factors such as location, account
-              standing, and the feature itself. Check the current terms in
-              X&apos;s official help and in-account monetization settings
-              before relying on platform payouts or quoting eligibility
-              thresholds.
+              X now uses Original Content Rewards. Creator Revenue Sharing stopped taking new people on 7 August 2026 and stopped paying on 7 September 2026. To apply, be 18 or older, live in a country on X's list, use a personal or business account, subscribe to X Premium, Premium+, or Premium Business, have 500 verified followers, and have 500,000 Home Timeline impressions from verified users in 90 days. Replies do not count. Open Creator Studio, then Original Content Rewards. Meeting the numbers does not guarantee approval.
             </p>
             <p className="muted" style={{ maxWidth: "50rem", lineHeight: 1.75 }}>
-              X also offers Creator Subscriptions for eligible creators. The
-              wider business model can include services, products,
-              sponsorships, consulting, affiliates where appropriate, and
-              traffic to assets you control such as your website.
+              Pakistan was not on the published country list on 30 September 2026. India, Bangladesh, and many other countries were. Check the list again before you rely on it. Payouts are every two weeks, with a $30 minimum. If your country is not included, earn from your own service or product instead.
             </p>
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", marginTop: "1rem" }}>
-              <a className="search-submit" href="https://help.x.com/en" target="_blank" rel="noreferrer">
-                X Help Center
-              </a>
-              <a className="search-submit" href="https://help.x.com/en/using-x/subscriptions-creator" target="_blank" rel="noreferrer">
-                X Creator Subscriptions
+              <Link className="search-submit" href="/learn/x-twitter/x-monetization">
+                Read the X monetization guide
+              </Link>
+              <a className="search-submit" href="https://help.x.com/en/using-x/original-content-rewards" target="_blank" rel="noreferrer">
+                X official rules
               </a>
             </div>
           </div>

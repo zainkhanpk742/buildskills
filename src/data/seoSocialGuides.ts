@@ -1,6 +1,9 @@
 export type DetailedGuide = {
   checkedDate?: string;
+  difficulty?: "Beginner" | "Intermediate" | "Practical";
+  faqs?: { question: string; answer: string }[];
   sources?: { label: string; url: string }[];
+  sections?: { heading: string; paragraphs: string[]; bullets?: string[] }[];
   slug: string;
   area: string;
   title: string;
@@ -649,19 +652,63 @@ export const seoSocialGuides: DetailedGuide[] = [
     slug: "x-twitter/x-monetization",
     area: "X / Twitter",
     title: "How can I make money on X?",
-    summary: "Separate platform features from the wider business value of an audience and professional network.",
-    paragraphs: [
-      "Ways to earn on X can include eligible platform programs, subscriptions or other features where available, sponsorships, products, services, consulting, and traffic to another business asset. Current platform eligibility and features can change.",
-      "For a freelancer, direct service revenue may be more relevant than platform payouts. Use posts to demonstrate expertise, answer questions, and connect interested people with a clear service process.",
-      "For a creator, partnerships can work when the audience and subject are a strong fit. Be transparent about commercial relationships and protect the credibility that makes the audience valuable.",
-      "Do not treat follower count as a financial model. Ask what the audience does after discovering you and whether that action can support a sustainable offer.",
-      "Build the business independently enough that a platform change does not destroy the entire model. Your website, portfolio, email list, product, or client relationships can provide continuity.",
-      "Do not build a business around one platform payout. Use X to build an audience and offer a relevant next step you control, such as a website, mailing list, product, or service. Keep commercial terms clear and confirm current feature availability and eligibility in X's official resources before planning around a payout."
+    summary: "In 2026, X pays eligible creators through Original Content Rewards. Creator Revenue Sharing closed on 7 September 2026. Your own product or service does not need either program.",
+    checkedDate: "2026-09-30",
+    difficulty: "Beginner",
+    paragraphs: [],
+    sections: [
+      {
+        heading: "Which X program pays creators now?",
+        paragraphs: [
+          "The current platform payout is Original Content Rewards. X stopped taking new Creator Revenue Sharing enrollments on 7 August 2026. People already in that program earned through 7 September 2026, with a final payout expected on or around 11 September. From 8 September 2026, X began letting those members apply for Original Content Rewards. A new creator uses Original Content Rewards, not the old revenue-sharing page.",
+          "The program pays for original posts, articles, images, and video that show your own voice or expertise. Commentary counts when you react, explain, or add a real point. A copied post, a repost of someone else's video, or a caption on someone else's clip does not.",
+        ],
+      },
+      {
+        heading: "What do I need before I apply?",
+        paragraphs: [
+          "X's help page, checked 30 September 2026, says you must meet every rule at the time you apply. Meeting them does not guarantee that X will accept you. Check the live list in Creator Studio, because X reviews applications.",
+        ],
+        bullets: [
+          "Be 18 or older.",
+          "Be in a country where Original Content Rewards is offered. On 30 September 2026 the published list included India, Bangladesh, Sri Lanka, the United States, the United Kingdom, Canada, Nigeria, and the United Arab Emirates. Pakistan was not on that list. Open the help page again before you plan around it.",
+          "Use a personal or business account in good standing. Political and government accounts are not eligible.",
+          "Keep an active X Premium, Premium+, or Premium Business subscription. Premium Basic is not the subscription that lets you apply.",
+          "Have at least 500 verified followers.",
+          "Have at least 500,000 Home Timeline impressions from verified users in the last 90 days. Impressions on replies do not count.",
+          "Be actively posting original content, as X defines it on the same page.",
+        ],
+      },
+      {
+        heading: "How do I apply and get paid?",
+        paragraphs: [
+          "Open Creator Studio, then Original Content Rewards, and read the eligibility status on your own account. When every requirement is met, submit the application. X reviews it and tells you the result. Do not pay a stranger who offers to unlock the program. X does not do that.",
+          "Payouts are currently processed every two weeks, and the minimum payout is $30. Creators outside the United States connect a Stripe account and complete identity verification in Stripe. Use the payout method Creator Studio shows for your country. Bought impressions, promoted impressions, and repeated views from the same account do not count as qualified impressions.",
+        ],
+      },
+      {
+        heading: "What if my country is not on the list?",
+        paragraphs: [
+          "You cannot join Original Content Rewards from a country X has not opened. Do not borrow an address or a payout account in another country. You can still earn from your own work: a service, a product, or a sponsorship you disclose. Those payments do not depend on this program.",
+          "X also has Creator Subscriptions for accounts that qualify under a separate policy. Read that policy before you count on it. A client you find through a useful post is a more reliable first income than a platform payout.",
+        ],
+      },
+    ],
+    faqs: [
+      { question: "How do I get monetized on X in 2026?", answer: "Apply for Original Content Rewards in Creator Studio after you meet every published rule: age, an eligible country, a personal or business account, X Premium or higher, 500 verified followers, and 500,000 Home Timeline impressions from verified users in 90 days. Approval is not automatic." },
+      { question: "Is Creator Revenue Sharing still open?", answer: "No. New enrollments stopped on 7 August 2026, and earnings under that program stopped on 7 September 2026. The replacement is Original Content Rewards." },
+      { question: "Does X Premium Basic let me apply?", answer: "No. X's help page says the creator needs Premium, Premium+, or Premium Business. Views from Premium Basic users can still count as qualified impressions on someone else's post." },
+      { question: "Do replies count toward the 500,000 impressions?", answer: "No. X excludes impressions on replies. The count is Home Timeline impressions from verified users over the last 90 days." },
+      { question: "Can I join from Pakistan?", answer: "Pakistan was not on X's published country list on 30 September 2026. India, Bangladesh, and several other countries were. Check the current list, because it can change. Do not apply through another country." },
+      { question: "What content will X not pay for?", answer: "Copied posts, clips downloaded and reuploaded, small edits such as a filter or a text overlay, and compilations that add no real point of your own. Commentary you actually write can count." },
+      { question: "How much does X pay?", answer: "X does not publish a rate per view. It says payouts run every two weeks and the minimum payout is $30. Qualified impressions are unique views by Premium users who see at least half the post in the Home Timeline." },
+      { question: "Can I earn on X without the rewards program?", answer: "Yes. Sell a service or product you can deliver, or take a sponsorship you disclose. Those do not require Original Content Rewards or a particular country." },
     ],
     sources: [
-      { label: "X Help: Creator Subscriptions", url: "https://help.x.com/en/using-x/subscriptions-creator" },
-      { label: "X Help Center", url: "https://help.x.com/en" },
+      { label: "X Help: Original Content Rewards", url: "https://help.x.com/en/using-x/original-content-rewards" },
+      { label: "X Help: Creator Revenue Sharing", url: "https://help.x.com/en/using-x/creator-revenue-sharing" },
+      { label: "X Help: About X Premium", url: "https://help.x.com/en/using-x/x-premium" },
     ],
-    next: { href: "/learn/x-twitter", label: "Return to X / Twitter" }
-  }
+    next: { href: "/learn/x-twitter", label: "Return to X / Twitter" },
+  },
 ];

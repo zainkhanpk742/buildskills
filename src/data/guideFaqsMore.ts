@@ -298,14 +298,6 @@ export const addedFaqsMore: Record<string, Faq[]> = {
     faq("Can I run ads on X?", "Yes, under X's current ads rules and where ads are offered. Read the policy before you pay."),
     faq("Is a viral post a business result?", "Only if it brings the people you can help. Entertainment reach is not a client list."),
   ],
-  "x-twitter/x-monetization": [
-    faq("How can I make money on X?", "Through your own product or service, sponsorships you disclose, or creator payouts where X currently offers them to your account."),
-    faq("Does X pay every account?", "No. Payout programs have eligibility, country, and subscription rules that change. Read X's current help before you count on them."),
-    faq("Do I need a paid X plan to earn?", "Some creator features have been tied to X's subscription. Check the live requirement. Your own clients do not depend on that plan."),
-    faq("Should I promise income from X?", "No. Distribution changes. A payout screen from someone else is not your result."),
-    faq("What is a common scam?", "A message that says you won a payout and must pay a fee or send a code. X does not ask for that."),
-    faq("Can creators outside one country apply?", "Only where the program is offered. The help page and your account settings are the check. Do not use a borrowed country."),
-  ],
   "ai-productivity/what-is-generative-ai": [
     faq("What is generative AI used for?", "Drafts, summaries, practice questions, image ideas, and code suggestions. It is a starting point you still have to check."),
     faq("Does it search the live web every time?", "Only if the product says it does. Otherwise it may answer from older training. Important facts need a source you can open."),
