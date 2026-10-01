@@ -5,6 +5,7 @@ import { foundationGuides } from "@/data/foundationsGuides";
 import { digitalSkillsGuides } from "@/data/digitalSkillsGuides";
 import { aiVideoGenerationArea, aiVideoGuide } from "@/data/aiVideoGuide";
 import { chatgptPromptsArea, chatgptPromptsGuide } from "@/data/chatgptPromptsGuide";
+import { highPaidSkillsArea, indiaSkillsArea, skillDemandGuides, usaSkillsArea } from "@/data/skillDemandGuides";
 import { earningGuides } from "@/data/earningGuides";
 import { thinHubGuides } from "@/data/thinHubGuides";
 import { addedFaqs } from "@/data/guideFaqs";
@@ -176,6 +177,9 @@ export const areas: Area[] = [
   },
   aiVideoGenerationArea,
   chatgptPromptsArea,
+  highPaidSkillsArea,
+  usaSkillsArea,
+  indiaSkillsArea,
 ];
 
 export type Guide = {
@@ -460,6 +464,7 @@ export const guides: Guide[] = [
   ...digitalSkillsGuides,
   aiVideoGuide,
   chatgptPromptsGuide,
+  ...skillDemandGuides,
   ...earningGuides,
   ...thinHubGuides,
 ].map((guide) => {
