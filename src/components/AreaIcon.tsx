@@ -20,6 +20,9 @@ const icons: Record<string, string> = {
   "photo-editing": "M5 6.5h14v11H5zM8 15.5l2.2-2.4 1.6 1.6L15 11l2 2.2",
   "ai-video-generation": "M5 7.5h10v9H5zM15 10.2l4-1.7v7l-4-1.7M8 5.2l.6 1.4",
   "chatgpt-prompts": "M6 6.5h12v8H9l-3 2.5z",
+  "high-paid-skills": "M12 4.5v15M8 8.5c0-1.7 1.8-3 4-3s4 1.3 4 3-1.8 2.5-4 2.5-4 1.2-4 2.8 1.8 3 4 3 4-1.3 4-3",
+  "high-demand-skills-usa": "M5 17.5V6.5M5 17.5h14M8.5 17.5v-4M12 17.5V8M15.5 17.5v-6",
+  "high-demand-skills-india": "M12 4.5 14 9.2 19 9.6 15.2 12.8 16.4 17.8 12 15.2 7.6 17.8 8.8 12.8 5 9.6 10 9.2z",
 };
 
 export function AreaIcon({ slug }: { slug: string }) {
