@@ -6,6 +6,9 @@ import { pageMeta } from "@/lib/meta";
 
 const guideOnHub: Record<string, string> = {
   "chatgpt-prompts": "chatgpt-prompts/useful-chatgpt-prompts",
+  "high-paid-skills": "high-paid-skills/highest-paid-skills",
+  "high-demand-skills-usa": "high-demand-skills-usa/high-demand-skills-in-the-usa",
+  "high-demand-skills-india": "high-demand-skills-india/high-demand-skills-in-india",
 };
 
 export function generateStaticParams() {
