@@ -4,6 +4,7 @@ export const aiVideoGenerationArea = {
   slug: "ai-video-generation",
   title: "AI Video Generation",
   question: "What are the best AI video generators?",
+  h1: "AI video generation guides",
   summary: "Compare leading AI video generators, models, features, and plans before you subscribe.",
   description:
     "Learn how text-to-video, image-to-video, AI avatars, AI editing, and multi-model video platforms differ. Compare 20 leading tools, their main workflows, free access, paid plans, and what to check before buying.",
@@ -15,7 +16,7 @@ export const aiVideoGuide: Guide = {
   title: "What are the best AI video generators?",
   summary:
     "Compare 20 leading AI video generators for text-to-video, image-to-video, AI avatars, social content, editing, and production workflows.",
-  checkedDate: "2026-09-29",
+  checkedDate: "2026-10-02",
   difficulty: "Practical",
   estimatedMinutes: 18,
   topics: ["AI video generators","AI video generator apps","text to video AI","image to video AI","AI video maker","AI video creation tools","AI video editing","AI avatar video","AI video pricing","AI video plans","AI video software","generative video","video creation apps"],
@@ -43,7 +44,7 @@ export const aiVideoGuide: Guide = {
       ],
       bullets: [
         "01 — Runway: A production-focused creative platform for text-to-video, image-to-video, video transformation, editing, and access to multiple models. Plans include Free, Standard, Pro, Max, Team, and Enterprise; Pro and higher provide broader model access and higher credit capacity. Gen-4.5 uses 12 credits per second.",
-        "02 — Google Flow: Google's visual creation studio built around Veo and related creative tools. Free access includes daily Flow credits; paid Google AI Plus is $4.99/month, Pro is $19.99/month, and Ultra starts at $99.99/month. It supports text-to-video, frames-to-video, ingredients-to-video, extensions, video-to-video, and scene building.",
+        "02 — Google Flow: Google's visual creation studio built around Veo and related creative tools. Free access includes daily Flow credits. On Google's US plan page (checked 2 October 2026) Google AI Plus is $7.99/month, Pro is $19.99/month, and Ultra comes in two tiers, $99.99/month and $199.99/month (Google cut the top tier from $249.99 and added the $99.99 tier at I/O on 19 May 2026). Prices differ by country. It supports text-to-video, frames-to-video, ingredients-to-video, extensions, video-to-video, and scene building.",
         "03 — Kling AI: A strong option to test for realistic motion, image-to-video, text-to-video, and multi-shot generation. It is credit-based and commonly offers free access plus paid tiers; exact subscription pricing can vary by region and current promotion, so check the live plan page before buying.",
         "04 — Pika: A creator-focused generator for short AI clips, effects, image-to-video, and social experiments. Current plans include Free, Starter ($10/month), Creator ($35/month), and Fancy ($95/month) on monthly billing; annual billing is discounted. Paid plans add higher credit limits, faster generation, commercial use, and more parallel generations.",
         "05 — Luma Dream Machine: Built for cinematic image-to-video and text-to-video workflows. Current individual plans include Plus ($30/month), Pro ($90/month), and Ultra ($300/month), with yearly billing available at lower effective rates. Check credit consumption per model and resolution before choosing a plan.",
@@ -58,7 +59,7 @@ export const aiVideoGuide: Guide = {
         "14 — Krea: A multi-model creative workspace. Current plans are Free, Basic ($9/month), Pro ($35/month), and Max ($105/month); Pro adds access to all video models and workflow automation, while Max adds higher compute capacity and relaxed generation options.",
         "15 — Leonardo AI: A creative platform covering image, video, motion, and design generation. Current individual plans include Free, Essential ($12/month), Premium ($30/month), and higher tiers. It is useful when a project needs both generated images and motion.",
         "16 — CapCut: A social-first video editor with AI generation and editing features. CapCut has Free, Standard, and Pro membership structures; exact prices can vary by country, platform, taxes, and promotions, so the checkout page is the authoritative price for your account.",
-        "17 — Canva: A design and content platform with AI video creation, templates, stock media, editing, and brand workflows. Current plans include Free, Pro, Business, and Enterprise. Canva's published US pricing shows Pro at $180/year and Business at $250/year on the current pricing page, while regional pricing can differ.",
+        "17 — Canva: A design and content platform with AI video creation, templates, stock media, editing, and brand workflows. Current plans include Free, Pro, Business, and Enterprise. On 2 October 2026 Canva's US pricing showed Pro for one person at US$18/month on monthly billing, with a discounted yearly plan; check the exact yearly total at checkout, because it differs by country, tax, and promotions.",
         "18 — VEED: A browser-based video editor with AI video generation, AI avatars, image-to-video, captions, dubbing, and an AI Playground that can expose multiple video models. Plans include Free, Creator, Pro, Studio, and Enterprise. AI generations consume credits.",
         "19 — OpusClip: Primarily an AI repurposing and editing platform for turning long videos into short clips, with AI B-roll and other generation features in higher tiers. Current plans include Free ($0), Starter ($15/month), Pro ($29/month), and Business (custom).",
         "20 — Hailuo AI: A dedicated generative-video service from MiniMax useful for short text-to-video and image-to-video experiments. Availability, model access, credits, and subscription offers change quickly, so use the live Hailuo pricing page to confirm the current plan before buying.",
@@ -102,7 +103,7 @@ export const aiVideoGuide: Guide = {
   faqs: [
     { question: "What is an AI video generator?", answer: "An AI video generator creates or transforms video from instructions such as text prompts, images, reference frames, scripts, or existing footage. Some tools specialize in cinematic scene generation while others focus on avatars, editing, or multi-model workflows." },
     { question: "Which AI video generator should a beginner try first?", answer: "Start with a service that lets you test the workflow before paying. Free or limited tiers on tools such as Google Flow, Pika, HeyGen, Synthesia, Adobe Firefly, PixVerse, Krea, Canva, or Runway can help you learn what type of generation you actually need." },
-    { question: "How much do AI video generators cost?", answer: "Pricing ranges from free tiers to subscriptions and pay-as-you-go credit systems. Published examples checked September 29, 2026 include Google Flow Plus at $4.99/month, Pika Starter at $10/month, HeyGen Creator at $29/month, Synthesia Starter at $29/month, and Canva Pro at $180/year in the US. Always check the provider's current checkout price because regional pricing, annual discounts, taxes, and promotions can change the final amount." },
+    { question: "How much do AI video generators cost?", answer: "Pricing ranges from free tiers to subscriptions and pay-as-you-go credit systems. Published US examples include Google AI Plus (which includes Flow) at $7.99/month and Canva Pro at $18/month on monthly billing (both checked October 2, 2026), plus Pika Starter at $10/month, HeyGen Creator at $29/month, and Synthesia Starter at $29/month (checked September 29, 2026). Always check the provider's current checkout price because regional pricing, annual discounts, taxes, and promotions can change the final amount." },
     { question: "What is the difference between text-to-video and AI avatar video?", answer: "Text-to-video generates scenes, objects, camera movement, and visual sequences from prompts. AI avatar tools create a synthetic presenter or digital person speaking a script. They solve different production problems, so the right choice depends on the video format you need." },
     { question: "Can AI-generated videos be used commercially?", answer: "Often yes, but the answer depends on the provider, plan, model, asset source, and local law. Check the current commercial-use license and terms for the exact plan and model you use before publishing client or monetized work." },
   ],
@@ -110,6 +111,8 @@ export const aiVideoGuide: Guide = {
   sources: [
     { label: "Runway plans and credit guidance", url: "https://help.runwayml.com/hc/en-us/articles/21664961171475-Which-plan-is-right-for-me" },
     { label: "Google Flow plans", url: "https://labs.google/fx/tools/flow" },
+    { label: "Google AI plans (US prices)", url: "https://one.google.com/intl/en_us/about/google-ai-plans/" },
+    { label: "Google: AI subscription updates from I/O 2026 (19 May 2026)", url: "https://blog.google/products-and-platforms/products/google-one/google-ai-subscriptions/" },
     { label: "Pika pricing", url: "https://pika.art/pricing" },
     { label: "Luma pricing", url: "https://lumalabs.ai/pricing" },
     { label: "HeyGen pricing", url: "https://www.heygen.com/pricing" },

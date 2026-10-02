@@ -1,60 +1,40 @@
 import type { Metadata } from "next";
+import { seoMeta } from "@/data/seoMeta";
 
 const BRAND = " | BuildSkills";
 const SITE = "https://buildskills.com.pk";
 
+/**
+ * Build the document title. Hand-written titles in `seoMeta` win. Otherwise
+ * the headline is used as written, with the brand appended only when the
+ * result stays short. Titles are never padded with filler or cut mid-word.
+ */
 export function documentTitle(headline: string): string {
   const clean = headline.replace(/\s+/g, " ").trim();
-  if (clean.includes("BuildSkills") && clean.length >= 50 && clean.length <= 60) return clean;
-  const exact = `${clean}${BRAND}`;
-  if (exact.length >= 50 && exact.length <= 60) return exact;
-  if (exact.length > 60) {
-    const maxHead = 60 - BRAND.length;
-    let cut = clean.slice(0, maxHead);
-    const space = cut.lastIndexOf(" ");
-    if (space >= 28) cut = cut.slice(0, space);
-    cut = cut.replace(/[\s:–—|-]+$/g, "").trim();
-    let result = `${cut}${BRAND}`;
-    if (result.length < 50) result = `${clean.slice(0, maxHead).replace(/[\s:–—|-]+$/g, "").trim()}${BRAND}`;
-    if (result.length > 60) result = result.slice(0, 60).replace(/[\s:–—|-]+$/g, "");
-    return result;
-  }
-  const tails = [" for beginners worldwide", ": a beginner guide", " beginner guide for young people"];
-  for (const tail of tails) {
-    const candidate = `${clean}${tail}${BRAND}`;
-    if (candidate.length >= 50 && candidate.length <= 60) return candidate;
-  }
-  let body = `${clean} beginner guide for young people`;
-  let result = `${body}${BRAND}`;
-  if (result.length > 60) {
-    body = body.slice(0, 60 - BRAND.length).replace(/[\s:–—|-]+$/g, "").trim();
-    result = `${body}${BRAND}`;
-  }
-  if (result.length < 50) result = `${clean} for beginners worldwide today${BRAND}`;
-  while (result.length < 50) result = result.replace(BRAND, ` guide${BRAND}`);
-  if (result.length > 60) result = result.slice(0, 60).replace(/[\s:–—|-]+$/g, "");
-  return result;
+  if (clean.includes("BuildSkills")) return clean;
+  const branded = `${clean}${BRAND}`;
+  return branded.length <= 60 ? branded : clean;
 }
 
+/**
+ * Build the meta description from a summary. Hand-written descriptions in
+ * `seoMeta` win. Otherwise the summary is used as written; if it is longer
+ * than 160 characters it is shortened at the last full sentence that fits.
+ */
 export function metaDescription(summary: string): string {
-  let text = summary.replace(/\s+/g, " ").trim();
-  const tails = [
-    " A practical beginner guide for young people worldwide.",
-    " Follow the steps, then check the official source.",
-    " Start with one clear next step.",
-  ];
-  for (const tail of tails) {
-    if (text.length >= 140) break;
-    text = `${text}${tail}`.replace(/\s+/g, " ").trim();
+  const text = summary.replace(/\s+/g, " ").trim();
+  if (text.length <= 160) return text;
+  const sentences = text.match(/[^.!?]+[.!?]+/g) ?? [];
+  let out = "";
+  for (const sentence of sentences) {
+    const next = `${out}${sentence}`.trim();
+    if (next.length > 160) break;
+    out = `${next} `;
   }
-  if (text.length > 160) {
-    const sliced = text.slice(0, 157);
-    const space = sliced.lastIndexOf(" ");
-    text = (space >= 140 ? sliced.slice(0, space) : text.slice(0, 160)).trim();
-  }
-  if (text.length < 140) text = `${text} Written for beginners in every country.`.trim();
-  if (text.length > 160) text = text.slice(0, 160).trim();
-  return text;
+  out = out.trim();
+  if (out.length >= 70) return out;
+  const cut = text.slice(0, 157);
+  return `${cut.slice(0, cut.lastIndexOf(" "))}…`;
 }
 
 export function pageMeta(options: {
@@ -62,14 +42,17 @@ export function pageMeta(options: {
   description: string;
   path: string;
   type?: "website" | "article";
+  canonicalPath?: string;
 }): Metadata {
-  const title = documentTitle(options.title);
-  const description = metaDescription(options.description);
-  const url = options.path === "/" ? SITE : `${SITE}${options.path}`;
+  const manual = seoMeta[options.path];
+  const title = manual?.title ?? documentTitle(options.title);
+  const description = manual?.description ?? metaDescription(options.description);
+  const canonicalPath = options.canonicalPath ?? options.path;
+  const url = canonicalPath === "/" ? SITE : `${SITE}${canonicalPath}`;
   return {
     title: { absolute: title },
     description,
-    alternates: { canonical: options.path },
+    alternates: { canonical: canonicalPath },
     openGraph: {
       title,
       description,

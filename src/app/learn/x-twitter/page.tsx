@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { guidesInArea } from "@/data/site";
+import { guidePath, guidesInArea } from "@/data/site";
 import { pageMeta } from "@/lib/meta";
 
 export const metadata = pageMeta({
@@ -68,7 +68,7 @@ export default function Page() {
           <ul className="index-list" style={{ borderTop: "1px solid var(--line)", marginTop: "1.5rem" }}>
             {guides.map((guide, index) => (
               <li key={guide.slug}>
-                <Link href={`/learn/${guide.slug}`} className="index-row">
+                <Link href={guidePath(guide.slug)} className="index-row">
                   <span className="num tabular">{String(index + 1).padStart(2, "0")}</span>
                   <span>
                     <span className="title" style={{ display: "block" }}>{guide.title}</span>
@@ -174,7 +174,7 @@ export default function Page() {
               How do I get monetized on X?
             </h2>
             <p className="muted" style={{ maxWidth: "50rem", lineHeight: 1.75, marginTop: "1rem" }}>
-              X now uses Original Content Rewards. Creator Revenue Sharing stopped taking new people on 7 August 2026 and stopped paying on 7 September 2026. To apply, be 18 or older, live in a country on X's list, use a personal or business account, subscribe to X Premium, Premium+, or Premium Business, have 500 verified followers, and have 500,000 Home Timeline impressions from verified users in 90 days. Replies do not count. Open Creator Studio, then Original Content Rewards. Meeting the numbers does not guarantee approval.
+              X now uses Original Content Rewards. Creator Revenue Sharing stopped taking new people on 7 August 2026 and stopped paying on 7 September 2026. To apply, be 18 or older, live in a country on X&apos;s list, use a personal or business account, subscribe to X Premium, Premium+, or Premium Business, have 500 verified followers, and have 500,000 Home Timeline impressions from verified users in 90 days. Replies do not count. Open Creator Studio, then Original Content Rewards. Meeting the numbers does not guarantee approval.
             </p>
             <p className="muted" style={{ maxWidth: "50rem", lineHeight: 1.75 }}>
               Pakistan was not on the published country list on 30 September 2026. India, Bangladesh, and many other countries were. Check the list again before you rely on it. Payouts are every two weeks, with a $30 minimum. If your country is not included, earn from your own service or product instead.
@@ -212,6 +212,20 @@ export default function Page() {
           </div>
         </section>
       </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://buildskills.com.pk" },
+              { "@type": "ListItem", position: 2, name: "Learn", item: "https://buildskills.com.pk/learn" },
+              { "@type": "ListItem", position: 3, name: "X / Twitter", item: "https://buildskills.com.pk/learn/x-twitter" },
+            ],
+          }),
+        }}
+      />
     </main>
   );
 }

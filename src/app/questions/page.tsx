@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { QuestionExplorer } from "@/components/home/Interactive";
 import { Interior } from "@/components/library";
-import { areas, guidesInArea } from "@/data/site";
+import { areas, guidePath, guidesInArea } from "@/data/site";
 import { pageMeta } from "@/lib/meta";
 
 export const metadata: Metadata = pageMeta({
@@ -33,7 +33,7 @@ export default function Page() {
                 <ul className="index-list" style={{ borderTop: "1px solid var(--line)" }}>
                   {guides.map((guide) => (
                     <li key={guide.slug}>
-                      <Link href={`/learn/${guide.slug}`} className="index-row">
+                      <Link href={guidePath(guide.slug)} className="index-row">
                         <span className="title">{guide.title}</span>
                         <span className="meta">{guide.summary}</span>
                       </Link>

@@ -73,7 +73,7 @@ export const metadata = pageMeta({
 
 export default function Page() {
   return (
-    <main>
+    <main id="content">
       <section className="container" style={{ padding: "86px 0 54px" }}>
         <p className="eyebrow">LEARN · YOUTUBE</p>
         <h1
@@ -224,7 +224,7 @@ export default function Page() {
               Until 31 January 2027, a new channel needs 1,000 subscribers plus either 4,000 valid public watch hours in 12 months or 10 million valid public Shorts views in 90 days. From 1 February 2027, new applicants need 1,000 subscribers plus either 8,000 qualified watch hours in 365 days or 20 million qualified Shorts views in 90 days. TeamYouTube announced that change on 10 August 2026. Channels already in the Partner Program are not removed only because they sit under the new numbers.
             </p>
             <p style={{ color: "#667085", lineHeight: 1.7 }}>
-              Fan funding stays lower: 500 subscribers and either 3,000 qualified watch hours in 365 days or 3 million qualified Shorts views in 90 days. From 1 February 2027, Shorts pay needs 10 million qualified Shorts views in 90 days. You also need an eligible country, no active Community Guidelines strikes, 2-Step Verification, and an AdSense for YouTube account. Confirm the live checklist in YouTube Studio.
+              Fan funding stays lower: 500 subscribers and either 3,000 qualified watch hours in 365 days or 3 million qualified Shorts views in 90 days. From 1 February 2027, Shorts pay needs 10 million qualified Shorts views in 90 days. You also need an eligible country, no active Community Guidelines strikes, 2-Step Verification, and an AdSense for YouTube account. From 1 February 2027 a channel already in the program must also stay active: 1,000 qualified watch hours in 365 days, or 1 million qualified Shorts views in 90 days, or two long-form or five Shorts uploads every 90 days. Confirm the live checklist in YouTube Studio.
             </p>
             <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", marginTop: "18px" }}>
               <Link className="secondary-btn" href="/learn/youtube/youtube-monetization-requirements-2026">
@@ -301,6 +301,20 @@ export default function Page() {
           </Link>
         </div>
       </section>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://buildskills.com.pk" },
+              { "@type": "ListItem", position: 2, name: "Learn", item: "https://buildskills.com.pk/learn" },
+              { "@type": "ListItem", position: 3, name: "YouTube", item: "https://buildskills.com.pk/learn/youtube" },
+            ],
+          }),
+        }}
+      />
     </main>
   );
 }

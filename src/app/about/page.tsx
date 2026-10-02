@@ -31,7 +31,7 @@ export default function Page() {
         </p>
         <h2>How pages are checked</h2>
         <p>
-          A guide is updated when the underlying rule changes. The last-checked date on a guide is the date those facts were compared with the provider's own documentation. Corrections are welcome at the contact email. The full standard is the{" "}
+          A guide is updated when the underlying rule changes. The last-checked date on a guide is the date those facts were compared with the provider&apos;s own documentation. Corrections are welcome at the contact email. The full standard is the{" "}
           <Link href="/editorial-policy">editorial policy</Link>. Limits of the advice are in the <Link href="/disclaimer">disclaimer</Link>.
         </p>
       </div>

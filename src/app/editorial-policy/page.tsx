@@ -24,7 +24,7 @@ export default function Page() {
         </p>
         <h2>How a fact gets in</h2>
         <p>
-          Prices, eligibility, and monetization numbers are taken from the provider's own help center or pricing page, such as YouTube Help, TikTok, Meta, Google, Fiverr, Upwork, or Canva. The page links that source. If a number cannot be confirmed, it is left out. Each guide shows a last-checked date when one has been set.
+          Prices, eligibility, and monetization numbers are taken from the provider&apos;s own help center or pricing page, such as YouTube Help, TikTok, Meta, Google, Fiverr, Upwork, or Canva. The page links that source. If a number cannot be confirmed, it is left out. Each guide shows a last-checked date when one has been set.
         </p>
         <h2>What we do not do</h2>
         <p>

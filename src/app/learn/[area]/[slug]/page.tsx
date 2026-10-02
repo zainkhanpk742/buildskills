@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { GuideView } from "@/components/library";
-import { guideBySlug, guides } from "@/data/site";
+import { guideBySlug, guidePath, guides } from "@/data/site";
 import { pageMeta } from "@/lib/meta";
 
 export function generateStaticParams() {
@@ -23,6 +23,7 @@ export async function generateMetadata({
     title: guide.title,
     description: guide.summary,
     path: `/learn/${guide.slug}`,
+    canonicalPath: guidePath(guide.slug),
     type: "article",
   });
 }

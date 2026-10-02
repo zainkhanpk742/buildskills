@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { areas, guideBySlug, guidesInArea } from "@/data/site";
+import { areas, guideBySlug, guidePath, guidesInArea } from "@/data/site";
 import { Interior } from "@/components/library";
 import { pageMeta } from "@/lib/meta";
 
@@ -62,7 +62,7 @@ export default function Page() {
             if (!guide) return null;
             return (
               <li key={resource.slug}>
-                <Link href={`/learn/${guide.slug}`} className="index-row">
+                <Link href={guidePath(guide.slug)} className="index-row">
                   <span className="num tabular">{String(index + 1).padStart(2, "0")}</span>
                   <span>
                     <span className="title" style={{ display: "block" }}>{resource.title}</span>
@@ -79,7 +79,7 @@ export default function Page() {
         <div>
           <h2 id="external-resources" className="serif" style={{ fontSize: "1.875rem", margin: 0 }}>Learning and official documentation</h2>
           <p className="muted" style={{ maxWidth: "42rem" }}>
-            These external references are useful starting points. Check each provider's current access, account, and usage requirements.
+            These external references are useful starting points. Check each provider&apos;s current access, account, and usage requirements.
           </p>
         </div>
         <ul className="index-list" style={{ borderTop: "1px solid var(--line)" }}>
