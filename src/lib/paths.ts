@@ -11,6 +11,9 @@ export const hubGuides: Record<string, string> = {
   "high-paid-skills": "high-paid-skills/highest-paid-skills",
   "high-demand-skills-usa": "high-demand-skills-usa/high-demand-skills-in-the-usa",
   "high-demand-skills-india": "high-demand-skills-india/high-demand-skills-in-india",
+  "high-demand-skills-pakistan": "high-demand-skills-pakistan/high-demand-skills-in-pakistan",
+  "high-demand-skills-uk": "high-demand-skills-uk/high-demand-skills-in-the-uk",
+  "high-demand-skills-uae": "high-demand-skills-uae/high-demand-skills-in-the-uae",
 };
 
 const hubForGuide: Record<string, string> = Object.fromEntries(

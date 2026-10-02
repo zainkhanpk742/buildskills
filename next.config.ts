@@ -18,6 +18,9 @@ const nextConfig: NextConfig = {
       { source: "/learn/high-paid-skills/highest-paid-skills", destination: "/learn/high-paid-skills", statusCode: 301 },
       { source: "/learn/high-demand-skills-usa/high-demand-skills-in-the-usa", destination: "/learn/high-demand-skills-usa", statusCode: 301 },
       { source: "/learn/high-demand-skills-india/high-demand-skills-in-india", destination: "/learn/high-demand-skills-india", statusCode: 301 },
+      { source: "/learn/high-demand-skills-pakistan/high-demand-skills-in-pakistan", destination: "/learn/high-demand-skills-pakistan", statusCode: 301 },
+      { source: "/learn/high-demand-skills-uk/high-demand-skills-in-the-uk", destination: "/learn/high-demand-skills-uk", statusCode: 301 },
+      { source: "/learn/high-demand-skills-uae/high-demand-skills-in-the-uae", destination: "/learn/high-demand-skills-uae", statusCode: 301 },
     ];
   },
   async headers() {

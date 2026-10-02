@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { QuestionExplorer } from "@/components/home/Interactive";
 import { Interior } from "@/components/library";
-import { areas, featuredQuestions, guideLinks, guidePath, guidesInArea } from "@/data/site";
+import { listedAreas as areas, featuredQuestions, guideLinks, guidePath, guidesInArea } from "@/data/site";
 import { pageMeta } from "@/lib/meta";
 
 export const metadata: Metadata = pageMeta({

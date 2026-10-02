@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { areas, guideBySlug, guidePath, guidesInArea } from "@/data/site";
+import { listedAreas as areas, guideBySlug, guidePath, guidesInArea } from "@/data/site";
 import { Interior } from "@/components/library";
 import { pageMeta } from "@/lib/meta";
 
