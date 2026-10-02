@@ -572,4 +572,12 @@ export const seoMeta: Record<string, SeoMeta> = {
     title: "Remote Jobs for Beginners with No Experience (Worldwide)",
     description: "Entry-level remote jobs that hire beginners, trusted job boards, how to apply with no experience, and how to spot the fake jobs that target newcomers.",
   },
+  "/learn/youtube/youtube-shorts-monetization": {
+    title: "YouTube Shorts Monetization 2026-2027: Rules & Revenue Share",
+    description: "How YouTube pays for Shorts (45% of the Creator Pool), the 10M and 20M view thresholds, the 1 February 2027 changes, and ways to earn below them.",
+  },
+  "/learn/freelancing/fiverr-gig-ideas": {
+    title: "30 Fiverr Gig Ideas for Beginners (With Example Titles)",
+    description: "30 beginner-friendly Fiverr gig ideas in writing, design, video, data and languages, each with an example title, plus how to price after the 20% fee.",
+  },
 };

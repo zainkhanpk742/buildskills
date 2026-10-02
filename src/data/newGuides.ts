@@ -588,4 +588,192 @@ export const newGuides: Guide[] = [
     related: ["freelancing/how-to-make-money-online-safely", "freelancing/how-to-start-freelancing", "linkedin/linkedin-job-search", "linkedin/how-to-build-a-linkedin-profile"],
     next: { href: "/learn/linkedin/linkedin-job-search", label: "How to use LinkedIn to find a job" },
   },
+  // ------------------------------------------------------------------ Shorts money
+  {
+    slug: "youtube/youtube-shorts-monetization",
+    area: "YouTube",
+    title: "YouTube Shorts Monetization Explained (2026 and 2027)",
+    h1: "YouTube Shorts monetization: how it works in 2026 and what changes in 2027",
+    summary:
+      "YouTube pays Shorts creators from a shared pool of ad revenue, and creators in the Partner Program keep 45% of their share. To join through Shorts today you need 1,000 subscribers and 10 million Shorts views in 90 days; from 1 February 2027 new channels need 20 million, and Shorts revenue itself requires 10 million views every 90 days.",
+    checkedDate: OCT2,
+    difficulty: "Beginner",
+    kind: "Guide",
+    paragraphs: [],
+    topics: ["YouTube Shorts monetization", "Shorts monetization requirements", "make money on YouTube Shorts", "Shorts revenue share"],
+    tools: ["YouTube Studio", "YouTube Shorts", "CapCut"],
+    sections: [
+      {
+        heading: "How YouTube pays for Shorts",
+        paragraphs: [
+          "Shorts are not paid per view in the way long videos with their own ads are. YouTube's Shorts monetization policy explains that ads shown between Shorts in the Shorts feed are pooled each month, by country. Part of that pool is set aside to cover music licensing for Shorts that use music; the rest becomes the Creator Pool.",
+          "The Creator Pool is shared between monetizing creators according to each creator's share of engaged views in that country. You keep 45% of the revenue allocated to you, whether or not your Shorts used music. YouTube Premium and Premium Lite subscriptions add a second pool: creators get a 45% share for Shorts watched by subscribers (55% for long-form videos), according to YouTube's 10 August 2026 announcement.",
+        ],
+      },
+      {
+        heading: "Requirements today (until 31 January 2027)",
+        paragraphs: [
+          "To earn a share of Shorts ad revenue, a channel must be in the YouTube Partner Program with ads and Premium revenue sharing, and accept the Shorts Monetization Module in YouTube Studio.",
+        ],
+        bullets: [
+          "1,000 subscribers.",
+          "Either 10 million valid public Shorts views in the last 90 days, or 4,000 valid public watch hours on long-form videos in the last 12 months.",
+          "Live in a country where the Partner Program is available, follow the monetization policies, have no active Community Guidelines strikes, turn on 2-Step Verification, and link an AdSense account.",
+          "A lower tier, 500 subscribers and 3 public uploads in the last 90 days plus 3 million Shorts views in 90 days (or 3,000 watch hours in 12 months), unlocks fan funding and shopping features but not Shorts ad revenue.",
+        ],
+      },
+      {
+        heading: "What changes on 1 February 2027",
+        paragraphs: [
+          "YouTube announced the biggest Partner Program changes since 2018 on 10 August 2026. They take effect on 1 February 2027, and channels already in the program must accept the new terms in YouTube Studio by 31 January 2027 to keep earning.",
+        ],
+        bullets: [
+          "New channels joining for ads and Premium revenue need 1,000 subscribers plus 20 million qualified Shorts views in 90 days, or 8,000 qualified watch hours in 365 days.",
+          "Shorts revenue sharing needs 10 million qualified Shorts views in the last 90 days, for every channel. Below that, the channel stays in the program and keeps long-form earnings, and Shorts sharing restarts automatically when it is back above 10 million.",
+          "YouTube said it will add incentive programs for channels below the threshold, such as bonuses for YouTube Shopping, brand-deal incentives, and boosts for starting trends, with details to come.",
+          "A channel must also stay active: 1,000 qualified watch hours in 365 days, 1 million Shorts views in 90 days, or two long-form or five Shorts uploads every 90 days.",
+          "The fan-funding and shopping entry tier does not change.",
+        ],
+      },
+      {
+        heading: "Ways to earn from Shorts below the thresholds",
+        paragraphs: [
+          "Most new channels will not reach 10 or 20 million Shorts views quickly. These routes do not depend on the Shorts revenue pool:",
+        ],
+        bullets: [
+          "Use Shorts to grow subscribers for long-form videos, which still earn with 4,000 watch hours (8,000 for new channels from February 2027).",
+          "Fan funding from 500 subscribers: channel memberships, Super Thanks, and Super Chat on live streams, where available.",
+          "YouTube Shopping: tag products you sell or affiliate products where the program is offered.",
+          "Brand deals and your own products or services, promoted in Shorts with the paid-promotion disclosure turned on.",
+        ],
+      },
+      {
+        heading: "What makes Shorts count as qualified and original",
+        paragraphs: [
+          "YouTube does not pay for reused or mass-produced content. Compilations of other people's clips, re-uploads, and repetitive AI-generated videos are the usual reasons Shorts channels are refused or demonetized. Original footage, your own voice and commentary, and real editing are what the policies reward.",
+          "Views from artificial traffic, such as bought views or click farms, are not valid views and can lead to the channel being removed. Grow by posting regularly, opening with the subject in the first second, and checking retention in YouTube Studio's analytics.",
+        ],
+      },
+    ],
+    faqs: [
+      { question: "How much does YouTube pay for 1,000 Shorts views?", answer: "There is no fixed rate. Shorts revenue is pooled by country and shared by engaged views, and creators keep 45% of their allocation, so earnings per 1,000 views vary by country, month, and audience." },
+      { question: "How many views do you need to monetize YouTube Shorts?", answer: "Until 31 January 2027, 10 million valid public Shorts views in 90 days plus 1,000 subscribers to join through Shorts. From 1 February 2027, new channels need 20 million, and every channel needs 10 million views in 90 days to receive Shorts revenue." },
+      { question: "Do Shorts views count toward the 4,000 watch hours?", answer: "No. Watch time from the Shorts feed does not count toward the long-form watch-hour requirement. Shorts views have their own route into the program." },
+      { question: "Can I monetize Shorts with music?", answer: "Yes. YouTube sets aside part of the revenue for music licensing based on how many tracks a Short uses, but your 45% share of what is allocated to you is the same." },
+      { question: "Will my channel be removed if I drop below 10 million Shorts views?", answer: "No. From 1 February 2027, dropping below 10 million qualified Shorts views in 90 days pauses Shorts revenue only. The channel stays in the Partner Program and keeps long-form earnings." },
+    ],
+    sources: [
+      { label: "YouTube Help: YouTube Shorts monetization policies", url: "https://support.google.com/youtube/answer/12504220" },
+      { label: "YouTube Official Blog: changes to the YouTube Partner Program (10 August 2026)", url: "https://blog.youtube/news-and-events/youtube-partner-program-updates-2027-new-opportunities-earn/" },
+      { label: "YouTube Help: YouTube Partner Program overview and eligibility", url: "https://support.google.com/youtube/answer/72851" },
+      { label: "YouTube Help: channel monetization policies", url: "https://support.google.com/youtube/answer/1311392" },
+    ],
+    related: ["youtube/youtube-monetization-requirements-2026", "youtube/make-money-on-youtube", "video-editing/capcut-tutorial", "tiktok/tiktok-monetization"],
+    next: { href: "/learn/youtube/youtube-monetization-requirements-2026", label: "YouTube monetization requirements" },
+  },
+
+  // ------------------------------------------------------------------ Fiverr gig ideas
+  {
+    slug: "freelancing/fiverr-gig-ideas",
+    area: "Freelancing",
+    title: "Fiverr Gig Ideas for Beginners (With Example Titles)",
+    h1: "30 Fiverr gig ideas for beginners, with example titles",
+    summary:
+      "The best Fiverr gigs for beginners sell one small, clear result you can deliver well with free tools: a caption edit, a resume rewrite, a social media graphic. Here are 30 ideas grouped by skill, each with an example gig title, plus how to choose one and price it after Fiverr's 20% fee.",
+    checkedDate: OCT2,
+    difficulty: "Beginner",
+    kind: "Guide",
+    paragraphs: [],
+    topics: ["Fiverr gig ideas", "Fiverr gigs for beginners", "Fiverr skills for beginners", "easy Fiverr gigs"],
+    tools: ["Fiverr", "Canva", "CapCut", "Google Docs", "Google Sheets"],
+    sections: [
+      {
+        heading: "How to choose a gig you can actually deliver",
+        paragraphs: [
+          "A gig idea is only good if three things are true: you can deliver it well today, you can show a sample, and buyers search for it. Pick from the lists below with that test, not by which sounds most profitable. Each example title starts with \"I will\", as Fiverr's gig titles do.",
+        ],
+      },
+      {
+        heading: "Writing and editing gigs",
+        paragraphs: [],
+        bullets: [
+          "\"I will proofread and edit your English blog post up to 1,000 words\"",
+          "\"I will rewrite your resume for entry-level jobs in a clean ATS-friendly format\"",
+          "\"I will write 5 product descriptions for your online store\"",
+          "\"I will write a LinkedIn About section that explains what you do\"",
+          "\"I will turn your notes into a clear step-by-step guide or SOP\"",
+          "\"I will write captions for 15 Instagram posts in your brand voice\"",
+        ],
+      },
+      {
+        heading: "Design gigs (free tools are enough to start)",
+        paragraphs: [],
+        bullets: [
+          "\"I will design 5 matching social media posts for your brand in Canva\"",
+          "\"I will design a YouTube thumbnail that is readable on a phone\"",
+          "\"I will design a one-page restaurant or cafe menu\"",
+          "\"I will create a simple, editable Canva template for your Instagram\"",
+          "\"I will design a professional presentation of up to 10 slides\"",
+          "\"I will design a printable event poster or flyer\"",
+        ],
+      },
+      {
+        heading: "Video and audio gigs",
+        paragraphs: [],
+        bullets: [
+          "\"I will edit your short video for TikTok, Reels, or Shorts with captions\"",
+          "\"I will add accurate English subtitles to your video\"",
+          "\"I will remove background noise and level the audio in your podcast episode\"",
+          "\"I will cut your long video into 5 short vertical clips\"",
+          "\"I will create a simple animated intro with your logo\"",
+          "\"I will transcribe up to 30 minutes of clear English audio\"",
+        ],
+      },
+      {
+        heading: "Data, admin, and tech gigs",
+        paragraphs: [],
+        bullets: [
+          "\"I will clean and organise your messy Excel or Google Sheets data\"",
+          "\"I will build a simple budget or inventory spreadsheet with formulas\"",
+          "\"I will research and compile a list of 50 leads with public contact details\"",
+          "\"I will set up your Google Business Profile correctly\"",
+          "\"I will make small fixes to your WordPress or Wix website\"",
+          "\"I will convert your PDF into an editable Word or Google Docs file\"",
+        ],
+      },
+      {
+        heading: "Language and teaching gigs",
+        paragraphs: [],
+        bullets: [
+          "\"I will translate your document between English and [your language]\"",
+          "\"I will be your conversation partner for [language] practice\"",
+          "\"I will tutor you in [subject] for school-level exams\"",
+          "\"I will review your app or website translation for natural [language]\"",
+          "\"I will record a clear voice-over in [language or accent] up to 150 words\"",
+          "\"I will create a quiz or worksheet set for your class or course\"",
+        ],
+      },
+      {
+        heading: "Price a beginner gig after the fee",
+        paragraphs: [
+          "Fiverr keeps 20% of each order (checked 2 October 2026), so a US$25 package pays you US$20. Time a sample job, then set the Basic package so the US$20 you keep is worth that time. Use the Standard and Premium packages for bigger versions of the same job, such as more videos or faster delivery, rather than unrelated extras.",
+          "Avoid gigs that rely on rules you cannot meet: fake reviews, followers, or engagement are against Fiverr's terms, and academic gigs that complete graded work for students are not allowed either.",
+        ],
+      },
+    ],
+    faqs: [
+      { question: "What is the easiest gig to start on Fiverr?", answer: "One you can already do well with free tools, such as proofreading, subtitles, social media graphics in Canva, or spreadsheet clean-up. Easy to deliver does not mean easy to win, so strong samples matter." },
+      { question: "Which Fiverr gigs are in demand?", answer: "Video editing for short-form platforms, design for small businesses, writing and editing, and data or spreadsheet help have steady demand. Search Fiverr for your idea and look at how many gigs and reviews already exist." },
+      { question: "How many gigs should a beginner make on Fiverr?", answer: "Start with one or two gigs that belong to the same skill. A focused profile is easier for buyers to trust than many unrelated gigs." },
+      { question: "Can I do Fiverr gigs with AI?", answer: "You can use AI tools to work faster, but you are responsible for the quality and accuracy of what you deliver. Follow the buyer's brief and Fiverr's rules, and never deliver unchecked AI output." },
+      { question: "How much should a beginner charge on Fiverr?", answer: "Enough that what you keep after the 20% fee pays for your time on a small, well-defined package. Low prices bring more messages but also more difficult briefs." },
+    ],
+    sources: [
+      { label: "Fiverr Help: paying for orders, extras, or custom offers", url: "https://help.fiverr.com/hc/en-us/articles/360050216133-Paying-for-orders-extras-or-custom-offers" },
+      { label: "Fiverr: Terms of Service", url: "https://www.fiverr.com/legal-portal/legal-terms/terms-of-service" },
+      { label: "Fiverr Help Center", url: "https://help.fiverr.com/" },
+    ],
+    related: ["freelancing/fiverr-for-beginners", "freelancing/freelancing-websites-for-beginners", "online-business/how-to-price-an-offer", "photo-editing/canva-tutorial"],
+    next: { href: "/learn/freelancing/fiverr-for-beginners", label: "Fiverr for beginners" },
+  },
 ];
