@@ -6,6 +6,7 @@ import { digitalSkillsGuides } from "@/data/digitalSkillsGuides";
 import { aiVideoGenerationArea, aiVideoGuide } from "@/data/aiVideoGuide";
 import { chatgptPromptsArea, chatgptPromptsGuide } from "@/data/chatgptPromptsGuide";
 import { highPaidSkillsArea, indiaSkillsArea, skillDemandGuides, usaSkillsArea } from "@/data/skillDemandGuides";
+import { countrySkillGuides, pakistanSkillsArea, uaeSkillsArea, ukSkillsArea } from "@/data/countrySkillGuides";
 import { earningGuides } from "@/data/earningGuides";
 import { thinHubGuides } from "@/data/thinHubGuides";
 import { addedFaqs } from "@/data/guideFaqs";
@@ -36,6 +37,8 @@ export type Area = {
   description: string;
   /** Visible H1 on the hub page, when it should differ from `question`. */
   h1?: string;
+  /** Routable and in the sitemap, but left out of area grids and counts. */
+  unlisted?: boolean;
 };
 
 export const areas: Area[] = [
@@ -200,7 +203,13 @@ export const areas: Area[] = [
   highPaidSkillsArea,
   usaSkillsArea,
   indiaSkillsArea,
+  pakistanSkillsArea,
+  ukSkillsArea,
+  uaeSkillsArea,
 ];
+
+/** Areas shown in area grids and counts (unlisted areas are reached by links). */
+export const listedAreas: Area[] = areas.filter((area) => !area.unlisted);
 
 export type Guide = {
   checkedDate?: string;
@@ -487,6 +496,7 @@ export const guides: Guide[] = [
   aiVideoGuide,
   chatgptPromptsGuide,
   ...skillDemandGuides,
+  ...countrySkillGuides,
   ...earningGuides,
   ...thinHubGuides,
   ...newGuides,

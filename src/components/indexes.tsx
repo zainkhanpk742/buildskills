@@ -1,12 +1,12 @@
 import Link from "next/link";
-import { areas, guidesInArea } from "@/data/site";
+import { guidesInArea, listedAreas } from "@/data/site";
 import { AreaIcon } from "@/components/AreaIcon";
 import { Arrow } from "@/components/ui";
 
 export function AreaIndex() {
   return (
     <ul className="area-cards">
-      {areas.map((area) => {
+      {listedAreas.map((area) => {
         const count = guidesInArea(area.title).length;
         return (
           <li key={area.slug}>

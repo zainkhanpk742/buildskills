@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { areas } from "@/data/site";
+import { listedAreas } from "@/data/site";
 import { Mark } from "@/components/ui";
 
 const columns = [
@@ -72,7 +72,7 @@ export function Footer() {
       <div className="footer-base">
         <div className="page-wrap">
           <p>© {new Date().getFullYear()} BuildSkills</p>
-          <p>{areas.length} learning areas. One way through.</p>
+          <p>{listedAreas.length} learning areas. One way through.</p>
         </div>
       </div>
     </footer>

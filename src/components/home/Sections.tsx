@@ -1,6 +1,6 @@
 import Link from "next/link";
 import {
-  areas,
+  listedAreas,
   featuredQuestions,
   guideBySlug,
   guidePath,
@@ -94,7 +94,7 @@ export function AreaGrid() {
           <div>
             <Kicker>Learning areas</Kicker>
             <h2 id="fields-title" className="display-section balance">
-              {areas.length} learning areas. Pick the problem you have.
+              {listedAreas.length} learning areas. Pick the problem you have.
             </h2>
           </div>
           <p className="lede">

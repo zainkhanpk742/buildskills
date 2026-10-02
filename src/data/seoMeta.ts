@@ -112,6 +112,18 @@ export const seoMeta: Record<string, SeoMeta> = {
     title: "In-Demand Skills in India in 2026 (With Pay Bands)",
     description: "Ten skills Indian employers hire for in 2026, from software and AI to data, cloud and security, with published salary bands by experience.",
   },
+  "/learn/high-demand-skills-pakistan": {
+    title: "High-Paying Skills in Pakistan 2026 (With PKR Pay Data)",
+    description: "Ten high-paying skills in Pakistan for 2026, with official labour data, record IT export figures, salaries in rupees where sourced, and free courses.",
+  },
+  "/learn/high-demand-skills-uk": {
+    title: "In-Demand Skills in the UK 2026 (Official Salary Data)",
+    description: "Ten in-demand skills in the UK for 2026, with Home Office going rates based on ONS pay data, the UK median wage, and free Skills Bootcamps.",
+  },
+  "/learn/high-demand-skills-uae": {
+    title: "Highest-Paying Skills in the UAE 2026 (AED Salaries)",
+    description: "Ten highest-paying skills in the UAE for 2026, with monthly salary ranges in AED, Golden and Green visa salary levels, and how to start each skill.",
+  },
   "/learn/seo/what-are-good-backlinks": {
     title: "What Makes a Good Backlink? A Beginner's Guide",
     description: "What makes a backlink useful, how good links are earned, which link schemes Google treats as spam, and what to do instead of buying links.",
