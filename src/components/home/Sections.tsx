@@ -3,6 +3,7 @@ import {
   areas,
   featuredQuestions,
   guideBySlug,
+  guidePath,
   pathSteps,
   principles,
 } from "@/data/site";
@@ -131,7 +132,7 @@ export function QuestionCards() {
             const minutes = readingMinutes([guide.summary, ...guide.paragraphs, ...sectionText]);
             return (
               <li key={slug}>
-                <Link href={`/learn/${guide.slug}`} className="q-card">
+                <Link href={guidePath(guide.slug)} className="q-card">
                   <span className="chip">Question</span>
                   <span className="q-title">{guide.title}</span>
                   <span className="q-summary">{guide.summary}</span>

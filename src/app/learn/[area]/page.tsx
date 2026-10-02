@@ -1,15 +1,10 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { AreaView, GuideView } from "@/components/library";
-import { areaBySlug, areas, guideBySlug } from "@/data/site";
+import { areaBySlug, areas, guideBySlug, hubGuides } from "@/data/site";
 import { pageMeta } from "@/lib/meta";
 
-const guideOnHub: Record<string, string> = {
-  "chatgpt-prompts": "chatgpt-prompts/useful-chatgpt-prompts",
-  "high-paid-skills": "high-paid-skills/highest-paid-skills",
-  "high-demand-skills-usa": "high-demand-skills-usa/high-demand-skills-in-the-usa",
-  "high-demand-skills-india": "high-demand-skills-india/high-demand-skills-in-india",
-};
+const guideOnHub = hubGuides;
 
 export function generateStaticParams() {
   return areas

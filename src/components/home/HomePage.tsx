@@ -3,7 +3,7 @@ import { ButtonLink, Kicker } from "@/components/ui";
 import { SearchIndex } from "@/components/home/Interactive";
 import { AreaGrid, FinalCta, Journey, PathRail, PrincipleGrid, QuestionCards, ToolDiscovery } from "@/components/home/Sections";
 
-export function HomePage({ initialQuery = "" }: { initialQuery?: string }) {
+export function HomePage() {
   return (
     <main id="content">
       <section className="hero hero-dashboard" aria-labelledby="hero-title">
@@ -30,7 +30,7 @@ export function HomePage({ initialQuery = "" }: { initialQuery?: string }) {
             </div>
             <p className="hero-trust">Free · Updated 2026 · Written for beginners worldwide</p>
             <p className="hero-search-hint">Have a question in mind? Search the guide library.</p>
-            <SearchIndex initialQuery={initialQuery} />
+            <SearchIndex />
           </div>
           <div className="hero-side">
             <figure className="hero-side-image">

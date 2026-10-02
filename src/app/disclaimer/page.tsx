@@ -24,11 +24,11 @@ export default function Page() {
         </p>
         <h2>Not professional advice</h2>
         <p>
-          Nothing here is legal, tax, immigration, financial, or medical advice. Prices, eligibility, and policies are checked against official pages when a fact is stated, and they can change after the "last checked" date on a guide. Confirm the current rule on the provider's own site before you pay or apply.
+          Nothing here is legal, tax, immigration, financial, or medical advice. Prices, eligibility, and policies are checked against official pages when a fact is stated, and they can change after the &quot;last checked&quot; date on a guide. Confirm the current rule on the provider&apos;s own site before you pay or apply.
         </p>
         <h2>External sites and ads</h2>
         <p>
-          Links leave BuildSkills. We do not control those sites. If advertising is shown, an advertiser's offer is not an endorsement and is not part of the guide. Advertising is covered in the{" "}
+          Links leave BuildSkills. We do not control those sites. If advertising is shown, an advertiser&apos;s offer is not an endorsement and is not part of the guide. Advertising is covered in the{" "}
           <Link href="/privacy-policy">privacy policy</Link>.
         </p>
         <p>

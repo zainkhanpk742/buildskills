@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Instrument_Sans, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
@@ -55,13 +56,16 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en" className={`${sans.variable} ${serif.variable}`}>
       <head>
         <meta name="google-adsense-account" content="ca-pub-3672700167787763" />
-        <script
-          async
+      </head>
+      <body>
+        {/* AdSense loads after the page is idle so it does not delay the first paint.
+            Site ownership stays verified by the meta tag above and /ads.txt. */}
+        <Script
+          id="adsense"
+          strategy="lazyOnload"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3672700167787763"
           crossOrigin="anonymous"
         />
-      </head>
-      <body>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-MK9VC2VGYW" />
         <script
           dangerouslySetInnerHTML={{

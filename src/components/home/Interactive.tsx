@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useId, useMemo, useState, type FormEvent } from "react";
-import { featuredQuestions, filterHits, guideBySlug } from "@/data/site";
+import { useEffect, useId, useMemo, useState, type FormEvent } from "react";
+import { featuredQuestions, filterHits, guideBySlug, guidePath } from "@/data/site";
 import { Arrow } from "@/components/ui";
 
 const prompts = [
@@ -13,9 +13,16 @@ const prompts = [
   "video-editing/how-to-edit-a-video",
 ] as const;
 
-export function SearchIndex({ initialQuery = "" }: { initialQuery?: string }) {
-  const [query, setQuery] = useState(initialQuery);
+export function SearchIndex() {
+  const [query, setQuery] = useState("");
   const router = useRouter();
+
+  // Read ?q= in the browser so the homepage itself can be prerendered as a
+  // static page (search links such as /?q=seo still prefill the box).
+  useEffect(() => {
+    const q = new URLSearchParams(window.location.search).get("q");
+    if (q) setQuery(q);
+  }, []);
   const listId = useId();
   const results = useMemo(() => (query.trim() ? filterHits(query) : []), [query]);
   const label = query.trim() ? `${results.length} ${results.length === 1 ? "match" : "matches"}` : "Try a question";
@@ -39,7 +46,7 @@ export function SearchIndex({ initialQuery = "" }: { initialQuery?: string }) {
             onChange={(event) => setQuery(event.target.value)}
             placeholder="A question, a skill, or a problem"
             autoComplete="off"
-            aria-controls={listId}
+            aria-controls={query.trim() && results.length > 0 ? listId : undefined}
             aria-autocomplete="list"
           />
           <button type="submit" className="finder-go">
@@ -78,7 +85,7 @@ export function SearchIndex({ initialQuery = "" }: { initialQuery?: string }) {
             if (!guide) return null;
             return (
               <li key={slug}>
-                <Link href={`/learn/${guide.slug}`}>{guide.title}</Link>
+                <Link href={guidePath(guide.slug)}>{guide.title}</Link>
               </li>
             );
           })}
@@ -100,7 +107,7 @@ export function QuestionExplorer() {
         <p className="chip">{current.area}</p>
         <h2>{current.title}</h2>
         <p>{current.summary}</p>
-        <Link href={`/learn/${current.slug}`} className="text-link">
+        <Link href={guidePath(current.slug)} className="text-link">
           Read the guide <Arrow />
         </Link>
       </div>

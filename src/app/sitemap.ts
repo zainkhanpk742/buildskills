@@ -1,32 +1,35 @@
 import type { MetadataRoute } from "next";
-import { areas, guides, guidesInArea } from "@/data/site";
+import { areas, guidePath, guides, guidesInArea, hubGuides } from "@/data/site";
+import { defaultGuideDate, defaultHubDate, pageDates } from "@/data/pageDates";
+
+const SITE = "https://buildskills.com.pk";
+
+function latest(dates: string[]): string {
+  return [...dates].sort().pop() ?? defaultHubDate;
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const pages = [
-    "/",
-    "/learn",
-    ...areas
-      .filter((area) => guidesInArea(area.title).length > 0)
-      .map((area) => `/learn/${area.slug}`),
-    "/learn/seo/what-are-good-backlinks",
-    "/questions",
-    "/tools",
-    "/resources",
-    "/projects",
-    "/about",
-    "/contact",
-    "/privacy-policy",
-    "/terms",
-    "/disclaimer",
-    "/editorial-policy",
-    ...guides.map((guide) => `/learn/${guide.slug}`),
-  ];
+  const entries = new Map<string, string>();
 
-  return [...new Set(pages)].map((path) => {
-    const guide = guides.find((item) => `/learn/${item.slug}` === path);
-    return {
-      url: path === "/" ? "https://buildskills.com.pk" : `https://buildskills.com.pk${path}`,
-      lastModified: guide?.checkedDate ?? "2026-09-30",
-    };
-  });
+  for (const [path, date] of Object.entries(pageDates)) entries.set(path, date);
+
+  for (const area of areas) {
+    const inArea = guidesInArea(area.title);
+    if (inArea.length === 0) continue;
+    const path = `/learn/${area.slug}`;
+    const guideDates = inArea.map((guide) => guide.checkedDate ?? defaultGuideDate);
+    entries.set(path, latest([pageDates[path] ?? defaultHubDate, ...guideDates]));
+  }
+
+  const hubGuideSlugs = new Set(Object.values(hubGuides));
+  for (const guide of guides) {
+    // Guides shown on a hub share the hub URL; their deeper URL redirects there.
+    if (hubGuideSlugs.has(guide.slug)) continue;
+    entries.set(guidePath(guide.slug), guide.checkedDate ?? defaultGuideDate);
+  }
+
+  return [...entries].map(([path, lastModified]) => ({
+    url: path === "/" ? SITE : `${SITE}${path}`,
+    lastModified,
+  }));
 }

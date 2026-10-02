@@ -10,6 +10,7 @@ import { earningGuides } from "@/data/earningGuides";
 import { thinHubGuides } from "@/data/thinHubGuides";
 import { addedFaqs } from "@/data/guideFaqs";
 import { addedFaqsMore } from "@/data/guideFaqsMore";
+import { extraRelated } from "@/data/relatedLinks";
 
 export const nav = [
   { label: "Learn", href: "/learn" },
@@ -26,11 +27,14 @@ export type Area = {
   summary: string;
   question: string;
   description: string;
+  /** Visible H1 on the hub page, when it should differ from `question`. */
+  h1?: string;
 };
 
 export const areas: Area[] = [
   {
     slug: "websites",
+    h1: "Website guides: plan, build, and publish a site",
     title: "Websites",
     question: "How do I build a website?",
     summary: "Plan, write, and publish a site that has a job.",
@@ -47,6 +51,7 @@ export const areas: Area[] = [
   },
   {
     slug: "mobile-apps",
+    h1: "Mobile app guides for beginners",
     title: "Mobile Apps",
     question: "How do I make a mobile app?",
     summary: "Decide when an app is the right product, then shape it.",
@@ -55,6 +60,7 @@ export const areas: Area[] = [
   },
   {
     slug: "databases",
+    h1: "Database guides for beginners",
     title: "Databases",
     question: "How do I design a database?",
     summary: "Organize information so the rest of the system can trust it.",
@@ -63,6 +69,7 @@ export const areas: Area[] = [
   },
   {
     slug: "business-software",
+    h1: "Business software guides: spreadsheet or custom app?",
     title: "Business Software",
     question: "How do I make software for my business?",
     summary: "Software shaped around a real workflow, not a generic suite.",
@@ -71,6 +78,7 @@ export const areas: Area[] = [
   },
   {
     slug: "digital-marketing",
+    h1: "Digital marketing guides for beginners",
     title: "Digital Marketing",
     question: "How do I market my business online?",
     summary: "Find the right audience, choose a channel, and measure useful results.",
@@ -79,6 +87,7 @@ export const areas: Area[] = [
   },
   {
     slug: "content-creation",
+    h1: "Content creation guides for beginners",
     title: "Content Creation",
     question: "How do I create content people want?",
     summary: "Make pieces people needed, in a form they can use.",
@@ -87,6 +96,7 @@ export const areas: Area[] = [
   },
   {
     slug: "graphic-design",
+    h1: "Graphic design guides: posters, logos, and brands",
     title: "Graphic Design",
     question: "How do I design a logo and brand identity?",
     summary: "A visual system that makes the work recognizable.",
@@ -103,6 +113,7 @@ export const areas: Area[] = [
   },
   {
     slug: "online-business",
+    h1: "Online business guides: test, price, and sell an offer",
     title: "Online Business",
     question: "How do I start an online business?",
     summary: "Test a useful offer, learn the basics, and build a way to sell it.",
@@ -161,6 +172,7 @@ export const areas: Area[] = [
   },
   {
     slug: "video-editing",
+    h1: "Video editing guides for beginners",
     title: "Video Editing",
     question: "How do I edit a video?",
     summary: "Learn editing basics, choose software for your device, and make clear videos.",
@@ -169,6 +181,7 @@ export const areas: Area[] = [
   },
   {
     slug: "photo-editing",
+    h1: "Photo editing guides for beginners",
     title: "Photo Editing",
     question: "How do I edit a photo?",
     summary: "Improve photos and graphics with approachable editing workflows.",
@@ -468,6 +481,11 @@ export const guides: Guide[] = [
   ...earningGuides,
   ...thinHubGuides,
 ].map((guide) => {
+  const extra = extraRelated[guide.slug];
+  if (extra) {
+    const related = [...new Set([...(guide.related ?? []), ...extra])].filter((slug) => slug !== guide.slug);
+    guide = { ...guide, related };
+  }
   const more = [...(addedFaqs[guide.slug] ?? []), ...(addedFaqsMore[guide.slug] ?? [])];
   if (!more.length) return guide;
   const seen = new Set((guide.faqs ?? []).map((item) => item.question));
@@ -659,7 +677,7 @@ export type SearchHit = {
 
 export function searchHits(): SearchHit[] {
   const questions: SearchHit[] = guides.map((guide) => ({
-    href: `/learn/${guide.slug}`,
+    href: guidePath(guide.slug),
     title: guide.title,
     kind: guide.kind ?? (guide.title.trim().endsWith("?") ? "Question" : "Guide"),
     detail: guide.area,
@@ -688,7 +706,7 @@ export function searchHits(): SearchHit[] {
     }
   }
   const tools: SearchHit[] = [...guideByTool].map(([tool, guide]) => ({
-    href: `/learn/${guide.slug}`,
+    href: guidePath(guide.slug),
     title: tool,
     kind: "Tool",
     detail: `${guide.area} guide`,
@@ -704,7 +722,7 @@ export function filterHits(query: string): SearchHit[] {
     return featuredQuestions.map((slug) => {
       const guide = guides.find((item) => item.slug === slug)!;
       return {
-        href: `/learn/${guide.slug}`,
+        href: guidePath(guide.slug),
         title: guide.title,
         kind: guide.kind ?? (guide.title.trim().endsWith("?") ? "Question" as const : "Guide" as const),
         detail: guide.area,
@@ -722,6 +740,28 @@ export function filterHits(query: string): SearchHit[] {
     .sort((a, b) => b.score - a.score)
     .slice(0, 8)
     .map(({ hit }) => hit);
+}
+
+/**
+ * Learning areas whose hub URL shows their main guide. The hub URL is the one
+ * public address for that guide: the guide's own deeper URL permanently
+ * redirects to the hub (see next.config.ts) and is left out of the sitemap.
+ */
+export const hubGuides: Record<string, string> = {
+  "chatgpt-prompts": "chatgpt-prompts/useful-chatgpt-prompts",
+  "high-paid-skills": "high-paid-skills/highest-paid-skills",
+  "high-demand-skills-usa": "high-demand-skills-usa/high-demand-skills-in-the-usa",
+  "high-demand-skills-india": "high-demand-skills-india/high-demand-skills-in-india",
+};
+
+const hubForGuide: Record<string, string> = Object.fromEntries(
+  Object.entries(hubGuides).map(([hub, guideSlug]) => [guideSlug, hub]),
+);
+
+/** Public path of a guide (the hub address for guides shown on a hub). */
+export function guidePath(slug: string): string {
+  const hub = hubForGuide[slug];
+  return hub ? `/learn/${hub}` : `/learn/${slug}`;
 }
 
 export function guideBySlug(slug: string) {

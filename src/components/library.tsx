@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { areaBySlug, areas, guideBySlug, guidesInArea, pathSteps } from "@/data/site";
+import { areaBySlug, areas, guideBySlug, guidePath, guidesInArea, pathSteps } from "@/data/site";
 import { hubContent } from "@/data/hubContent";
 import { Kicker } from "@/components/ui";
 
@@ -49,7 +49,10 @@ export function GuideView({ slug }: { slug: string }) {
         ]),
       ].join(" ").trim().split(/\s+/).filter(Boolean).length / 200,
     ));
-  const pageUrl = `https://buildskills.com.pk/learn/${guide.slug}`;
+  const publicPath = guidePath(guide.slug);
+  const pageUrl = `https://buildskills.com.pk${publicPath}`;
+  const areaUrl = `https://buildskills.com.pk/learn/${field?.slug ?? guide.slug.split("/")[0]}`;
+  const isHubPage = pageUrl === areaUrl;
   const structuredData = [
     {
       "@context": "https://schema.org",
@@ -87,8 +90,8 @@ export function GuideView({ slug }: { slug: string }) {
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: "https://buildskills.com.pk/" },
         { "@type": "ListItem", position: 2, name: "Learn", item: "https://buildskills.com.pk/learn" },
-        { "@type": "ListItem", position: 3, name: guide.area, item: `https://buildskills.com.pk/learn/${field?.slug ?? guide.slug.split("/")[0]}` },
-        { "@type": "ListItem", position: 4, name: guide.title, item: pageUrl },
+        { "@type": "ListItem", position: 3, name: guide.area, item: areaUrl },
+        ...(isHubPage ? [] : [{ "@type": "ListItem", position: 4, name: guide.title, item: pageUrl }]),
       ],
     },
     ...(guide.faqs?.length
@@ -175,7 +178,7 @@ export function GuideView({ slug }: { slug: string }) {
             {guide.tools?.length ? (
               <section aria-labelledby="tools-title">
                 <h2 id="tools-title">Tools mentioned</h2>
-                <p>{guide.tools.join(", ")}. Features and availability can change; check each provider's official information before choosing a tool.</p>
+                <p>{guide.tools.join(", ")}. Features and availability can change; check each provider&apos;s official information before choosing a tool.</p>
               </section>
             ) : null}
             {guide.faqs?.length ? (
@@ -195,7 +198,7 @@ export function GuideView({ slug }: { slug: string }) {
                 <ul>
                   {related.map((item) => item ? (
                     <li key={item.slug}>
-                      <Link href={`/learn/${item.slug}`}>{item.title}</Link>
+                      <Link href={guidePath(item.slug)}>{item.title}</Link>
                     </li>
                   ) : null)}
                 </ul>
@@ -216,7 +219,7 @@ export function GuideView({ slug }: { slug: string }) {
               ) : (
                 siblings.map((item) => (
                   <li key={item.slug}>
-                    <Link href={`/learn/${item.slug}`} className="index-row">
+                    <Link href={guidePath(item.slug)} className="index-row">
                       <span className="title">{item.title}</span>
                     </Link>
                   </li>
@@ -261,7 +264,7 @@ export function AreaView({ slug }: { slug: string }) {
       <header className="page-head">
         <div className="page-wrap">
           <p className="kicker plain" style={{ color: "var(--signal)" }}>Learning area</p>
-          <h1 className="display-section balance stack-4">{area.question}</h1>
+          <h1 className="display-section balance stack-4">{area.h1 ?? area.question}</h1>
           <p className="lede pretty stack-5">{area.description}</p>
         </div>
       </header>
@@ -298,7 +301,7 @@ export function AreaView({ slug }: { slug: string }) {
             <ul className="index-list" style={{ borderTop: "1px solid var(--line)", marginTop: "1.5rem" }}>
               {related.map((guide, index) => (
                 <li key={guide.slug}>
-                  <Link href={`/learn/${guide.slug}`} className="index-row">
+                  <Link href={guidePath(guide.slug)} className="index-row">
                     <span className="num tabular">{String(index + 1).padStart(2, "0")}</span>
                     <span>
                       <span className="title" style={{ display: "block" }}>

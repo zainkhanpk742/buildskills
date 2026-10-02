@@ -9,11 +9,6 @@ export const metadata: Metadata = pageMeta({
   path: "/",
 });
 
-export default async function Page({
-  searchParams,
-}: {
-  searchParams: Promise<{ q?: string }>;
-}) {
-  const { q } = await searchParams;
-  return <HomePage initialQuery={typeof q === "string" ? q : ""} />;
+export default function Page() {
+  return <HomePage />;
 }

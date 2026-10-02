@@ -294,7 +294,7 @@ export const earningGuides: Guide[] = [
     title: "YouTube Monetization Requirements in 2026",
     summary:
       "YouTube monetization requirements in 2026, including the 10 August 2026 change: from 1 February 2027 new channels need 8,000 watch hours or 20 million Shorts views.",
-    checkedDate: checked,
+    checkedDate: "2026-10-02",
     difficulty: "Beginner",
     estimatedMinutes: 12,
     paragraphs: [],
@@ -311,6 +311,7 @@ export const earningGuides: Guide[] = [
         paragraphs: [
           "If a channel is already in the YouTube Partner Program, TeamYouTube said it will not be removed, and will not lose long-form ads, only because it sits under the new entry numbers. From 1 February 2027, Shorts revenue sharing needs 10 million qualified Shorts views in the previous 90 days. Dropping below that pauses Shorts pay. It does not by itself remove the channel.",
           "Fan funding, such as channel memberships and Super Chat, stays on the earlier public tier described in the same announcement: 500 subscribers and either 3,000 qualified watch hours in 365 days or 3 million qualified Shorts views in 90 days. Existing members also need to accept updated terms by 31 January 2027 to keep earning from the related features. Country eligibility, no active Community Guidelines strikes, 2-Step Verification, and an AdSense for YouTube account still apply. Confirm the live checklist in YouTube Studio.",
+          "From 1 February 2027, YouTube also defines an active Partner Program channel: at least 1,000 qualified public watch hours in the past 365 days, or 1 million qualified Shorts views in the past 90 days, or uploads of two long-form videos or five Shorts every 90 days. A channel that meets none of these gets an extra 90 days to reach the watch-hour or Shorts-view figure before monetization can be affected.",
         ],
       },
     ],
@@ -318,12 +319,15 @@ export const earningGuides: Guide[] = [
       { question: "How many watch hours do I need for YouTube monetization?", answer: "Until 31 January 2027, new applicants need 4,000 valid public watch hours in 12 months, or 10 million Shorts views in 90 days, plus 1,000 subscribers. From 1 February 2027, new applicants need 8,000 qualified watch hours or 20 million qualified Shorts views, plus 1,000 subscribers." },
       { question: "Do current Partner Program channels lose monetization in 2027?", answer: "TeamYouTube said existing channels are not removed and do not lose long-form ads only because they are under the new entry thresholds. They do need to accept the updated terms." },
       { question: "What is the Shorts requirement?", answer: "From 1 February 2027, Shorts ads and subscription revenue need 10 million qualified Shorts views in 90 days. Below that, Shorts revenue pauses. The channel can stay in the program." },
+      { question: "What counts as an active channel from 2027?", answer: "From 1 February 2027 a Partner Program channel counts as active with 1,000 qualified watch hours in 365 days, or 1 million qualified Shorts views in 90 days, or two long-form or five Shorts uploads every 90 days. Inactive channels get an extra 90-day window to recover." },
       { question: "Is the subscriber requirement still 1,000?", answer: "Yes for the ads and Premium entry path described in the 10 August 2026 announcement. Fan funding remains available from the lower 500-subscriber tier." },
       { question: "Does this work in every country?", answer: "No. The YouTube Partner Program is limited to eligible countries. Check your country inside YouTube Studio. Watch-hour math does not override country eligibility." },
       { question: "Where is the official announcement?", answer: "TeamYouTube published it on 10 August 2026 in the YouTube Help Community. The ongoing help page is YouTube's article on how to join the YouTube Partner Program." },
     ],
     sources: [
       { label: "TeamYouTube announcement, 10 August 2026", url: "https://support.google.com/youtube/thread/451804019" },
+      { label: "YouTube Official Blog: changes to the YouTube Partner Program (10 August 2026)", url: "https://blog.youtube/news-and-events/youtube-partner-program-updates-2027-new-opportunities-earn/" },
+      { label: "Search Engine Journal: new active-channel and Shorts payout rules", url: "https://www.searchenginejournal.com/youtube-updates-partner-program-terms-shorts-payout-rules/585331/" },
       { label: "YouTube Help: join the YouTube Partner Program", url: "https://support.google.com/youtube/answer/72851" },
     ],
     related: ["youtube/make-money-on-youtube", "video-editing/how-to-edit-a-video"],
@@ -335,7 +339,7 @@ export const earningGuides: Guide[] = [
     title: "Canva Tutorial: Design Basics for Beginners",
     summary:
       "A Canva tutorial for beginners: frames, text, export, and how to read the current Pro price on canva.com before you subscribe.",
-    checkedDate: checked,
+    checkedDate: "2026-10-02",
     difficulty: "Beginner",
     estimatedMinutes: 12,
     paragraphs: [],
@@ -344,7 +348,7 @@ export const earningGuides: Guide[] = [
         heading: "Canva tutorial",
         paragraphs: [
           "This Canva tutorial is the shortest useful path. Open a blank design or a template, set the size for the place you will publish, put the main message in the first line of text, and export a file you can actually upload. Canva is a design tool. It does not decide your brand for you.",
-          "Free accounts can start. Pro adds premium templates, a larger stock library, Brand Kits, background removal, and more AI use. On 30 September 2026, Canva's own pricing page showed Pro for one person at US$120 per year before tax on the yearly plan. The figure on your screen can differ by country, by monthly billing, and by tax. Read the total on canva.com/pricing before you pay. Do not trust a screenshot in a chat.",
+          "Free accounts can start. Pro adds premium templates, a larger stock library, Brand Kits, background removal, and more AI use. On 2 October 2026, Canva's US pricing showed Pro for one person at US$18 per month on monthly billing, before tax. The yearly plan costs less per month; check its exact total at checkout. The figure on your screen can differ by country, by billing period, by promotions, and by tax. Read the total on canva.com/pricing before you pay. Do not trust a screenshot in a chat.",
         ],
       },
       {
@@ -357,7 +361,7 @@ export const earningGuides: Guide[] = [
     ],
     faqs: [
       { question: "Is Canva free?", answer: "Yes. There is a Free plan. Pro, Business, and Enterprise are paid. Confirm the current price for your country on canva.com/pricing." },
-      { question: "How much is Canva Pro?", answer: "On 30 September 2026 the US yearly price shown on Canva's pricing page for one person was US$120 per year before tax. Your checkout can differ. Look at the total before you confirm." },
+      { question: "How much is Canva Pro?", answer: "On 2 October 2026 Canva's US pricing showed Pro for one person at US$18 per month on monthly billing, before tax, with a discounted yearly plan. Prices differ by country and change with promotions, so look at the total at checkout before you confirm." },
       { question: "Can beginners use Canva for clients?", answer: "Yes, if the design is clear and you have rights to the assets. A template is a start. The headline, the offer, and the client's real information are the work." },
       { question: "Do I need Pro to learn?", answer: "No. Learn frames, type, contrast, and export on the Free plan. Upgrade only when a specific Pro feature is blocking paid work." },
       { question: "What size is a YouTube thumbnail?", answer: "YouTube's own thumbnail guidance is the source for the current pixel size. Set that size in Canva before you design, not after." },

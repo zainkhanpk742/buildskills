@@ -36,7 +36,7 @@ export default function Page() {
         </p>
         <h2>Google AdSense and the DoubleClick cookie</h2>
         <p>
-          Google, as a third-party vendor, uses cookies to serve ads on this site. Google's use of advertising cookies, including the DoubleClick DART cookie, enables it and its partners to serve ads based on your visit to this site and other sites on the Internet.
+          Google, as a third-party vendor, uses cookies to serve ads on this site. Google&apos;s use of advertising cookies, including the DoubleClick DART cookie, enables it and its partners to serve ads based on your visit to this site and other sites on the Internet.
         </p>
         <p>You can opt out of personalized advertising in any of these ways:</p>
         <ul>
@@ -51,7 +51,7 @@ export default function Page() {
           </li>
         </ul>
         <p>
-          More detail is in Google's{" "}
+          More detail is in Google&apos;s{" "}
           <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noreferrer">advertising technologies policy</a>{" "}
           and{" "}
           <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer">privacy policy</a>.
@@ -64,7 +64,7 @@ export default function Page() {
         <h2>CCPA rights</h2>
         <p>
           If the California Consumer Privacy Act applies to you, you may request to know, delete, or correct personal information, and you may opt out of the sale or sharing of personal information. We do not sell personal information for money. Email{" "}
-          <a href="mailto:salimpk742@gmail.com">salimpk742@gmail.com</a> with the subject "CCPA request".
+          <a href="mailto:salimpk742@gmail.com">salimpk742@gmail.com</a> with the subject &quot;CCPA request&quot;.
         </p>
         <h2>Children</h2>
         <p>
