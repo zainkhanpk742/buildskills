@@ -548,4 +548,28 @@ export const seoMeta: Record<string, SeoMeta> = {
     title: "How to Price an Online Offer or Service",
     description: "Price an online offer from your time, your costs, and the result for the buyer, so you can explain the number and attract the right clients.",
   },
+  "/learn/ai-productivity/how-to-make-money-with-ai": {
+    title: "How to Make Money with AI in 2026 (Real Ways, No Hype)",
+    description: "Seven realistic ways to earn with AI tools, the YouTube and TikTok rules on AI content, the scams to avoid, and a 30-day plan to a first payment.",
+  },
+  "/learn/ai-productivity/free-ai-tools": {
+    title: "Free AI Tools in 2026 for Students and Beginners",
+    description: "Free AI tools for chat, research, writing, design, and video: ChatGPT, Gemini, Claude, Copilot, NotebookLM, Canva and more, checked October 2026.",
+  },
+  "/learn/chatgpt-prompts/chatgpt-prompts-for-students": {
+    title: "ChatGPT Prompts for Students: Study, Essays & Exams",
+    description: "Copy-and-adapt ChatGPT prompts for students: understand topics, revise for exams, plan essays, practise languages, and stay within school AI rules.",
+  },
+  "/learn/freelancing/make-money-online-as-a-teenager": {
+    title: "How to Make Money Online as a Teenager (Safe Ways)",
+    description: "Real age rules for Fiverr, Upwork, YouTube, TikTok and X, checked October 2026, plus safe ways for teens to earn with a parent and the scams to avoid.",
+  },
+  "/learn/freelancing/freelancing-websites-for-beginners": {
+    title: "Best Freelancing Websites for Beginners (Fees Compared)",
+    description: "Fiverr, Upwork, Freelancer.com, PeoplePerHour and Contra compared: freelancer fees checked October 2026, how each finds you work, and which to pick.",
+  },
+  "/learn/freelancing/remote-jobs-for-beginners": {
+    title: "Remote Jobs for Beginners with No Experience (Worldwide)",
+    description: "Entry-level remote jobs that hire beginners, trusted job boards, how to apply with no experience, and how to spot the fake jobs that target newcomers.",
+  },
 };

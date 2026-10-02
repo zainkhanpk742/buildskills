@@ -12,6 +12,7 @@ import { addedFaqs } from "@/data/guideFaqs";
 import { addedFaqsMore } from "@/data/guideFaqsMore";
 import { extraRelated } from "@/data/relatedLinks";
 import { guideDepth } from "@/data/guideDepth";
+import { newGuides } from "@/data/newGuides";
 import { rankHits } from "@/lib/searchFilter";
 import { guidePath } from "@/lib/paths";
 
@@ -487,6 +488,7 @@ export const guides: Guide[] = [
   ...skillDemandGuides,
   ...earningGuides,
   ...thinHubGuides,
+  ...newGuides,
 ].map((guide) => {
   const depth = guideDepth[guide.slug];
   if (depth) {
