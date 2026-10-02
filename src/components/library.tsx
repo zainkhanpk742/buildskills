@@ -57,7 +57,7 @@ export function GuideView({ slug }: { slug: string }) {
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      headline: guide.title,
+      headline: guide.h1 ?? guide.title,
       description: guide.summary,
       url: pageUrl,
       mainEntityOfPage: pageUrl,
@@ -119,7 +119,7 @@ export function GuideView({ slug }: { slug: string }) {
             <p className="kicker plain" style={{ color: "var(--signal)" }}>
               {guide.area}
             </p>
-            <h1 className="display-section balance stack-4 max-3">{guide.title}</h1>
+            <h1 className="display-section balance stack-4 max-3">{guide.h1 ?? guide.title}</h1>
             <aside className="answer-box stack-5" aria-label="Short answer">
               <p className="kicker plain">Short answer</p>
               <p>{guide.summary}</p>
