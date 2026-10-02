@@ -592,4 +592,12 @@ export const seoMeta: Record<string, SeoMeta> = {
     title: "DaVinci Resolve for Beginners: Free Pro Video Editing",
     description: "Edit your first video in DaVinci Resolve's free version: free vs Studio (US$295), system requirements, the pages, a step-by-step edit, and export.",
   },
+  "/learn/video-editing/edit-videos-for-tiktok-and-reels": {
+    title: "How to Edit Videos for TikTok, Reels and Shorts (2026)",
+    description: "Edit one vertical video for TikTok, Instagram Reels and YouTube Shorts: 9:16 settings, official length rules, a step-by-step workflow and safe zones.",
+  },
+  "/learn/chatgpt-prompts/chatgpt-image-prompts": {
+    title: "ChatGPT Image Prompts: 30 Examples and a Simple Formula",
+    description: "A simple formula for ChatGPT image prompts plus 30 examples for thumbnails, posts, products, logos and study diagrams, with editing tips and usage rules.",
+  },
 };
