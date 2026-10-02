@@ -776,4 +776,299 @@ export const newGuides: Guide[] = [
     related: ["freelancing/fiverr-for-beginners", "freelancing/freelancing-websites-for-beginners", "online-business/how-to-price-an-offer", "photo-editing/canva-tutorial"],
     next: { href: "/learn/freelancing/fiverr-for-beginners", label: "Fiverr for beginners" },
   },
+  // ------------------------------------------------------------------ AI search
+  {
+    slug: "seo/ai-search-optimization",
+    area: "SEO",
+    title: "SEO for AI Search: AI Overviews, AI Mode and Chatbots",
+    h1: "SEO for AI search: how to show up in AI Overviews, AI Mode, and chatbots",
+    summary:
+      "Google says there is no special trick for its AI features: AI Overviews and AI Mode are built on its normal ranking systems, so a page must be indexed and eligible for a snippet, and the usual SEO basics apply. This guide explains what that means in practice, what you can skip, and how to measure AI visibility.",
+    checkedDate: OCT2,
+    difficulty: "Intermediate",
+    kind: "Guide",
+    paragraphs: [],
+    topics: ["AI search optimization", "generative engine optimization", "GEO", "AI Overviews SEO", "AI Mode"],
+    tools: ["Google Search Console", "Bing Webmaster Tools"],
+    sections: [
+      {
+        heading: "What Google officially says (checked 2 October 2026)",
+        paragraphs: [
+          "Google Search Central publishes two pages for site owners: \"AI features and your website\" and a guide to optimizing for generative AI features. Both say the best practices for SEO remain relevant, because AI Overviews and AI Mode use Google's core ranking and quality systems to pick the pages they link to.",
+        ],
+        bullets: [
+          "To appear as a supporting link, a page must be indexed and eligible to be shown in Google Search with a snippet. Google says there are no additional technical requirements.",
+          "The site must also be included in the Search generative AI features setting in Search Console. Inclusion is the default.",
+          "You do not need new machine-readable files, AI text files such as llms.txt, special markup, or a special schema.org type to appear in these features.",
+          "You do not need to split content into tiny chunks or rewrite it in a special style for AI; Google says there is no ideal page length.",
+          "robots.txt rules for Googlebot, and snippet controls such as nosnippet, data-nosnippet, max-snippet, and noindex, are how you limit what appears.",
+        ],
+      },
+      {
+        heading: "The SEO basics that matter most for AI answers",
+        paragraphs: [
+          "Google's own list of fundamentals that \"continue to be worthwhile\" for AI features is short and practical:",
+        ],
+        bullets: [
+          "Allow crawling in robots.txt and in your CDN or hosting firewall.",
+          "Make pages easy to find through internal links.",
+          "Provide a good page experience on phones and desktops.",
+          "Put important content in text, not only inside images or video.",
+          "Support text with high-quality images and video where they help.",
+          "Keep structured data accurate and matching the visible text.",
+          "Keep Merchant Center and Business Profile information up to date if you sell products or serve a local area.",
+        ],
+      },
+      {
+        heading: "Write pages that AI answers can cite",
+        paragraphs: [
+          "AI answers link to pages that answer a question clearly and can be trusted. That is the same writing that works for people, and none of it requires a special format.",
+        ],
+        bullets: [
+          "Answer the main question near the top in one or two plain sentences, then explain the details.",
+          "Use descriptive headings that match the questions people ask, such as \"How much does it cost?\".",
+          "Show where facts come from: name the source and the date you checked it, and link to it.",
+          "Add what only you can add: first-hand testing, your own examples, photos you took, local knowledge, or original data.",
+          "Keep facts current. Update prices, rules, and dates when they change, and say when the page was last checked.",
+          "Say who wrote the page and why they can be trusted, and make contact information easy to find.",
+        ],
+      },
+      {
+        heading: "Other AI search tools: ChatGPT, Copilot, and Perplexity",
+        paragraphs: [
+          "AI assistants with web search, such as ChatGPT search, Microsoft Copilot, and Perplexity, also read public web pages and link to sources. Each has its own crawler, and you control access through robots.txt using the user-agent names each company publishes, such as OAI-SearchBot for ChatGPT search. Blocking a search crawler can stop your pages being shown as sources in that tool.",
+          "Microsoft's Copilot uses Bing's index, so verifying your site in Bing Webmaster Tools and submitting your sitemap there helps it find your pages. The same people-first content that ranks in Google is what these tools tend to cite.",
+        ],
+      },
+      {
+        heading: "How to measure AI visibility",
+        paragraphs: [
+          "Search Console includes a Generative AI performance report showing impressions in AI Overviews and AI Mode by page, country, device, and date, with a separate report for Discover. These impressions are also counted in the normal Performance report, so do not add the two together.",
+          "Clicks from AI features are counted as Google Search traffic, so watch whether the pages that appear in the AI report also bring visits and sign-ups in your analytics. For other assistants, look for referral visits from their domains in your analytics tool.",
+        ],
+      },
+    ],
+    faqs: [
+      { question: "What is generative engine optimization (GEO)?", answer: "A name for optimizing content to be cited in AI-generated answers. Google's guidance says it is still SEO: indexable, crawlable, helpful pages with clear text. It says special files, markup, or chunking are not needed." },
+      { question: "Do I need an llms.txt file?", answer: "Not for Google. Google's generative AI optimization guide says you do not need new machine-readable or AI text files, because Google Search does not use them." },
+      { question: "How do I get my website into Google AI Overviews?", answer: "Make sure the page is indexed and eligible for a snippet, keep the Search generative AI features setting on in Search Console, and publish a clear, accurate answer to the question. Inclusion makes a page eligible; it does not guarantee it will be shown." },
+      { question: "Can I stop my content appearing in AI Overviews?", answer: "Google points to its normal controls: nosnippet, data-nosnippet, max-snippet, and noindex limit what is shown, and Search Console has a setting for Search generative AI features. Blocking Googlebot in robots.txt removes the page from Search as a whole." },
+      { question: "Does structured data help with AI search?", answer: "It is not required, and Google says there is no special schema for AI features. Accurate structured data that matches the page still helps Search understand it." },
+    ],
+    sources: [
+      { label: "Google Search Central: AI features and your website", url: "https://developers.google.com/search/docs/appearance/ai-features" },
+      { label: "Google Search Central: optimizing for generative AI features on Google Search", url: "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide" },
+      { label: "Google Search Central: creating helpful, reliable, people-first content", url: "https://developers.google.com/search/docs/fundamentals/creating-helpful-content" },
+      { label: "OpenAI: crawlers and user agents", url: "https://platform.openai.com/docs/bots" },
+      { label: "Bing Webmaster Tools", url: "https://www.bing.com/webmasters" },
+    ],
+    related: ["seo/what-is-seo", "seo/technical-seo", "seo/search-console", "seo/seo-content-strategy"],
+    next: { href: "/learn/seo/search-console", label: "How to use Google Search Console" },
+  },
+
+  // ------------------------------------------------------------------ SEO course
+  {
+    slug: "seo/free-seo-course",
+    area: "SEO",
+    title: "Free SEO Course for Beginners: 12 Lessons",
+    h1: "Free SEO course for beginners: 12 lessons, in order",
+    summary:
+      "This free SEO course puts BuildSkills' twelve SEO guides in a learning order, with a goal, a practice task, and a self-check for each lesson. Most people can finish it in two to four weeks at 30 to 60 minutes a day, using only free tools from Google.",
+    checkedDate: OCT2,
+    difficulty: "Beginner",
+    kind: "Guide",
+    paragraphs: [],
+    topics: ["free SEO course", "learn SEO free", "SEO for beginners", "SEO training"],
+    tools: ["Google Search Console", "Google Search", "Google Trends", "PageSpeed Insights"],
+    sections: [
+      {
+        heading: "How the course works",
+        paragraphs: [
+          "Each lesson links to a full guide in the Related guides list at the end of this page. Read the guide, do the practice task on a real website (your own, a friend's, or a free test site), and answer the self-check before you move on. The course is free, needs no sign-up, and does not issue a certificate; your proof is the improved website.",
+          "You need a website you can edit and, from lesson 3, a Google Search Console property for it. The time per lesson is our estimate for a beginner and includes the practice task.",
+        ],
+      },
+      {
+        heading: "Module 1: How search works (lessons 1 to 3)",
+        paragraphs: [],
+        bullets: [
+          "Lesson 1, What is SEO (30 minutes): learn what SEO can and cannot do. Practice: write one sentence describing who your site is for and what they search. Self-check: can you explain the difference between SEO and ads?",
+          "Lesson 2, How search engines work (40 minutes): crawling, indexing, and ranking. Practice: search site:yourdomain.com to see which pages Google has indexed. Self-check: what stops a page being indexed?",
+          "Lesson 3, How to get your website on Google (60 minutes): verify your site in Search Console and submit a sitemap. Practice: request indexing for your homepage. Self-check: where do you see whether a URL is indexed?",
+        ],
+      },
+      {
+        heading: "Module 2: Choosing what to write (lessons 4 to 6)",
+        paragraphs: [],
+        bullets: [
+          "Lesson 4, Search intent (40 minutes): what the searcher actually wants. Practice: search three of your target phrases and note whether the results are guides, products, or local listings. Self-check: does your page match the type of result Google shows?",
+          "Lesson 5, Keyword research (60 minutes): find real questions with free tools such as Google autocomplete, People also ask, and Google Trends. Practice: list 20 questions your audience asks, grouped by topic. Self-check: which three would you write first, and why?",
+          "Lesson 6, SEO content strategy (45 minutes): turn the list into a plan of main pages and supporting pages. Practice: map each question to one page. Self-check: does any question map to two pages that would compete?",
+        ],
+      },
+      {
+        heading: "Module 3: Improving your pages (lessons 7 to 9)",
+        paragraphs: [],
+        bullets: [
+          "Lesson 7, On-page SEO (60 minutes): titles, headings, descriptions, images, and answering the question early. Practice: rewrite the title and first paragraph of your most important page. Self-check: is the title unique and under about 60 characters?",
+          "Lesson 8, Internal linking (40 minutes): connect related pages with descriptive links. Practice: add three links from older pages to your newest page. Self-check: can every important page be reached in a few clicks from the homepage?",
+          "Lesson 9, Technical SEO (60 minutes): mobile layout, speed, HTTPS, canonical URLs, and robots rules. Practice: test one page in PageSpeed Insights and fix the top issue you can. Self-check: does every page have exactly one canonical URL?",
+        ],
+      },
+      {
+        heading: "Module 4: Growing and measuring (lessons 10 to 12)",
+        paragraphs: [],
+        bullets: [
+          "Lesson 10, Google Search Console (45 minutes): read the Performance and Pages reports. Practice: find the query with the most impressions and the lowest click rate. Self-check: what would you change to earn more clicks for it?",
+          "Lesson 11, Increase website traffic (45 minutes): combine search with email, social, and partnerships, and earn links honestly. Practice: list five sites that might link to a useful page of yours. Self-check: are any of your ideas paid or manipulative links?",
+          "Lesson 12, Local SEO (45 minutes, for businesses that serve an area): Google Business Profile, reviews, and consistent contact details. Practice: check that your name, address, and phone match everywhere. Self-check: what does a customer see when they search your business name?",
+        ],
+      },
+      {
+        heading: "Bonus lesson: SEO for AI search",
+        paragraphs: [
+          "Once the basics are in place, read our guide to SEO for AI search. Google says AI Overviews and AI Mode use the same ranking systems and that pages must be indexed and eligible for a snippet, so the twelve lessons above are also the foundation for showing up in AI answers.",
+        ],
+      },
+      {
+        heading: "Final project and checklist",
+        paragraphs: [
+          "Finish the course by improving one real page from start to end and recording the before and after in Search Console over the following four to eight weeks. Rankings take time to change, so judge the work by whether the page is indexed, its impressions, and its click rate, not by a single day's position.",
+        ],
+        bullets: [
+          "The page answers one clear question and matches the search intent.",
+          "It has a unique title, one H1, descriptive headings, and an honest description.",
+          "Its main content is text, with images that have useful alt text.",
+          "At least three related pages link to it, and it links to them.",
+          "It is mobile-friendly, loads quickly, and is indexed in Search Console.",
+          "Facts are sourced and dated, and the page says who wrote it.",
+        ],
+      },
+    ],
+    faqs: [
+      { question: "Can I learn SEO for free?", answer: "Yes. The core knowledge is free in Google Search Central's documentation, and the main tools, Google Search Console and PageSpeed Insights, are free. This 12-lesson course links them together in order." },
+      { question: "How long does it take to learn SEO?", answer: "The basics in this course take two to four weeks at 30 to 60 minutes a day. Getting good takes months of practice on real sites, because results take weeks to show." },
+      { question: "Do I need a website to learn SEO?", answer: "It helps a lot. Use your own site, a free website builder, or help a friend's or a local organisation's site, so you can practise every lesson on real pages." },
+      { question: "Does this free SEO course give a certificate?", answer: "No. If you want a certificate, providers such as HubSpot Academy and Google Skillshop offer free ones for related marketing skills. For SEO work, a portfolio of improved pages is stronger proof." },
+      { question: "Is SEO still worth learning with AI search?", answer: "Yes. Google says its AI features are built on its core ranking systems and that SEO best practices remain relevant, so the same skills help pages appear in AI answers." },
+    ],
+    sources: [
+      { label: "Google Search Central: SEO Starter Guide", url: "https://developers.google.com/search/docs/fundamentals/seo-starter-guide" },
+      { label: "Google Search Console", url: "https://search.google.com/search-console/about" },
+      { label: "PageSpeed Insights", url: "https://pagespeed.web.dev/" },
+      { label: "Google Trends", url: "https://trends.google.com/" },
+      { label: "Google Search Central: AI features and your website", url: "https://developers.google.com/search/docs/appearance/ai-features" },
+    ],
+    related: [
+      "seo/what-is-seo",
+      "seo/how-search-engines-work",
+      "seo/how-to-get-website-on-google",
+      "seo/search-intent",
+      "seo/keyword-research",
+      "seo/seo-content-strategy",
+      "seo/on-page-seo",
+      "seo/internal-linking",
+      "seo/technical-seo",
+      "seo/search-console",
+      "seo/how-to-increase-website-traffic",
+      "seo/local-seo",
+      "seo/ai-search-optimization",
+    ],
+    next: { href: "/learn/seo/what-is-seo", label: "Lesson 1: What is SEO?" },
+  },
+  // ------------------------------------------------------------------ DaVinci Resolve
+  {
+    slug: "video-editing/davinci-resolve-for-beginners",
+    area: "Video Editing",
+    title: "DaVinci Resolve for Beginners: Free Pro Video Editing",
+    h1: "DaVinci Resolve for beginners: edit your first video in the free version",
+    summary:
+      "DaVinci Resolve is a free, professional video editor for Windows, Mac, and Linux from Blackmagic Design. The free version edits most 8-bit video up to Ultra HD 3840 x 2160 at 60 fps; the paid Studio version is a one-time US$295 licence (checked 2 October 2026). This guide walks through a first edit, page by page.",
+    checkedDate: OCT2,
+    difficulty: "Beginner",
+    kind: "Guide",
+    paragraphs: [],
+    topics: ["DaVinci Resolve tutorial", "DaVinci Resolve for beginners", "free video editing software for PC", "DaVinci Resolve free vs Studio"],
+    tools: ["DaVinci Resolve", "DaVinci Resolve Studio"],
+    sections: [
+      {
+        heading: "Free vs Studio (checked 2 October 2026)",
+        paragraphs: [
+          "Blackmagic Design's product page describes two versions of DaVinci Resolve 21. Download either only from blackmagicdesign.com.",
+        ],
+        bullets: [
+          "DaVinci Resolve (free): editing, colour, visual effects, motion graphics, and audio in one app. Works with virtually all 8-bit video formats up to 60 fps at resolutions up to Ultra HD 3840 x 2160, and includes multi-user collaboration and HDR grading.",
+          "DaVinci Resolve Studio (US$295, one-time, no subscription): adds the DaVinci Neural Engine AI tools, dozens more effects, AI noise reduction, text-based editing, magic mask, 10-bit video up to 120 fps, resolutions beyond 4K, and multi-GPU support.",
+          "For learning and for most YouTube, social, and client videos at 1080p or 4K, the free version is enough.",
+        ],
+      },
+      {
+        heading: "Will it run on my computer?",
+        paragraphs: [
+          "Resolve needs more power than phone apps. Blackmagic's minimum requirements for version 21.1 include:",
+        ],
+        bullets: [
+          "Windows: Windows 10 Creators Update or later, 16 GB of memory (32 GB with Fusion effects), and a GPU with at least 4 GB of VRAM.",
+          "Mac: an Apple silicon Mac with macOS 15 Sequoia or later and 8 GB of memory (16 GB with Fusion).",
+          "Linux: Rocky Linux 8.6, 32 GB of memory, and a discrete GPU with at least 4 GB of VRAM.",
+          "If your computer is below this, try a lighter editor such as CapCut first, or edit at 1080p with optimised media turned on.",
+        ],
+      },
+      {
+        heading: "The pages, in the order you use them",
+        paragraphs: [
+          "Resolve splits the work into pages, shown as buttons along the bottom of the window. A beginner needs four of them.",
+        ],
+        bullets: [
+          "Media: bring your clips, music, and images into the project.",
+          "Cut or Edit: arrange and trim clips on the timeline. The Cut page is faster for simple videos; the Edit page gives a traditional timeline with more control.",
+          "Color: correct exposure and white balance, then add a look.",
+          "Fairlight: clean up and balance audio.",
+          "Deliver: export the finished video.",
+          "Fusion (visual effects) can wait until you are comfortable with the rest.",
+        ],
+      },
+      {
+        heading: "Step by step: your first edit",
+        paragraphs: [
+          "This walk-through makes a simple 1080p video for YouTube. Keyboard shortcuts are for Windows; on a Mac, use Cmd instead of Ctrl.",
+        ],
+        bullets: [
+          "Create a project: open Resolve, click New Project in the Project Manager, and name it.",
+          "Set the timeline: open File, Project Settings, and set the timeline resolution to 1920 x 1080 and the frame rate to match your footage (often 30 or 25 fps). For a vertical video, set 1080 x 1920.",
+          "Import: on the Media page, drag your clips and music into the Media Pool.",
+          "Build the rough cut: on the Edit page, drag clips onto the timeline in story order.",
+          "Trim: press B for the Blade tool to cut a clip, press A to go back to selection, select the unwanted piece, and press Delete. Ctrl+Z undoes a mistake.",
+          "Add titles: open the Effects library, choose Titles, and drag a Text title above your clip on the timeline. Edit the words in the Inspector.",
+          "Fix colour: on the Color page, use the primary wheels to brighten a dark shot or warm a blue one. Small changes look best.",
+          "Balance audio: on the Edit page or Fairlight, lower the music so speech stays clearly louder, and keep the meter out of the red so nothing clips.",
+          "Export: on the Deliver page, choose the YouTube preset (or H.264 at 1080p), pick a file name and location, click Add to Render Queue, then Render All.",
+        ],
+      },
+      {
+        heading: "Five beginner mistakes to avoid",
+        paragraphs: [],
+        bullets: [
+          "Mixing frame rates without setting the project first, which can make motion look jerky. Set the timeline frame rate before you import.",
+          "Editing large 4K or phone HEVC files on a slow computer. Right-click the clips in the Media Pool and generate optimised media for smoother playback.",
+          "Forgetting where the project is saved. Resolve stores projects in its database; use File, Export Project to keep a backup copy.",
+          "Using music you have no licence for. Use your own, royalty-free libraries whose terms you have read, or the client's licensed tracks.",
+          "Rendering before checking the whole timeline once at full screen with the sound on.",
+        ],
+      },
+    ],
+    faqs: [
+      { question: "Is DaVinci Resolve really free?", answer: "Yes. The free version has no watermark and no time limit, and supports most 8-bit video up to Ultra HD 3840 x 2160 at 60 fps. The paid Studio version (US$295 one-time, checked 2 October 2026) adds AI tools, more effects, and higher formats." },
+      { question: "Is DaVinci Resolve good for beginners?", answer: "Yes, if your computer meets the requirements. Start on the Cut or Edit page and ignore the advanced pages until you are comfortable. It takes longer to learn than phone apps but grows with you." },
+      { question: "DaVinci Resolve or CapCut: which should I use?", answer: "CapCut is quicker for short vertical videos on a phone. DaVinci Resolve is better for longer videos, colour correction, and audio work on a computer, and its free version is a professional tool." },
+      { question: "What computer do I need for DaVinci Resolve?", answer: "For version 21.1: Windows 10 or later with 16 GB of memory and a 4 GB GPU, an Apple silicon Mac on macOS 15 or later with 8 GB, or Rocky Linux 8.6 with 32 GB and a 4 GB discrete GPU. More memory makes editing smoother." },
+      { question: "How do I export a video for YouTube in DaVinci Resolve?", answer: "On the Deliver page, choose the YouTube preset or H.264 at your timeline resolution, name the file, click Add to Render Queue, and then Render All." },
+    ],
+    sources: [
+      { label: "Blackmagic Design: DaVinci Resolve (free and Studio)", url: "https://www.blackmagicdesign.com/products/davinciresolve" },
+      { label: "Blackmagic Design: DaVinci Resolve training", url: "https://www.blackmagicdesign.com/products/davinciresolve/training" },
+    ],
+    related: ["video-editing/how-to-edit-a-video", "video-editing/best-video-editing-apps", "video-editing/capcut-tutorial", "video-editing/how-to-add-subtitles"],
+    next: { href: "/learn/video-editing/how-to-edit-a-video", label: "How to edit a video" },
+  },
 ];

@@ -580,4 +580,16 @@ export const seoMeta: Record<string, SeoMeta> = {
     title: "30 Fiverr Gig Ideas for Beginners (With Example Titles)",
     description: "30 beginner-friendly Fiverr gig ideas in writing, design, video, data and languages, each with an example title, plus how to price after the 20% fee.",
   },
+  "/learn/seo/ai-search-optimization": {
+    title: "SEO for AI Search: AI Overviews, AI Mode & Chatbots",
+    description: "What Google says about AI Overviews and AI Mode, what you can skip (llms.txt, chunking), how to get cited by AI assistants, and how to measure it.",
+  },
+  "/learn/seo/free-seo-course": {
+    title: "Free SEO Course for Beginners: 12 Lessons (2026)",
+    description: "A free 12-lesson SEO course: lesson order, practice tasks and self-checks, using free Google tools, plus a final project checklist and an AI search bonus.",
+  },
+  "/learn/video-editing/davinci-resolve-for-beginners": {
+    title: "DaVinci Resolve for Beginners: Free Pro Video Editing",
+    description: "Edit your first video in DaVinci Resolve's free version: free vs Studio (US$295), system requirements, the pages, a step-by-step edit, and export.",
+  },
 };
