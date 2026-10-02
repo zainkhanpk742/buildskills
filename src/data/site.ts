@@ -11,6 +11,7 @@ import { thinHubGuides } from "@/data/thinHubGuides";
 import { addedFaqs } from "@/data/guideFaqs";
 import { addedFaqsMore } from "@/data/guideFaqsMore";
 import { extraRelated } from "@/data/relatedLinks";
+import { guideDepth } from "@/data/guideDepth";
 
 export const nav = [
   { label: "Learn", href: "/learn" },
@@ -197,6 +198,8 @@ export const areas: Area[] = [
 
 export type Guide = {
   checkedDate?: string;
+  /** Page heading when it should differ from `title` (cards and links keep `title`). */
+  h1?: string;
   difficulty?: "Beginner" | "Intermediate" | "Practical";
   estimatedMinutes?: number;
   faqs?: { question: string; answer: string }[];
@@ -481,6 +484,19 @@ export const guides: Guide[] = [
   ...earningGuides,
   ...thinHubGuides,
 ].map((guide) => {
+  const depth = guideDepth[guide.slug];
+  if (depth) {
+    guide = {
+      ...guide,
+      h1: depth.h1 ?? guide.h1,
+      checkedDate: depth.checkedDate ?? guide.checkedDate,
+      // Added sections change the length, so let the reading time be recalculated.
+      estimatedMinutes: depth.sections?.length ? undefined : guide.estimatedMinutes,
+      sections: [...(guide.sections ?? []), ...(depth.sections ?? [])],
+      faqs: [...(guide.faqs ?? []), ...(depth.faqs ?? [])],
+      sources: [...(guide.sources ?? []), ...(depth.sources ?? [])],
+    };
+  }
   const extra = extraRelated[guide.slug];
   if (extra) {
     const related = [...new Set([...(guide.related ?? []), ...extra])].filter((slug) => slug !== guide.slug);

@@ -138,7 +138,7 @@ export const earningGuides: Guide[] = [
         heading: "Fiverr for beginners",
         paragraphs: [
           "Fiverr is a marketplace where a buyer orders a packaged service, called a gig. Fiverr for beginners works when the gig says exactly what the buyer receives. A title such as \"I will do anything\" does not. A title such as \"I will edit a 60-second video with captions\" does.",
-          "Create the account on Fiverr's own site. Read the current seller terms, fee, and payout methods there. The fee and the list of payout countries change, so this guide does not freeze a percentage. Your order page is the place that shows what Fiverr keeps and what you receive.",
+          "Create the account on Fiverr's own site. Read the current seller terms, fee, and payout methods there. On 2 October 2026 Fiverr kept 20% of each order (the full breakdown is further down this page). Fees and payout countries can change, so your order page is the final word on what Fiverr keeps and what you receive.",
         ],
       },
       {
@@ -158,7 +158,7 @@ export const earningGuides: Guide[] = [
     ],
     faqs: [
       { question: "How do beginners get orders on Fiverr?", answer: "Publish one specific gig, add real samples, and write a description a buyer can skim. The first orders usually come from a clear offer, not from a long list of skills." },
-      { question: "Does Fiverr charge sellers?", answer: "Yes. Fiverr keeps a service fee. The current amount is on Fiverr's official fee explanation and on each order. Do not trust a screenshot from a blog." },
+      { question: "Does Fiverr charge sellers?", answer: "Yes. On 2 October 2026 Fiverr kept 20% of each order, including extras and tips. Each order page shows the exact amount. Do not trust an old screenshot from a blog." },
       { question: "Can I use Fiverr from any country?", answer: "Many countries can sell. Payout methods differ. Confirm your country on Fiverr before you build a catalog that depends on a payout you cannot receive." },
       { question: "Should I offer a very cheap gig?", answer: "A low price can attract the wrong brief. Price the smallest package you can finish well, and say what is included." },
       { question: "Is it allowed to ask friends for fake reviews?", answer: "No. Fake reviews break marketplace rules and can close the account. Use real samples instead." },
@@ -183,7 +183,7 @@ export const earningGuides: Guide[] = [
         heading: "Upwork profile tips",
         paragraphs: [
           "Upwork connects freelancers with clients who post jobs or invite people. Upwork for beginners starts with a profile a stranger can trust: a real photo, a title that names the work, an overview in plain language, and proof. Upwork profile tips that matter are specific. \"Hard worker\" is not proof. A link, a sample, or a short description of a finished job is.",
-          "Upwork charges a service fee. The rate and any exceptions are on Upwork's pricing pages and can change. Read them before you set a rate, because the number you bid is not the number you keep.",
+          "Upwork charges a service fee of 0% to 15% per contract (checked 2 October 2026; details below). The exact rate shows before you send a proposal and can change between contracts, so read it before you set a rate: the number you bid is not the number you keep.",
         ],
       },
       {
@@ -197,7 +197,7 @@ export const earningGuides: Guide[] = [
     faqs: [
       { question: "How do I create an Upwork profile as a beginner?", answer: "Use your real name, a clear title, an overview that states the offer, and at least one sample. Complete the identity steps Upwork asks for. Do not buy a profile." },
       { question: "What is a good Upwork proposal?", answer: "It answers the job post in the first lines, names a first step, and points to relevant proof. A copied introduction is easy to ignore." },
-      { question: "How much does Upwork charge?", answer: "Upwork keeps a service fee. The current percentage is on Upwork's official pricing page. Check it before you quote, because your take-home pay is the bid minus that fee." },
+      { question: "How much does Upwork charge?", answer: "A variable service fee of 0% to 15% per contract, shown before you submit a proposal (checked 2 October 2026). Your take-home pay is the bid minus that fee and any payout-method charges." },
       { question: "Why was my Upwork account not approved?", answer: "Upwork does not accept every application. A thin profile, a mismatch with their current rules, or an unsupported setup can be the reason. The decision email and the help center are the source, not a forum rumor." },
       { question: "Can I get paid in my country?", answer: "Often yes, through the methods Upwork lists for that country. PayPal and Payoneer are not both available everywhere. Open the payout settings before you accept a contract." },
       { question: "Should beginners bid on every job?", answer: "No. Bid where your sample matches the request. A few relevant proposals are stronger than dozens of identical ones." },
