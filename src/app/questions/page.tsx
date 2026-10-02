@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { QuestionExplorer } from "@/components/home/Interactive";
 import { Interior } from "@/components/library";
-import { areas, guidePath, guidesInArea } from "@/data/site";
+import { areas, featuredQuestions, guideLinks, guidePath, guidesInArea } from "@/data/site";
 import { pageMeta } from "@/lib/meta";
 
 export const metadata: Metadata = pageMeta({
@@ -18,7 +18,7 @@ export default function Page() {
       title="Start with the problem in front of you."
       lede="Search engines are full of fragments. These are complete starting points: a direct answer, the field it belongs to, and where to go next."
     >
-      <QuestionExplorer />
+      <QuestionExplorer questions={guideLinks(featuredQuestions)} />
       <section className="stack-12" aria-labelledby="browse-questions-title">
         <h2 id="browse-questions-title" className="serif" style={{ fontSize: "1.875rem", margin: 0 }}>Browse questions by topic</h2>
         <div className="stack-8">
