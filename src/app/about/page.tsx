@@ -25,6 +25,10 @@ export default function Page() {
           The site is published by the BuildSkills Editorial Team. It is an independent educational project. It is not YouTube, Google, TikTok, Meta, Canva, Fiverr, or Upwork. The contact email is{" "}
           <a href="mailto:salimpk742@gmail.com">salimpk742@gmail.com</a>.
         </p>
+        <p>
+          BuildSkills also offers paid website, software, and digital marketing work, kept separate from the free guides. See{" "}
+          <Link href="/services">Services</Link>.
+        </p>
         <h2>Mission</h2>
         <p>
           The job of the site is to give a beginner one accurate next step, with the official source linked when a rule or a price is stated. Pages are written for every country. When a program is missing in some places, including Creator Rewards in Pakistan, the page says so.

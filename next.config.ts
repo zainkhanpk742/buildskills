@@ -6,7 +6,6 @@ const nextConfig: NextConfig = {
   outputFileTracingRoot: process.cwd(),
   async redirects() {
     return [
-      { source: "/services", destination: "/learn", permanent: true },
       { source: "/services/seo", destination: "/learn/seo", permanent: true },
       { source: "/services/mobile-apps", destination: "/learn/mobile-apps", permanent: true },
       { source: "/services/software", destination: "/learn/business-software", permanent: true },

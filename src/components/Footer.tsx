@@ -29,6 +29,7 @@ const columns = [
     links: [
       ["Projects", "/projects"],
       ["About", "/about"],
+      ["Services", "/services"],
       ["Editorial policy", "/editorial-policy"],
       ["Contact", "/contact"],
       ["Privacy", "/privacy-policy"],
