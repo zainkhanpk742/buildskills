@@ -12,6 +12,10 @@ import { addedFaqs } from "@/data/guideFaqs";
 import { addedFaqsMore } from "@/data/guideFaqsMore";
 import { extraRelated } from "@/data/relatedLinks";
 import { guideDepth } from "@/data/guideDepth";
+import { rankHits } from "@/lib/searchFilter";
+import { guidePath } from "@/lib/paths";
+
+export { guidePath, hubGuides } from "@/lib/paths";
 
 export const nav = [
   { label: "Learn", href: "/learn" },
@@ -732,7 +736,6 @@ export function searchHits(): SearchHit[] {
 }
 
 export function filterHits(query: string): SearchHit[] {
-  const all = searchHits();
   const q = query.trim().toLowerCase();
   if (!q) {
     return featuredQuestions.map((slug) => {
@@ -746,38 +749,7 @@ export function filterHits(query: string): SearchHit[] {
       };
     });
   }
-  const terms = q.split(/\s+/).filter(Boolean);
-  return all
-    .map((hit) => {
-      const score = terms.reduce((count, term) => count + (hit.hay.includes(term) ? 1 : 0), 0);
-      return { hit, score };
-    })
-    .filter(({ score }) => score > 0 && score / terms.length >= 0.6)
-    .sort((a, b) => b.score - a.score)
-    .slice(0, 8)
-    .map(({ hit }) => hit);
-}
-
-/**
- * Learning areas whose hub URL shows their main guide. The hub URL is the one
- * public address for that guide: the guide's own deeper URL permanently
- * redirects to the hub (see next.config.ts) and is left out of the sitemap.
- */
-export const hubGuides: Record<string, string> = {
-  "chatgpt-prompts": "chatgpt-prompts/useful-chatgpt-prompts",
-  "high-paid-skills": "high-paid-skills/highest-paid-skills",
-  "high-demand-skills-usa": "high-demand-skills-usa/high-demand-skills-in-the-usa",
-  "high-demand-skills-india": "high-demand-skills-india/high-demand-skills-in-india",
-};
-
-const hubForGuide: Record<string, string> = Object.fromEntries(
-  Object.entries(hubGuides).map(([hub, guideSlug]) => [guideSlug, hub]),
-);
-
-/** Public path of a guide (the hub address for guides shown on a hub). */
-export function guidePath(slug: string): string {
-  const hub = hubForGuide[slug];
-  return hub ? `/learn/${hub}` : `/learn/${slug}`;
+  return rankHits(searchHits(), q);
 }
 
 export function guideBySlug(slug: string) {
@@ -791,3 +763,21 @@ export function areaBySlug(slug: string) {
 export function guidesInArea(title: string) {
   return guides.filter((guide) => guide.area === title);
 }
+
+/** Small, serialisable guide summaries for client components. */
+export function guideLinks(slugs: readonly string[]) {
+  return slugs.flatMap((slug) => {
+    const guide = guideBySlug(slug);
+    return guide
+      ? [{ slug: guide.slug, href: guidePath(guide.slug), title: guide.title, summary: guide.summary, area: guide.area }]
+      : [];
+  });
+}
+
+/** The four example questions shown under the homepage search box. */
+export const searchPrompts = [
+  "seo/how-to-get-website-on-google",
+  "websites/how-to-build-a-website",
+  "ai-productivity/how-to-use-chatgpt",
+  "video-editing/how-to-edit-a-video",
+] as const;

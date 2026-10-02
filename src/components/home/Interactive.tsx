@@ -2,30 +2,51 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect, useId, useMemo, useState, type FormEvent } from "react";
-import { featuredQuestions, filterHits, guideBySlug, guidePath } from "@/data/site";
+import { useCallback, useEffect, useId, useMemo, useRef, useState, type FormEvent } from "react";
+import { rankHits, type SearchHit } from "@/lib/searchFilter";
 import { Arrow } from "@/components/ui";
 
-const prompts = [
-  "seo/how-to-get-website-on-google",
-  "websites/how-to-build-a-website",
-  "ai-productivity/how-to-use-chatgpt",
-  "video-editing/how-to-edit-a-video",
-] as const;
+export type GuideLink = { slug: string; href: string; title: string; summary: string; area: string };
 
-export function SearchIndex() {
+/**
+ * Homepage search. The guide library is not bundled into this component: the
+ * search data is fetched from /search-index.json the first time it is needed.
+ */
+export function SearchIndex({ chips }: { chips: GuideLink[] }) {
   const [query, setQuery] = useState("");
+  const [index, setIndex] = useState<SearchHit[] | null>(null);
+  const loading = useRef(false);
   const router = useRouter();
+  const listId = useId();
+
+  const loadIndex = useCallback(() => {
+    if (loading.current) return;
+    loading.current = true;
+    fetch("/search-index.json")
+      .then((response) => (response.ok ? response.json() : []))
+      .then((hits: SearchHit[]) => setIndex(hits))
+      .catch(() => {
+        loading.current = false;
+      });
+  }, []);
 
   // Read ?q= in the browser so the homepage itself can be prerendered as a
   // static page (search links such as /?q=seo still prefill the box).
   useEffect(() => {
     const q = new URLSearchParams(window.location.search).get("q");
-    if (q) setQuery(q);
-  }, []);
-  const listId = useId();
-  const results = useMemo(() => (query.trim() ? filterHits(query) : []), [query]);
-  const label = query.trim() ? `${results.length} ${results.length === 1 ? "match" : "matches"}` : "Try a question";
+    if (q) {
+      setQuery(q);
+      loadIndex();
+    }
+  }, [loadIndex]);
+
+  const results = useMemo(() => (query.trim() && index ? rankHits(index, query) : []), [query, index]);
+  const pending = Boolean(query.trim()) && index === null;
+  const label = query.trim()
+    ? pending
+      ? "Searching"
+      : `${results.length} ${results.length === 1 ? "match" : "matches"}`
+    : "Try a question";
 
   function onSubmit(event: FormEvent) {
     event.preventDefault();
@@ -43,7 +64,11 @@ export function SearchIndex() {
             name="q"
             type="search"
             value={query}
-            onChange={(event) => setQuery(event.target.value)}
+            onFocus={loadIndex}
+            onChange={(event) => {
+              loadIndex();
+              setQuery(event.target.value);
+            }}
             placeholder="A question, a skill, or a problem"
             autoComplete="off"
             aria-controls={query.trim() && results.length > 0 ? listId : undefined}
@@ -58,7 +83,7 @@ export function SearchIndex() {
         {label}
       </p>
       {query.trim() ? (
-        results.length === 0 ? (
+        pending ? null : results.length === 0 ? (
           <div className="finder-empty">
             <p>Nothing in the library matches that yet. Try a topic such as AI, websites, video editing, or freelancing.</p>
             <Link href="/contact" className="text-link">
@@ -80,24 +105,18 @@ export function SearchIndex() {
         )
       ) : (
         <ul className="finder-chips">
-          {prompts.map((slug) => {
-            const guide = guideBySlug(slug);
-            if (!guide) return null;
-            return (
-              <li key={slug}>
-                <Link href={guidePath(guide.slug)}>{guide.title}</Link>
-              </li>
-            );
-          })}
+          {chips.map((guide) => (
+            <li key={guide.slug}>
+              <Link href={guide.href}>{guide.title}</Link>
+            </li>
+          ))}
         </ul>
       )}
     </div>
   );
 }
 
-const questions = featuredQuestions.map((slug) => guideBySlug(slug)!);
-
-export function QuestionExplorer() {
+export function QuestionExplorer({ questions }: { questions: GuideLink[] }) {
   const [active, setActive] = useState(questions[0]!.slug);
   const current = questions.find((item) => item.slug === active) ?? questions[0]!;
 
@@ -107,7 +126,7 @@ export function QuestionExplorer() {
         <p className="chip">{current.area}</p>
         <h2>{current.title}</h2>
         <p>{current.summary}</p>
-        <Link href={guidePath(current.slug)} className="text-link">
+        <Link href={current.href} className="text-link">
           Read the guide <Arrow />
         </Link>
       </div>

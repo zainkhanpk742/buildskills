@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ButtonLink, Kicker } from "@/components/ui";
 import { SearchIndex } from "@/components/home/Interactive";
+import { guideLinks, searchPrompts } from "@/data/site";
 import { AreaGrid, FinalCta, Journey, PathRail, PrincipleGrid, QuestionCards, ToolDiscovery } from "@/components/home/Sections";
 
 export function HomePage() {
@@ -30,7 +31,7 @@ export function HomePage() {
             </div>
             <p className="hero-trust">Free · Updated 2026 · Written for beginners worldwide</p>
             <p className="hero-search-hint">Have a question in mind? Search the guide library.</p>
-            <SearchIndex />
+            <SearchIndex chips={guideLinks(searchPrompts)} />
           </div>
           <div className="hero-side">
             <figure className="hero-side-image">
