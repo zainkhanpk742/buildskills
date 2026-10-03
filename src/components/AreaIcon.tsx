@@ -23,6 +23,10 @@ const icons: Record<string, string> = {
   "high-paid-skills": "M12 4.5v15M8 8.5c0-1.7 1.8-3 4-3s4 1.3 4 3-1.8 2.5-4 2.5-4 1.2-4 2.8 1.8 3 4 3 4-1.3 4-3",
   "high-demand-skills-usa": "M5 17.5V6.5M5 17.5h14M8.5 17.5v-4M12 17.5V8M15.5 17.5v-6",
   "high-demand-skills-india": "M12 4.5 14 9.2 19 9.6 15.2 12.8 16.4 17.8 12 15.2 7.6 17.8 8.8 12.8 5 9.6 10 9.2z",
+  // Country pages reuse existing icons: briefcase (freelancing), bar chart (USA), building (online business).
+  "high-demand-skills-pakistan": "M4 8.5h16v10H4zM9 8.5V6.8A1.8 1.8 0 0 1 10.8 5h2.4A1.8 1.8 0 0 1 15 6.8v1.7",
+  "high-demand-skills-uk": "M5 17.5V6.5M5 17.5h14M8.5 17.5v-4M12 17.5V8M15.5 17.5v-6",
+  "high-demand-skills-uae": "M4 9.5 12 4l8 5.5V20H4zM10 20v-6h4v6",
 };
 
 export function AreaIcon({ slug }: { slug: string }) {
