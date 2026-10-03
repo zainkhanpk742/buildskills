@@ -3,10 +3,8 @@ import type { Area, Guide } from "@/data/site";
 const checked = "2026-10-03";
 
 /**
- * Country pages in the same format as the USA and India pages. They are full
- * learning areas (own hub URL, sitemap entry, search entry) but `unlisted`, so
- * the homepage and library area grids and counts stay unchanged. They are
- * reached from the other country pages and the high-paid skills hub.
+ * Country pages in the same format as the USA and India pages: full learning
+ * areas with their own hub URL, listed right after India in the area grids.
  */
 export const pakistanSkillsArea: Area = {
   slug: "high-demand-skills-pakistan",
@@ -15,7 +13,6 @@ export const pakistanSkillsArea: Area = {
   summary: "Ten skills that pay well in Pakistan, with official labour data, IT export figures, and sourced pay in rupees.",
   description:
     "High-paying skills in Pakistan for 2026. IT and IT-enabled services exports reached a record US$4.6 billion in FY2025-26, and most of that work is software, data, design, and digital services.",
-  unlisted: true,
 };
 
 export const ukSkillsArea: Area = {
@@ -25,7 +22,6 @@ export const ukSkillsArea: Area = {
   summary: "Ten skills UK employers hire for, with the Home Office going rates that are based on official ONS pay data.",
   description:
     "In-demand skills in the UK for 2026, with going rates in pounds from the Home Office occupation list (updated 3 August 2026) and the ONS median wage for comparison.",
-  unlisted: true,
 };
 
 export const uaeSkillsArea: Area = {
@@ -35,7 +31,6 @@ export const uaeSkillsArea: Area = {
   summary: "Ten skills UAE employers pay well for, with 2026 monthly salary ranges in dirhams and the official visa salary levels.",
   description:
     "Highest-paying skills in the UAE for 2026, with monthly salary ranges in AED from a 2026 recruiter salary guide and the official Golden and Green visa salary thresholds.",
-  unlisted: true,
 };
 
 const pkPayNote =
