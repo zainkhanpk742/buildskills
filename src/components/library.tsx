@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { areaBySlug, areas, guideBySlug, guidePath, guidesInArea, pathSteps } from "@/data/site";
 import { hubContent } from "@/data/hubContent";
 import { Kicker } from "@/components/ui";
+import { socialUrls } from "@/lib/social";
 
 export function Interior({
   kicker,
@@ -76,6 +77,7 @@ export function GuideView({ slug }: { slug: string }) {
         "@type": "Organization",
         name: "BuildSkills",
         url: "https://buildskills.com.pk",
+        sameAs: socialUrls,
         logo: {
           "@type": "ImageObject",
           url: "https://buildskills.com.pk/apple-touch-icon.png",

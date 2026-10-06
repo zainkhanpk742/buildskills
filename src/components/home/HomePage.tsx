@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { socialUrls } from "@/lib/social";
 import { ButtonLink, Kicker } from "@/components/ui";
 import { SearchIndex } from "@/components/home/Interactive";
 import { guideLinks, searchPrompts } from "@/data/site";
@@ -81,6 +82,7 @@ export function HomePage() {
                 name: "BuildSkills",
                 url: "https://buildskills.com.pk/",
                 email: "salimpk742@gmail.com",
+                sameAs: socialUrls,
                 logo: {
                   "@type": "ImageObject",
                   url: "https://buildskills.com.pk/apple-touch-icon.png",
