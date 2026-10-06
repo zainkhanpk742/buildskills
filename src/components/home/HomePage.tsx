@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { socialUrls } from "@/lib/social";
+import { SocialIcon } from "@/components/SocialIcon";
+import { socialProfiles, socialUrls } from "@/lib/social";
 import { ButtonLink, Kicker } from "@/components/ui";
 import { SearchIndex } from "@/components/home/Interactive";
 import { guideLinks, searchPrompts } from "@/data/site";
@@ -30,7 +31,17 @@ export function HomePage() {
                 Explore questions
               </ButtonLink>
             </div>
-            <p className="hero-trust">Free · Updated 2026 · Written for beginners worldwide</p>
+            <p className="hero-trust">
+              Free · Updated 2026 · Written for beginners worldwide ·{" "}
+              <span style={{ display: "inline-flex", alignItems: "center", gap: "0.45rem", verticalAlign: "middle" }}>
+                Follow us
+                {socialProfiles.map((profile) => (
+                  <a key={profile.url} href={profile.url} target="_blank" rel="noopener" aria-label={`BuildSkills on ${profile.label}`} title={profile.label} style={{ color: "inherit", display: "inline-flex" }}>
+                    <SocialIcon label={profile.label} size={15} />
+                  </a>
+                ))}
+              </span>
+            </p>
             <p className="hero-search-hint">Have a question in mind? Search the guide library.</p>
             <SearchIndex chips={guideLinks(searchPrompts)} />
           </div>
