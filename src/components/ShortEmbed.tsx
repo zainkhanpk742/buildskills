@@ -9,7 +9,7 @@ export function ShortEmbed({ video }: { video: GuideVideo }) {
   const frame = { width: "100%", maxWidth: "18rem", aspectRatio: "9 / 16", borderRadius: "0.75rem", overflow: "hidden", background: "#000" } as const;
   return (
     <section aria-labelledby="short-title" style={{ marginBottom: "2rem" }}>
-      <h2 id="short-title">Watch the 30-second version</h2>
+      <h2 id="short-title">Watch the quick video</h2>
       {playing ? (
         <div style={frame}>
           <iframe
