@@ -14,6 +14,25 @@ export default function Page() {
   return (
     <main id="content">
       <article className="container" style={{ maxWidth: "900px", padding: "70px 0" }}>
+        <nav aria-label="Breadcrumb" className="article-breadcrumb">
+          <Link href="/learn">Learn</Link>
+          <span aria-hidden="true"> / </span>
+          <Link href="/learn/seo">SEO</Link>
+        </nav>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Learn", item: "https://buildskills.com.pk/learn" },
+                { "@type": "ListItem", position: 2, name: "SEO", item: "https://buildskills.com.pk/learn/seo" },
+                { "@type": "ListItem", position: 3, name: "What makes a good backlink?", item: "https://buildskills.com.pk/learn/seo/what-are-good-backlinks" },
+              ],
+            }),
+          }}
+        />
         <p className="eyebrow">LEARN · SEO</p>
         <h1 style={{ fontSize: "clamp(42px,6vw,68px)", letterSpacing: "-.05em", lineHeight: 1.03, margin: "0 0 18px" }}>
           What makes a good backlink?

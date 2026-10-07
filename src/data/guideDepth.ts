@@ -1,4 +1,5 @@
 import type { Guide } from "@/data/site";
+import { thinGuideDepth } from "@/data/thinGuideDepth";
 
 type GuideSection = NonNullable<Guide["sections"]>[number];
 type Faq = NonNullable<Guide["faqs"]>[number];
@@ -449,3 +450,8 @@ export const guideDepth: Record<string, GuideDepth> = {
   "instagram/instagram-growth": { h1: "How to grow on Instagram" },
   "websites/how-to-build-a-website": { h1: "How to build a website: free and paid options" },
 };
+
+for (const [slug, extra] of Object.entries(thinGuideDepth)) {
+  const base = guideDepth[slug];
+  guideDepth[slug] = { ...base, ...extra, h1: base?.h1 ?? extra.h1 };
+}
