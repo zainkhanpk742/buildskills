@@ -68,7 +68,7 @@ export function GuideView({ slug }: { slug: string }) {
       articleSection: guide.area,
       keywords: guide.topics,
       isAccessibleForFree: true,
-      image: "https://buildskills.com.pk/og.png",
+      image: "https://buildskills.com.pk/og-v2.png",
       datePublished: guide.checkedDate ?? "2026-09-30",
       dateModified: guide.checkedDate ?? "2026-09-30",
       author: {
