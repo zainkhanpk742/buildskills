@@ -38,12 +38,13 @@ export const metadata: Metadata = {
     url: "https://buildskills.com.pk",
     siteName: "BuildSkills",
     type: "website",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "BuildSkills" }],
+    images: [{ url: "/og-v2.png", width: 1200, height: 630, alt: "BuildSkills: Learn digital skills free. SEO, websites, mobile apps, AI and freelancing guides at buildskills.com.pk" }],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "BuildSkills — Practical digital skills for everyone",
     description: "Learn practical digital skills, explore useful tools, and follow clear guides.",
+    images: [{ url: "/og-v2.png", width: 1200, height: 630, alt: "BuildSkills: Learn digital skills free. SEO, websites, mobile apps, AI and freelancing guides at buildskills.com.pk" }],
   },
   robots: { index: true, follow: true },
   other: {

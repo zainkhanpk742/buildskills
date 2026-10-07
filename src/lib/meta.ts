@@ -59,12 +59,13 @@ export function pageMeta(options: {
       url,
       siteName: "BuildSkills",
       type: options.type ?? "website",
-      images: [{ url: "/og.png", width: 1200, height: 630, alt: "BuildSkills" }],
+      images: [{ url: "/og-v2.png", width: 1200, height: 630, alt: "BuildSkills: Learn digital skills free. SEO, websites, mobile apps, AI and freelancing guides at buildskills.com.pk" }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      images: [{ url: "/og-v2.png", width: 1200, height: 630, alt: "BuildSkills: Learn digital skills free. SEO, websites, mobile apps, AI and freelancing guides at buildskills.com.pk" }],
     },
   };
 }
