@@ -4,7 +4,7 @@
  * sitemap's lastmod stays truthful. Guides use their own `checkedDate`.
  */
 export const pageDates: Record<string, string> = {
-  "/": "2026-10-01",
+  "/": "2026-10-07",
   "/learn": "2026-09-30",
   "/questions": "2026-09-30",
   "/tools": "2026-09-30",
@@ -17,7 +17,7 @@ export const pageDates: Record<string, string> = {
   "/terms": "2026-09-30",
   "/disclaimer": "2026-09-30",
   "/editorial-policy": "2026-09-30",
-  "/learn/seo/what-are-good-backlinks": "2026-09-30",
+  "/learn/seo/what-are-good-backlinks": "2026-10-07",
   "/learn/youtube": "2026-10-02",
   "/learn/x-twitter": "2026-09-30",
 };

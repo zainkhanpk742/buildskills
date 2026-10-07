@@ -8,6 +8,16 @@ function latest(dates: string[]): string {
   return [...dates].sort().pop() ?? defaultHubDate;
 }
 
+const LEGAL = new Set(["/privacy-policy", "/terms", "/disclaimer", "/editorial-policy", "/contact"]);
+
+function priorityFor(path: string): number {
+  if (path === "/") return 1;
+  if (LEGAL.has(path)) return 0.3;
+  if (path === "/learn" || /^\/learn\/[^/]+$/.test(path)) return 0.8;
+  if (path.startsWith("/learn/")) return 0.7;
+  return 0.5;
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries = new Map<string, string>();
 
@@ -31,5 +41,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [...entries].map(([path, lastModified]) => ({
     url: path === "/" ? SITE : `${SITE}${path}`,
     lastModified,
+    priority: priorityFor(path),
   }));
 }

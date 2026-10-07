@@ -26,6 +26,22 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
+        // Build assets and icons are files, not pages: keep them crawlable
+        // (CSS/JS/fonts are needed for rendering) but out of the index.
+        source: "/_next/static/:path*",
+        headers: [{ key: "X-Robots-Tag", value: "noindex" }],
+      },
+      {
+        source: "/:file(favicon\\.ico|icon\\.png|icon\\.svg|apple-icon\\.png)",
+        headers: [{ key: "X-Robots-Tag", value: "noindex" }],
+      },
+      {
+        // Search-style URLs such as /?q=... are not separate pages.
+        source: "/:path*",
+        has: [{ type: "query", key: "q" }],
+        headers: [{ key: "X-Robots-Tag", value: "noindex, follow" }],
+      },
+      {
         // The *.vercel.app copies of the site must not be indexed; the custom
         // domain is the only public address. Canonicals already point there.
         source: "/:path*",
