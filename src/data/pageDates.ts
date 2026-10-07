@@ -20,6 +20,9 @@ export const pageDates: Record<string, string> = {
   "/learn/seo/what-are-good-backlinks": "2026-10-07",
   "/learn/youtube": "2026-10-02",
   "/learn/x-twitter": "2026-09-30",
+  "/learn/photo-editing": "2026-10-07",
+  "/learn/instagram": "2026-10-07",
+  "/learn/linkedin": "2026-10-07",
 };
 
 /** Fallback for guides that do not set `checkedDate` (their last edit). */

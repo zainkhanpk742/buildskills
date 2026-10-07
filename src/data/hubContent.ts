@@ -1,4 +1,61 @@
 export const hubContent: Record<string, { paragraphs: string[]; steps: string[]; faqs: { question: string; answer: string }[] }> = {
+  "photo-editing": {
+    paragraphs: [
+      "This area is for beginners who want photos and simple graphics that look clean: students, small shop owners posting products, and new creators making thumbnails. You do not need expensive software. The skills that matter most, such as cropping, fixing light and colour, and exporting the right file, work the same in any app.",
+      "The guides go from basics to tools to a real project. Learn the editing steps first, then pick an app that fits your device, then practise on a thumbnail or a Canva design you can actually use.",
+    ],
+    steps: [
+      "Step 1: How to edit photos: crop, straighten, fix light and colour, in that order.",
+      "Step 2: Best photo editing apps: choose a free or paid app for your phone or computer.",
+      "Step 3: Canva tutorial: turn edited photos into posts, banners and simple designs.",
+      "Step 4: How to make a thumbnail: put it all together in one project people will click.",
+    ],
+    faqs: [
+      { question: "Which file format should I save my photo in?", answer: "For photos, JPEG or WebP keep files small; for graphics with text, sharp edges or transparency, PNG is usually better. MDN's image format guide (checked 7 October 2026) explains the trade-offs between these formats." },
+      { question: "Do I need Photoshop to start?", answer: "No. The basic steps of cropping, exposure, colour and export are available in free phone and web editors. Learn the steps first; change tools later if you need more control." },
+      { question: "Can I use any photo I find online?", answer: "Not safely. Most images online are protected by copyright. Use your own photos, images you have permission to use, or a library whose licence allows your use, and check that licence." },
+      { question: "Why does my photo look different on another phone?", answer: "Screens show brightness and colour differently. Avoid extreme edits, check the photo on a second device, and keep a copy of the original so you can redo it." },
+    ],
+  },
+  instagram: {
+    paragraphs: [
+      "This area is for people who want to use Instagram for a business, a side project or a creator account, not just for personal posts. It covers setting up the right account type, planning content, making Reels, growing, and the honest picture on earning money.",
+      "Instagram's help centre says a professional account (business or creator) adds a professional dashboard with insights and tools for ads and messages, and that switching a private account to professional makes it public (checked 7 October 2026). That is why setup comes first in the path below.",
+    ],
+    steps: [
+      "Step 1: Set up Instagram for business: choose Business or Creator and complete the profile.",
+      "Step 2: Instagram content strategy: pick your content pillars and a posting rhythm.",
+      "Step 3: Instagram Reels: make short videos that reach people who don't follow you yet.",
+      "Step 4: Instagram growth: use insights to keep what works and drop what doesn't.",
+      "Step 5: Instagram monetization: understand the official earning options and their limits.",
+    ],
+    faqs: [
+      { question: "Should I choose a Business or Creator account?", answer: "Instagram describes Business accounts as best for retailers, local businesses, brands and service providers, and Creator accounts as best for public figures, content producers, artists and influencers. You can switch between them at any time (Instagram Help, checked 7 October 2026)." },
+      { question: "Will switching to a professional account make my profile public?", answer: "Yes. Instagram says a private account becomes public when you switch, and all pending follow requests are accepted automatically (checked 7 October 2026)." },
+      { question: "How long should my Reels be?", answer: "Instagram's help centre says reels can add up to 20 minutes, but reels over 3 minutes will not be recommended to new audiences (checked 7 October 2026). For reach, stay at 3 minutes or less." },
+      { question: "Is buying followers a good way to start?", answer: "No. Bought followers do not watch or buy, so your insights stop showing what real people like. Grow slowly with useful posts instead." },
+    ],
+  },
+  linkedin: {
+    paragraphs: [
+      "This area is for students, job seekers, freelancers and small business owners who want LinkedIn to bring real opportunities: interviews, clients or customers. It is not about posting every day; it is about a strong profile, a clear topic and steady, useful activity.",
+      "The path starts with your profile, because everything else (posts, job applications and client messages) sends people to it. Then it splits: job seekers use the job search guide, freelancers the client guide, and businesses the Page guide. Analytics comes last, to see what is working.",
+    ],
+    steps: [
+      "Step 1: How to build a LinkedIn profile: photo, headline, About, experience and Featured work.",
+      "Step 2: LinkedIn content strategy: one professional topic and a weekly posting rhythm.",
+      "Step 3a: LinkedIn job search: Open to Work, job alerts and a weekly routine.",
+      "Step 3b: Get clients on LinkedIn: a client-ready profile and respectful outreach.",
+      "Step 3c: LinkedIn Page for business: create and run your company's Page.",
+      "Step 4: LinkedIn analytics: read your numbers and decide what to post next.",
+    ],
+    faqs: [
+      { question: "Is a LinkedIn Page free?", answer: "Yes. LinkedIn says you can create a Page for free, but you need a personal LinkedIn account first, and Pages can be created on desktop or the iOS app, not on Android (LinkedIn Help, checked 7 October 2026)." },
+      { question: "Will my employer see that I'm Open to Work?", answer: "You choose who sees it: all members, recruiters only, or only you. LinkedIn says it takes steps to hide it from recruiters at your current company but cannot guarantee complete privacy (checked 7 October 2026)." },
+      { question: "How many job alerts can I set?", answer: "LinkedIn's help centre says a member can have up to 20 job alerts at once, sent daily or weekly by email, notification or both (checked 7 October 2026)." },
+      { question: "What files can I add to my profile or posts?", answer: "LinkedIn supports images such as JPEG and PNG, documents such as PDF and PPTX, and videos such as MP4 and MOV, with a 100 MB file limit (LinkedIn Help, checked 7 October 2026)." },
+    ],
+  },
   facebook: {
     paragraphs: [
       "People searching this page usually want two things: how to grow a Facebook Page, and how to get monetized on Facebook. Growth is the content you can keep publishing. Monetization, in 2026, is a separate program called Facebook Content Monetization, and Meta says it is invite-only.",

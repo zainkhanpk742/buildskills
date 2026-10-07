@@ -281,3 +281,193 @@ export const thinGuideDepth: Record<string, GuideDepth> = {
     ],
   },
 };
+
+const igReels = {
+  label: "Instagram Help: Record a reel on Instagram (checked 7 Oct 2026)",
+  url: "https://help.instagram.com/2720958398006062/",
+};
+const liCreatePage = {
+  label: "LinkedIn Help: Create a LinkedIn Page (checked 7 Oct 2026)",
+  url: "https://www.linkedin.com/help/linkedin/answer/a543852",
+};
+const liOpenToWork = {
+  label: "LinkedIn Help: Let recruiters know you're Open to Work (checked 7 Oct 2026)",
+  url: "https://www.linkedin.com/help/linkedin/answer/a507508",
+};
+const liJobAlerts = {
+  label: "LinkedIn Help: Job alerts on LinkedIn (checked 7 Oct 2026)",
+  url: "https://www.linkedin.com/help/linkedin/answer/a511279",
+};
+const xPost = {
+  label: "X Help Center: How to post (checked 7 Oct 2026)",
+  url: "https://help.x.com/en/using-x/how-to-post",
+};
+
+export const thinGuideDepth2: Record<string, GuideDepth> = {
+  "linkedin/linkedin-page-for-business": {
+    checkedDate: OCT7,
+    sections: [
+      {
+        heading: "Create the Page: what LinkedIn asks for",
+        paragraphs: [
+          "LinkedIn's help centre says a Page is free, that you need a personal LinkedIn account to create one, and that Pages can be created on desktop or in the iOS app but not on Android (checked 7 October 2026). You choose a Page type (Company, Showcase page or Educational institution), fill in the Page identity and details, and tick a box confirming you have the right to act for the organisation.",
+          "A Page is different from your profile: a profile is you as a person, a Page is the business. Customers and job seekers look at the Page to check the business is real, so finish it before you invite anyone.",
+        ],
+        bullets: [
+          "Name and URL: the exact business name customers search for.",
+          "Logo and cover image: the same logo you use on your website and invoices.",
+          "Tagline and About: what you sell, to whom, and where you work.",
+          "Website and contact details that actually reach you.",
+        ],
+      },
+      {
+        heading: "Run the Page week to week",
+        paragraphs: [
+          "LinkedIn says Page admins can use the Activity tab to see and reply to comments, mentions, reposts and reactions. Check it after each post and reply the same day. A simple rhythm is one post a week about your work (a project, a tip from your field, or a team update) and one reply session where you answer every comment.",
+        ],
+      },
+    ],
+    sources: [liCreatePage, liPageActivity],
+  },
+  "linkedin/linkedin-job-search": {
+    checkedDate: OCT7,
+    sections: [
+      {
+        heading: "Use the two job tools LinkedIn gives you",
+        paragraphs: [
+          "Open to Work: LinkedIn explains that when you state the jobs and locations you want, it helps your profile appear when recruiters search. You can show this to all members (which adds the #OpenToWork photo frame and includes people at your current company), to recruiters only, or keep it visible only to you. LinkedIn says it takes steps to hide this from recruiters at your current employer but cannot guarantee complete privacy, so choose carefully if you are employed.",
+          "Job alerts: after a job search, switch the job alert toggle on to be told about new postings that match, by email, app notification or both, daily or weekly. LinkedIn's help page says you can have up to 20 alerts at once (checked 7 October 2026).",
+        ],
+      },
+      {
+        heading: "A weekly job-search routine",
+        paragraphs: [
+          "Set three alerts: your exact target title, a nearby title, and the same title in a second city or remote. Each week, apply to the best matches the day they appear, and for each application change the first lines of your profile About and your message so they match the job description.",
+        ],
+        bullets: [
+          "Keep a list of every application: company, role, date, and the person you contacted.",
+          "Follow the companies you apply to and comment usefully on their posts.",
+          "Ask one person a week for a short informational chat instead of a job.",
+        ],
+      },
+    ],
+    sources: [liOpenToWork, liJobAlerts],
+  },
+  "linkedin/get-clients": {
+    checkedDate: OCT7,
+    sections: [
+      {
+        heading: "Turn your profile into a client-ready page",
+        paragraphs: [
+          "Clients decide in seconds whether you can solve their problem. Write the headline for them, not for an employer: the service, who it is for, and the result. Use the Featured section for proof: LinkedIn accepts PDFs, slides, images and video up to 100 MB (checked 7 October 2026), so a two-page case study works well.",
+        ],
+        bullets: [
+          "Case study format: the client's problem, what you did, and the result they agreed you can share.",
+          "Ask past clients for a written recommendation that names the work you did.",
+          "Put a clear next step in your About: how to book a call or ask for a quote.",
+        ],
+      },
+      {
+        heading: "Outreach that does not feel like spam",
+        paragraphs: [
+          "Connect with people in one industry you understand. Before you message, read their recent posts and comment on one with a useful point. When you do message, mention something specific about their business, offer one small idea, and ask a simple question. Never paste the same pitch to everyone, and stop after one polite follow-up if there is no reply.",
+        ],
+      },
+    ],
+    sources: [liMedia, liFeed],
+  },
+  "x-twitter/x-content-strategy": {
+    checkedDate: OCT7,
+    sections: [
+      {
+        heading: "What a post on X can hold",
+        paragraphs: [
+          "X's help centre says a standard post can have up to 280 characters and up to 4 media items, such as photos, a GIF or a video. Longer posts, up to 4,000 characters, are an X Premium feature (checked 7 October 2026). That limit is why X rewards one clear idea per post, while threads and longer posts carry the detail.",
+        ],
+      },
+      {
+        heading: "Formats that suit X (and differ from Instagram or LinkedIn)",
+        paragraphs: [
+          "X moves fast and is text-first, so the strategy is conversation, not polished visuals. Plan posts around opinions you can back up, quick lessons, and replies to people in your field.",
+        ],
+        bullets: [
+          "One-line lesson: a single useful idea in plain words.",
+          "Thread: a step-by-step guide where each post makes sense on its own.",
+          "Reply strategy: thoughtful replies under bigger accounts in your topic, which is where many small accounts are first noticed.",
+          "Weekly recap: link to your best post of the week, or to your site, in a pinned post.",
+        ],
+      },
+    ],
+    sources: [xPost],
+  },
+  "instagram/instagram-reels": {
+    checkedDate: OCT7,
+    sections: [
+      {
+        heading: "How long a Reel can be, and what gets recommended",
+        paragraphs: [
+          "Instagram's help centre says you can record one or more clips that add up to 20 minutes, but that reels over 3 minutes will not be recommended to new audiences, and that longer recording is not yet available to every account (checked 7 October 2026). If you want new viewers to find a Reel, keep it at 3 minutes or less.",
+        ],
+      },
+      {
+        heading: "A simple Reel structure",
+        paragraphs: [
+          "Most useful Reels follow the same shape: show the result first, then the steps, then what to do next. Write the on-screen text before filming, so every clip has a job.",
+        ],
+        bullets: [
+          "First second: the finished result or the question you answer.",
+          "Middle: three to five quick steps, each one clip.",
+          "End: one clear call to action, such as saving the Reel or reading a guide.",
+          "Add captions or on-screen text, because many people watch with the sound off.",
+          "Use your own original audio or audio from Instagram's library, not a song you ripped from elsewhere.",
+        ],
+      },
+    ],
+    sources: [igReels],
+  },
+  "instagram/how-to-set-up-instagram-for-business": {
+    checkedDate: OCT7,
+    sections: [
+      {
+        heading: "Switch to a professional account, step by step",
+        paragraphs: [
+          "From Instagram's help centre (checked 7 October 2026): in the app, go to your profile, tap More, then under For professionals tap Account type and tools, and choose Switch to professional account. Pick a category, choose Business (shops, brands, local businesses, service providers) or Creator (public figures, content producers, artists), then add contact details. Connecting a Facebook Page is optional and helps with shared posts, ads and shopping tools.",
+          "Two things to know first: if your personal account is private, switching makes it public and accepts all pending follow requests; and if you later switch back to personal, you lose access to ads and some tools, and any connected Facebook Page is disconnected.",
+        ],
+      },
+      {
+        heading: "Make the profile ready for customers",
+        paragraphs: [
+          "Instagram lets you choose whether to show the category label and contact details on your profile. Show them if customers should call or message you. Then pin three posts that explain what you sell, show real work, and answer the most common customer question.",
+        ],
+      },
+    ],
+    sources: [igPro],
+  },
+  "content-creation/plan-one-piece": {
+    checkedDate: OCT7,
+    sections: [
+      {
+        heading: "A one-page plan you can reuse",
+        paragraphs: [
+          "Before you write or film anything, answer these questions in a note. It takes ten minutes and stops most rewrites.",
+        ],
+        bullets: [
+          "Audience: who exactly is this for, and what do they already know?",
+          "Promise: the one thing they will be able to do or understand at the end.",
+          "Format: article, short video, carousel or thread, chosen for where your audience already is.",
+          "Outline: three to five points in order, each one sentence.",
+          "Proof: an example, screenshot or result that shows the point is true.",
+          "Next step: what the reader or viewer should do after.",
+        ],
+      },
+      {
+        heading: "Turn one piece into several, without copying",
+        paragraphs: [
+          "Once the main piece is done, adapt it to each platform's format instead of posting the same file everywhere. Platforms have their own limits: for example, X's help centre gives a standard post as 280 characters, and Instagram says reels over 3 minutes are not recommended to new audiences (both checked 7 October 2026). So a long article might become one short Reel, one X thread and one carousel, each written for that place.",
+        ],
+      },
+    ],
+    sources: [xPost, igReels],
+  },
+};
