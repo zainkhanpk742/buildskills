@@ -3,6 +3,8 @@ import type { ReactNode } from "react";
 import { areaBySlug, areas, guideBySlug, guidePath, guidesInArea, pathSteps } from "@/data/site";
 import { hubContent } from "@/data/hubContent";
 import { Kicker } from "@/components/ui";
+import { ShortEmbed } from "@/components/ShortEmbed";
+import { guideVideos } from "@/data/guideVideos";
 import { socialUrls } from "@/lib/social";
 
 export function Interior({
@@ -54,7 +56,8 @@ export function GuideView({ slug }: { slug: string }) {
   const pageUrl = `https://buildskills.com.pk${publicPath}`;
   const areaUrl = `https://buildskills.com.pk/learn/${field?.slug ?? guide.slug.split("/")[0]}`;
   const isHubPage = pageUrl === areaUrl;
-  const structuredData = [
+  const video = guideVideos[guide.slug];
+  const structuredData: Record<string, unknown>[] = [
     {
       "@context": "https://schema.org",
       "@type": "Article",
@@ -108,6 +111,19 @@ export function GuideView({ slug }: { slug: string }) {
         }]
       : []),
   ];
+  if (video) {
+    structuredData.push({
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      name: video.name,
+      description: video.description,
+      thumbnailUrl: [`https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`],
+      uploadDate: video.uploadDate,
+      duration: video.duration,
+      embedUrl: `https://www.youtube-nocookie.com/embed/${video.id}`,
+      contentUrl: `https://www.youtube.com/shorts/${video.id}`,
+    });
+  }
   return (
     <main id="content">
       <article>
@@ -144,6 +160,7 @@ export function GuideView({ slug }: { slug: string }) {
         </header>
         <div className="page-wrap article-grid section-pad">
           <div className="prose">
+            {video ? <ShortEmbed video={video} /> : null}
             {guide.sections?.length
               ? guide.sections.map((section) => (
                   <section key={section.heading}>
