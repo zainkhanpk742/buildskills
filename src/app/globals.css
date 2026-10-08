@@ -548,3 +548,23 @@ h1, h2, h3 { text-wrap: balance; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* Example and tip boxes inside guide sections */
+.prose .guide-example, .prose .guide-tip { margin: 0 0 1.4rem; }
+.prose .guide-example > p:last-of-type { white-space: pre-wrap; }
+
+/* Urdu (right-to-left) guides */
+.urdu { font-family: var(--font-urdu), var(--font-sans), serif; }
+.urdu, .urdu * { letter-spacing: 0 !important; }
+.urdu h1, .urdu h2, .urdu h3, .urdu .prose h2 { font-family: var(--font-urdu), var(--font-sans), serif; line-height: 1.9; }
+.urdu .display-section { line-height: 1.75; }
+.urdu .prose p, .urdu .answer-box > p:last-of-type { line-height: 2.25; }
+.urdu .prose ul, .urdu .prose ol { padding-left: 0; padding-right: 1.4rem; line-height: 2.2; }
+.urdu .prose li { padding-left: 0; padding-right: 0.2rem; }
+.urdu .step-bar strong { line-height: 2; }
+.urdu [lang="en"] { font-family: var(--font-sans), sans-serif; line-height: 1.6; }
+.urdu .answer-box { border-left: 1px solid #d5e3f6; border-right: 3px solid var(--accent); }
+.urdu .step-bar li { padding: 0.22rem 0.22rem 0.22rem 0.65rem; }
+.urdu h1.display-section { padding-bottom: 0.35em; }
+.urdu .prose p, .urdu .prose li { font-size: 1.14rem; }
+.urdu .kicker { text-transform: none; }

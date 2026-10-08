@@ -14,6 +14,7 @@ import { addedFaqsMore } from "@/data/guideFaqsMore";
 import { extraRelated } from "@/data/relatedLinks";
 import { guideDepth } from "@/data/guideDepth";
 import { newGuides } from "@/data/newGuides";
+import { urduGuides, URDU_WEBSITE_GUIDE } from "@/data/urduGuides";
 import { rankHits } from "@/lib/searchFilter";
 import { guidePath } from "@/lib/paths";
 
@@ -225,7 +226,19 @@ export type Guide = {
     heading: string;
     paragraphs: string[];
     bullets?: string[];
+    /** Numbered steps, shown before `bullets`. */
+    steps?: string[];
+    /** Copyable example prompts, shown in a box. */
+    examples?: { label: string; text: string }[];
+    /** Paragraphs shown after the steps and bullets. */
+    after?: string[];
+    /** One short tip, shown in a box at the end of the section. */
+    tip?: string;
   }[];
+  /** Page language when it is not English (the page is rendered right-to-left for Urdu). */
+  lang?: "ur";
+  /** The same guide in another language (linked both ways, with hreflang). */
+  alternate?: { href: string; hreflang: "en" | "ur"; label: string };
   slug: string;
   area: string;
   title: string;
@@ -277,6 +290,7 @@ const guidesBase: Guide[] = [
   },
   {
     slug: "websites/how-to-build-a-website",
+    alternate: { href: `/learn/${URDU_WEBSITE_GUIDE}`, hreflang: "ur", label: "اردو میں پڑھیں (Urdu mein parhein)" },
     area: "Websites",
     title: "How do I build a website?",
     summary:
@@ -500,6 +514,7 @@ export const guides: Guide[] = [
   ...earningGuides,
   ...thinHubGuides,
   ...newGuides,
+  ...urduGuides,
 ].map((guide) => {
   const depth = guideDepth[guide.slug];
   if (depth) {

@@ -6,6 +6,46 @@ import { Kicker } from "@/components/ui";
 import { ShortEmbed } from "@/components/ShortEmbed";
 import { guideVideos } from "@/data/guideVideos";
 import { socialUrls } from "@/lib/social";
+import { urduFont } from "@/lib/fonts";
+
+const uiText = {
+  en: {
+    learn: "Learn",
+    shortAnswer: "Short answer",
+    practical: "Practical guide",
+    minRead: (n: number) => `${n} min read`,
+    updated: "Updated",
+    sources: "Sources and further reading",
+    tools: "Tools mentioned",
+    faq: "Frequently asked questions",
+    related: "Related guides",
+    continue: "Continue",
+    alsoIn: (area: string) => `Also in ${area}`,
+    allOf: (area: string) => `All of ${area}`,
+    tip: "Tip",
+    video: "Watch the quick video",
+    subscribe: "Subscribe on YouTube",
+  },
+  ur: {
+    learn: "سیکھیں",
+    shortAnswer: "مختصر جواب",
+    practical: "عملی گائیڈ",
+    minRead: (n: number) => `${n} منٹ کی پڑھائی`,
+    updated: "اپڈیٹ",
+    sources: "ذرائع اور مزید مطالعہ (انگریزی)",
+    tools: "مذکورہ ٹولز",
+    faq: "اکثر پوچھے جانے والے سوالات",
+    related: "متعلقہ گائیڈز",
+    continue: "آگے پڑھیں",
+    alsoIn: () => "ویب سائٹس کی مزید گائیڈز",
+    allOf: () => "تمام ویب سائٹ گائیڈز",
+    tip: "ٹپ",
+    video: "مختصر ویڈیو دیکھیں",
+    subscribe: "YouTube پر Subscribe کریں",
+  },
+};
+const areaNamesUr: Record<string, string> = { Websites: "ویب سائٹس" };
+const difficultyUr: Record<string, string> = { Beginner: "ابتدائی", Intermediate: "درمیانہ", Practical: "عملی" };
 
 export function Interior({
   kicker,
@@ -57,12 +97,17 @@ export function GuideView({ slug }: { slug: string }) {
   const areaUrl = `https://buildskills.com.pk/learn/${field?.slug ?? guide.slug.split("/")[0]}`;
   const isHubPage = pageUrl === areaUrl;
   const video = guideVideos[guide.slug];
+  const isUrdu = guide.lang === "ur";
+  const t = isUrdu ? uiText.ur : uiText.en;
+  const areaLabel = isUrdu ? areaNamesUr[guide.area] ?? guide.area : guide.area;
+  const difficultyLabel = guide.difficulty ? (isUrdu ? difficultyUr[guide.difficulty] : guide.difficulty) : t.practical;
   const structuredData: Record<string, unknown>[] = [
     {
       "@context": "https://schema.org",
       "@type": "Article",
       headline: guide.h1 ?? guide.title,
       description: guide.summary,
+      ...(guide.lang ? { inLanguage: guide.lang } : {}),
       url: pageUrl,
       mainEntityOfPage: pageUrl,
       articleSection: guide.area,
@@ -126,20 +171,24 @@ export function GuideView({ slug }: { slug: string }) {
   }
   return (
     <main id="content">
-      <article>
+      <article
+        lang={guide.lang}
+        dir={isUrdu ? "rtl" : undefined}
+        className={isUrdu ? `urdu ${urduFont.variable}` : undefined}
+      >
         <header className="page-head">
           <div className="page-wrap">
             <nav aria-label="Breadcrumb" className="article-breadcrumb">
-              <Link href="/learn">Learn</Link>
+              <Link href="/learn">{t.learn}</Link>
               <span aria-hidden="true"> / </span>
-              {field ? <Link href={`/learn/${field.slug}`}>{guide.area}</Link> : <span>{guide.area}</span>}
+              {field ? <Link href={`/learn/${field.slug}`}>{areaLabel}</Link> : <span>{areaLabel}</span>}
             </nav>
             <p className="kicker plain" style={{ color: "var(--signal)" }}>
-              {guide.area}
+              {areaLabel}
             </p>
             <h1 className="display-section balance stack-4 max-3">{guide.h1 ?? guide.title}</h1>
-            <aside className="answer-box stack-5" aria-label="Short answer">
-              <p className="kicker plain">Short answer</p>
+            <aside className="answer-box stack-5" aria-label={t.shortAnswer}>
+              <p className="kicker plain">{t.shortAnswer}</p>
               <p>{guide.summary}</p>
               {guide.sections?.length ? (
                 <ol className="step-bar">
@@ -153,14 +202,27 @@ export function GuideView({ slug }: { slug: string }) {
               ) : null}
             </aside>
             <p className="article-meta">
-              BuildSkills Editorial Team <span aria-hidden="true">·</span> {guide.difficulty ?? "Practical guide"} <span aria-hidden="true">·</span> {readingMinutes} min read
-              {guide.checkedDate ? <> <span aria-hidden="true">·</span> Updated {guide.checkedDate}</> : null}
+              <span lang="en" dir="ltr">BuildSkills Editorial Team</span> <span aria-hidden="true">·</span> {difficultyLabel} <span aria-hidden="true">·</span> {t.minRead(readingMinutes)}
+              {guide.checkedDate ? <> <span aria-hidden="true">·</span> {t.updated} <span dir="ltr">{guide.checkedDate}</span></> : null}
             </p>
+            {guide.alternate ? (
+              <p className="article-meta stack-4">
+                <Link
+                  href={guide.alternate.href}
+                  hrefLang={guide.alternate.hreflang}
+                  lang={guide.alternate.hreflang}
+                  dir={guide.alternate.hreflang === "ur" ? "rtl" : "ltr"}
+                  className="text-link"
+                >
+                  {guide.alternate.label}
+                </Link>
+              </p>
+            ) : null}
           </div>
         </header>
         <div className="page-wrap article-grid section-pad">
           <div className="prose">
-            {video ? <ShortEmbed video={video} /> : null}
+            {video ? <ShortEmbed video={video} heading={t.video} subscribeLabel={t.subscribe} /> : null}
             {guide.sections?.length
               ? guide.sections.map((section) => (
                   <section key={section.heading}>
@@ -168,12 +230,34 @@ export function GuideView({ slug }: { slug: string }) {
                     {section.paragraphs.map((paragraph) => (
                       <p key={paragraph.slice(0, 48)}>{paragraph}</p>
                     ))}
+                    {section.steps?.length ? (
+                      <ol>
+                        {section.steps.map((step) => (
+                          <li key={step}>{step}</li>
+                        ))}
+                      </ol>
+                    ) : null}
                     {section.bullets?.length ? (
                       <ul>
                         {section.bullets.map((bullet) => (
                           <li key={bullet}>{bullet}</li>
                         ))}
                       </ul>
+                    ) : null}
+                    {section.examples?.map((example) => (
+                      <aside key={example.label} className="answer-box guide-example">
+                        <p className="kicker plain">{example.label}</p>
+                        <p>{example.text}</p>
+                      </aside>
+                    ))}
+                    {section.after?.map((paragraph) => (
+                      <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+                    ))}
+                    {section.tip ? (
+                      <aside className="answer-box guide-tip">
+                        <p className="kicker plain">{t.tip}</p>
+                        <p>{section.tip}</p>
+                      </aside>
                     ) : null}
                   </section>
                 ))
@@ -182,10 +266,10 @@ export function GuideView({ slug }: { slug: string }) {
                 ))}
             {guide.sources?.length ? (
               <section className="article-sources" aria-labelledby="sources-title">
-                <h2 id="sources-title">Sources and further reading</h2>
+                <h2 id="sources-title">{t.sources}</h2>
                 <ul>
                   {guide.sources.map((source) => (
-                    <li key={source.url}>
+                    <li key={source.url} lang={isUrdu ? "en" : undefined} dir={isUrdu ? "ltr" : undefined}>
                       <a href={source.url} target="_blank" rel="noreferrer">
                         {source.label}
                       </a>
@@ -196,13 +280,13 @@ export function GuideView({ slug }: { slug: string }) {
             ) : null}
             {guide.tools?.length ? (
               <section aria-labelledby="tools-title">
-                <h2 id="tools-title">Tools mentioned</h2>
+                <h2 id="tools-title">{t.tools}</h2>
                 <p>{guide.tools.join(", ")}. Features and availability can change; check each provider&apos;s official information before choosing a tool.</p>
               </section>
             ) : null}
             {guide.faqs?.length ? (
               <section aria-labelledby="faq-title">
-                <h2 id="faq-title">Frequently asked questions</h2>
+                <h2 id="faq-title">{t.faq}</h2>
                 {guide.faqs.map((faq) => (
                   <details key={faq.question}>
                     <summary><h3 style={{ display: "inline" }}>{faq.question}</h3></summary>
@@ -213,23 +297,23 @@ export function GuideView({ slug }: { slug: string }) {
             ) : null}
             {related.length ? (
               <section aria-labelledby="related-title">
-                <h2 id="related-title">Related guides</h2>
+                <h2 id="related-title">{t.related}</h2>
                 <ul>
                   {related.map((item) => item ? (
-                    <li key={item.slug}>
-                      <Link href={guidePath(item.slug)}>{item.title}</Link>
+                    <li key={item.slug} lang={isUrdu && !item.lang ? "en" : undefined}>
+                      <Link href={guidePath(item.slug)}><bdi>{item.title}</bdi></Link>
                     </li>
                   ) : null)}
                 </ul>
               </section>
             ) : null}
             <div className="continue">
-              <p className="kicker plain faint">Continue</p>
+              <p className="kicker plain faint">{t.continue}</p>
               <Link href={guide.next.href}>{guide.next.label}</Link>
             </div>
           </div>
           <aside>
-            <p className="kicker plain faint">Also in {guide.area}</p>
+            <p className="kicker plain faint">{t.alsoIn(guide.area)}</p>
             <ul className="index-list" style={{ borderTop: "1px solid var(--line)", marginTop: "1rem" }}>
               {siblings.length === 0 ? (
                 <li className="index-row">
@@ -237,9 +321,9 @@ export function GuideView({ slug }: { slug: string }) {
                 </li>
               ) : (
                 siblings.map((item) => (
-                  <li key={item.slug}>
+                  <li key={item.slug} lang={isUrdu && !item.lang ? "en" : item.lang}>
                     <Link href={guidePath(item.slug)} className="index-row">
-                      <span className="title">{item.title}</span>
+                      <span className="title"><bdi>{item.title}</bdi></span>
                     </Link>
                   </li>
                 ))
@@ -247,7 +331,7 @@ export function GuideView({ slug }: { slug: string }) {
             </ul>
             {field ? (
               <Link href={`/learn/${field.slug}`} className="search-submit stack-5" style={{ color: "var(--signal)" }}>
-                All of {guide.area}
+                {t.allOf(guide.area)}
               </Link>
             ) : null}
           </aside>
