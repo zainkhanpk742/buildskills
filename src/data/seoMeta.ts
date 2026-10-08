@@ -176,6 +176,10 @@ export const seoMeta: Record<string, SeoMeta> = {
     title: "What Is SEO? A Simple Explanation for Beginners",
     description: "SEO means making a useful page easier to find in Google's free results. Learn how it works, what it is not, and the first steps to take.",
   },
+  "/learn/websites/website-banane-ka-tarika-urdu": {
+    title: "ویب سائٹ بنانے کا طریقہ: اردو میں مکمل گائیڈ | BuildSkills",
+    description: "اردو میں آسان مرحلہ وار گائیڈ: AI سے کوڈ لکھوائیں، GitHub پر repository بنائیں، Vercel سے مفت deploy کریں اور اپنا .pk یا .com domain جوڑیں۔",
+  },
   "/learn/websites/how-to-build-a-website": {
     title: "How to Build a Website: A Step-by-Step Beginner Plan",
     description: "Build a website in the right order: decide the site's job, list the pages, write the words, choose a builder or code, then publish and improve.",

@@ -19,12 +19,22 @@ export async function generateMetadata({
   const { area, slug } = await params;
   const guide = guideBySlug(`${area}/${slug}`);
   if (!guide) return {};
+  const own = guidePath(guide.slug);
+  const languages = guide.alternate
+    ? {
+        [guide.lang ?? "en"]: own,
+        [guide.alternate.hreflang]: guide.alternate.href,
+        "x-default": guide.lang ? guide.alternate.href : own,
+      }
+    : undefined;
   return pageMeta({
     title: guide.title,
     description: guide.summary,
     path: `/learn/${guide.slug}`,
-    canonicalPath: guidePath(guide.slug),
+    canonicalPath: own,
     type: "article",
+    languages,
+    locale: guide.lang === "ur" ? "ur_PK" : undefined,
   });
 }
 

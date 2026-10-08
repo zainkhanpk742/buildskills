@@ -4,12 +4,20 @@ import { useState } from "react";
 import { YOUTUBE_CHANNEL, type GuideVideo } from "@/data/guideVideos";
 
 /** Click-to-play YouTube Short: only a lazy thumbnail loads until the reader presses play. */
-export function ShortEmbed({ video }: { video: GuideVideo }) {
+export function ShortEmbed({
+  video,
+  heading = "Watch the quick video",
+  subscribeLabel = "Subscribe on YouTube",
+}: {
+  video: GuideVideo;
+  heading?: string;
+  subscribeLabel?: string;
+}) {
   const [playing, setPlaying] = useState(false);
   const frame = { width: "100%", maxWidth: "18rem", aspectRatio: "9 / 16", borderRadius: "0.75rem", overflow: "hidden", background: "#000" } as const;
   return (
     <section aria-labelledby="short-title" style={{ marginBottom: "2rem" }}>
-      <h2 id="short-title">Watch the quick video</h2>
+      <h2 id="short-title">{heading}</h2>
       {playing ? (
         <div style={frame}>
           <iframe
@@ -42,7 +50,7 @@ export function ShortEmbed({ video }: { video: GuideVideo }) {
         </button>
       )}
       <p style={{ marginTop: "0.75rem" }}>
-        <a href={YOUTUBE_CHANNEL} target="_blank" rel="noopener" className="text-link">Subscribe on YouTube</a>
+        <a href={YOUTUBE_CHANNEL} target="_blank" rel="noopener" className="text-link">{subscribeLabel}</a>
       </p>
     </section>
   );

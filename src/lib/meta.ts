@@ -43,6 +43,9 @@ export function pageMeta(options: {
   path: string;
   type?: "website" | "article";
   canonicalPath?: string;
+  /** Language alternates for hreflang, e.g. { en: "/learn/a", ur: "/learn/b" }. */
+  languages?: Record<string, string>;
+  locale?: string;
 }): Metadata {
   const manual = seoMeta[options.path];
   const title = manual?.title ?? documentTitle(options.title);
@@ -52,12 +55,15 @@ export function pageMeta(options: {
   return {
     title: { absolute: title },
     description,
-    alternates: { canonical: canonicalPath },
+    alternates: options.languages
+      ? { canonical: canonicalPath, languages: options.languages }
+      : { canonical: canonicalPath },
     openGraph: {
       title,
       description,
       url,
       siteName: "BuildSkills",
+      ...(options.locale ? { locale: options.locale } : {}),
       type: options.type ?? "website",
       images: [{ url: "/og-v2.png", width: 1200, height: 630, alt: "BuildSkills: Learn digital skills free. SEO, websites, mobile apps, AI and freelancing guides at buildskills.com.pk" }],
     },

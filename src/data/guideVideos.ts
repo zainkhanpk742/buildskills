@@ -25,6 +25,13 @@ export const guideVideos: Record<string, GuideVideo> = {
     uploadDate: "2026-10-06",
     duration: "PT6S",
   },
+  "websites/website-banane-ka-tarika-urdu": {
+    id: "IfVTLSX70lg",
+    name: "How to make a website?",
+    description: "A short BuildSkills video on how to make a website, with the full free guide on buildskills.com.pk.",
+    uploadDate: "2026-10-06",
+    duration: "PT25S",
+  },
   "seo/what-is-seo": {
     id: "ji_XcAy4Wts",
     name: "What Is SEO? Explained in 15 Seconds",
