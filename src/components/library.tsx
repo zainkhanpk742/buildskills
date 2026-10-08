@@ -391,24 +391,26 @@ export function AreaView({ slug }: { slug: string }) {
   return (
     <main id="content">
       <header className="page-head">
-        <div className="page-wrap">
-          <p className="kicker plain" style={{ color: "var(--signal)" }}>Learning area</p>
-          <h1 className="display-section balance stack-4">{area.h1 ?? area.question}</h1>
-          <p className="lede pretty stack-5">{area.description}</p>
-        </div>
-      </header>
-      <div className="page-wrap area-grid section-pad">
-        <div>
+        <div className={hubVideo ? "page-wrap hub-head" : "page-wrap"}>
+          <div>
+            <p className="kicker plain" style={{ color: "var(--signal)" }}>Learning area</p>
+            <h1 className="display-section balance stack-4">{area.h1 ?? area.question}</h1>
+            <p className="lede pretty stack-5">{area.description}</p>
+          </div>
           {hubVideo ? (
             <section className="home-video-copy hub-video" aria-labelledby="hub-video-title">
+              <HomeVideoPlayer video={hubVideo} eager />
               <Kicker>Start here</Kicker>
               <h2 id="hub-video-title" className="balance">Watch: {hubVideoTitle}</h2>
-              <HomeVideoPlayer video={hubVideo} />
               <a href={`${YOUTUBE_CHANNEL}?sub_confirmation=1`} target="_blank" rel="noopener" className="btn btn-accent home-video-subscribe">
                 <SocialIcon label="YouTube" size={18} /> Subscribe to our YouTube channel
               </a>
             </section>
           ) : null}
+        </div>
+      </header>
+      <div className="page-wrap area-grid section-pad">
+        <div>
           {extra ? (
             <div className="prose" style={{ marginBottom: "2.5rem" }}>
               {extra.paragraphs.map((paragraph) => (
