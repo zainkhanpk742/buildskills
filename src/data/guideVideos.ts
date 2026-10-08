@@ -66,3 +66,15 @@ export const HOME_VIDEO: GuideVideo = {
   uploadDate: "2026-10-08T03:35:02-07:00",
   duration: "PT37S",
 };
+
+/** Hub page videos, keyed by area slug. Title, upload date and length from the YouTube watch page (checked 8 Oct 2026). */
+export const hubVideos: Record<string, GuideVideo> = {
+  websites: {
+    id: "VHvjzLosklk",
+    name: "How to Make a Website for Beginners | Class 1 – Part 1 | BuildSkills",
+    description:
+      "Class 1, Part 1 of the free BuildSkills beginner course on how to make a website. It starts from zero, step by step, so you can follow along even if you have never built a website before.",
+    uploadDate: "2026-10-07T13:50:24-07:00",
+    duration: "PT2M28S",
+  },
+};
