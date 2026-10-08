@@ -4,7 +4,9 @@ import { areaBySlug, areas, guideBySlug, guidePath, guidesInArea, pathSteps } fr
 import { hubContent } from "@/data/hubContent";
 import { Kicker } from "@/components/ui";
 import { ShortEmbed } from "@/components/ShortEmbed";
-import { guideVideos } from "@/data/guideVideos";
+import { guideVideos, hubVideos, YOUTUBE_CHANNEL } from "@/data/guideVideos";
+import { HomeVideoPlayer } from "@/components/home/HomeVideo";
+import { SocialIcon } from "@/components/SocialIcon";
 import { socialUrls } from "@/lib/social";
 import { urduFont } from "@/lib/fonts";
 
@@ -359,6 +361,22 @@ export function AreaView({ slug }: { slug: string }) {
   const related = guidesInArea(area.title);
   const isSeo = area.slug === "seo";
   const extra = hubContent[area.slug];
+  const hubVideo = hubVideos[area.slug];
+  const hubVideoTitle = hubVideo?.name.replace(/ \| BuildSkills$/, "").replace(" | ", ", ");
+  const hubVideoSchema = hubVideo
+    ? {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        name: hubVideo.name,
+        description: hubVideo.description,
+        thumbnailUrl: [`https://i.ytimg.com/vi/${hubVideo.id}/hqdefault.jpg`],
+        uploadDate: hubVideo.uploadDate,
+        duration: hubVideo.duration,
+        contentUrl: `https://www.youtube.com/watch?v=${hubVideo.id}`,
+        embedUrl: `https://www.youtube-nocookie.com/embed/${hubVideo.id}`,
+        publisher: { "@id": "https://buildskills.com.pk/#organization" },
+      }
+    : null;
   const hubSchema = extra?.faqs.length
     ? {
         "@context": "https://schema.org",
@@ -373,10 +391,22 @@ export function AreaView({ slug }: { slug: string }) {
   return (
     <main id="content">
       <header className="page-head">
-        <div className="page-wrap">
-          <p className="kicker plain" style={{ color: "var(--signal)" }}>Learning area</p>
-          <h1 className="display-section balance stack-4">{area.h1 ?? area.question}</h1>
-          <p className="lede pretty stack-5">{area.description}</p>
+        <div className={hubVideo ? "page-wrap hub-head" : "page-wrap"}>
+          <div>
+            <p className="kicker plain" style={{ color: "var(--signal)" }}>Learning area</p>
+            <h1 className="display-section balance stack-4">{area.h1 ?? area.question}</h1>
+            <p className="lede pretty stack-5">{area.description}</p>
+          </div>
+          {hubVideo ? (
+            <section className="home-video-copy hub-video" aria-labelledby="hub-video-title">
+              <HomeVideoPlayer video={hubVideo} eager />
+              <Kicker>Start here</Kicker>
+              <h2 id="hub-video-title" className="balance">Watch: {hubVideoTitle}</h2>
+              <a href={`${YOUTUBE_CHANNEL}?sub_confirmation=1`} target="_blank" rel="noopener" className="btn btn-accent home-video-subscribe">
+                <SocialIcon label="YouTube" size={18} /> Subscribe to our YouTube channel
+              </a>
+            </section>
+          ) : null}
         </div>
       </header>
       <div className="page-wrap area-grid section-pad">
@@ -464,6 +494,9 @@ export function AreaView({ slug }: { slug: string }) {
           </aside>
         )}
       </div>
+      {hubVideoSchema ? (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(hubVideoSchema).replace(/</g, "\\u003c") }} />
+      ) : null}
       {hubSchema ? (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(hubSchema).replace(/</g, "\\u003c") }} />
       ) : null}

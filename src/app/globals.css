@@ -594,3 +594,11 @@ h1, h2, h3 { text-wrap: balance; }
 .hero-video-copy h2 { margin-top: 0.5rem; font-size: clamp(1.3rem, 1.1rem + 0.6vw, 1.6rem); }
 .hero-video-copy p:not(.kicker) { margin-top: 0.55rem; font-size: 0.95rem; }
 .hero-video-copy .home-video-subscribe { margin-top: 1rem; }
+.hub-head { display: grid; gap: 2rem; }
+.hub-video { min-width: 0; }
+.hub-video .home-video-frame { max-width: 34rem; }
+.hub-video .kicker { margin-top: 1.1rem; }
+.hub-video h2 { margin-top: 0.5rem; font-size: clamp(1.2rem, 1.05rem + 0.5vw, 1.45rem); }
+.hub-video .home-video-subscribe { margin-top: 1rem; }
+@media (min-width: 1024px) { .hub-head { grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: 3rem; align-items: center; } }
+
