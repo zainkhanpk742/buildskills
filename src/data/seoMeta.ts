@@ -185,16 +185,16 @@ export const seoMeta: Record<string, SeoMeta> = {
     description: "Build a website in the right order: decide the site's job, list the pages, write the words, choose a builder or code, then publish and improve.",
   },
   "/learn/seo/how-to-get-website-on-google": {
-    title: "How to Get Your Website on Google (Step by Step)",
-    description: "Get a new website on Google: publish it publicly, let Google crawl it, submit a sitemap, and check indexing in Search Console. Ads are separate.",
+    title: "How to Get Your Website on Google for Free (2026 Steps)",
+    description: "Get your website on Google search for free: publish it, add it to Search Console, submit a sitemap, request indexing, and know how long indexing takes.",
   },
   "/learn/seo/how-to-increase-website-traffic": {
     title: "How to Increase Website Traffic Without Shortcuts",
     description: "Increase website traffic with pages that match real searches, better titles that earn clicks, and internal links, without buying fake visits.",
   },
   "/learn/mobile-apps/how-to-build-a-mobile-app": {
-    title: "How to Build a Mobile App: iPhone & Android Basics",
-    description: "Build an iPhone app in Xcode or an Android app in Android Studio. Apple charges $99 a year and Google Play a one-time $25 (checked 30 Sep 2026).",
+    title: "How to Make a Mobile App (Free, No-Code and Coding Steps)",
+    description: "Steps to build a mobile app from scratch: free no-code tools, Android Studio and Xcode basics, Play Store and App Store fees, and practical tips for Pakistan.",
   },
   "/learn/business-software/software-for-your-business": {
     title: "How to Create Software for Your Business",
@@ -233,8 +233,8 @@ export const seoMeta: Record<string, SeoMeta> = {
     description: "Plan a business website from the goal, audience, offer, and proof, then build only the pages needed to turn a visitor into an enquiry.",
   },
   "/learn/websites/website-cost": {
-    title: "How Much Does a Website Cost in 2026?",
-    description: "What decides website cost: scope, design, content, features, hosting, and maintenance, and how to compare a DIY build with a paid one.",
+    title: "Website Cost in Pakistan and Worldwide (2026 Guide)",
+    description: "What a website really costs in Pakistan and worldwide: the .pk domain fee from PKNIC, hosting, design, content and upkeep, and how to spend less safely.",
   },
   "/learn/websites/publish-a-website": {
     title: "How to Publish a Website: Hosting, Domain & Go-Live",
@@ -473,8 +473,8 @@ export const seoMeta: Record<string, SeoMeta> = {
     description: "Add subtitles to a video: create or check a transcript, sync captions with speech, choose burned-in or closed captions, and review the result.",
   },
   "/learn/photo-editing/how-to-edit-photos": {
-    title: "How to Edit Photos: A Beginner's Workflow",
-    description: "Edit photos step by step: keep the original, straighten and crop, fix exposure and colour, and export the right file for where it will be used.",
+    title: "How to Edit Photos on Your Phone: Free Beginner Guide",
+    description: "Edit photos on your phone or computer step by step: crop, fix light and colour, and export. Plus free photo editing apps for beginners and what to avoid.",
   },
   "/learn/photo-editing/best-photo-editing-apps": {
     title: "Best Photo Editing Apps for Beginners (2026)",
@@ -505,8 +505,8 @@ export const seoMeta: Record<string, SeoMeta> = {
     description: "Ten skills Indian employers hire for in 2026, from software and AI to data, cloud and security, with published salary bands by experience.",
   },
   "/learn/freelancing/how-to-start-freelancing": {
-    title: "How to Start Freelancing with No Experience (2026)",
-    description: "Start freelancing step by step: pick one paid skill, make three samples, write a clear offer, find a first client, and get paid safely.",
+    title: "How to Start Freelancing in 2026 (Pakistan and Worldwide)",
+    description: "Start freelancing with no experience: pick a skill, build samples, win a first client and get paid. Includes Pakistan: Payoneer, bank accounts and PSEB.",
   },
   "/learn/freelancing/how-to-make-money-online": {
     title: "How to Make Money Online: Real Ways for Beginners",
