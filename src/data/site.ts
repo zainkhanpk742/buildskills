@@ -15,6 +15,7 @@ import { extraRelated } from "@/data/relatedLinks";
 import { guideDepth } from "@/data/guideDepth";
 import { newGuides } from "@/data/newGuides";
 import { urduGuides, URDU_WEBSITE_GUIDE } from "@/data/urduGuides";
+import { pakistanGuides, englishAlternates, pakistanRelatedAdds } from "@/data/pakistanGuides";
 import { rankHits } from "@/lib/searchFilter";
 import { guidePath } from "@/lib/paths";
 
@@ -515,7 +516,12 @@ export const guides: Guide[] = [
   ...thinHubGuides,
   ...newGuides,
   ...urduGuides,
+  ...pakistanGuides,
 ].map((guide) => {
+  const alternate = englishAlternates[guide.slug];
+  if (alternate && !guide.alternate) guide = { ...guide, alternate };
+  const adds = pakistanRelatedAdds[guide.slug];
+  if (adds) guide = { ...guide, related: [...new Set([...(guide.related ?? []), ...adds])] };
   const depth = guideDepth[guide.slug];
   if (depth) {
     guide = {
