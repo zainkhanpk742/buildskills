@@ -94,7 +94,7 @@ export function HomePage() {
                 name: "BuildSkills",
                 alternateName: ["Build Skills", "BuildSkills.com.pk"],
                 url: "https://buildskills.com.pk/",
-                email: "salimpk742@gmail.com",
+                email: "buildskillspk@gmail.com",
                 sameAs: socialUrls,
                 logo: {
                   "@type": "ImageObject",

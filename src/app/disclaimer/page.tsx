@@ -32,7 +32,7 @@ export default function Page() {
           <Link href="/privacy-policy">privacy policy</Link>.
         </p>
         <p>
-          Questions: <a href="mailto:salimpk742@gmail.com">salimpk742@gmail.com</a>.
+          Questions: <a href="mailto:buildskillspk@gmail.com">buildskillspk@gmail.com</a>.
         </p>
       </div>
     </Interior>

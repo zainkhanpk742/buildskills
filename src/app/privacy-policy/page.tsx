@@ -19,7 +19,7 @@ export default function Page() {
       <div className="prose">
         <p>
           The site is published by BuildSkills. Questions about this policy go to{" "}
-          <a href="mailto:salimpk742@gmail.com">salimpk742@gmail.com</a>.
+          <a href="mailto:buildskillspk@gmail.com">buildskillspk@gmail.com</a>.
         </p>
         <h2>Information you give us</h2>
         <p>
@@ -59,17 +59,17 @@ export default function Page() {
         <h2>GDPR rights</h2>
         <p>
           If the GDPR applies to you, you may ask for access to personal data we hold, correction, deletion, restriction, or a copy, and you may object to processing based on legitimate interests. Email{" "}
-          <a href="mailto:salimpk742@gmail.com">salimpk742@gmail.com</a>. You may also complain to your local data protection authority.
+          <a href="mailto:buildskillspk@gmail.com">buildskillspk@gmail.com</a>. You may also complain to your local data protection authority.
         </p>
         <h2>CCPA rights</h2>
         <p>
           If the California Consumer Privacy Act applies to you, you may request to know, delete, or correct personal information, and you may opt out of the sale or sharing of personal information. We do not sell personal information for money. Email{" "}
-          <a href="mailto:salimpk742@gmail.com">salimpk742@gmail.com</a> with the subject &quot;CCPA request&quot;.
+          <a href="mailto:buildskillspk@gmail.com">buildskillspk@gmail.com</a> with the subject &quot;CCPA request&quot;.
         </p>
         <h2>Children</h2>
         <p>
           The site is written for a general audience, including students. It is not directed at children under 13, and we do not knowingly collect personal information from children under 13. If you believe a child has sent us personal information, email{" "}
-          <a href="mailto:salimpk742@gmail.com">salimpk742@gmail.com</a> and we will delete it.
+          <a href="mailto:buildskillspk@gmail.com">buildskillspk@gmail.com</a> and we will delete it.
         </p>
         <h2>Changes</h2>
         <p>If this policy changes, the date at the top of the page will change. Continued use of the site after that date means you have seen the updated policy.</p>
