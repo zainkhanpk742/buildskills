@@ -20,7 +20,7 @@ export default function Page() {
       <div className="prose">
         <p>
           BuildSkills publishes free educational guides about digital skills, websites, SEO, AI tools, editing, social platforms, freelancing, and online earning. The site is operated by BuildSkills. Contact{" "}
-          <a href="mailto:salimpk742@gmail.com">salimpk742@gmail.com</a>.
+          <a href="mailto:buildskillspk@gmail.com">buildskillspk@gmail.com</a>.
         </p>
         <h2>Educational use</h2>
         <p>

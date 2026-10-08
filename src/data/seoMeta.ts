@@ -146,7 +146,7 @@ export const seoMeta: Record<string, SeoMeta> = {
   },
   "/about": {
     title: "About BuildSkills: Free Digital Skills Guides",
-    description: "BuildSkills is an independent, free learning site for digital skills, written by the BuildSkills Editorial Team. Contact: salimpk742@gmail.com.",
+    description: "BuildSkills is an independent, free learning site for digital skills, written by the BuildSkills Editorial Team. Contact: buildskillspk@gmail.com.",
   },
   "/services": {
     title: "Website Development & SEO Services | BuildSkills",
@@ -154,7 +154,7 @@ export const seoMeta: Record<string, SeoMeta> = {
   },
   "/contact": {
     title: "Contact BuildSkills | Suggest a Guide or Fix",
-    description: "Email BuildSkills at salimpk742@gmail.com to suggest a guide, report outdated information or a broken link, or ask a question about the site.",
+    description: "Email BuildSkills at buildskillspk@gmail.com to suggest a guide, report outdated information or a broken link, or ask a question about the site.",
   },
   "/privacy-policy": {
     title: "Privacy Policy | BuildSkills",

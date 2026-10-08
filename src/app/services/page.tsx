@@ -4,7 +4,7 @@ import { Interior } from "@/components/library";
 import { pageMeta } from "@/lib/meta";
 
 const SITE = "https://buildskills.com.pk";
-const SERVICES_EMAIL = "zainkhanpk742@gmail.com";
+const SERVICES_EMAIL = "buildskillspk@gmail.com";
 const FIVERR_URL = "https://www.fiverr.com/s/9d964qe";
 const MAILTO = `mailto:${SERVICES_EMAIL}?subject=${encodeURIComponent("Service enquiry from BuildSkills")}&body=${encodeURIComponent(
   "Hello,\n\nService I need:\nWhat my business does:\nWhat I want to achieve:\nDeadline:\nBudget range (optional):\n\nThanks,\n",

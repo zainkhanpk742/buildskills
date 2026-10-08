@@ -2,7 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 
-const TO = "salimpk742@gmail.com";
+const TO = "buildskillspk@gmail.com";
 
 export function ContactForm() {
   const [name, setName] = useState("");
@@ -46,17 +46,17 @@ export function ContactForm() {
       return;
     }
     window.location.href = url;
-    setStatus("If Gmail did not open, copy the message below and email it to salimpk742@gmail.com.");
+    setStatus("If Gmail did not open, copy the message below and email it to buildskillspk@gmail.com.");
   }
 
   async function copy() {
     try {
       await navigator.clipboard.writeText(`To: ${TO}\n\n${brief}`);
       setCopied(true);
-      setStatus("Copied. Paste it into Gmail or any email app, addressed to salimpk742@gmail.com.");
+      setStatus("Copied. Paste it into Gmail or any email app, addressed to buildskillspk@gmail.com.");
     } catch {
       setCopied(false);
-      setStatus("Copy is blocked in this browser. Select the message below and email it to salimpk742@gmail.com.");
+      setStatus("Copy is blocked in this browser. Select the message below and email it to buildskillspk@gmail.com.");
     }
   }
 

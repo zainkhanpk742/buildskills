@@ -6,7 +6,7 @@ import { pageMeta } from "@/lib/meta";
 export const metadata: Metadata = pageMeta({
   title: "Editorial Policy",
   description:
-    "How BuildSkills checks guides, dates pages, cites official sources, and corrects mistakes. Contact salimpk742@gmail.com.",
+    "How BuildSkills checks guides, dates pages, cites official sources, and corrects mistakes. Contact buildskillspk@gmail.com.",
   path: "/editorial-policy",
 });
 
@@ -33,12 +33,12 @@ export default function Page() {
         </p>
         <h2>Corrections</h2>
         <p>
-          If a page is wrong, email <a href="mailto:salimpk742@gmail.com">salimpk742@gmail.com</a> with the URL and the official source. We update the page and the last-checked date. The <Link href="/disclaimer">disclaimer</Link> explains the limits of educational content.
+          If a page is wrong, email <a href="mailto:buildskillspk@gmail.com">buildskillspk@gmail.com</a> with the URL and the official source. We update the page and the last-checked date. The <Link href="/disclaimer">disclaimer</Link> explains the limits of educational content.
         </p>
         <h2>Who is responsible</h2>
         <p>
           Guides are credited to the BuildSkills Editorial Team. The site contact is{" "}
-          <a href="mailto:salimpk742@gmail.com">salimpk742@gmail.com</a>. More about the project is on the <Link href="/about">about page</Link>.
+          <a href="mailto:buildskillspk@gmail.com">buildskillspk@gmail.com</a>. More about the project is on the <Link href="/about">about page</Link>.
         </p>
       </div>
     </Interior>

@@ -8,7 +8,7 @@ import { pageMeta } from "@/lib/meta";
 export const metadata: Metadata = pageMeta({
   title: "About BuildSkills",
   description:
-    "BuildSkills is a free beginner learning site for digital skills, run by the BuildSkills Editorial Team. Contact salimpk742@gmail.com.",
+    "BuildSkills is a free beginner learning site for digital skills, run by the BuildSkills Editorial Team. Contact buildskillspk@gmail.com.",
   path: "/about",
 });
 
@@ -23,7 +23,7 @@ export default function Page() {
         <h2>Who runs the site</h2>
         <p>
           The site is published by the BuildSkills Editorial Team. It is an independent educational project. It is not YouTube, Google, TikTok, Meta, Canva, Fiverr, or Upwork. The contact email is{" "}
-          <a href="mailto:salimpk742@gmail.com">salimpk742@gmail.com</a>.
+          <a href="mailto:buildskillspk@gmail.com">buildskillspk@gmail.com</a>.
         </p>
         <p>
           BuildSkills also offers paid website, software, and digital marketing work, kept separate from the free guides. See{" "}
