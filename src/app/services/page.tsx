@@ -5,7 +5,6 @@ import { pageMeta } from "@/lib/meta";
 
 const SITE = "https://buildskills.com.pk";
 const SERVICES_EMAIL = "buildskillspk@gmail.com";
-const FIVERR_URL = "https://www.fiverr.com/s/9d964qe";
 const MAILTO = `mailto:${SERVICES_EMAIL}?subject=${encodeURIComponent("Service enquiry from BuildSkills")}&body=${encodeURIComponent(
   "Hello,\n\nService I need:\nWhat my business does:\nWhat I want to achieve:\nDeadline:\nBudget range (optional):\n\nThanks,\n",
 )}`;
@@ -88,7 +87,7 @@ const services = [
 ];
 
 const steps = [
-  { title: "Contact", body: `Email ${SERVICES_EMAIL} or message through Fiverr. Say what you need and what your business does.` },
+  { title: "Contact", body: `Email ${SERVICES_EMAIL}. Say what you need and what your business does.` },
   { title: "Discuss", body: "We talk through your goals, examples you like, the features you need, and your deadline, by email, chat, or a call." },
   { title: "Quote", body: "You receive a written scope, timeline, and price before any work starts, and you decide whether to go ahead." },
   { title: "Build", body: "The work is done in stages, with previews you can check and feedback rounds along the way." },
@@ -105,11 +104,6 @@ const faqs = [
     question: "Can you guarantee first place on Google?",
     answer:
       "No. Nobody can honestly guarantee a ranking, and Google's own SEO guidance says no one can guarantee a number one ranking. What can be done is building the site correctly, fixing technical problems, and creating useful content, which gives your pages a fair chance to rank.",
-  },
-  {
-    question: "Can I order through Fiverr instead of email?",
-    answer:
-      "Yes. You can use the Fiverr profile linked on this page, where Fiverr's own terms and fees apply, or email directly to discuss the project first.",
   },
   {
     question: "Do you work with businesses outside Pakistan?",
@@ -143,7 +137,6 @@ const schema = {
       description:
         "Website design and development with SEO, custom marketplace platforms, offline database software for businesses, digital marketing, and help building digital services.",
       areaServed: "Worldwide",
-      sameAs: [FIVERR_URL],
       hasOfferCatalog: {
         "@type": "OfferCatalog",
         name: "Services",
@@ -181,7 +174,6 @@ function Contact() {
   return (
     <div className="actions">
       <a href={MAILTO} className="btn btn-primary">Email me</a>
-      <a href={FIVERR_URL} target="_blank" rel="noopener" className="btn btn-secondary">View my Fiverr profile</a>
     </div>
   );
 }
@@ -197,7 +189,7 @@ export default function Page() {
       <div className="prose" style={{ marginBottom: "3rem" }}>
         <p>
           Every project starts with a conversation and a written quote. There are no fixed prices or packages on this page, because each business needs something different. To ask about a project, email{" "}
-          <a href={MAILTO}>{SERVICES_EMAIL}</a> or use the Fiverr profile below.
+          <a href={MAILTO}>{SERVICES_EMAIL}</a>.
         </p>
         <Contact />
 
@@ -244,7 +236,7 @@ export default function Page() {
 
         <h2>Get in touch</h2>
         <p>
-          Email <a href={MAILTO}>{SERVICES_EMAIL}</a> with a short description of what you need, or order through Fiverr. Questions about the free guides, corrections, and site feedback go to the <Link href="/contact">contact page</Link> instead.
+          Email <a href={MAILTO}>{SERVICES_EMAIL}</a> with a short description of what you need. Questions about the free guides, corrections, and site feedback go to the <Link href="/contact">contact page</Link> instead.
         </p>
         <Contact />
         <p className="meta" style={{ marginTop: "1.5rem" }}>
