@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { SocialIcon } from "@/components/SocialIcon";
 import { socialProfiles, socialUrls } from "@/lib/social";
+import { HOME_VIDEO } from "@/data/guideVideos";
 import { ButtonLink, Kicker } from "@/components/ui";
 import { SearchIndex } from "@/components/home/Interactive";
 import { guideLinks, searchPrompts } from "@/data/site";
@@ -118,6 +119,18 @@ export function HomePage() {
                   },
                   "query-input": "required name=search_term_string",
                 },
+              },
+              {
+                "@type": "VideoObject",
+                "@id": "https://buildskills.com.pk/#intro-video",
+                name: HOME_VIDEO.name,
+                description: HOME_VIDEO.description,
+                thumbnailUrl: [`https://i.ytimg.com/vi/${HOME_VIDEO.id}/hqdefault.jpg`],
+                uploadDate: HOME_VIDEO.uploadDate,
+                duration: HOME_VIDEO.duration,
+                contentUrl: `https://www.youtube.com/watch?v=${HOME_VIDEO.id}`,
+                embedUrl: `https://www.youtube-nocookie.com/embed/${HOME_VIDEO.id}`,
+                publisher: { "@id": "https://buildskills.com.pk/#organization" },
               },
             ],
           }).replace(/</g, "\\u003c"),
