@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { SocialIcon } from "@/components/SocialIcon";
 import { socialProfiles, socialUrls } from "@/lib/social";
-import { HOME_VIDEO } from "@/data/guideVideos";
+import { HOME_VIDEO, YOUTUBE_CHANNEL } from "@/data/guideVideos";
 import { ButtonLink, Kicker } from "@/components/ui";
 import { SearchIndex } from "@/components/home/Interactive";
 import { HomeVideoPlayer } from "@/components/home/HomeVideo";
@@ -63,16 +63,14 @@ export function HomePage() {
       </section>
 
       <section className="home-video" aria-labelledby="home-video-title">
-        <div className="page-wrap" style={{ maxWidth: "82rem" }}>
-          <div className="home-video-card">
-            <div className="home-video-copy">
-              <Kicker>Start here</Kicker>
-              <h2 id="home-video-title" className="balance">Watch: Welcome to BuildSkills</h2>
-              <p>A 37-second look at what you can learn here, from SEO and websites to AI tools and freelancing. Free, step by step, in simple words.</p>
-              <a href="https://www.youtube.com/@buildskillpk" target="_blank" rel="noopener" className="text-link">Subscribe on YouTube</a>
-            </div>
-            <HomeVideoPlayer />
+        <div className="page-wrap home-video-card" style={{ maxWidth: "82rem" }}>
+          <div className="home-video-copy">
+            <Kicker>Start here</Kicker>
+            <h2 id="home-video-title" className="balance">Watch: Welcome to BuildSkills</h2>
+            <p>A 37-second look at what you can learn here, from SEO and websites to AI tools and freelancing. Free, step by step, in simple words.</p>
+            <a href={YOUTUBE_CHANNEL} target="_blank" rel="noopener" className="text-link">Subscribe on YouTube</a>
           </div>
+          <HomeVideoPlayer />
         </div>
       </section>
 
