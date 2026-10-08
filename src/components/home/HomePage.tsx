@@ -48,31 +48,16 @@ export function HomePage() {
             <SearchIndex chips={guideLinks(searchPrompts)} />
           </div>
           <div className="hero-side">
-            <figure className="hero-side-image">
-              <Image
-                src="/hero.webp"
-                alt="Students learning together in a computer classroom"
-                fill
-                priority
-                sizes="(max-width: 900px) 100vw, 470px"
-              />
-            </figure>
-            <p className="hero-caption">A digital classroom. Ask anything, learn anything.</p>
+            <HomeVideoPlayer eager className="in-hero" />
+            <div className="home-video-copy hero-video-copy">
+              <Kicker>Start here</Kicker>
+              <h2 id="home-video-title" className="balance">Watch: Welcome to BuildSkills</h2>
+              <p>A 37-second look at what you can learn here, from SEO and websites to AI tools and freelancing. Free, step by step, in simple words.</p>
+              <a href={`${YOUTUBE_CHANNEL}?sub_confirmation=1`} target="_blank" rel="noopener" className="btn btn-accent home-video-subscribe">
+                <SocialIcon label="YouTube" size={18} /> Subscribe to our YouTube channel
+              </a>
+            </div>
           </div>
-        </div>
-      </section>
-
-      <section className="home-video" aria-labelledby="home-video-title">
-        <div className="page-wrap home-video-card" style={{ maxWidth: "82rem" }}>
-          <div className="home-video-copy">
-            <Kicker>Start here</Kicker>
-            <h2 id="home-video-title" className="balance">Watch: Welcome to BuildSkills</h2>
-            <p>A 37-second look at what you can learn here, from SEO and websites to AI tools and freelancing. Free, step by step, in simple words.</p>
-            <a href={`${YOUTUBE_CHANNEL}?sub_confirmation=1`} target="_blank" rel="noopener" className="btn btn-accent home-video-subscribe">
-              <SocialIcon label="YouTube" size={18} /> Subscribe to our YouTube channel
-            </a>
-          </div>
-          <HomeVideoPlayer />
         </div>
       </section>
 
