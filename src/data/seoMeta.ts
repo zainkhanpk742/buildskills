@@ -9,20 +9,20 @@ export type SeoMeta = { title: string; description: string };
 
 export const seoMeta: Record<string, SeoMeta> = {
   "/": {
-    title: "BuildSkills: Free Guides to Digital Skills, AI & Freelancing",
-    description: "Free, beginner-friendly guides to AI tools, websites, SEO, video and photo editing, social media, freelancing, and earning online safely.",
+    title: "BuildSkills (Build Skills): Free Digital Skills Guides",
+    description: "Build Skills with free, beginner-friendly guides to AI tools, websites, SEO, video and photo editing, social media, freelancing, and earning online safely.",
   },
   "/learn": {
-    title: "Learn Digital Skills Online Free: All Guides | BuildSkills",
-    description: "Browse every free BuildSkills guide by topic: AI, ChatGPT prompts, websites, SEO, editing, YouTube, TikTok, freelancing, and online business.",
+    title: "Learn Digital Skills Online Free: 2026 Beginner Guides",
+    description: "Free step-by-step guides to learn digital skills in 2026: AI and ChatGPT, websites, SEO, video and photo editing, YouTube, TikTok, and freelancing.",
   },
   "/learn/websites": {
-    title: "Website Building Guides for Beginners | BuildSkills",
-    description: "Learn how websites work, the difference between a domain and hosting, what a site costs, and how to plan, build, and publish your first website.",
+    title: "How to Build a Website: Free Beginner Guides (2026)",
+    description: "Plan, build and publish your first website: domain vs hosting, what a website costs, step-by-step build guides, and a full Urdu guide. Free for beginners.",
   },
   "/learn/seo": {
-    title: "Learn SEO for Beginners: Free Step-by-Step Guides",
-    description: "A free SEO path for beginners: how search works, search intent, keyword research, on-page and technical SEO, links, and Google Search Console.",
+    title: "Learn SEO Free: Beginner Guide to Ranking on Google",
+    description: "A free step-by-step SEO path for beginners: how Google Search works, keyword research, on-page and technical SEO, links, and using Google Search Console.",
   },
   "/learn/mobile-apps": {
     title: "Mobile App Guides for Beginners | BuildSkills",
@@ -61,12 +61,12 @@ export const seoMeta: Record<string, SeoMeta> = {
     description: "Free Facebook guides: create a Page, decide what to post, grow an audience, get customers, and understand Facebook Content Monetization in 2026.",
   },
   "/learn/youtube": {
-    title: "YouTube for Beginners: Grow a Channel & Get Monetized",
-    description: "Start a YouTube channel, find video ideas, improve titles, thumbnails and retention, read YouTube Analytics, and meet the monetization rules.",
+    title: "How to Grow a YouTube Channel & Get Monetized (2026)",
+    description: "Free YouTube guides: start a channel, find video ideas, improve titles, thumbnails and retention, read YouTube Analytics, and meet the monetization rules.",
   },
   "/learn/x-twitter": {
-    title: "X (Twitter) for Beginners: Grow & Get Paid in 2026",
-    description: "Free X guides: build a profile, decide what to post, grow an audience, find clients, and understand Original Content Rewards and its rules.",
+    title: "How to Grow on X (Twitter) and Get Paid in 2026",
+    description: "Free X (Twitter) guides: build a strong profile, decide what to post, grow an audience, find clients, and understand Original Content Rewards and its rules.",
   },
   "/learn/instagram": {
     title: "Instagram for Beginners: Reels, Growth & Monetization",
@@ -81,8 +81,8 @@ export const seoMeta: Record<string, SeoMeta> = {
     description: "Free LinkedIn guides: build a strong profile, post useful content, find a job, win clients, run a company Page, and measure what works.",
   },
   "/learn/ai-productivity": {
-    title: "AI for Beginners: ChatGPT, Prompts & AI Tools",
-    description: "Learn to use AI tools safely: what generative AI is, how to use ChatGPT, write better prompts, study with AI, and choose the right AI tool.",
+    title: "How to Use AI Tools and ChatGPT: Free Beginner Guides",
+    description: "Learn to use AI tools safely and productively: what generative AI is, how to use ChatGPT, write better prompts, study with AI, and pick the right AI tool.",
   },
   "/learn/video-editing": {
     title: "Video Editing for Beginners: Free Guides & Tutorials",
@@ -105,32 +105,32 @@ export const seoMeta: Record<string, SeoMeta> = {
     description: "Ten high-paying computer and data skills with May 2025 median wages from the US Bureau of Labor Statistics, and how a beginner starts each one.",
   },
   "/learn/high-demand-skills-usa": {
-    title: "In-Demand Skills in the USA (2026, Official Data)",
-    description: "Ten skills US employers keep hiring for, with May 2025 BLS median pay and projected job openings, and what a beginner should learn first.",
+    title: "10 In-Demand Skills in the USA for 2026 (BLS Pay Data)",
+    description: "Ten skills US employers keep hiring for in 2026, with May 2025 BLS median pay and projected job openings, plus which skill a beginner should learn first.",
   },
   "/learn/high-demand-skills-india": {
     title: "In-Demand Skills in India in 2026 (With Pay Bands)",
     description: "Ten skills Indian employers hire for in 2026, from software and AI to data, cloud and security, with published salary bands by experience.",
   },
   "/learn/high-demand-skills-pakistan": {
-    title: "High-Paying Skills in Pakistan 2026 (With PKR Pay Data)",
-    description: "Ten high-paying skills in Pakistan for 2026, with official labour data, record IT export figures, salaries in rupees where sourced, and free courses.",
+    title: "10 High-Demand Skills in Pakistan for 2026 (PKR Pay)",
+    description: "The 10 most in-demand, high-paying skills in Pakistan for 2026, with official labour data, IT export figures, rupee salaries where sourced, and free courses.",
   },
   "/learn/high-demand-skills-uk": {
-    title: "In-Demand Skills in the UK 2026 (Official Salary Data)",
-    description: "Ten in-demand skills in the UK for 2026, with Home Office going rates based on ONS pay data, the UK median wage, and free Skills Bootcamps.",
+    title: "10 In-Demand Skills in the UK for 2026 (With Pay Data)",
+    description: "The 10 most in-demand skills in the UK for 2026, with Home Office going rates from ONS pay data, the UK median wage, and free Skills Bootcamps to start.",
   },
   "/learn/high-demand-skills-uae": {
-    title: "Highest-Paying Skills in the UAE 2026 (AED Salaries)",
-    description: "Ten highest-paying skills in the UAE for 2026, with monthly salary ranges in AED, Golden and Green visa salary levels, and how to start each skill.",
+    title: "10 Highest-Paying Skills in the UAE 2026 (AED Salaries)",
+    description: "The 10 highest-paying skills in the UAE for 2026, with monthly AED salary ranges, Golden and Green visa salary levels, and a clear way to start each skill.",
   },
   "/learn/seo/what-are-good-backlinks": {
     title: "What Makes a Good Backlink? A Beginner's Guide",
     description: "What makes a backlink useful, how good links are earned, which link schemes Google treats as spam, and what to do instead of buying links.",
   },
   "/questions": {
-    title: "Digital Skills Questions, Answered | BuildSkills",
-    description: "Practical answers to beginner questions about AI, websites, SEO, video and photo editing, social media, freelancing, and online work.",
+    title: "Digital Skills Questions Answered: Free Beginner Help",
+    description: "Quick, practical answers to beginner questions about AI, websites, SEO, video and photo editing, social media, freelancing, and earning money online.",
   },
   "/tools": {
     title: "Digital Tools Directory for Beginners | BuildSkills",
@@ -425,8 +425,8 @@ export const seoMeta: Record<string, SeoMeta> = {
     description: "Define the audience and message first, then choose a logo, colours, and type you can repeat everywhere. A step-by-step beginner method.",
   },
   "/learn/online-business/how-to-start-an-online-business": {
-    title: "How to Start an Online Business (Test Before You Spend)",
-    description: "Start an online business by testing a specific customer problem and a small offer before you pay for a big website, stock, or ads.",
+    title: "How to Start an Online Business in 2026 (Step by Step)",
+    description: "Start an online business the low-risk way: find a real customer problem, test a small offer, and win first sales before paying for a big website or ads.",
   },
   "/learn/ai-productivity/how-to-use-ai-productively": {
     title: "How to Use AI to Get More Done (Safely)",
@@ -521,8 +521,8 @@ export const seoMeta: Record<string, SeoMeta> = {
     description: "Start on Upwork: a profile that shows proof, proposals that answer the client's job, and how Upwork's service fee affects what you keep.",
   },
   "/learn/ai-productivity/best-skills-to-learn-2026": {
-    title: "Best Skills to Learn in 2026 to Earn Online",
-    description: "The best skills to learn in 2026 if you want paid work: writing, websites, SEO, design, video editing, and using AI well, and how to start.",
+    title: "Best Skills to Learn in 2026 (and Free Ways to Start)",
+    description: "The best skills to learn in 2026 for paid work: writing, websites, SEO, design, video editing and AI. See what each involves and how to start it for free.",
   },
   "/learn/ai-productivity/free-online-courses-with-certificates": {
     title: "Free Online Courses with Certificates (2026 Guide)",
@@ -581,8 +581,8 @@ export const seoMeta: Record<string, SeoMeta> = {
     description: "Copy-and-adapt ChatGPT prompts for students: understand topics, revise for exams, plan essays, practise languages, and stay within school AI rules.",
   },
   "/learn/freelancing/make-money-online-as-a-teenager": {
-    title: "How to Make Money Online as a Teenager (Safe Ways)",
-    description: "Real age rules for Fiverr, Upwork, YouTube, TikTok and X, checked October 2026, plus safe ways for teens to earn with a parent and the scams to avoid.",
+    title: "How to Make Money Online as a Teenager (Safe, 2026)",
+    description: "Safe, legal ways for teens to earn online in 2026: real age rules for Fiverr, Upwork, YouTube, TikTok and X, how a parent can help, and scams to avoid.",
   },
   "/learn/freelancing/freelancing-websites-for-beginners": {
     title: "Best Freelancing Websites for Beginners (Fees Compared)",
@@ -593,8 +593,8 @@ export const seoMeta: Record<string, SeoMeta> = {
     description: "Entry-level remote jobs that hire beginners, trusted job boards, how to apply with no experience, and how to spot the fake jobs that target newcomers.",
   },
   "/learn/youtube/youtube-shorts-monetization": {
-    title: "YouTube Shorts Monetization 2026-2027: Rules & Revenue Share",
-    description: "How YouTube pays for Shorts (45% of the Creator Pool), the 10M and 20M view thresholds, the 1 February 2027 changes, and ways to earn below them.",
+    title: "YouTube Shorts Monetization 2026: Requirements & Pay",
+    description: "How YouTube pays for Shorts in 2026: the 10M and 20M view thresholds, the 45% Creator Pool share, the February 2027 changes, and ways to earn before then.",
   },
   "/learn/freelancing/fiverr-gig-ideas": {
     title: "30 Fiverr Gig Ideas for Beginners (With Example Titles)",

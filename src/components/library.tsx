@@ -124,6 +124,7 @@ export function GuideView({ slug }: { slug: string }) {
       publisher: {
         "@type": "Organization",
         name: "BuildSkills",
+        alternateName: "Build Skills",
         url: "https://buildskills.com.pk",
         sameAs: socialUrls,
         logo: {
