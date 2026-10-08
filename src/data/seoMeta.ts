@@ -176,6 +176,22 @@ export const seoMeta: Record<string, SeoMeta> = {
     title: "What Is SEO? A Simple Explanation for Beginners",
     description: "SEO means making a useful page easier to find in Google's free results. Learn how it works, what it is not, and the first steps to take.",
   },
+  "/learn/freelancing/freelancing-kaise-shuru-karein-urdu": {
+    title: "فری لانسنگ کیسے شروع کریں: پاکستان کے لیے اردو گائیڈ",
+    description: "اردو میں مرحلہ وار گائیڈ: skill چنیں، portfolio بنائیں، پہلا کلائنٹ ڈھونڈیں، Payoneer یا فری لانسر بینک اکاؤنٹ سے پیسے وصول کریں اور PSEB رجسٹریشن سمجھیں۔",
+  },
+  "/learn/freelancing/how-to-start-freelancing-in-pakistan": {
+    title: "How to Start Freelancing in Pakistan (2026 Guide)",
+    description: "Start freelancing in Pakistan step by step: choose a skill, find first clients, get paid via Payoneer or a freelancer bank account, and register with PSEB.",
+  },
+  "/learn/mobile-apps/mobile-app-kaise-banaye-urdu": {
+    title: "موبائل ایپ کیسے بنائیں: کوڈنگ کے ساتھ اور بغیر (اردو)",
+    description: "اردو میں آسان گائیڈ: بغیر کوڈنگ کے MIT App Inventor یا Android Studio سے موبائل ایپ بنائیں، ٹیسٹ کریں اور Google Play یا App Store پر شائع کریں۔",
+  },
+  "/learn/seo/seo-kya-hai-urdu": {
+    title: "SEO کیا ہے؟ آسان اردو میں مکمل وضاحت | BuildSkills",
+    description: "SEO کیا ہے اور Google کیسے کام کرتا ہے؟ آسان اردو میں on-page، technical اور off-page SEO، keywords، Search Console اور عام غلطیاں سمجھیں۔",
+  },
   "/learn/websites/website-banane-ka-tarika-urdu": {
     title: "ویب سائٹ بنانے کا طریقہ: اردو میں مکمل گائیڈ | BuildSkills",
     description: "اردو میں آسان مرحلہ وار گائیڈ: AI سے کوڈ لکھوائیں، GitHub پر repository بنائیں، Vercel سے مفت deploy کریں اور اپنا .pk یا .com domain جوڑیں۔",

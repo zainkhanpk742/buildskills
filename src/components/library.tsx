@@ -8,6 +8,13 @@ import { guideVideos } from "@/data/guideVideos";
 import { socialUrls } from "@/lib/social";
 import { urduFont } from "@/lib/fonts";
 
+const areaNamesUr: Record<string, string> = {
+  Websites: "ویب سائٹس",
+  Freelancing: "فری لانسنگ",
+  "Mobile Apps": "موبائل ایپس",
+  SEO: "SEO",
+};
+
 const uiText = {
   en: {
     learn: "Learn",
@@ -37,14 +44,14 @@ const uiText = {
     faq: "اکثر پوچھے جانے والے سوالات",
     related: "متعلقہ گائیڈز",
     continue: "آگے پڑھیں",
-    alsoIn: () => "ویب سائٹس کی مزید گائیڈز",
-    allOf: () => "تمام ویب سائٹ گائیڈز",
+    alsoIn: (area: string) => `${areaNamesUr[area] ?? area} کی مزید گائیڈز`,
+    allOf: (area: string) => `${areaNamesUr[area] ?? area} کی تمام گائیڈز`,
     tip: "ٹپ",
     video: "مختصر ویڈیو دیکھیں",
     subscribe: "YouTube پر Subscribe کریں",
   },
 };
-const areaNamesUr: Record<string, string> = { Websites: "ویب سائٹس" };
+
 const difficultyUr: Record<string, string> = { Beginner: "ابتدائی", Intermediate: "درمیانہ", Practical: "عملی" };
 
 export function Interior({
