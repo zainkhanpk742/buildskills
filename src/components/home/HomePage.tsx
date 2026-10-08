@@ -68,7 +68,9 @@ export function HomePage() {
             <Kicker>Start here</Kicker>
             <h2 id="home-video-title" className="balance">Watch: Welcome to BuildSkills</h2>
             <p>A 37-second look at what you can learn here, from SEO and websites to AI tools and freelancing. Free, step by step, in simple words.</p>
-            <a href={YOUTUBE_CHANNEL} target="_blank" rel="noopener" className="text-link">Subscribe on YouTube</a>
+            <a href={`${YOUTUBE_CHANNEL}?sub_confirmation=1`} target="_blank" rel="noopener" className="btn btn-accent home-video-subscribe">
+              <SocialIcon label="YouTube" size={18} /> Subscribe to our YouTube channel
+            </a>
           </div>
           <HomeVideoPlayer />
         </div>

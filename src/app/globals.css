@@ -596,5 +596,6 @@ h1, h2, h3 { text-wrap: balance; }
 }
 .home-video-copy h2 { margin: 0.6rem 0 0; color: var(--ink); font-size: clamp(1.45rem, 1.1rem + 1vw, 2rem); font-weight: 680; letter-spacing: -0.04em; line-height: 1.1; }
 .home-video-copy p { margin: 0.75rem 0 0; color: var(--ink-soft); max-width: 34rem; }
-.home-video-copy .text-link { display: inline-block; margin-top: 0.85rem; font-weight: 650; }
+.home-video-copy .home-video-subscribe { margin-top: 1.15rem; min-height: 3.2rem; padding-inline: 1.25rem; border-radius: 13px; box-shadow: 0 8px 18px rgba(23, 73, 173, 0.2); }
+.home-video-copy .home-video-subscribe:hover { transform: translateY(-2px); box-shadow: 0 12px 24px rgba(23, 73, 173, 0.24); }
 @media (min-width: 900px) { .home-video-card { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 2.5rem; } }
