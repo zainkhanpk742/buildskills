@@ -1,5 +1,6 @@
 import type { Guide } from "@/data/site";
 import { thinGuideDepth, thinGuideDepth2 } from "@/data/thinGuideDepth";
+import { longtailDepth } from "@/data/longtailDepth";
 
 type GuideSection = NonNullable<Guide["sections"]>[number];
 type Faq = NonNullable<Guide["faqs"]>[number];
@@ -454,4 +455,16 @@ export const guideDepth: Record<string, GuideDepth> = {
 for (const [slug, extra] of Object.entries({ ...thinGuideDepth, ...thinGuideDepth2 })) {
   const base = guideDepth[slug];
   guideDepth[slug] = { ...base, ...extra, h1: base?.h1 ?? extra.h1 };
+}
+
+// Long-tail retargeting: these headings replace the old H1 on purpose.
+for (const [slug, extra] of Object.entries(longtailDepth)) {
+  const base = guideDepth[slug];
+  guideDepth[slug] = {
+    ...base,
+    ...extra,
+    sections: [...(base?.sections ?? []), ...(extra.sections ?? [])],
+    faqs: [...(base?.faqs ?? []), ...(extra.faqs ?? [])],
+    sources: [...(base?.sources ?? []), ...(extra.sources ?? [])],
+  };
 }
