@@ -56,3 +56,13 @@ export const guideVideos: Record<string, GuideVideo> = {
 };
 
 export const YOUTUBE_CHANNEL = "https://www.youtube.com/@buildskillpk";
+
+/** Homepage intro video. Title, upload date and length taken from the YouTube watch page (checked 8 Oct 2026). */
+export const HOME_VIDEO: GuideVideo = {
+  id: "BIznhjP04Ac",
+  name: "Welcome to BuildSkills | Learn Digital Skills Free (SEO, Websites, AI & More)",
+  description:
+    "BuildSkills is a free place to learn the digital skills that can change your future: SEO, websites, mobile apps, AI tools, YouTube, video and photo editing, and freelancing, step by step in simple words.",
+  uploadDate: "2026-10-08T03:35:02-07:00",
+  duration: "PT37S",
+};

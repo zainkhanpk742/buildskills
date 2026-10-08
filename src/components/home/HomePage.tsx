@@ -1,8 +1,10 @@
 import Image from "next/image";
 import { SocialIcon } from "@/components/SocialIcon";
 import { socialProfiles, socialUrls } from "@/lib/social";
+import { HOME_VIDEO, YOUTUBE_CHANNEL } from "@/data/guideVideos";
 import { ButtonLink, Kicker } from "@/components/ui";
 import { SearchIndex } from "@/components/home/Interactive";
+import { HomeVideoPlayer } from "@/components/home/HomeVideo";
 import { guideLinks, searchPrompts } from "@/data/site";
 import { AreaGrid, FinalCta, Journey, PathRail, PrincipleGrid, QuestionCards, ToolDiscovery } from "@/components/home/Sections";
 
@@ -57,6 +59,20 @@ export function HomePage() {
             </figure>
             <p className="hero-caption">A digital classroom. Ask anything, learn anything.</p>
           </div>
+        </div>
+      </section>
+
+      <section className="home-video" aria-labelledby="home-video-title">
+        <div className="page-wrap home-video-card" style={{ maxWidth: "82rem" }}>
+          <div className="home-video-copy">
+            <Kicker>Start here</Kicker>
+            <h2 id="home-video-title" className="balance">Watch: Welcome to BuildSkills</h2>
+            <p>A 37-second look at what you can learn here, from SEO and websites to AI tools and freelancing. Free, step by step, in simple words.</p>
+            <a href={`${YOUTUBE_CHANNEL}?sub_confirmation=1`} target="_blank" rel="noopener" className="btn btn-accent home-video-subscribe">
+              <SocialIcon label="YouTube" size={18} /> Subscribe to our YouTube channel
+            </a>
+          </div>
+          <HomeVideoPlayer />
         </div>
       </section>
 
@@ -118,6 +134,18 @@ export function HomePage() {
                   },
                   "query-input": "required name=search_term_string",
                 },
+              },
+              {
+                "@type": "VideoObject",
+                "@id": "https://buildskills.com.pk/#intro-video",
+                name: HOME_VIDEO.name,
+                description: HOME_VIDEO.description,
+                thumbnailUrl: [`https://i.ytimg.com/vi/${HOME_VIDEO.id}/hqdefault.jpg`],
+                uploadDate: HOME_VIDEO.uploadDate,
+                duration: HOME_VIDEO.duration,
+                contentUrl: `https://www.youtube.com/watch?v=${HOME_VIDEO.id}`,
+                embedUrl: `https://www.youtube-nocookie.com/embed/${HOME_VIDEO.id}`,
+                publisher: { "@id": "https://buildskills.com.pk/#organization" },
               },
             ],
           }).replace(/</g, "\\u003c"),
