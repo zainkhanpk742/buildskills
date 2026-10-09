@@ -43,14 +43,14 @@ export const guideVideos: Record<string, GuideVideo> = {
     id: "ji_XcAy4Wts",
     name: "What Is SEO? Explained in 15 Seconds",
     description: "What is SEO? A simple explanation for beginners: how a useful page gets found on Google.",
-    uploadDate: "2026-10-08",
+    uploadDate: "2026-10-07T23:27:12-07:00",
     duration: "PT15S",
   },
   "seo/what-is-seo": {
     id: "ji_XcAy4Wts",
     name: "What Is SEO? Explained in 15 Seconds",
     description: "What is SEO? A simple explanation for beginners: how a useful page gets found on Google.",
-    uploadDate: "2026-10-08",
+    uploadDate: "2026-10-07T23:27:12-07:00",
     duration: "PT15S",
   },
 };
@@ -78,3 +78,6 @@ export const hubVideos: Record<string, GuideVideo> = {
     duration: "PT2M28S",
   },
 };
+
+/** Guides that show their video in the hero's right column (with the subscribe button) instead of inside the article. */
+export const heroVideoGuides = new Set<string>(["seo/what-is-seo"]);
