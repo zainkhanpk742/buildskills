@@ -15,10 +15,21 @@ function badge(duration: string) {
  * Click-to-play 16:9 facade for a YouTube video (homepage intro by default).
  * Only the YouTube thumbnail loads until the visitor presses play; then a youtube-nocookie iframe replaces it.
  */
-export function HomeVideoPlayer({ eager = false, className = "", video = HOME_VIDEO }: { eager?: boolean; className?: string; video?: GuideVideo }) {
+export function HomeVideoPlayer({
+  eager = false,
+  className = "",
+  video = HOME_VIDEO,
+  vertical = false,
+}: {
+  eager?: boolean;
+  className?: string;
+  video?: GuideVideo;
+  /** 9:16 frame for YouTube Shorts; uses the 1280x720 thumbnail centre-cropped. */
+  vertical?: boolean;
+}) {
   const [playing, setPlaying] = useState(false);
   return (
-    <div className={`home-video-frame ${className}`.trim()}>
+    <div className={`home-video-frame${vertical ? " is-vertical" : ""} ${className}`.trim()}>
       {playing ? (
         <iframe
           src={`https://www.youtube-nocookie.com/embed/${video.id}?autoplay=1&rel=0`}
@@ -31,10 +42,10 @@ export function HomeVideoPlayer({ eager = false, className = "", video = HOME_VI
         <button type="button" className="home-video-facade" onClick={() => setPlaying(true)} aria-label={`Play video: ${video.name}`}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={`https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`}
+            src={`https://i.ytimg.com/vi/${video.id}/${vertical ? "maxresdefault" : "hqdefault"}.jpg`}
             alt=""
-            width={480}
-            height={360}
+            width={vertical ? 1280 : 480}
+            height={vertical ? 720 : 360}
             loading={eager ? "eager" : "lazy"}
             fetchPriority={eager ? "high" : "auto"}
             decoding="async"

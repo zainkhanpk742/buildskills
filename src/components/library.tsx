@@ -4,7 +4,7 @@ import { areaBySlug, areas, guideBySlug, guidePath, guidesInArea, pathSteps } fr
 import { hubContent } from "@/data/hubContent";
 import { Kicker } from "@/components/ui";
 import { ShortEmbed } from "@/components/ShortEmbed";
-import { guideVideos, hubVideos, YOUTUBE_CHANNEL } from "@/data/guideVideos";
+import { guideVideos, heroVideoGuides, hubVideos, YOUTUBE_CHANNEL } from "@/data/guideVideos";
 import { HomeVideoPlayer } from "@/components/home/HomeVideo";
 import { SocialIcon } from "@/components/SocialIcon";
 import { socialUrls } from "@/lib/social";
@@ -106,6 +106,7 @@ export function GuideView({ slug }: { slug: string }) {
   const areaUrl = `https://buildskills.com.pk/learn/${field?.slug ?? guide.slug.split("/")[0]}`;
   const isHubPage = pageUrl === areaUrl;
   const video = guideVideos[guide.slug];
+  const heroVideo = video && heroVideoGuides.has(guide.slug) ? video : undefined;
   const isUrdu = guide.lang === "ur";
   const t = isUrdu ? uiText.ur : uiText.en;
   const areaLabel = isUrdu ? areaNamesUr[guide.area] ?? guide.area : guide.area;
@@ -187,52 +188,64 @@ export function GuideView({ slug }: { slug: string }) {
         className={isUrdu ? `urdu ${urduFont.variable}` : undefined}
       >
         <header className="page-head">
-          <div className="page-wrap">
-            <nav aria-label="Breadcrumb" className="article-breadcrumb">
-              <Link href="/learn">{t.learn}</Link>
-              <span aria-hidden="true"> / </span>
-              {field ? <Link href={`/learn/${field.slug}`}>{areaLabel}</Link> : <span>{areaLabel}</span>}
-            </nav>
-            <p className="kicker plain" style={{ color: "var(--signal)" }}>
-              {areaLabel}
-            </p>
-            <h1 className="display-section balance stack-4 max-3">{guide.h1 ?? guide.title}</h1>
-            <aside className="answer-box stack-5" aria-label={t.shortAnswer}>
-              <p className="kicker plain">{t.shortAnswer}</p>
-              <p>{guide.summary}</p>
-              {guide.sections?.length ? (
-                <ol className="step-bar">
-                  {guide.sections.slice(0, 4).map((section, index) => (
-                    <li key={section.heading}>
-                      <span>{index + 1}</span>
-                      <strong>{section.heading}</strong>
-                    </li>
-                  ))}
-                </ol>
-              ) : null}
-            </aside>
-            <p className="article-meta">
-              <span lang="en" dir="ltr">BuildSkills Editorial Team</span> <span aria-hidden="true">·</span> {difficultyLabel} <span aria-hidden="true">·</span> {t.minRead(readingMinutes)}
-              {guide.checkedDate ? <> <span aria-hidden="true">·</span> {t.updated} <span dir="ltr">{guide.checkedDate}</span></> : null}
-            </p>
-            {guide.alternate ? (
-              <p className="article-meta stack-4">
-                <Link
-                  href={guide.alternate.href}
-                  hrefLang={guide.alternate.hreflang}
-                  lang={guide.alternate.hreflang}
-                  dir={guide.alternate.hreflang === "ur" ? "rtl" : "ltr"}
-                  className="text-link"
-                >
-                  {guide.alternate.label}
-                </Link>
+          <div className={heroVideo ? "page-wrap hub-head guide-hero" : "page-wrap"}>
+            <div>
+              <nav aria-label="Breadcrumb" className="article-breadcrumb">
+                <Link href="/learn">{t.learn}</Link>
+                <span aria-hidden="true"> / </span>
+                {field ? <Link href={`/learn/${field.slug}`}>{areaLabel}</Link> : <span>{areaLabel}</span>}
+              </nav>
+              <p className="kicker plain" style={{ color: "var(--signal)" }}>
+                {areaLabel}
               </p>
+              <h1 className="display-section balance stack-4 max-3">{guide.h1 ?? guide.title}</h1>
+              <aside className="answer-box stack-5" aria-label={t.shortAnswer}>
+                <p className="kicker plain">{t.shortAnswer}</p>
+                <p>{guide.summary}</p>
+                {guide.sections?.length ? (
+                  <ol className="step-bar">
+                    {guide.sections.slice(0, 4).map((section, index) => (
+                      <li key={section.heading}>
+                        <span>{index + 1}</span>
+                        <strong>{section.heading}</strong>
+                      </li>
+                    ))}
+                  </ol>
+                ) : null}
+              </aside>
+              <p className="article-meta">
+                <span lang="en" dir="ltr">BuildSkills Editorial Team</span> <span aria-hidden="true">·</span> {difficultyLabel} <span aria-hidden="true">·</span> {t.minRead(readingMinutes)}
+                {guide.checkedDate ? <> <span aria-hidden="true">·</span> {t.updated} <span dir="ltr">{guide.checkedDate}</span></> : null}
+              </p>
+              {guide.alternate ? (
+                <p className="article-meta stack-4">
+                  <Link
+                    href={guide.alternate.href}
+                    hrefLang={guide.alternate.hreflang}
+                    lang={guide.alternate.hreflang}
+                    dir={guide.alternate.hreflang === "ur" ? "rtl" : "ltr"}
+                    className="text-link"
+                  >
+                    {guide.alternate.label}
+                  </Link>
+                </p>
+              ) : null}
+            </div>
+            {heroVideo ? (
+              <section className="home-video-copy hub-video guide-hero-video" aria-labelledby="hero-video-title">
+                <HomeVideoPlayer video={heroVideo} vertical eager />
+                <Kicker>Start here</Kicker>
+                <h2 id="hero-video-title" className="balance">Watch: {heroVideo.name}</h2>
+                <a href={`${YOUTUBE_CHANNEL}?sub_confirmation=1`} target="_blank" rel="noopener" className="btn btn-accent home-video-subscribe">
+                  <SocialIcon label="YouTube" size={18} /> Subscribe to our YouTube channel
+                </a>
+              </section>
             ) : null}
           </div>
         </header>
         <div className="page-wrap article-grid section-pad">
           <div className="prose">
-            {video ? <ShortEmbed video={video} heading={t.video} subscribeLabel={t.subscribe} /> : null}
+            {video && !heroVideo ? <ShortEmbed video={video} heading={t.video} subscribeLabel={t.subscribe} /> : null}
             {guide.sections?.length
               ? guide.sections.map((section) => (
                   <section key={section.heading}>
