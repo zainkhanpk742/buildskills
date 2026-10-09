@@ -79,5 +79,18 @@ export const hubVideos: Record<string, GuideVideo> = {
   },
 };
 
-/** Guides that show their video in the hero's right column (with the subscribe button) instead of inside the article. */
-export const heroVideoGuides = new Set<string>(["seo/what-is-seo"]);
+/**
+ * Guides that show a Short in the hero's right column (vertical player + subscribe button).
+ * If it is the same video as the guide's in-article embed, the in-article copy is not shown.
+ */
+export const heroVideos: Record<string, GuideVideo> = {
+  "seo/what-is-seo": guideVideos["seo/what-is-seo"],
+  // Title, upload time and length from the YouTube watch page (checked 9 Oct 2026; approxDurationMs 15041).
+  "mobile-apps/how-to-build-a-mobile-app": {
+    id: "xZ2vWPP8Ulk",
+    name: "How to Make an App Without Coding (Beginners)",
+    description: "How to make an app without coding for beginners: free no-code steps, with the full free guide on buildskills.com.pk.",
+    uploadDate: "2026-10-08T23:06:08-07:00",
+    duration: "PT15S",
+  },
+};

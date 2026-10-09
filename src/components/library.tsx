@@ -4,7 +4,7 @@ import { areaBySlug, areas, guideBySlug, guidePath, guidesInArea, pathSteps } fr
 import { hubContent } from "@/data/hubContent";
 import { Kicker } from "@/components/ui";
 import { ShortEmbed } from "@/components/ShortEmbed";
-import { guideVideos, heroVideoGuides, hubVideos, YOUTUBE_CHANNEL } from "@/data/guideVideos";
+import { guideVideos, heroVideos, hubVideos, YOUTUBE_CHANNEL } from "@/data/guideVideos";
 import { HomeVideoPlayer } from "@/components/home/HomeVideo";
 import { SocialIcon } from "@/components/SocialIcon";
 import { socialUrls } from "@/lib/social";
@@ -106,7 +106,8 @@ export function GuideView({ slug }: { slug: string }) {
   const areaUrl = `https://buildskills.com.pk/learn/${field?.slug ?? guide.slug.split("/")[0]}`;
   const isHubPage = pageUrl === areaUrl;
   const video = guideVideos[guide.slug];
-  const heroVideo = video && heroVideoGuides.has(guide.slug) ? video : undefined;
+  const heroVideo = heroVideos[guide.slug];
+  const articleVideo = video && video.id !== heroVideo?.id ? video : undefined;
   const isUrdu = guide.lang === "ur";
   const t = isUrdu ? uiText.ur : uiText.en;
   const areaLabel = isUrdu ? areaNamesUr[guide.area] ?? guide.area : guide.area;
@@ -167,17 +168,18 @@ export function GuideView({ slug }: { slug: string }) {
         }]
       : []),
   ];
-  if (video) {
+  for (const v of [heroVideo, articleVideo]) {
+    if (!v) continue;
     structuredData.push({
       "@context": "https://schema.org",
       "@type": "VideoObject",
-      name: video.name,
-      description: video.description,
-      thumbnailUrl: [`https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`],
-      uploadDate: video.uploadDate,
-      duration: video.duration,
-      embedUrl: `https://www.youtube-nocookie.com/embed/${video.id}`,
-      contentUrl: `https://www.youtube.com/shorts/${video.id}`,
+      name: v.name,
+      description: v.description,
+      thumbnailUrl: [`https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`],
+      uploadDate: v.uploadDate,
+      duration: v.duration,
+      embedUrl: `https://www.youtube-nocookie.com/embed/${v.id}`,
+      contentUrl: `https://www.youtube.com/shorts/${v.id}`,
     });
   }
   return (
@@ -245,7 +247,7 @@ export function GuideView({ slug }: { slug: string }) {
         </header>
         <div className="page-wrap article-grid section-pad">
           <div className="prose">
-            {video && !heroVideo ? <ShortEmbed video={video} heading={t.video} subscribeLabel={t.subscribe} /> : null}
+            {articleVideo ? <ShortEmbed video={articleVideo} heading={t.video} subscribeLabel={t.subscribe} /> : null}
             {guide.sections?.length
               ? guide.sections.map((section) => (
                   <section key={section.heading}>
