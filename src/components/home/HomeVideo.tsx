@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { HOME_VIDEO, type GuideVideo } from "@/data/guideVideos";
+import { YouTubePoster } from "@/components/YouTubePoster";
 
 /** "PT2M28S" -> "2:28" */
 function badge(duration: string) {
@@ -24,7 +25,7 @@ export function HomeVideoPlayer({
   eager?: boolean;
   className?: string;
   video?: GuideVideo;
-  /** 9:16 frame for YouTube Shorts; uses the 1280x720 thumbnail centre-cropped. */
+  /** 9:16 frame for YouTube Shorts; poster is the portrait oar2 thumbnail, falling back to hqdefault centre-cropped. */
   vertical?: boolean;
 }) {
   const [playing, setPlaying] = useState(false);
@@ -40,15 +41,12 @@ export function HomeVideoPlayer({
         />
       ) : (
         <button type="button" className="home-video-facade" onClick={() => setPlaying(true)} aria-label={`Play video: ${video.name}`}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={`https://i.ytimg.com/vi/${video.id}/${vertical ? "maxresdefault" : "hqdefault"}.jpg`}
-            alt=""
-            width={vertical ? 1280 : 480}
-            height={vertical ? 720 : 360}
-            loading={eager ? "eager" : "lazy"}
-            fetchPriority={eager ? "high" : "auto"}
-            decoding="async"
+          <YouTubePoster
+            id={video.id}
+            vertical={vertical}
+            width={vertical ? 720 : 480}
+            height={vertical ? 1280 : 360}
+            eager={eager}
           />
           <span className="home-video-play" aria-hidden="true">
             <svg viewBox="0 0 24 24" width="26" height="26"><path d="M8 5.5v13l11-6.5z" fill="currentColor" /></svg>
