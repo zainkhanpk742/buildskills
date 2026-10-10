@@ -103,4 +103,13 @@ export const heroVideos: Record<string, GuideVideo> = {
     uploadDate: "2026-10-09T22:28:46-07:00",
     duration: "PT15S",
   },
+  // Shown on the /learn/chatgpt-prompts hub (the hub URL shows this guide).
+  // Title, upload time and length from the YouTube watch page (checked 10 Oct 2026; lengthSeconds 15).
+  "chatgpt-prompts/useful-chatgpt-prompts": {
+    id: "sLV9F-q6uwg",
+    name: "How to Write Useful and Better ChatGPT Prompts",
+    description: "How to write useful and better ChatGPT prompts for beginners, with the full free guide on buildskills.com.pk.",
+    uploadDate: "2026-10-10T07:43:51-07:00",
+    duration: "PT15S",
+  },
 };
