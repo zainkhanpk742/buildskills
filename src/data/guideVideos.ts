@@ -95,4 +95,12 @@ export const heroVideos: Record<string, GuideVideo> = {
     uploadDate: "2026-10-08T23:06:08-07:00",
     duration: "PT15S",
   },
+  // Title, upload time and length from the YouTube watch page (checked 10 Oct 2026; lengthSeconds 15).
+  "seo/how-to-get-website-on-google": {
+    id: "5-FrUXNT5nc",
+    name: "How to Get Your Website on Google (Free)",
+    description: "How to get your website on Google for free, step by step for beginners, with the full free guide on buildskills.com.pk.",
+    uploadDate: "2026-10-09T22:28:46-07:00",
+    duration: "PT15S",
+  },
 };
