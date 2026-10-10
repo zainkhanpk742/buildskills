@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { YOUTUBE_CHANNEL, type GuideVideo } from "@/data/guideVideos";
+import { YouTubePoster } from "@/components/YouTubePoster";
 
 /** Click-to-play YouTube Short: only a lazy thumbnail loads until the reader presses play. */
 export function ShortEmbed({
@@ -35,12 +36,9 @@ export function ShortEmbed({
           aria-label={`Play video: ${video.name}`}
           style={{ ...frame, position: "relative", display: "block", padding: 0, border: 0, cursor: "pointer" }}
         >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={`https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`}
-            alt=""
-            loading="lazy"
-            decoding="async"
+          <YouTubePoster
+            id={video.id}
+            vertical
             style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
           />
           <svg viewBox="0 0 68 48" width="68" height="48" aria-hidden="true" style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}>
